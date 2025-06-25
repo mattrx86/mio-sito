@@ -1,0 +1,71 @@
+baseURL = "https://mattiariccadonna.com/"
+languageCode = "it"
+title = "Mattia Riccadonna"
+theme = "typo"
+
+# --- ANALYTICS (facoltativo) ---
+googleAnalytics = "G-CJZF9EPTD0"
+
+# --- TASSONOMIE (puoi anche rimuoverle se non usi tag) ---
+[taxonomies]
+tag = ''
+
+# --- PARAMETRI DI PERSONALIZZAZIONE ---
+[params]
+description = "Galleria personale, idee e dipinti di Mattia Riccadonna"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'eink'
+hideHeader = false
+
+# Breadcrumbs
+[params.breadcrumbs]
+enabled = true
+showCurrentPage = true
+home = "Home"
+
+# Social icons
+[[params.social]]
+name = "Reddit"
+url = "https://www.reddit.com/user/mattia_riccadonna/"
+
+[[params.social]]
+name = "Instagram"
+url = "https://www.instagram.com/mattiariccadonna/"
+
+[[params.social]]
+name = "facebook"
+url = "https://www.facebook.com/mattia.riccadonna86"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "galleria"
+url = "/galleria"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "info"
+url = "/info"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
