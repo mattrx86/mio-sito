@@ -1,0 +1,75 @@
+:root {
+    --main-width: 780px; /* overrides default of 780px */
+}
+
+/* MODIFICHE PER GALLERIA*/
+.galleria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    margin-top: 2rem;
+  }
+  .quadro {
+    display: flex;
+    align-items: flex-start; /* 👈 questo fa il trucco */
+    gap: 2rem;
+  } 
+  .quadro img {
+    max-width: 300px;
+    height: auto;
+  }
+  .info-quadri {
+    font-size: 1em;
+    line-height: 1;
+  }
+  .info-quadri p {
+    font-size: 0.9em;
+    margin: 0.2rem 0;
+    line-height: 1.1;
+  }
+
+/* MODIFICHE PER I FILTRI*/
+.filtro-riga {
+  display: flex;
+  font-size: 0.85em;
+  flex-wrap: wrap;
+  row-gap: 0rem;
+  column-gap: 0.4rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.filtro {
+  font-size: 0.85em;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  color: #4b4b4b;
+}
+
+.filtro:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.filtro.attivo {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+  }
+
+
+  
+  @media screen and (max-width: 768px) {
+    .quadro {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 600px) {
+    .quadro img {
+      max-width: 100%;
+      height: auto;
+      max-height: 50vh; /* massimo metà schermo */
+      object-fit: contain;
+    }
+  }
+  

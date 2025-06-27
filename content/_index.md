@@ -2,6 +2,8 @@
 title: "Mattia Riccadonna"
 ---
 
-# Colori e luce!
+## Colori e luce.
 
-Galleria personale, idee e dipinti di Mattia Riccadonna. Dallo studio della teoria del colore all'equilibrio di composizione "Notan" attraverso forme del paesaggio con tecnica pittorica ad olio. Vivo, lavoro e dipingo in Trentino Alto Adige.
+Dipinti e spazio personale a cura di Mattia Riccadonna. Colori e composizioni attraverso le forme del paesaggio con tecnica ad olio. Vive, lavora e dipinge in Trentino-Alto Adige.
+
+> “Ci vuole molto tempo per rendere le cose semplici.” — David Hockney

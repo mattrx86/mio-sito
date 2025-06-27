@@ -2,10 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mattia Riccadonna</title>
-    <link>http://localhost:1313/</link>
+    <link>https://mattiariccadonna.com/</link>
     <description>Recent content on Mattia Riccadonna</description>
     <generator>Hugo</generator>
     <language>it</language>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mattiariccadonna.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Log-Structured Merge Tree</title>
+      <link>https://mattiariccadonna.com/posts/2025-06-27-nuovo-progetto/</link>
+      <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/posts/2025-06-27-nuovo-progetto/</guid>
+      <description>An LSM Tree overview and Java implementation.</description>
+    </item>
+    <item>
+      <title>Contatti</title>
+      <link>https://mattiariccadonna.com/contatti/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/contatti/</guid>
+      <description>&lt;p&gt;Mi chiamo Mattia, sono nato nel 1986 e vivo a Comano Terme. Ho una passione per il disegno e la pittura che coltivo da più di vent’anni. Nel tempo libero dipingo e sperimento con forme e colori, seguendo ispirazioni personali e varie influenze.&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;“Credo che il processo stesso di guardare possa rendere bella una cosa.” — David Hockney&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:mattia.riccadonna@yahoo.it&#34;&gt;Scrivimi!&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Prova 1</title>
+      <link>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prova due che ne so</title>
+      <link>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Senza titolo</title>
+      <link>https://mattiariccadonna.com/galleria/senza-titolo-1991/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/galleria/senza-titolo-1991/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Senza titolo 2</title>
+      <link>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-2/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

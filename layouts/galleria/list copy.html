@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+  <h1 style="display:none;">Galleria</h1>
+
+  <!-- Filtro -->
+  <div id="filtri">
+    <button data-filter="*">Tutti</button>
+    {{ range $tag, $_ := .Site.Taxonomies.tags }}
+      <button data-filter=".{{ $tag | urlize }}">{{ $tag }}</button>
+    {{ end }}
+  </div>
+  
+
+  <!-- Mosaico -->
+  <div class="griglia-galleria">
+    {{ range .RegularPages }}
+      <a href="{{ .RelPermalink }}" class="quadro {{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+        <img src="{{ .Params.image }}" alt="{{ .Title }}">
+      </a>
+    {{ end }}
+  </div>
+
+  <!-- Carica la libreria Isotope -->
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+  <!-- Inizializza i filtri -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const grid = new Isotope(".griglia-galleria", {
+        itemSelector: ".quadro",
+        layoutMode: "fitRows"
+      });
+
+      document.querySelectorAll("#filtri button").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const filter = btn.getAttribute("data-filter");
+          grid.arrange({ filter });
+        });
+      });
+    });
+  </script>
+
+{{ end }}

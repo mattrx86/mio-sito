@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+
+<!-- Filtro Anni -->
+<div class="filtro-anni filtro-riga">
+  <span class="filtro attivo" data-filter="*">Tutti</span>
+  {{ $anni := slice }}
+  {{ range .Pages }}
+    {{ with .Params.year }}
+      {{ $anni = $anni | append . }}
+    {{ end }}
+  {{ end }}
+  {{ range (uniq $anni | sort) }}
+    <span class="filtro" data-filter=".anno-{{ . }}">{{ . }}</span>
+  {{ end }}
+</div>
+
+<!-- Filtro Tag -->
+<div class="filtro-tag filtro-riga">
+  <span class="filtro attivo" data-filter="*">Tutti</span>
+  {{ range $tag, $_ := .Site.Taxonomies.tags }}
+    <span class="filtro" data-filter=".{{ $tag | urlize }}">{{ $tag }}</span>
+  {{ end }}
+</div>
+
+  <!-- Elenco quadri -->
+  <div class="galleria">
+    {{ range .Pages }}
+    <div class="quadro {{ with .Params.year }}anno-{{ . }} {{ end }}{{ range .Params.tags }}{{ . | urlize }} {{ end }}">
+        <img 
+          src="{{ .Params.image }}"
+          data-zoom-src="{{ .Params.zoom }}"
+          alt="{{ .Title }}"
+          loading="lazy" />
+        <div class="info-quadri">
+          <p><em>{{ .Title }}</em>, {{ .Params.year }}</p>
+          <p>{{ .Params.medium }}</p>
+          <p>{{ .Params.size }}</p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

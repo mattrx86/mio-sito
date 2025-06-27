@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
+  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+{{ $theme := "auto"}}
+
+{{ with .Param "theme" }}
+{{ $theme = .}}
+{{ end }}
+
+<body class="{{ $theme }}">
+
+  <div class="content">
+    <header>
+      {{ partial "header.html" . }}
+    </header>
+
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+    </main>
+  </div>
+
+  {{/* Body end hook */}}
+  {{ partial "functions/get_hook.html" (dict "hook" "body_end" "context" .) }}
+
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+
+  {{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+  {{ end }}
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js"></script>
+<script>
+  mediumZoom('.galleria img', {
+    margin: 24,
+    background: 'rgba(0,0,0,0.25)'
+  }); 
+</script>
+<script>
+  let filtroAnno = '*';
+  let filtroTag = '*';
+
+  function aggiornaGalleria() {
+    document.querySelectorAll('.quadro').forEach(el => {
+      const haAnno = filtroAnno === '*' || el.classList.contains(filtroAnno.replace('.', ''));
+      const haTag = filtroTag === '*' || el.classList.contains(filtroTag.replace('.', ''));
+      el.style.display = (haAnno && haTag) ? 'flex' : 'none';
+    });
+  }
+
+  // Gestione filtri anno
+  document.querySelectorAll('.filtro-anni .filtro').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filtro-anni .filtro').forEach(el => el.classList.remove('attivo'));
+      btn.classList.add('attivo');
+      filtroAnno = btn.getAttribute('data-filter');
+      aggiornaGalleria();
+    });
+  });
+
+  // Gestione filtri tag
+  document.querySelectorAll('.filtro-tag .filtro').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filtro-tag .filtro').forEach(el => el.classList.remove('attivo'));
+      btn.classList.add('attivo');
+      filtroTag = btn.getAttribute('data-filter');
+      aggiornaGalleria();
+    });
+  });
+</script>
+<script src="{{ "js/theme-switch.js" | relURL }}"></script>
+<script defer src="{{ "js/copy-code.js" | relURL }}"></script>
+</html>

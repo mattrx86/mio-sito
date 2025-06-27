@@ -1,0 +1,12 @@
+<article class="quadro-singolo">
+    <h1>{{ .Title }}</h1>
+    <img src="{{ .Params.image }}" alt="{{ .Title }}">
+    <ul>
+      <li><strong>Artista:</strong> {{ .Params.artist }}</li>
+      <li><strong>Anno:</strong> {{ .Params.year }}</li>
+      <li><strong>Tecnica:</strong> {{ .Params.medium }}</li>
+      <li><strong>Dimensioni:</strong> {{ .Params.size }}</li>
+    </ul>
+    <p>{{ .Content }}</p>
+  </article>
+  

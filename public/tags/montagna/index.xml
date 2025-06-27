@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Montagna on Mattia Riccadonna</title>
+    <link>http://localhost:1313/tags/montagna/</link>
+    <description>Recent content in Montagna on Mattia Riccadonna</description>
+    <generator>Hugo</generator>
+    <language>it</language>
+    <atom:link href="http://localhost:1313/tags/montagna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Senza titolo</title>
+      <link>http://localhost:1313/gallery/senza-titolo-1991/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/gallery/senza-titolo-1991/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Senza titolo</title>
+      <link>http://localhost:1313/gallery/senza-titolo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/gallery/senza-titolo/</guid>
+      <description>&lt;p&gt;Test visibile&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
