@@ -4,7 +4,7 @@ title = "Mattia Riccadonna"
 theme = "typo"
 
 # --- ANALYTICS (facoltativo) ---
-googleAnalytics = "G-CJZF9EPTD0"
+#googleAnalytics = "G-CJZF9EPTD0"
 
 # --- TASSONOMIE (puoi anche rimuoverle se non usi tag) ---
 [taxonomies]
@@ -73,3 +73,8 @@ category = "General"
 categoryid = "categoryId"
 mapping = "pathname"
 theme = "preferred_color_scheme"
+
+[params.umami]
+enable = true
+websiteId = "7f1594c8-ae9f-4d1d-96dc-05f5c62de636"
+jsLocation = "https://cloud.umami.is/script.js"
