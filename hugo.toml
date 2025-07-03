@@ -3,16 +3,16 @@ languageCode = "it"
 title = "Mattia Riccadonna"
 theme = "typo"
 
-# --- ANALYTICS (facoltativo) ---
+# Google analytics code
 #googleAnalytics = "G-CJZF9EPTD0"
 
-# --- TASSONOMIE (puoi anche rimuoverle se non usi tag) ---
 [taxonomies]
 tag = "tags"
 
-# --- PARAMETRI DI PERSONALIZZAZIONE ---
 [params]
 description = "Galleria personale, idee e dipinti di Mattia Riccadonna"
+keywords = ["arte contemporanea", "galleria d'arte", "pittura ad olio", "artista italiano", "Mattia Riccadonna", "paesaggi del Trentino-Alto Adige"]
+subtitle = "Colori e luce"
 
 # Appearance settings
 theme = 'light'
@@ -31,16 +31,16 @@ home = "~"
 #url = "https://www.reddit.com/user/mattia_riccadonna/"
 
 [[params.social]]
-name = "facebook"
-url = "https://www.facebook.com/mattia.riccadonna86"
-
-[[params.social]]
 name = "Instagram"
 url = "https://www.instagram.com/mattiariccadonna/"
 
 [[params.social]]
-name = "Whatsapp"
-url = "https://wa.me/393200866982"
+name = "facebook"
+url = "https://www.facebook.com/mattia.riccadonna86"
+
+#[[params.social]]
+#name = "Whatsapp"
+#url = "https://wa.me/393200866982"
 
 # Main menu pages
 [[params.menu]]
@@ -78,3 +78,4 @@ theme = "preferred_color_scheme"
 enable = true
 websiteId = "7f1594c8-ae9f-4d1d-96dc-05f5c62de636"
 jsLocation = "https://cloud.umami.is/script.js"
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Mattia Riccadonna</title>
+    <link>http://localhost:1313/it/tags/</link>
+    <description>Recent content in Tags on Mattia Riccadonna</description>
+    <generator>Hugo</generator>
+    <language>it</language>
+    <atom:link href="http://localhost:1313/it/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Marittimo</title>
+      <link>http://localhost:1313/it/tags/marittimo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/marittimo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Matita</title>
+      <link>http://localhost:1313/it/tags/matita/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/matita/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Natura</title>
+      <link>http://localhost:1313/it/tags/natura/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/natura/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Notturno</title>
+      <link>http://localhost:1313/it/tags/notturno/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/notturno/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Olio_su_tela</title>
+      <link>http://localhost:1313/it/tags/olio_su_tela/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/olio_su_tela/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paesaggio</title>
+      <link>http://localhost:1313/it/tags/paesaggio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/it/tags/paesaggio/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
