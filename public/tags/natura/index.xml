@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Natura on Mattia Riccadonna</title>
-    <link>https://mattiariccadonna.com/tags/natura/</link>
+    <link>http://localhost:1313/tags/natura/</link>
     <description>Recent content in Natura on Mattia Riccadonna</description>
     <generator>Hugo</generator>
     <language>it</language>
-    <atom:link href="https://mattiariccadonna.com/tags/natura/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/natura/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prova due che ne so</title>
-      <link>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-3/</link>
+      <link>http://localhost:1313/galleria/senza-titolo-1991-copy-3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mattiariccadonna.com/galleria/senza-titolo-1991-copy-3/</guid>
+      <guid>http://localhost:1313/galleria/senza-titolo-1991-copy-3/</guid>
       <description></description>
     </item>
   </channel>

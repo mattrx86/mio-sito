@@ -6,17 +6,31 @@
 .galleria {
     display: flex;
     flex-wrap: wrap;
-    gap: 10rem;
+    gap: 2rem;
     margin-top: 2rem;
   }
   .quadro {
     display: flex;
     align-items: flex-start; /* 👈 questo fa il trucco */
-    gap: 2rem;
+    gap: 1rem;
+      flex: 0 1 auto;
+  margin-bottom: 2rem;
   } 
-  .quadro img {
+  /*.quadro img {
     max-width: 300px;
     height: auto;
+  }*/
+  /*.quadro img {
+  width: auto;
+  height: auto;
+  max-height: 300px; 
+  object-fit: contain;
+  display: block;
+  }*/
+  .quadro img {
+  max-width: 350px;
+  height: auto;
+  object-fit: contain;
   }
   .info-quadri {
     font-size: 1em;

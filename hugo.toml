@@ -26,17 +26,17 @@ showCurrentPage = true
 home = "~"
 
 # Social icons
-#[[params.social]]
-#name = "Reddit"
-#url = "https://www.reddit.com/user/mattia_riccadonna/"
+[[params.social]]
+name = "Reddit"
+url = "https://www.reddit.com/user/mattia_riccadonna/"
 
 [[params.social]]
 name = "Instagram"
 url = "https://www.instagram.com/mattiariccadonna/"
 
-[[params.social]]
-name = "facebook"
-url = "https://www.facebook.com/mattia.riccadonna86"
+#[[params.social]]
+#name = "facebook"
+#url = "https://www.facebook.com/mattia.riccadonna86"
 
 #[[params.social]]
 #name = "Whatsapp"
@@ -47,9 +47,9 @@ url = "https://www.facebook.com/mattia.riccadonna86"
 name = "home"
 url = "/"
 
-#[[params.menu]]
-#name = "galleria"
-#url = "/galleria"
+[[params.menu]]
+name = "galleria"
+url = "/galleria"
 
 #[[params.menu]]
 #name = "posts"
@@ -79,3 +79,7 @@ enable = true
 websiteId = "7f1594c8-ae9f-4d1d-96dc-05f5c62de636"
 jsLocation = "https://cloud.umami.is/script.js"
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
