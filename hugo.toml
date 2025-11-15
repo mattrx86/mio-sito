@@ -11,7 +11,7 @@ tag = "tags"
 
 [params]
 description = "Galleria personale, idee e dipinti di Mattia Riccadonna"
-keywords = ["arte contemporanea", "galleria d'arte", "pittura ad olio", "artista italiano", "Mattia Riccadonna", "paesaggi del Trentino-Alto Adige"]
+keywords = ["arte contemporanea", "galleria d'arte", "pittura ad olio", "artista italiano", "Mattia Riccadonna", "paesaggi del Trentino-Alto Adige", "copia d'autore", "talento italiano"]
 subtitle = "Colori e luce"
 
 # Appearance settings
@@ -32,15 +32,15 @@ url = "https://www.reddit.com/user/mattia_riccadonna/"
 
 [[params.social]]
 name = "Instagram"
-url = "https://www.instagram.com/mattiariccadonna/"
+url = "https://www.instagram.com/m4ttiar/"
 
-#[[params.social]]
-#name = "facebook"
-#url = "https://www.facebook.com/mattia.riccadonna86"
+[[params.social]]
+name = "facebook"
+url = "https://www.facebook.com/mattia.riccadonna86"
 
-#[[params.social]]
-#name = "Whatsapp"
-#url = "https://wa.me/393200866982"
+[[params.social]]
+name = "Ebay"
+url = "https://www.ebay.it/usr/mattia_riccadonna_art"
 
 # Main menu pages
 [[params.menu]]
