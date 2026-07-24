@@ -108,3 +108,25 @@ a {
 main {
   max-width: 680px;
 }
+
+/* --- Colori link bordeaux caldi --- */
+:root {
+  --link-color: #8B3A3A;        /* bordeaux */
+  --link-hover: #C0622A;        /* marrone arancio al hover */
+}
+
+[data-theme="dark"] {
+  --link-color: #C4826A;        /* bordeaux chiaro per dark mode */
+  --link-hover: #E8A882;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration-color: transparent;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration-color: var(--link-hover);
+}
