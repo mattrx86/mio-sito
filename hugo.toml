@@ -1,7 +1,29 @@
 baseURL = "https://mattiariccadonna.com/"
-languageCode = "it"
-title = "Mattia Riccadonna"
-theme = "nostyleplease"
+theme   = "nostyleplease"
+
+# Lingua di default
+defaultContentLanguage         = "it"
+defaultContentLanguageInSubdir = false   # italiano senza /it/ nell'URL
+
+[languages]
+  [languages.it]
+    languageCode = "it-IT"
+    languageName = "Italiano"
+    title        = "Mattia Riccadonna"
+    weight       = 1
+    [languages.it.params]
+      description = "Pittore su tela, ingegnere, padre. Dipingo dal 2002. Olio, acquerello, sperimentazione."
+      keywords    = ["pittore", "arte", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "illustrazione"]
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    title        = "Mattia Riccadonna"
+    weight       = 2
+    contentDir   = "content/en"
+    [languages.en.params]
+      description = "Painter, engineer, father. Oil on canvas, watercolour, experimentation. Archive of works since 2002."
+      keywords    = ["painter", "art", "oil painting", "watercolour", "Mattia Riccadonna", "Italian artist", "Trentino"]
 
 [markup]
   [markup.goldmark]
@@ -11,24 +33,22 @@ theme = "nostyleplease"
         title = true
   [markup.highlight]
     codeFences = true
-    style = 'rrt'
+    style      = 'rrt'
   [markup.tableOfContents]
     startLevel = 2
-    endLevel = 3
-    ordered = false
+    endLevel   = 3
+    ordered    = false
 
 [params]
-  description = "Pittore, acquerellista, illustratore. Archivio di opere dal 2002 ad oggi."
-  keywords = ["arte", "pittura", "acquerello", "illustrazione", "Mattia Riccadonna", "Trentino"]
-
   [params.theme_config]
-    appearance        = "auto"       # "light", "dark", "auto"
+    appearance        = "auto"
     back_home_text    = "← indietro"
     date_format       = "2006-01-02"
     isListGroupByDate = true
     isShowFooter      = true
-    show_description  = true         # mostra la descrizione sotto il titolo in home
+    show_description  = true
 
+# SEO — sitemap
 [sitemap]
   changefreq = "weekly"
   priority   = 0.5
