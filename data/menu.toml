@@ -1,0 +1,44 @@
+[[entries]]
+  title = "mattia riccadonna"
+  url   = "/"
+
+[[entries]]
+  title = "archivio (2002–2007)"
+
+  [[entries.entries]]
+    title     = "tutti i dipinti"
+    url       = "/archivio"
+    post_list = { section = "archivio", limit = 5, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutti" }
+
+[[entries]]
+  title = "studio"
+
+  [[entries.entries]]
+    title     = "acquerelli & bozzetti"
+    url       = "/studio"
+    post_list = { section = "studio", limit = 5, show_more = true, show_more_url = "/studio", show_more_text = "→ tutti" }
+
+[[entries]]
+  title = "illustrazione"
+  url   = "/illustrazione"
+
+[[entries]]
+  title = "note & blog"
+  url   = "/blog"
+
+  [[entries.entries]]
+    title     = "ultimi post"
+    post_list = { section = "blog", limit = 3, show_more = true, show_more_url = "/blog", show_more_text = "→ tutti" }
+
+[[entries]]
+  title = "contatti"
+  url   = "/contatti"
+
+[[entries]]
+  title = "—"
+
+[[entries]]
+  title = "<a href='https://www.instagram.com/m4ttiar/' target='_blank'>instagram</a>"
+
+[[entries]]
+  title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank'>ebay (opere in vendita)</a>"

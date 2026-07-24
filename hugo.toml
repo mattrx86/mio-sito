@@ -1,85 +1,35 @@
 baseURL = "https://mattiariccadonna.com/"
 languageCode = "it"
 title = "Mattia Riccadonna"
-theme = "typo"
+theme = "nostyleplease"
 
-# Google analytics code
-#googleAnalytics = "G-CJZF9EPTD0"
-
-[taxonomies]
-tag = "tags"
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    codeFences = true
+    style = 'rrt'
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
 
 [params]
-description = "Galleria personale, idee e dipinti di Mattia Riccadonna"
-keywords = ["arte contemporanea", "galleria d'arte", "pittura ad olio", "artista italiano", "Mattia Riccadonna", "paesaggi del Trentino-Alto Adige", "copia d'autore", "talento italiano"]
-subtitle = "Colori e luce"
+  description = "Pittore, acquerellista, illustratore. Archivio di opere dal 2002 ad oggi."
+  keywords = ["arte", "pittura", "acquerello", "illustrazione", "Mattia Riccadonna", "Trentino"]
 
-# Appearance settings
-theme = 'light'
-colorPalette = 'eink'
-hideHeader = false
-
-# Breadcrumbs
-[params.breadcrumbs]
-enabled = true
-showCurrentPage = true
-home = "~"
-
-# Social icons
-[[params.social]]
-name = "Reddit"
-url = "https://www.reddit.com/user/mattia_riccadonna/"
-
-[[params.social]]
-name = "Instagram"
-url = "https://www.instagram.com/m4ttiar/"
-
-[[params.social]]
-name = "facebook"
-url = "https://www.facebook.com/mattia.riccadonna86"
-
-[[params.social]]
-name = "Ebay"
-url = "https://www.ebay.it/usr/mattia_riccadonna_art"
-
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "galleria"
-url = "/galleria"
-
-#[[params.menu]]
-#name = "posts"
-#url = "/posts"
-
-[[params.menu]]
-name = "contatti"
-url = "/contatti"
-
-# Syntax highlight on code blocks
-[markup]
-[markup.highlight]
-style = 'algol'
-
-# Giscus comments
-[params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
-
-[params.umami]
-enable = true
-websiteId = "7f1594c8-ae9f-4d1d-96dc-05f5c62de636"
-jsLocation = "https://cloud.umami.is/script.js"
+  [params.theme_config]
+    appearance        = "auto"       # "light", "dark", "auto"
+    back_home_text    = "← indietro"
+    date_format       = "2006-01-02"
+    isListGroupByDate = true
+    isShowFooter      = true
+    show_description  = true         # mostra la descrizione sotto il titolo in home
 
 [sitemap]
   changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
+  priority   = 0.5
+  filename   = "sitemap.xml"

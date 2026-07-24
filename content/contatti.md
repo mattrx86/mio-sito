@@ -1,11 +1,13 @@
 ---
-title: "Contatti"
-description: "Scrivi a Mattia Riccadonna — artista e pittore dal Trentino-Alto Adige. Rispondo a curiosità, collaborazioni e richieste artistiche."
-keywords: ["contatti artista", "Mattia Riccadonna", "scrivimi", "galleria pittura", "arte contemporanea"]
-layout: "single"
-hideBackToTop: true
+title: "contatti"
+date: 2024-01-01
 ---
 
-Mi chiamo Mattia Riccadonna, sono nato nel 1986 e vivo a Comano Terme. Ho una passione per la pittura ed il disegno che coltivo da più di vent’anni. Dipingo e sperimento con forme, colori e composizioni seguendo ispirazioni personali e varie influenze artistiche.
+Puoi trovarmi qui:
 
-[Scrivimi!](mailto:info@mattiariccadonna.com)
+- **Instagram** → [@m4ttiar](https://www.instagram.com/m4ttiar/)
+- **Facebook** → [mattia.riccadonna86](https://www.facebook.com/mattia.riccadonna86)
+- **Reddit** → [u/mattia_riccadonna](https://www.reddit.com/user/mattia_riccadonna/)
+- **eBay** (opere in vendita) → [mattia_riccadonna_art](https://www.ebay.it/usr/mattia_riccadonna_art)
+
+Per commissioni, collaborazioni o semplicemente per fare due chiacchiere sull'arte, scrivimi su Instagram è il modo più veloce.

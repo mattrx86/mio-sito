@@ -1,0 +1,14 @@
+[build]
+  publish = "public"
+  command = "hugo --minify"
+
+[build.environment]
+  HUGO_VERSION        = "0.128.0"
+  HUGO_ENABLEGITINFO  = "true"
+
+# Redirect www → no-www
+[[redirects]]
+  from   = "https://www.mattiariccadonna.com/*"
+  to     = "https://mattiariccadonna.com/:splat"
+  status = 301
+  force  = true
