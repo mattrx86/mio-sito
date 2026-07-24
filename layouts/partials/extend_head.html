@@ -1,0 +1,29 @@
+<!-- Toggle dark/light mode -->
+<style>
+  #theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    opacity: 0.5;
+    background: none;
+    border: 1px solid currentColor;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2px;
+    color: inherit;
+  }
+  #theme-toggle:hover { opacity: 1; }
+</style>
+<button id="theme-toggle" onclick="toggleTheme()">◐</button>
+<script>
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    html.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    localStorage.setItem('theme', current === 'dark' ? 'light' : 'dark');
+  }
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+</script>
