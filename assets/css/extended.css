@@ -1,9 +1,23 @@
 /* ============================================================
    MATTIA RICCADONNA — CSS personalizzato sopra nostyleplease
-   Importa Space Mono (nerd/elegante) da Google Fonts
+   v2 — con hover highlight, colori link, dark mode toggle
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap');
+
+/* --- Variabili colore --- */
+:root {
+  --link-color:      #7A2E2E;   /* bordeaux scuro */
+  --link-hover:      #B84A2A;   /* terracotta al hover */
+  --link-bg-hover:   #F5EDE8;   /* highlight caldo al hover */
+  --accent:          #7A2E2E;
+}
+
+[data-theme="dark"] {
+  --link-color:      #D4907A;   /* bordeaux chiaro */
+  --link-hover:      #EDB99A;
+  --link-bg-hover:   #2A1A14;   /* highlight scuro */
+}
 
 /* --- Tipografia base --- */
 body {
@@ -12,7 +26,7 @@ body {
   line-height: 1.75;
 }
 
-/* Testi lunghi (post, descrizioni opere) più leggibili con serif */
+/* Testi lunghi più leggibili con serif */
 article p,
 article li,
 .content p,
@@ -22,7 +36,7 @@ article li,
   line-height: 1.85;
 }
 
-/* Titoli restano monospace — danno quel tono archivistico */
+/* Titoli monospace — tono archivistico */
 h1, h2, h3, h4 {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -32,6 +46,32 @@ h1, h2, h3, h4 {
 h1 { font-size: 1.1rem; }
 h2 { font-size: 1rem; }
 
+/* --- Link con hover highlight --- */
+a {
+  color: var(--link-color);
+  text-decoration-color: transparent;
+  border-radius: 2px;
+  padding: 0 2px;
+  transition: color 0.15s, background-color 0.15s, text-decoration-color 0.15s;
+}
+
+a:hover {
+  color: var(--link-hover);
+  background-color: var(--link-bg-hover);
+  text-decoration-color: var(--link-hover);
+}
+
+/* --- Citazioni (blockquote) --- */
+blockquote {
+  border-left: 2px solid var(--link-color);
+  margin-left: 0;
+  padding-left: 1.2rem;
+  opacity: 0.85;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
 /* --- Immagini --- */
 article img,
 .content img {
@@ -39,12 +79,11 @@ article img,
   height: auto;
   display: block;
   margin: 2rem auto;
-  /* sottile bordo che dà senso di "cornice" senza essere kitsch */
   outline: 1px solid currentColor;
   outline-offset: 4px;
 }
 
-/* Didascalia immagine (testo subito dopo un'immagine in corsivo) */
+/* Didascalia — testo in corsivo subito dopo immagine */
 article img + em,
 .content img + em {
   display: block;
@@ -56,22 +95,14 @@ article img + em,
   font-family: 'Space Mono', monospace;
 }
 
-/* --- Metadati opera (grassetto + valore) --- */
+/* --- Metadati opera --- */
 article strong {
   font-family: 'Space Mono', monospace;
   font-size: 0.85rem;
   letter-spacing: 0.03em;
 }
 
-/* --- Tag --- */
-.tags a,
-a[href*="/tags/"] {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.78rem;
-  opacity: 0.7;
-}
-
-/* --- Separatore orizzontale (usato tra info e narrazione) --- */
+/* --- Separatore --- */
 hr {
   border: none;
   border-top: 1px solid currentColor;
@@ -79,7 +110,7 @@ hr {
   margin: 2rem 0;
 }
 
-/* --- Blocco <details> per i retroscena/dettagli --- */
+/* --- Blocco details/summary per retroscena --- */
 details {
   border-left: 2px solid currentColor;
   padding-left: 1rem;
@@ -98,35 +129,27 @@ details[open] summary {
   margin-bottom: 1rem;
 }
 
-/* --- Link generici --- */
-a {
-  text-underline-offset: 3px;
+/* --- Toggle dark/light in alto a destra --- */
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  opacity: 0.45;
+  background: none;
+  border: 1px solid currentColor;
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+  color: inherit;
+  transition: opacity 0.15s;
+  z-index: 100;
 }
 
-/* --- Larghezza contenuto leggermente più ampia per le immagini --- */
-.container,
-main {
+#theme-toggle:hover { opacity: 1; }
+
+/* --- Larghezza contenuto --- */
+.container, main {
   max-width: 680px;
-}
-
-/* --- Colori link bordeaux caldi --- */
-:root {
-  --link-color: #8B3A3A;        /* bordeaux */
-  --link-hover: #C0622A;        /* marrone arancio al hover */
-}
-
-[data-theme="dark"] {
-  --link-color: #C4826A;        /* bordeaux chiaro per dark mode */
-  --link-hover: #E8A882;
-}
-
-a {
-  color: var(--link-color);
-  text-decoration-color: transparent;
-  transition: color 0.15s, text-decoration-color 0.15s;
-}
-
-a:hover {
-  color: var(--link-hover);
-  text-decoration-color: var(--link-hover);
 }
