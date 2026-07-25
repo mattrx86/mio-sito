@@ -15,20 +15,20 @@
     post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutte le opere" }
 
   [[entries.entries]]
-    title     = "studio — lavori recenti"
-    url       = "/studio"
-    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio", show_more_text = "→ tutti" }
+    title     = "lavori recenti"
+    url       = "/lavori-recenti"
+    post_list = { section = "lavori-recenti", limit = 3, show_more = true, show_more_url = "/lavori-recenti", show_more_text = "→ tutti" }
 
   [[entries.entries]]
     title = "illustrazione"
     url   = "/illustrazione"
 
 [[entries]]
-  title = "storia & documenti"
+  title = "storia"
 
   [[entries.entries]]
-    title = "mostre ed esposizioni"
-    url   = "/mostre"
+    title = "mostre e concorsi"
+    url   = "/mostre-e-concorsi"
 
   [[entries.entries]]
     title = "rassegna stampa"
@@ -50,13 +50,10 @@
   title = "—"
 
 [[entries]]
-  title = "<a href='/en/'>🇬🇧 english</a>"
+  title = "<a href='/en/'>english version</a>"
 
 [[entries]]
   title = "—"
 
 [[entries]]
-  title = "<a href='https://www.instagram.com/m4ttiar/' target='_blank'>instagram</a>"
-
-[[entries]]
-  title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank'>ebay (opere in vendita)</a>"
+  title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank'>opere in vendita</a>"
