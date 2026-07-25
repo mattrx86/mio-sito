@@ -1,8 +1,7 @@
-a {
+a, a:visited {
   color: #7A2E2E;
 }
 
 a:hover {
   color: #B84A2A;
-  background-color: #F5EDE8;
 }
