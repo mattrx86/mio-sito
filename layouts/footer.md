@@ -1,1 +1,1 @@
-2026 — Mattia Riccadonna, strati. — Un archivio personale.
+1999-2026 — Un archivio personale.
