@@ -1,1 +1,1 @@
-© MR. Un archivio personale. 2002-2026 
+Un archivio personale. ©MR 2002-2026 
