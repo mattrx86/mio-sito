@@ -1,0 +1,175 @@
+{{- $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) -}}
+{{- $styles := resources.Get "css/main.css" | toCSS $cssOpts | minify -}}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }}</title>
+<link rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" href="{{ "index.xml" | absURL }}">
+{{- with .Site.Params.description }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- with .Site.Params.keywords }}
+<meta name="keywords" content="{{ delimit . ", " }}">
+{{- end }}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:type" content="website" />
+{{- with .Site.Params.description }}
+<meta property="og:description" content="{{ . }}" />
+{{- end }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}">
+<style>
+/* ============================================================
+   Mattia Riccadonna, strati. — CSS personalizzato
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --link-color:    #7A2E2E;
+  --link-hover:    #B84A2A;
+  --link-bg-hover: #F5EDE8;
+}
+
+[data-theme="dark"] {
+  --link-color:    #D4907A;
+  --link-hover:    #EDB99A;
+  --link-bg-hover: #2A1A14;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+article p, article li, .content p, .content li {
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 1.1rem; }
+h2 { font-size: 1rem; }
+
+a {
+  color: var(--link-color);
+  text-decoration-color: transparent;
+  border-radius: 2px;
+  padding: 0 2px;
+  transition: color 0.15s, background-color 0.15s, text-decoration-color 0.15s;
+}
+
+a:hover {
+  color: var(--link-hover);
+  background-color: var(--link-bg-hover);
+  text-decoration-color: var(--link-hover);
+}
+
+blockquote {
+  border-left: 2px solid var(--link-color);
+  margin-left: 0;
+  padding-left: 1.2rem;
+  opacity: 0.85;
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+dt {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin-top: 0.8rem;
+}
+
+dd { margin-left: 0; font-family: 'Instrument Serif', serif; }
+
+article img, .content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+article img + em, .content img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin-top: -1.2rem;
+  margin-bottom: 2rem;
+  font-family: 'Space Mono', monospace;
+}
+
+article strong {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid currentColor;
+  opacity: 0.2;
+  margin: 2rem 0;
+}
+
+details {
+  border-left: 2px solid currentColor;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  opacity: 0.85;
+}
+
+details summary {
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  user-select: none;
+}
+
+details[open] summary { margin-bottom: 1rem; }
+
+#theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  opacity: 0.4;
+  background: none;
+  border: 1px solid currentColor;
+  padding: 0.2rem 0.45rem;
+  border-radius: 2px;
+  color: inherit;
+  transition: opacity 0.15s;
+  z-index: 100;
+}
+
+#theme-toggle:hover { opacity: 1; }
+
+.container, main { max-width: 680px; }
+</style>
+
+<script>
+  (function() {
+    var saved = localStorage.getItem('theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  })();
+  function toggleTheme() {
+    var html = document.documentElement;
+    var current = html.getAttribute('data-theme');
+    var next = (current === 'dark') ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  }
+</script>
+<button id="theme-toggle" onclick="toggleTheme()" title="Cambia tema / Switch theme">◐</button>
