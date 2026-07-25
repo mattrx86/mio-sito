@@ -47,7 +47,7 @@ h2 { font-size: 1rem;   }
 
 /* --- Link con hover highlight --- */
 a {
-  color: var(--link-color);
+  color: #7A2E2E;
   text-decoration-color: transparent;
   border-radius: 2px;
   padding: 0 2px;
@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: #B84A2A;
   background-color: var(--link-bg-hover);
   text-decoration-color: var(--link-hover);
 }
