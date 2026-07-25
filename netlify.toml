@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "rm -rf themes/typo themes/nostyleplease && git clone https://github.com/hanwenguo/hugo-theme-nostyleplease themes/nostyleplease && hugo --minify"
+  command = "rm -rf themes/typo themes/nostyleplease && git clone https://github.com/hanwenguo/hugo-theme-nostyleplease themes/nostyleplease && printf 'a { color: #7A2E2E !important; }\na:hover { color: #B84A2A !important; background-color: #F5EDE8; }' >> themes/nostyleplease/assets/css/main.scss && hugo --minify"
 
 [build.environment]
   HUGO_VERSION       = "0.128.0"
