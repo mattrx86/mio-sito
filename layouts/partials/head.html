@@ -12,7 +12,6 @@
 <meta property="og:type" content="website" />
 {{ $mainCSS := resources.Get "css/main.css" }}
 {{ if $mainCSS }}<link rel="stylesheet" href="{{ $mainCSS.Permalink }}">{{ end }}
-{{ partial "theme-style.html" . }}
 <style>
 :root { --link-color: #7A2E2E; --link-hover: #B84A2A; --link-bg-hover: #F5EDE8; }
 [data-theme="dark"] { --link-color: #D4907A; --link-hover: #EDB99A; --link-bg-hover: #2A1A14; }
@@ -25,4 +24,4 @@ a:hover { color: var(--link-hover) !important; background-color: var(--link-bg-h
 (function(){var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();
 function toggleTheme(){var h=document.documentElement;var c=h.getAttribute('data-theme');var n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
 </script>
-<button id="theme-toggle" onclick="toggleTheme()" title="◐"></button>
+<button id="theme-toggle" onclick="toggleTheme()" title="◐">◐</button>
