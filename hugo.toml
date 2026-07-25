@@ -41,7 +41,7 @@ defaultContentLanguageInSubdir = false
 [params]
   [params.theme_config]
     appearance        = "auto"
-    back_home_text    = ".. indietro"
+    back_home_text    = "..indietro"
     date_format       = "2006-01-02"
     isListGroupByDate = true
     isShowFooter      = true
