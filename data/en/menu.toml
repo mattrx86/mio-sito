@@ -3,24 +3,36 @@
   url   = "/en/"
 
 [[entries]]
-  title = "archive (2002–2007)"
+  title = "about"
+  url   = "/en/storia"
+
+[[entries]]
+  title = "works"
 
   [[entries.entries]]
-    title     = "all paintings"
+    title     = "archive (2002–2007)"
     url       = "/en/archivio"
-    post_list = { section = "archivio", limit = 5, show_more = true, show_more_url = "/en/archivio", show_more_text = "→ all" }
-
-[[entries]]
-  title = "studio"
+    post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/en/archivio", show_more_text = "→ all works" }
 
   [[entries.entries]]
-    title     = "watercolours & sketches"
+    title     = "studio — recent work"
     url       = "/en/studio"
-    post_list = { section = "studio", limit = 5, show_more = true, show_more_url = "/en/studio", show_more_text = "→ all" }
+    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/en/studio", show_more_text = "→ all" }
+
+  [[entries.entries]]
+    title = "illustration"
+    url   = "/en/illustrazione"
 
 [[entries]]
-  title = "illustration"
-  url   = "/en/illustrazione"
+  title = "history & documents"
+
+  [[entries.entries]]
+    title = "exhibitions"
+    url   = "/en/mostre"
+
+  [[entries.entries]]
+    title = "press"
+    url   = "/en/rassegna-stampa"
 
 [[entries]]
   title = "notes & blog"
