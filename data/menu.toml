@@ -3,31 +3,43 @@
   url   = "/"
 
 [[entries]]
-  title = "archivio (2002–2007)"
+  title = "chi sono"
+  url   = "/storia"
+
+[[entries]]
+  title = "opere"
 
   [[entries.entries]]
-    title     = "tutti i dipinti"
+    title     = "archivio (2002–2007)"
     url       = "/archivio"
-    post_list = { section = "archivio", limit = 5, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutti" }
-
-[[entries]]
-  title = "studio"
+    post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutte le opere" }
 
   [[entries.entries]]
-    title     = "acquerelli & bozzetti"
+    title     = "studio — lavori recenti"
     url       = "/studio"
-    post_list = { section = "studio", limit = 5, show_more = true, show_more_url = "/studio", show_more_text = "→ tutti" }
+    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio", show_more_text = "→ tutti" }
+
+  [[entries.entries]]
+    title = "illustrazione"
+    url   = "/illustrazione"
 
 [[entries]]
-  title = "illustrazione"
-  url   = "/illustrazione"
+  title = "storia & documenti"
+
+  [[entries.entries]]
+    title = "mostre ed esposizioni"
+    url   = "/mostre"
+
+  [[entries.entries]]
+    title = "rassegna stampa"
+    url   = "/rassegna-stampa"
 
 [[entries]]
   title = "note & blog"
   url   = "/blog"
 
   [[entries.entries]]
-    title     = "ultimi post"
+    title     = "ultimi articoli"
     post_list = { section = "blog", limit = 3, show_more = true, show_more_url = "/blog", show_more_text = "→ tutti" }
 
 [[entries]]
