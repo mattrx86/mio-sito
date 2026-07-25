@@ -1,1 +1,1 @@
-1999-2026 — Un archivio personale.
+© MR. Un archivio personale. 2002-2026 
