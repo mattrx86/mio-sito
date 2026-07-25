@@ -10,37 +10,19 @@
 {{- end }}
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:type" content="website" />
-{{- with .Site.Params.description }}
-<meta property="og:description" content="{{ . }}" />
-{{- end }}
 {{ $mainCSS := resources.Get "css/main.css" }}
-{{ if $mainCSS }}
-  <link rel="stylesheet" href="{{ $mainCSS.Permalink }}">
-{{ end }}
+{{ if $mainCSS }}<link rel="stylesheet" href="{{ $mainCSS.Permalink }}">{{ end }}
+{{ partial "theme-style.html" . }}
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap');
-:root{--link-color:#7A2E2E;--link-hover:#B84A2A;--link-bg-hover:#F5EDE8;}
-[data-theme="dark"]{--link-color:#D4907A;--link-hover:#EDB99A;--link-bg-hover:#2A1A14;}
-body{font-family:'Space Mono',monospace;font-size:.92rem;line-height:1.75;}
-article p,article li,.content p,.content li{font-family:'Instrument Serif',serif;font-size:1.05rem;line-height:1.85;}
-h1,h2,h3,h4{font-family:'Space Mono',monospace;font-weight:700;letter-spacing:-.02em;}
-h1{font-size:1.1rem;}h2{font-size:1rem;}
-a{color:var(--link-color);text-decoration-color:transparent;border-radius:2px;padding:0 2px;transition:color .15s,background-color .15s,text-decoration-color .15s;}
-a:hover{color:var(--link-hover);background-color:var(--link-bg-hover);text-decoration-color:var(--link-hover);}
-blockquote{border-left:2px solid var(--link-color);margin-left:0;padding-left:1.2rem;opacity:.85;font-family:'Instrument Serif',serif;font-style:italic;font-size:1.05rem;}
-dt{font-family:'Space Mono',monospace;font-size:.82rem;opacity:.6;margin-top:.8rem;}
-dd{margin-left:0;font-family:'Instrument Serif',serif;}
-article img,.content img{max-width:100%;height:auto;display:block;margin:2rem auto;outline:1px solid currentColor;outline-offset:4px;}
-article img+em,.content img+em{display:block;text-align:center;font-size:.82rem;opacity:.6;margin-top:-1.2rem;margin-bottom:2rem;font-family:'Space Mono',monospace;}
-hr{border:none;border-top:1px solid currentColor;opacity:.2;margin:2rem 0;}
-details{border-left:2px solid currentColor;padding-left:1rem;margin:1.5rem 0;opacity:.85;}
-details summary{cursor:pointer;font-family:'Space Mono',monospace;font-size:.85rem;user-select:none;}
-details[open] summary{margin-bottom:1rem;}
-#theme-toggle{position:fixed;top:1rem;right:1rem;cursor:pointer;font-family:'Space Mono',monospace;font-size:.75rem;opacity:.4;background:none;border:1px solid currentColor;padding:.2rem .45rem;border-radius:2px;color:inherit;transition:opacity .15s;z-index:100;}
-#theme-toggle:hover{opacity:1;}
+:root { --link-color: #7A2E2E; --link-hover: #B84A2A; --link-bg-hover: #F5EDE8; }
+[data-theme="dark"] { --link-color: #D4907A; --link-hover: #EDB99A; --link-bg-hover: #2A1A14; }
+a { color: var(--link-color) !important; text-decoration-color: transparent; border-radius: 2px; padding: 0 2px; transition: color .15s, background-color .15s; }
+a:hover { color: var(--link-hover) !important; background-color: var(--link-bg-hover); }
+#theme-toggle { position: fixed; top: 1rem; right: 1rem; cursor: pointer; font-size: .75rem; opacity: .4; background: none; border: 1px solid currentColor; padding: .2rem .45rem; border-radius: 2px; color: inherit; transition: opacity .15s; z-index: 100; }
+#theme-toggle:hover { opacity: 1; }
 </style>
 <script>
 (function(){var s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();
 function toggleTheme(){var h=document.documentElement;var c=h.getAttribute('data-theme');var n=c==='dark'?'light':'dark';h.setAttribute('data-theme',n);localStorage.setItem('theme',n);}
 </script>
-<button id="theme-toggle" onclick="toggleTheme()" title="Cambia tema / Switch theme">◐</button>
+<button id="theme-toggle" onclick="toggleTheme()" title="◐"></button>
