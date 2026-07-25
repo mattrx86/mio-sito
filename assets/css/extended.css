@@ -1,22 +1,21 @@
 /* ============================================================
-   MATTIA RICCADONNA — CSS personalizzato sopra nostyleplease
-   v2 — con hover highlight, colori link, dark mode toggle
+   Mattia Riccadonna, strati. — CSS personalizzato
+   sopra nostyleplease — v3 finale
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap');
 
 /* --- Variabili colore --- */
 :root {
-  --link-color:      #7A2E2E;   /* bordeaux scuro */
-  --link-hover:      #B84A2A;   /* terracotta al hover */
-  --link-bg-hover:   #F5EDE8;   /* highlight caldo al hover */
-  --accent:          #7A2E2E;
+  --link-color:    #7A2E2E;
+  --link-hover:    #B84A2A;
+  --link-bg-hover: #F5EDE8;
 }
 
 [data-theme="dark"] {
-  --link-color:      #D4907A;   /* bordeaux chiaro */
-  --link-hover:      #EDB99A;
-  --link-bg-hover:   #2A1A14;   /* highlight scuro */
+  --link-color:    #D4907A;
+  --link-hover:    #EDB99A;
+  --link-bg-hover: #2A1A14;
 }
 
 /* --- Tipografia base --- */
@@ -26,7 +25,7 @@ body {
   line-height: 1.75;
 }
 
-/* Testi lunghi più leggibili con serif */
+/* Testi lunghi — serif per leggibilità */
 article p,
 article li,
 .content p,
@@ -36,7 +35,7 @@ article li,
   line-height: 1.85;
 }
 
-/* Titoli monospace — tono archivistico */
+/* Titoli — monospace archivistico */
 h1, h2, h3, h4 {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
@@ -44,7 +43,7 @@ h1, h2, h3, h4 {
 }
 
 h1 { font-size: 1.1rem; }
-h2 { font-size: 1rem; }
+h2 { font-size: 1rem;   }
 
 /* --- Link con hover highlight --- */
 a {
@@ -61,7 +60,7 @@ a:hover {
   text-decoration-color: var(--link-hover);
 }
 
-/* --- Citazioni (blockquote) --- */
+/* --- Citazioni --- */
 blockquote {
   border-left: 2px solid var(--link-color);
   margin-left: 0;
@@ -70,6 +69,20 @@ blockquote {
   font-family: 'Instrument Serif', serif;
   font-style: italic;
   font-size: 1.05rem;
+}
+
+/* --- Definizioni (termine : valore) --- */
+dt {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.82rem;
+  opacity: 0.6;
+  margin-top: 0.8rem;
+}
+
+dd {
+  margin-left: 0;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1rem;
 }
 
 /* --- Immagini --- */
@@ -83,19 +96,19 @@ article img,
   outline-offset: 4px;
 }
 
-/* Didascalia — testo in corsivo subito dopo immagine */
+/* Didascalia — corsivo subito dopo l'immagine */
 article img + em,
 .content img + em {
   display: block;
   text-align: center;
   font-size: 0.82rem;
-  opacity: 0.65;
+  opacity: 0.6;
   margin-top: -1.2rem;
   margin-bottom: 2rem;
   font-family: 'Space Mono', monospace;
 }
 
-/* --- Metadati opera --- */
+/* --- Metadati opera (grassetto) --- */
 article strong {
   font-family: 'Space Mono', monospace;
   font-size: 0.85rem;
@@ -110,7 +123,7 @@ hr {
   margin: 2rem 0;
 }
 
-/* --- Blocco details/summary per retroscena --- */
+/* --- Details/summary per retroscena --- */
 details {
   border-left: 2px solid currentColor;
   padding-left: 1rem;
@@ -137,7 +150,7 @@ details[open] summary {
   cursor: pointer;
   font-family: 'Space Mono', monospace;
   font-size: 0.75rem;
-  opacity: 0.45;
+  opacity: 0.4;
   background: none;
   border: 1px solid currentColor;
   padding: 0.2rem 0.45rem;
