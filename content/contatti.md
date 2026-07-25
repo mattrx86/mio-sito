@@ -1,12 +1,11 @@
 ---
 title: "contatti"
-date: 2024-01-01
+date: 2026-07-25
 ---
 
 Puoi trovarmi qui:
 
-- **Instagram** → [@m4ttiar](https://www.instagram.com/m4ttiar/)
-- **Facebook** → [mattia.riccadonna86](https://www.facebook.com/mattia.riccadonna86)
+- **Instagram** → [@riccadonna_art](https://www.instagram.com/riccadonna_art/)
 - **Reddit** → [u/mattia_riccadonna](https://www.reddit.com/user/mattia_riccadonna/)
 - **eBay** (opere in vendita) → [mattia_riccadonna_art](https://www.ebay.it/usr/mattia_riccadonna_art)
 
