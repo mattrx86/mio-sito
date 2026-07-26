@@ -1,5 +1,5 @@
 ---
-title: "la mia storia"
+title: "chi sono"
 date: 2026-07-26
 description: "Pittore, ingegnere e papà."
 ---
