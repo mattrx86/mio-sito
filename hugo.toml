@@ -42,7 +42,7 @@ defaultContentLanguageInSubdir = false
   [params.theme_config]
     appearance        = "auto"
     back_home_text    = "..indietro"
-    date_format       = "01-02-2006"
+    date_format       = "02-01-2006"
     isListGroupByDate = true
     isShowFooter      = true
     show_description  = false
