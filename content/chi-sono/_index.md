@@ -4,9 +4,9 @@ date: 2026-07-26
 description: "Pittore, ingegnere e papà."
 ---
 
-Ho iniziato a disegnare (con un certo impegno) a tredici anni, quasi per caso.  
+Ho iniziato a disegnare a tredici anni, `quasi` per caso.  
 
-18 novembre 1999, ad Arco, al <mark>1° Concorso Provinciale "Giovanni Segantini"</mark> avevo ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
+18 novembre 1999, ad Arco, al **1° Concorso Provinciale "Giovanni Segantini"** avevo ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
 Col tempo il disegno è diventato pittura. L'olio su tela è stato il mezzo che ho usato di più, ma ho sempre sperimentato — acquerello, matita, pastello, qualsiasi cosa avesse una texture interessante.
 
