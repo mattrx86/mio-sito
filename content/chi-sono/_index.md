@@ -17,9 +17,9 @@ Oggi dipingo ancora. Con più consapevolezza e meno fretta. Circa **60–70 oper
 
 ## il sito
 
-Questo spazio l'ho costruito io — con Hugo, GitHub e Netlify, tutti strumenti gratuiti e open source. Ho sempre avuto curiosità per l'informatica e le nuove tecnologie, e costruire qualcosa da zero con le proprie mani — anche digitali — mi dà la stessa soddisfazione di finire un quadro.
+Questo spazio l'ho costruito io — con Visual Code Studio, Hugo, GitHub e Netlify, tutti strumenti gratuiti e open source. Ho sempre avuto curiosità per l'informatica e le nuove tecnologie, e costruire qualcosa da zero con le proprie mani — anche digitali — mi dà la stessa soddisfazione di finire un quadro.
 
-Il design è volutamente minimale: testo, immagini, poca distrazione. Perché l'arte si guarda, non si impacchetta.
+Come detto prima il design è volutamente minimale: testo, immagini, poca distrazione. Perché l'arte si guarda, non si impacchetta.
 
 ---
 
