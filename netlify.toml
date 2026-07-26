@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = """rm -rf themes/typo themes/nostyleplease && git clone https://github.com/hanwenguo/hugo-theme-nostyleplease themes/nostyleplease && printf 'a { color: #6B1ACC !important; } a:hover { color: #9B4DFF !important; background-color: #EDE9FE; }' >> themes/nostyleplease/assets/css/main.scss && sed -i 's|<body>|<body><div style="position:fixed;top:1rem;right:1rem;font-family:monospace;font-size:0.8rem;z-index:100;">  <a href="/">IT</a> / <a href="/en/">EN</a></div>|g' themes/nostyleplease/layouts/_default/baseof.html && hugo --minify"""
+  command = """rm -rf themes/typo themes/nostyleplease && git clone https://github.com/mattrx86/hugo-theme-nostyleplease themes/nostyleplease && hugo --minify"""
 
 [build.environment]
   HUGO_VERSION       = "0.128.0"
