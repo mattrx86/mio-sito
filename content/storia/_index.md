@@ -1,10 +1,10 @@
 ---
 title: "la mia storia"
-date: 2024-01-01
-description: "Pittore dal 1999, ingegnere, padre. Una vita con più anime."
+date: 2026-07-26
+description: "Pittore, ingegnere e papà."
 ---
 
-Ho iniziato a disegnare a tredici anni, quasi per caso.  
+Ho iniziato a disegnare (con un certo impegno) a tredici anni, quasi per caso.  
 Non c'era un piano, non c'era una scuola d'arte — c'era solo quella sensazione strana di voler fermare le cose sulla carta prima che sparissero.
 
 Col tempo il disegno è diventato pittura. L'olio su tela è stato il mezzo che ho usato di più, ma ho sempre sperimentato — acquerello, matita, pastello, qualsiasi cosa avesse una texture interessante.
