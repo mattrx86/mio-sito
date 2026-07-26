@@ -4,13 +4,13 @@
 
 [[entries]]
   title = "chi sono"
-  url   = "/storia"
+  url   = "/chi-sono"
 
 [[entries]]
   title = "opere"
 
   [[entries.entries]]
-    title     = "archivio (2002–2007)"
+    title     = "archivio (1999–2007)"
     url       = "/archivio"
     post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutte le opere" }
 
