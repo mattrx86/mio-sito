@@ -1,85 +1,53 @@
 baseURL = "https://mattiariccadonna.com/"
-languageCode = "it"
-title = "Mattia Riccadonna"
-theme = "typo"
+theme   = "nostyleplease"
 
-# Google analytics code
-#googleAnalytics = "G-CJZF9EPTD0"
+defaultContentLanguage         = "it"
+defaultContentLanguageInSubdir = false
 
-[taxonomies]
-tag = "tags"
+[languages]
+  [languages.it]
+    languageCode = "it-IT"
+    languageName = "Italiano"
+    title        = "Mattia Riccadonna, strati."
+    weight       = 1
+    [languages.it.params]
+      description = "Pittore, disegnatore, padre, ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 2002 ad oggi."
+      keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore"]
+
+  [languages.en]
+    languageCode = "en-US"
+    languageName = "English"
+    title        = "Mattia Riccadonna, layers."
+    weight       = 2
+    contentDir   = "content/en"
+    [languages.en.params]
+      description = "Painter, draughtsman, father, engineer. Painting since 1999. Oil on canvas, watercolour, experimentation. Archive of works, exhibitions and documents since 2002."
+      keywords    = ["painter", "oil painting", "watercolour", "Mattia Riccadonna", "Italian artist", "Trentino", "illustration"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    codeFences = true
+    style      = "rrt"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+    ordered    = false
 
 [params]
-description = "Galleria personale, idee e dipinti di Mattia Riccadonna"
-keywords = ["arte contemporanea", "galleria d'arte", "pittura ad olio", "artista italiano", "Mattia Riccadonna", "paesaggi del Trentino-Alto Adige", "copia d'autore", "talento italiano"]
-subtitle = "Colori e luce"
-
-# Appearance settings
-theme = 'light'
-colorPalette = 'eink'
-hideHeader = false
-
-# Breadcrumbs
-[params.breadcrumbs]
-enabled = true
-showCurrentPage = true
-home = "~"
-
-# Social icons
-[[params.social]]
-name = "Reddit"
-url = "https://www.reddit.com/user/mattia_riccadonna/"
-
-[[params.social]]
-name = "Instagram"
-url = "https://www.instagram.com/m4ttiar/"
-
-[[params.social]]
-name = "facebook"
-url = "https://www.facebook.com/mattia.riccadonna86"
-
-[[params.social]]
-name = "Ebay"
-url = "https://www.ebay.it/usr/mattia_riccadonna_art"
-
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "galleria"
-url = "/galleria"
-
-#[[params.menu]]
-#name = "posts"
-#url = "/posts"
-
-[[params.menu]]
-name = "contatti"
-url = "/contatti"
-
-# Syntax highlight on code blocks
-[markup]
-[markup.highlight]
-style = 'algol'
-
-# Giscus comments
-[params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
-
-[params.umami]
-enable = true
-websiteId = "7f1594c8-ae9f-4d1d-96dc-05f5c62de636"
-jsLocation = "https://cloud.umami.is/script.js"
+  [params.theme_config]
+    appearance        = "auto"
+    back_home_text    = "..indietro"
+    date_format       = "02-01-2006"
+    isListGroupByDate = true
+    isShowFooter      = true
+    show_description  = false
 
 [sitemap]
   changefreq = "weekly"
-  priority = 0.5
-  filename = "sitemap.xml"
+  priority   = 0.5
+  filename   = "sitemap.xml"

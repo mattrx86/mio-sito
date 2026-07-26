@@ -1,11 +1,12 @@
 ---
-title: "Mattia Riccadonna"
-description: "Dipinti, composizioni e luce nei paesaggi ad olio di Mattia Riccadonna. Galleria d'arte personale dal Trentino-Alto Adige."
-keywords: ["arte contemporanea", "galleria d'arte", "pittura ad olio", "Mattia Riccadonna", "artista italiano", "Trentino-Alto Adige"]
+layout: home
 ---
 
-## Colori e luce.
+Dipingo, disegno e osservo da quando avevo tredici anni — prima per passione, poi per abitudine, ora per piacere e curiosità.
 
-Galleria di opere personali. Colori e composizioni attraverso le forme del paesaggio dipinte con tecnica ad olio. Vivo e lavoro in Trentino-Alto Adige.
+Il design del sito che ho creato è volutamente minimale: testo e immagini con poca distrazione. Gli `strati`
+sono fatti di *colore*, ma anche di *pensieri* e di *momenti* che si sovrappongono.
 
-> “Ci vuole molto tempo per rendere le cose semplici.” — David Hockney
+Qui dentro puoi trovare la mia storia: opere vecchie e nuove, le mostre e i concorsi, i ritagli di giornale, gli esperimenti di oggi. Un archivio personale aperto di opere prodotte dal 1999 ad oggi.
+
+---
