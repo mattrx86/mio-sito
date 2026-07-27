@@ -1,18 +1,18 @@
 ---
 title: "chi sono"
 date: 2026-07-26
-description: "Pittore, ingegnere e papà."
+description: "Chi ero e chi sono"
 ---
 
-Ho iniziato a disegnare a tredici anni, quasi per caso.  
+Ho iniziato a disegnare a tredici anni, *quasi* per caso.  
 
 18 novembre 1999, ad Arco, al 1° Concorso Provinciale `Giovanni Segantini` ho ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
 Col tempo il disegno è diventato pittura. L'olio su tela è stato il mezzo che ho usato di più, ma ho sempre sperimentato — acquerello, matita, pastello, qualsiasi cosa avesse una texture interessante.
 
-Tra il 2002 e il 2007 ho vissuto il periodo più intenso: **mostre, concorsi, articoli di giornale**, una piccola ma reale presenza nel mondo dell'arte locale trentina. Poi la vita ha preso altre strade — l'ingegneria, il lavoro, una famiglia — e la pittura è rimasta, ma più silenziosa.
+Tra il 2002 e il 2007 ho vissuto il periodo più intenso: mostre, concorsi, articoli di giornale, una piccola presenza nel mondo dell'arte locale trentina. Poi la vita ha preso altre strade — l'università, il lavoro, una famiglia — e la pittura è rimasta, ma più silenziosa.
 
-Oggi dipingo ancora. Con più consapevolezza e meno fretta. Circa 60–70 opere prodotte in vent'anni, tra quadri conservati, venduti e qualcuno perso per strada.
+Oggi dipingo ancora. Con più libertà espressiva e meno rigidità. Circa 70 opere prodotte in vent'anni, tra quadri conservati, venduti e qualcuno perso per strada.
 
 ---
 
