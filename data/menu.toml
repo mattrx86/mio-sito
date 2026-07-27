@@ -16,7 +16,7 @@
 
   [[entries.entries]]
     title     = "lavori recenti"
-    url       = "/lavori-recenti"
+    url       = "/studio"
     post_list = { section = "lavori-recenti", limit = 3, show_more = true, show_more_url = "/lavori-recenti", show_more_text = "→ tutti" }
 
   [[entries.entries]]
