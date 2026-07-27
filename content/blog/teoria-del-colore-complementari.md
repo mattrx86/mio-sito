@@ -1,5 +1,5 @@
 ---
-title: "sui colori complementari — una nota pratica"
+title: "sui colori complementari"
 date: 2025-06-15
 tags: ["teoria-del-colore", "tecnica", "acquerello"]
 toc: true
