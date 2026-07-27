@@ -8,7 +8,7 @@
   [[entries.entries]]
     title     = "archivio (1999–2007)"
     url       = "/archivio"
-    post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio", show_more_text = "mostra tutti" }
+    post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutti" }
 
   [[entries.entries]]
     title     = "studio"
