@@ -6,19 +6,19 @@ description: "Chi ero e chi sono"
 
 Ho iniziato a disegnare a tredici anni, *quasi* per caso.  
 
-18 novembre 1999, ad Arco, al 1° Concorso Provinciale `Giovanni Segantini` ho ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
+18 novembre 1999, ad Arco, al 1° Concorso Provinciale Giovanni `Segantini` ho ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
-Col tempo il disegno è diventato prima amore per i *comics* (`Benito Jacovitti` e Charles M. Schulz su tutti) poi *pittura* con l'amore per `Van Gogh e Carlo Sartori`. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo neglu ultimi anni, tecniche miste.
+Col tempo il disegno è diventato prima amore per i *comics* (Benito `Jacovitti` e Charles M. Schulz su tutti) poi *pittura* con l'amore per `Van Gogh` e `Sartori`. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo neglu ultimi anni, tecniche miste.
 
-Tra il 2002 e il 2007 ho vissuto il periodo più intenso: mostre, concorsi, articoli di giornale, una piccola presenza nel mondo dell'arte locale trentina. Poi la vita ha preso altre strade — l'università, il lavoro, una famiglia — e la pittura è rimasta, ma più silenziosa.
+Tra il 2002 e il 2007 ho vissuto il periodo più intenso: mostre, concorsi, articoli di giornale, una piccola presenza nel mondo dell'arte locale trentina. Poi la vita ha preso altre strade — l'università, il lavoro, una famiglia — e la pittura è rimasta silenziosa. In questo periodo mi sono avvicinato alla `fotografia` cercando di mantenere un occhio tecnico ma curioso.
 
-Oggi dipingo ancora. Con più libertà espressiva e meno rigidità. Circa 70 opere prodotte in `vent'anni`, tra quadri conservati, venduti e qualcuno perso per strada.
+Oggi dipingo ancora. Con più libertà espressiva e meno rigidità. Circa 70-80 lavori (non sono sicuro sul numero, ho realizzato questo archivio anche per fare lavoro di inventario) prodotte in più di `venticinque anni` di produzione, tra disegni, caricature, fumetti, quadri conservati, venduti e qualcuno perso per strada.
 
 ---
 
 ## il sito
 
-Questo spazio l'ho costruito io — con Visual Code Studio, Hugo, GitHub e Netlify, tutti strumenti gratuiti e open source. Ho sempre avuto curiosità per l'informatica e le nuove tecnologie, e costruire qualcosa da zero con le proprie mani — anche digitali — mi dà la stessa soddisfazione di finire un quadro.
+Questo spazio l'ho costruito io nei ritagli di tempo — con Visual Code Studio, Hugo, GitHub e Netlify, tutti strumenti open source. Ho sempre avuto curiosità per l'informatica e le nuove tecnologie, e costruire qualcosa da zero con le proprie mani — anche digitali — mi dà la stessa soddisfazione di finire un quadro.
 
 Come detto prima il design è volutamente minimale: testo, immagini, poca distrazione. Perché l'arte si guarda, non si impacchetta.
 
@@ -27,7 +27,7 @@ Come detto prima il design è volutamente minimale: testo, immagini, poca distra
 ## in numeri
 
 opere prodotte
-: ~60–70 dal 2002 ad oggi
+: ~70-80 dal 1999 ad oggi
 
 mostre ed esposizioni
 : 5 tra personali, collettive e concorsi
