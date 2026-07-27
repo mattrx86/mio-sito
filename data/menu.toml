@@ -7,7 +7,7 @@
   url   = "/chi-sono"
 
 [[entries]]
-  title = "OPERE"
+  title = "opere"
 
   [[entries.entries]]
     title     = "archivio (1999–2007)"
@@ -24,7 +24,7 @@
     url   = "/illustrazione"
 
 [[entries]]
-  title = "STORIA"
+  title = "storia"
 
   [[entries.entries]]
     title = "mostre e concorsi"
