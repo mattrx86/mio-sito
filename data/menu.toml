@@ -7,24 +7,24 @@
   url   = "/chi-sono"
 
 [[entries]]
-  title = "opere"
+  title = "OPERE"
 
   [[entries.entries]]
     title     = "archivio (1999–2007)"
     url       = "/archivio"
-    post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutte le opere" }
+    post_list = { section = "archivio", limit = 4, show_more = true, show_more_url = "/archivio", show_more_text = "→ tutti" }
 
   [[entries.entries]]
-    title     = "lavori recenti"
+    title     = "studio"
     url       = "/studio"
-    post_list = { section = "lavori-recenti", limit = 3, show_more = true, show_more_url = "/lavori-recenti", show_more_text = "→ tutti" }
+    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio", show_more_text = "→ tutti" }
 
   [[entries.entries]]
     title = "illustrazione"
     url   = "/illustrazione"
 
 [[entries]]
-  title = "storia"
+  title = "STORIA"
 
   [[entries.entries]]
     title = "mostre e concorsi"
