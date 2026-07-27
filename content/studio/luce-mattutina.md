@@ -4,7 +4,7 @@ date: 2025-07-10
 tags: ["paesaggio", "olio-su-tela"]
 ---
 
-![Luce mattutina, 2024](/img/studio/acquerello-luglio-2025.jpg)
+![Luce mattutina, 2024](/static/images/galleria/luce-mattutina.jpg)
 
 **Tecnica:** olio su cartoncino telato  
 **Dimensioni:** 35x40 cm  
