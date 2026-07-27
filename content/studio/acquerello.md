@@ -1,5 +1,5 @@
 ---
-title: "acquerello — luglio 2025"
+title: "aquerello"
 date: 2025-07-10
 tags: ["acquerello", "paesaggio", "progetto-quotidiano"]
 ---
