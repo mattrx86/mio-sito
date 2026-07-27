@@ -5,6 +5,5 @@ artist: "Mattia Riccadonna"
 year: 2025
 medium: "Olio su tela"
 size: "40 x 70 cm"
-image: "/images/galleria/risveglio-alpino.jpg"
-zoom: "/images/galleria/risveglio-alpino.jpg"
+image: "static/img/studio/risveglio-alpino.jpg"
 ---
