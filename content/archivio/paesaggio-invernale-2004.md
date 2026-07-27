@@ -12,25 +12,20 @@ tags: ["olio", "paesaggio", "trentino"]
 
 ---
 
-Inverno 2004. Stavo finendo il quarto anno di liceo. 
-Fuori casa c'era quella luce piatta e bianca che ha solo febbraio in montagna — 
-nessuna ombra, nessun contrasto, eppure tutto leggibilissimo.
+Inverno 2004. Stavo finendo il quarto anno di liceo. Fuori casa c'era quella luce piatta e bianca che ha solo febbraio in montagna — nessuna ombra, nessun contrasto, eppure tutto leggibilissimo.
 
-Ho cercato di catturare quella sensazione di silenzio. 
-Non so se ci sono riuscito, ma ricordo ancora l'odore del trementina in camera.
+Ho cercato di catturare quella sensazione di silenzio. Non so se ci sono riuscito, ma ricordo ancora l'odore del trementina in camera.
 
 <details>
-<summary>→ dettaglio pennellate (zona centrale)</summary>
+<summary>dettaglio</summary>
 
 ![Dettaglio](/img/archivio/paesaggio-invernale-2004-dettaglio.jpg)
 
-In questa zona ho usato la spatola invece del pennello — 
-si vede meglio dal vivo, ma anche in foto si nota la differenza di texture.
+In questa zona ho usato la spatola invece del pennello — si vede meglio dal vivo, ma anche in foto si nota la differenza di texture.
 
 </details>
 
 ---
 
 **Cosa succedeva nel 2004:**  
-Usciva Half-Life 2. L'Italia vinceva gli Europei di calcio. 
-Io passavo le serate a disegnare e ad ascoltare i Radiohead.
+Usciva Half-Life 2. L'Italia vinceva gli Europei di calcio. Io passavo le serate a disegnare e ad ascoltare i Radiohead.

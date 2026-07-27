@@ -1,6 +1,6 @@
 ---
 title: "ritratto senza titolo"
-date: 2006-09-03
+date: 1999-09-03
 tags: ["olio", "ritratto"]
 ---
 

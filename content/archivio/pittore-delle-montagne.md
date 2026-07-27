@@ -12,15 +12,13 @@ tags: ["matite", "ritratto"]
 
 ---
 
-Il primo ritratto che ho fatto senza copiare da una foto. 
-Modello dal vivo, luce da una finestra a sinistra. 
+Il primo ritratto che ho fatto senza copiare da una foto.
+Modello dal vivo, luce da una finestra a sinistra.
 Tre sedute da circa due ore ciascuna.
 
-Non è perfetto — l'occhio sinistro è ancora un po' storto — 
-ma è il dipinto da cui ho capito che volevo continuare a fare questo.
+Non è perfetto — l'occhio sinistro è ancora un po' storto — ma è il dipinto da cui ho capito che volevo continuare a fare questo.
 
 ---
 
 **Cosa succedeva nel 2006:**  
-Mondiali in Germania, Zidane e la testata. 
-Io avevo appena preso la patente e stavo iniziando l'università.
+Mondiali in Germania, Zidane e la testata. Io avevo appena preso la patente e stavo iniziando l'università.
