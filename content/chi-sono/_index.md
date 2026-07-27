@@ -4,7 +4,7 @@ date: 2026-07-26
 description: "Chi ero e chi sono"
 ---
 
-Ho iniziato a disegnare a tredici anni, *quasi* per caso.  
+Ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
 
 18 novembre 1999, ad Arco, al 1° Concorso Provinciale Giovanni `Segantini` ho ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
