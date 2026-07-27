@@ -11,18 +11,8 @@ defaultContentLanguageInSubdir = false
     title        = "Mattia Riccadonna, strati."
     weight       = 1
     [languages.it.params]
-      description = "Pittore, disegnatore, padre, ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 2002 ad oggi."
+      description = "Pittore, disegnatore, papà e ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 1999 ad oggi."
       keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore"]
-
-  [languages.en]
-    languageCode = "en-US"
-    languageName = "English"
-    title        = "Mattia Riccadonna, layers."
-    weight       = 2
-    contentDir   = "content/en"
-    [languages.en.params]
-      description = "Painter, draughtsman, father, engineer. Painting since 1999. Oil on canvas, watercolour, experimentation. Archive of works, exhibitions and documents since 2002."
-      keywords    = ["painter", "oil painting", "watercolour", "Mattia Riccadonna", "Italian artist", "Trentino", "illustration"]
 
 [markup]
   [markup.goldmark]
