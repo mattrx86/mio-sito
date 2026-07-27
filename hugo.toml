@@ -12,7 +12,7 @@ defaultContentLanguageInSubdir = false
     weight       = 1
     [languages.it.params]
       description = "Pittore, disegnatore, papà e ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 1999 ad oggi."
-      keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore"]
+      keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore", "pittore Trentino", "arte Trentino", "quadri originali"]
 
 [markup]
   [markup.goldmark]
@@ -31,9 +31,12 @@ defaultContentLanguageInSubdir = false
     ordered    = false
 
 [params]
+  author    = "Mattia Riccadonna"
+  copyright = "Mattia Riccadonna"
+
   [params.theme_config]
-    appearance        = "auto"
-    back_home_text    = "..indietro"
+    appearance        = "light"
+    back_home_text    = "← indietro"
     date_format       = "02-01-2006"
     isListGroupByDate = true
     isShowFooter      = true
@@ -41,5 +44,10 @@ defaultContentLanguageInSubdir = false
 
 [sitemap]
   changefreq = "weekly"
-  priority   = 0.5
+  priority   = 0.8
   filename   = "sitemap.xml"
+
+[outputs]
+  home    = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page    = ["HTML"]
