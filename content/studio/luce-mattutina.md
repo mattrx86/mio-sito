@@ -1,6 +1,6 @@
 ---
-title: "Luce mattutina"
-year: 2024
+title: "luce mattutina"
+year: 31-07-2024
 tags: ["paesaggio", "olio-su-tela"]
 ---
 
