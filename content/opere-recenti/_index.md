@@ -1,10 +1,10 @@
 ---
-title: "studio"
+title: "opere-recenti"
 date: 2024-01-01
 ---
 
-Il lavoro di adesso. Acquerelli, bozzetti, matite, esperimenti.  
+Il lavoro di adesso. Olio, tecniche miste, acquerello, esperimenti.  
 Alcune cose finite, molte ancora in corso.  
-Aggiorno questa sezione quando posso.
+Aggiorno questa sezione quando ne vale la pena.
 
 <br>
