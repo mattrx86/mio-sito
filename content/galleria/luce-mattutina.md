@@ -1,6 +1,6 @@
 ---
 title: "Luce mattutina"
-tags: ["paesaggio", "olio_su_tela"]
+tags: ["paesaggio", "olio"]
 artist: "Mattia Riccadonna"
 year: 2024
 medium: "Olio su tela"

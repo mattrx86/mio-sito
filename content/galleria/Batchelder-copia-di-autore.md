@@ -1,6 +1,6 @@
 ---
 title: "Tributo a Peter Batchelder (Copia d'Autore)"
-tags: ["paesaggio", "olio_su_tela","tributo"]
+tags: ["paesaggio", "olio","tributo"]
 artist: "Mattia Riccadonna"
 year: 2024
 medium: "Olio su tela"

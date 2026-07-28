@@ -1,6 +1,6 @@
 ---
 title: "Chiaro di luna"
-tags: ["paesaggio", "olio_su_tela","notturno"]
+tags: ["paesaggio", "olio","notturno"]
 artist: "Mattia Riccadonna"
 year: 2025
 medium: "Olio su tela"
