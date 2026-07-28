@@ -1,7 +1,7 @@
 ---
 title: "luce mattutina"
 date: 2025-07-10
-tags: ["paesaggio", "olio-su-tela"]
+tags: ["paesaggio", "olio"]
 ---
 
 ![Luce mattutina, 2024](/static/images/galleria/luce-mattutina.jpg)
