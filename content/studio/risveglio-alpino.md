@@ -10,7 +10,7 @@ tags: ["olio-su-tela", "paesaggio"]
 **tecnica:** olio su tela  
 **anno produzione:** 2025  
 **dimensioni:** 40x70 cm    
-**stato:** collezione privata, Ponte Arche    
+**ubicazione:** collezione privata    
 
 ---
 
