@@ -1,49 +1,49 @@
 [[entries]]
   title = "chi sono"
-  url   = "/chi-sono"
+  url   = "/chi-sono/"
 
 [[entries]]
   title = "opere"
 
   [[entries.entries]]
     title     = "archivio (1999–2007)"
-    url       = "/archivio"
-    post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio", show_more_text = ".. mostra tutti" }
+    url       = "/archivio/"
+    post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
     title     = "studio"
-    url       = "/studio"
-    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio", show_more_text = ".. mostra tutti" }
+    url       = "/studio/"
+    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
     title = "illustrazione"
-    url   = "/illustrazione"
+    url   = "/illustrazione/"
 
 [[entries]]
   title = "storia"
 
   [[entries.entries]]
     title = "mostre e concorsi"
-    url   = "/mostre-e-concorsi"
+    url   = "/mostre-e-concorsi/"
 
   [[entries.entries]]
     title = "rassegna stampa"
-    url   = "/rassegna-stampa"
+    url   = "/rassegna-stampa/"
 
 [[entries]]
   title = "fotografia"
 
 [[entries]]
   title = "blog"
-  url   = "/blog"
+  url   = "/blog/"
 
   [[entries.entries]]
     title     = "ultimi articoli"
-    post_list = { section = "blog", limit = 3, show_more = true, show_more_url = "/blog", show_more_text = ".. mostra tutti" }
+    post_list = { section = "blog", limit = 3, show_more = true, show_more_url = "/blog/", show_more_text = ".. mostra tutti" }
 
 [[entries]]
   title = "contatti"
-  url   = "/contatti"
+  url   = "/contatti/"
 
 [[entries]]
   title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank'>opere in vendita</a>"
