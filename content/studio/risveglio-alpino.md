@@ -7,10 +7,10 @@ tags: ["olio-su-tela", "paesaggio"]
 
 ![risveglio alpino, 2025](/img/studio/risveglio-alpino.jpg)
 
-**tecnica:** olio su tela
+**tecnica:** olio su tela  
 **anno produzione:** 2025  
-**dimensioni:** 40x70 cm  
-**stato:** collezione privata, Ponte Arche  
+**dimensioni:** 40x70 cm    
+**stato:** collezione privata, Ponte Arche    
 
 ---
 
