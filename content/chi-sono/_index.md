@@ -41,6 +41,6 @@ anni di pittura
 
 ---
 
-→ [archivio dipinti](/archivio/)  
+→ [archivio (1999–2007)](/archivio/)  
+→ [dipinti recenti (2024–..)](/dipinti-recenti/)  
 → [mostre ed esposizioni](/mostre/)  
-→ [rassegna stampa](/rassegna-stampa/)
