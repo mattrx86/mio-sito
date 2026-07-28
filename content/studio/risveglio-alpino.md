@@ -3,7 +3,7 @@ title: "risveglio alpino"
 date: 2025-07-10
 hideDate: true
 description: "Olio su tela, 40x70cm. Paesaggio alpino trentino dipinto nel 2025. Esposto al premio d'arte 2025 Giulio Riccadonna. Opera di Mattia Riccadonna."
-tags: ["olio-su-tela", "paesaggio", "2025"]
+tags: ["olio", "paesaggio", "2025"]
 ---
 
 ![risveglio alpino, 2025](/img/studio/risveglio-alpino.jpg)
