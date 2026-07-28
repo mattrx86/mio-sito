@@ -11,7 +11,7 @@ Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario de
 
 ---
 
-## l'Adige
+## l'Adige, 19-12-1999
 
 ![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
