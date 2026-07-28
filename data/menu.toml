@@ -34,10 +34,6 @@
   title = "blog"
   url   = "/blog/"
 
-  [[entries.entries]]
-    title     = "ultimi articoli"
-    post_list = { section = "blog", limit = 2, show_more = true, show_more_url = "/blog/", show_more_text = ".. mostra tutti" }
-
 [[entries]]
   title = "contatti"
   url   = "/contatti/"
