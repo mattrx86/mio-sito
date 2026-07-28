@@ -11,9 +11,9 @@
     post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
-    title     = "opere recenti (2024-...)"
+    title     = "opere recenti (2024-..)"
     url       = "/opere-recenti/"
-    post_list = { section = "studio", limit = 3, show_more = true, show_more_url = "/studio/", show_more_text = ".. mostra tutti" }
+    post_list = { section = "opere-recenti", limit = 3, show_more = true, show_more_url = "/opere-recenti/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
     title = "disegno"
