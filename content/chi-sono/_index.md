@@ -33,7 +33,7 @@ mostre ed esposizioni
 : 5 tra personali, collettive e concorsi
 
 articoli di giornale
-: 4–5 su testate locali trentine (2003–2005)
+: 4–5 su testate locali trentine (1999–2005)
 
 anni di pittura
 : dal 1999 — più di venticinque anni
