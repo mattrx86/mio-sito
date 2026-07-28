@@ -6,4 +6,5 @@ date: 2024-01-01
 Questi sono i dipinti del periodo in cui tutto è iniziato. Olio, acrilico, qualche pastello. Avevo tra i 13 e i 21 anni e il mondo era diverso.
 
 Ogni opera ha una piccola nota su cosa stava succedendo in quegli anni — per dare un contesto a chi guarda, e per ricordarlo a me stesso.
+
 <br>
