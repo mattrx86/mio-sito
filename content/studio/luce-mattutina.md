@@ -1,23 +1,19 @@
 ---
-title: "luce mattutina"
-date: 2025-07-10
-tags: ["paesaggio", "olio"]
+title: "Luce mattutina — Olio su tela, 2024 | Mattia Riccadonna"
+heading: "luce mattutina"
+date: 2024-07-30
+hideDate: true
+description: "Olio su tela, 35x40cm. Paesaggio trentino con tipica casa giudicariese dipinto nel 2024. Presentato e premiato con il secondo posto al premio d'arte 2024 Giulio Riccadonna di Rango, luglio 2024"
+tags: ["olio", "paesaggio", "2024"]
 ---
 
-![Luce mattutina, 2024](/static/images/galleria/luce-mattutina.jpg)
+![Luce mattutina, olio su tela 35x40 cm, Mattia Riccadonna, 2024](/img/studio/luce-mattutina.jpg)
 
-**Tecnica:** olio su cartoncino telato   
-**Dimensioni:** 35x40 cm  
-**Serie:** nessuna  
+**tecnica:** olio su tela  
+**anno produzione:** 2024  
+**dimensioni:** 35x40 cm    
+**ubicazione:** collezione privata    
 
 ---
 
-Fatto stamattina presto, prima che il caldo diventasse insostenibile.
-Volevo catturare quella luce obliqua delle 7:30 che dura tipo venti minuti 
-e poi sparisce.
-
-Ho usato meno acqua del solito — il caldo asciuga tutto in fretta 
-e devi lavorare veloce o ti si formano i bordi duri dappertutto.
-In questo caso ci ho giocato invece di combatterli.
-
-**Palette usata:** giallo di cadmio, ocra, terra di Siena bruciata, blu di Prussia, un tocco di verde vescica.
+**annotazioni:** opera presentata al Premio d'Arte Giulio Riccadonna di Rango in data 30-07-2024 e premiata con il `secondo posto in classifica`.

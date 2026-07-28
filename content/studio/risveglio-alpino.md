@@ -16,4 +16,4 @@ tags: ["olio", "paesaggio", "2025"]
 
 ---
 
-**annotazioni:** tela esposta al premio d'arte Giulio Riccadonna di Rango in data 26-06-2025
+**annotazioni:** opera presentata al Premio d'Arte Giulio Riccadonna di Rango in data 26-06-2025.
