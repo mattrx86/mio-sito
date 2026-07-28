@@ -15,7 +15,9 @@
         </time>
     </p>
     {{ end }}
+    {{ if not .Params.hideTitle }}
     <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+    {{ end }}
     {{ if .Params.toc }}
         <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
             {{ .TableOfContents }}

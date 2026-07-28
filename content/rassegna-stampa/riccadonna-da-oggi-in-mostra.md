@@ -2,7 +2,9 @@
 title: "Esercizi di memoria — Mostra personale a Tione, 2003 | Mattia Riccadonna"
 heading: "esercizi di memoria, 2003"
 date: 2003-08-25
-description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di Tione di Trento. Pittura, copie d'autore e lavori originali esposti fino al 31 gagosto 2003."
+hideTitle: true
+hideDate: true
+description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di Tione di Trento. Pittura, copie d'autore e lavori originali esposti fino al 31 agosto 2003."
 ---
 
 ## Trentino, 25-08-2003
