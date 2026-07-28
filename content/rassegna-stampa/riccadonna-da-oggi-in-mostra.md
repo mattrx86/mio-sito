@@ -1,6 +1,5 @@
 ---
 title: "Esercizi di memoria — Mostra personale a Tione, 2003 | Mattia Riccadonna"
-heading: "esercizi di memoria, 2003"
 date: 2003-08-25
 hideTitle: true
 hideDate: true
