@@ -7,7 +7,7 @@ description: "Olio su tela, 40x70cm. Paesaggio alpino trentino dipinto nel 2025.
 tags: ["olio", "paesaggio", "2025"]
 ---
 
-![Risveglio alpino, olio su tela 40x70 cm, Mattia Riccadonna, 2025](/img/studio/risveglio-alpino.jpg)
+![Risveglio alpino, olio su tela 40x70 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/risveglio-alpino.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2025  

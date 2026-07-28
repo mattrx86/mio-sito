@@ -1,5 +1,5 @@
 ---
-title: "opere recenti (2024-..)"
+title: "dipinti recenti (2024-..)"
 date: 2024-01-01
 ---
 

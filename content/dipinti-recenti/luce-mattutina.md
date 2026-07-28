@@ -7,7 +7,7 @@ description: "Olio su tela, 35x40cm. Paesaggio trentino con tipica casa giudicar
 tags: ["olio", "paesaggio", "2024"]
 ---
 
-![Luce mattutina, olio su tela 35x40 cm, Mattia Riccadonna, 2024](/img/studio/luce-mattutina.jpg)
+![Luce mattutina, olio su tela 35x40 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/luce-mattutina.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2024  
