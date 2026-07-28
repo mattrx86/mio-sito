@@ -8,12 +8,12 @@
   [[entries.entries]]
     title     = "archivio (1999–2007)"
     url       = "/archivio/"
-    post_list = { section = "archivio", limit = 3, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
+    post_list = { section = "archivio", limit = 2, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
     title     = "dipinti recenti (2024-..)"
     url       = "/dipinti-recenti/"
-    post_list = { section = "dipinti-recenti", limit = 3, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
+    post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
 
   [[entries.entries]]
     title = "disegno"
@@ -36,7 +36,7 @@
 
   [[entries.entries]]
     title     = "ultimi articoli"
-    post_list = { section = "blog", limit = 3, show_more = true, show_more_url = "/blog/", show_more_text = ".. mostra tutti" }
+    post_list = { section = "blog", limit = 2, show_more = true, show_more_url = "/blog/", show_more_text = ".. mostra tutti" }
 
 [[entries]]
   title = "contatti"
