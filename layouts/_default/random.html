@@ -1,0 +1,16 @@
+{{ define "main" }}
+<script>
+const opere = [
+  {{ range where site.RegularPages "Section" "archivio" }}
+  "{{ .Permalink }}",
+  {{ end }}
+  {{ range where site.RegularPages "Section" "dipinti-recenti" }}
+  "{{ .Permalink }}",
+  {{ end }}
+];
+
+const casuale = opere[Math.floor(Math.random() * opere.length)];
+window.location.replace(casuale);
+</script>
+<p>Caricamento opera casuale...</p>
+{{ end }}
