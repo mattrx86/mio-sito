@@ -1,55 +1,53 @@
 ---
 title: "rassegna stampa"
 date: 2024-01-01
-description: "Articoli di giornale dal 2003 al 2005 su testate locali trentine. Mattia Riccadonna pittore nella stampa locale del Trentino."
+description: "Articoli di giornale dal 1999 al 2005 su testate locali trentine. Mattia Riccadonna pittore nella stampa locale del Trentino."
+hideDate: true
 ---
 
-Quattro o cinque articoli su giornali locali trentini, tutti tra il 2003 e il 2005.  
-Ho ancora i ritagli originali — eccoli qui.
-
----
-
-## 2003 — articolo 1
-
-![Ritaglio di giornale, 2003](/img/rassegna-stampa/articolo-1.jpg)
-
-**Testata:**  
-**Data:**  
-**In occasione di:**  
+Qualche traccia rimasta su carta — ritagli di giornali locali trentini tra il 1999 e il 2005.  
 
 ---
 
-## 2004 — articolo 2
+## 1999 — Concorso Segantini, i vincitori
 
-![Ritaglio di giornale, 2004](/img/rassegna-stampa/articolo-2.jpg)
+![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
-**Testata:**  
-**Data:**  
-**In occasione di:**  
+**Testata:** l'Adige  
+**Data:** 19 dicembre 1999  
+**In occasione di:** 1° Concorso Provinciale Giovanni Segantini, scuola media Nicolò d'Arco, Arco (TN)
+
+Avevo tredici anni. 112 opere in concorso da dieci istituti della provincia. La giuria decise di non assegnare il primo premio assoluto — aumentò invece i riconoscimenti. Per le opere grafiche e pittoriche venni citato tra i vincitori.
+
+<details>
+<summary>trascrizione dell'articolo</summary>
+
+*Premiazione del primo concorso provinciale Giovanni Segantini, ieri, alla scuola media Nicolò d'Arco. 112 le opere eseguite dagli alunni di dieci istituti della provincia di Trento. La giuria ha deciso di non assegnare il primo premio assoluto, ma di aumentare i riconoscimenti ai partecipanti dato il numero e la qualità, buona, dei lavori presentati. Per i temi letterari i vincitori sono Lisa Lever (scuola media Madruzzo di Cavedine) e Margherita Bettoni (Nicolò d'Arco).*
+
+*Per le opere grafiche/pittoriche: **Mattia Riccadonna (Ponte Arche)**, Ettore Delaldio e Michele Varesco (Tesero) e Teresa Cirillo (Trento). Altre sei borse di studio sono state assegnate a Samantha Rossin (Arco), Alessandra Torboli (Ala), Martina Ioriatti (Trento), Francesca Trentini (Cavedine), la classe sesonda A della scuola Soraperra du Pozza di Fassa, quindi Giulia Bellatto, Lavinia Cappelletti, Irene Cimonetti, Martina Zandonai (Mori).*
+
+</details>
+
+---
+
+## 2003 — articolo 2
+
+*in arrivo*
 
 ---
 
 ## 2004 — articolo 3
 
-![Ritaglio di giornale, 2004](/img/rassegna-stampa/articolo-3.jpg)
-
-**Testata:**  
-**Data:**  
+*in arrivo*
 
 ---
 
-## 2005 — articolo 4
+## 2004 — articolo 4
 
-![Ritaglio di giornale, 2005](/img/rassegna-stampa/articolo-4.jpg)
-
-**Testata:**  
-**Data:**  
+*in arrivo*
 
 ---
 
 ## 2005 — articolo 5
 
-![Ritaglio di giornale, 2005](/img/rassegna-stampa/articolo-5.jpg)
-
-**Testata:**  
-**Data:**
+*in arrivo*
