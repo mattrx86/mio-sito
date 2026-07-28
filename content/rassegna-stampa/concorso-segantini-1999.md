@@ -11,34 +11,26 @@ Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario de
 
 ---
 
-## il diploma
+## l'Adige
 
-![Diploma 1° Concorso Provinciale Giovanni Segantini, 1999](/img/rassegna-stampa/primo-concorso-segantini-1999.jpg)
+![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
 <details>
 <summary>→ trascrizione</summary>
 
-Comune di Arco — Assessorato alla cultura ed istruzione  
-Scuola Media "Nicolò d'Arco"  
-Associazione Arco per Segantini
+**Concorso Segantini, i vincitori**
 
-**1° CONCORSO PROVINCIALE "GIOVANNI SEGANTINI"**  
-Arco, 13 – 18 dicembre 1999
+*Ieri le premiazioni delle migliori opere letterarie e pittoriche presso le medie di Arco*
 
-Viene assegnata la Borsa di Studio del valore di L. 200.000 a
+Premiazione del primo concorso provinciale Giovanni Segantini, ieri, alla scuola media Nicolò d'Arco. 112 le opere eseguite dagli alunni di dieci istituti della provincia di Trento. La giuria ha deciso di non assegnare il primo premio assoluto, ma di aumentare i riconoscimenti ai partecipanti dato il numero e la qualità, buona, dei lavori presentati. Per i temi letterari i vincitori sono Lisa Lever (scuola media Madruzzo di Cavedine) e Margherita Bettoni (Nicolò d'Arco).
 
-**RICCADONNA MATTIA**
-
-classe III A S.M. "G. Prati" – PONTE ARCHE
-
-*La Giuria*  
-Arco, 18 dicembre 1999
+Per le opere grafiche/pittoriche: **Mattia Riccadonna (Ponte Arche)**, Ettore Delaldio e Michele Varesco (Tesero) e Teresa Cirillo (Trento). Altre sei borse di studio sono state assegnate a Samantha Rossin (Arco), Alessandra Torboli (Ala), Martina Ioriatti (Trento), Francesca Trentini (Cavedine), la classe sesonda A della scuola Soraperra du Pozza di Fassa, quindi Giulia Bellatto, Lavinia Cappelletti, Irene Cimonetti, Martina Zandonai (Mori).
 
 </details>
 
 ---
 
-## la stampa — Alto Adige, 19 dicembre 1999
+## Alto Adige, 19 dicembre 1999
 
 ![Articolo Alto Adige 19 dicembre 1999 — Dodici borse di studio in ricordo di Segantini](/img/rassegna-stampa/alto-adige-19-12-1999.jpg)
 
@@ -55,24 +47,5 @@ ARCO. Al 1° concorso provinciale «Giovanni Segantini», nel centenario della m
 
 *Fonte: Alto Adige — Corriere delle Alpi, 19/12/1999*  
 *http://www.altoadige.kataweb.it/altoadige/arch_19/riva/cronaca/ag203.htm*
-
-</details>
-
----
-
-## la stampa — articolo locale
-
-![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
-
-<details>
-<summary>→ trascrizione</summary>
-
-**Concorso Segantini, i vincitori**
-
-*Ieri le premiazioni delle migliori opere letterarie e pittoriche presso le medie di Arco*
-
-Premiazione del primo concorso provinciale Giovanni Segantini, ieri, alla scuola media Nicolò d'Arco. 112 le opere eseguite dagli alunni di dieci istituti della provincia di Trento. La giuria ha deciso di non assegnare il primo premio assoluto, ma di aumentare i riconoscimenti ai partecipanti dato il numero e la qualità, buona, dei lavori presentati. Per i temi letterari i vincitori sono Lisa Lever (scuola media Madruzzo di Cavedine) e Margherita Bettoni (Nicolò d'Arco).
-
-Per le opere grafiche/pittoriche: **Mattia Riccadonna (Ponte Arche)**, Ettore Delaldio e Michele Varesco (Tesero) e Teresa Cirillo (Trento). Altre sei borse di studio sono state assegnate a Samantha Rossin (Arco), Alessandra Torboli (Ala), Martina Ioriatti (Trento), Francesca Trentini (Cavedine), la classe sesonda A della scuola Soraperra du Pozza di Fassa, quindi Giulia Bellatto, Lavinia Cappelletti, Irene Cimonetti, Martina Zandonai (Mori).
 
 </details>
