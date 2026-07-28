@@ -4,9 +4,9 @@ date: 2026-07-26
 description: "Chi ero e chi sono"
 ---
 
-Sono nato il 13-05-1986. Ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
+Mi chiamo Mattia e sono nato il 13-05-1986. Ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
 
-18 novembre 1999, ad Arco, al 1° Concorso Provinciale Giovanni `Segantini` ho ricevuto in premio una borsa di studio di 200'000 Lire per la mia versione del [*pittore delle montagne*](/archivio/pittore-delle-montagne). Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
+18 novembre 1999, ad Arco, al [1° Concorso Provinciale Giovanni `Segantini`](content/rassegna-stampa/concorso-segantini-1999.md) ho ricevuto in premio una borsa di studio di 200 mila Lire per la mia versione del [*pittore delle montagne*](/archivio/pittore-delle-montagne). Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
 Col tempo il disegno è diventato prima amore per i *comics* ([Benito Jacovitti](https://it.wikipedia.org/wiki/Benito_Jacovitti) e [Charles M. Schulz](https://it.wikipedia.org/wiki/Charles_M._Schulz) su tutti) poi *pittura* con l'amore per `Van Gogh` e `Sartori`. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo neglu ultimi anni, tecniche miste.
 
