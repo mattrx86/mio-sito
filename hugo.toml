@@ -11,7 +11,8 @@ defaultContentLanguageInSubdir = false
     title        = "Mattia Riccadonna, strati."
     weight       = 1
     [languages.it.params]
-      description = "Pittore, disegnatore, papà e ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 1999 ad oggi."
+      seo_title   = "Mattia Riccadonna — Pittore e illustratore trentino"
+      description = "Pittore, illustratore e ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 1999 ad oggi."
       keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore", "pittore Trentino", "arte Trentino", "quadri originali"]
 
 [markup]

@@ -4,14 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {{ if .Params.description }}
     <meta name="description" content="{{ .Params.description }}">
-  {{ else if .IsPage }}
-    <meta name="description" content="{{ .Summary }}">
+  {{ else if or .IsPage .IsHome }}
+    <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
   {{ end }}
   <title>
     {{ if .Params.seo_title }}
       {{ .Params.seo_title }}
     {{ else if .IsHome }}
-      {{ $.Site.Title }}
+      {{ $.Site.Params.seo_title | default $.Site.Title }}
     {{ else }}
       {{ .Title }}
     {{ end }}
