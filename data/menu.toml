@@ -29,6 +29,8 @@
   [[entries.entries]]
     title = "rassegna stampa"
     url   = "/rassegna-stampa/"
+    post_list = { section = "rassegna-stampa", limit = 2, show_more = true, show_more_url = "/rassegna-stampa/", show_more_text = ".. mostra tutti" }
+
 
 [[entries]]
   title = "blog"
