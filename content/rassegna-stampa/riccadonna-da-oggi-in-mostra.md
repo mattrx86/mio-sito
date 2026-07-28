@@ -5,18 +5,18 @@ date: 2003-08-25
 description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di Tione di Trento. Pittura, copie d'autore e lavori originali esposti fino al 31 gagosto 2003."
 ---
 
+## Trentino, 25-08-2003
+
+![Ritaglio di giornale — Mostra Esercizi di memoria, Tione 2003](/img/rassegna-stampa/riccadonna-da-oggi-in-mostra.jpg)
+
+---
+
 Gennaio 2003. Avevo diciassette anni e frequentavo le superiori. La mostra si chiamava **"Esercizi di memoria"** ed è stata inaugurata alle ore 17 presso le sale espositive del Centro Studi Judicaria di Tione di Trento. In mostra i primi lavori e l'ultima produzione — copie autorizzate di artisti locali e internazionali (Sartori, Rocca) e lavori originali. Aperta fino a domenica 31.
 
 ---
 
-## Trentino, 25 agosto 2003
-
-![Ritaglio di giornale — Mostra Esercizi di memoria, Tione 2003](/img/rassegna-stampa/articolo-mostra-esercizi-di-memoria-2003.jpg)
-
----
-
 <details>
-<summary>apri articolo</summary>
+<summary>leggi articolo</summary>
 
 **Riccadonna da oggi in mostra**
 

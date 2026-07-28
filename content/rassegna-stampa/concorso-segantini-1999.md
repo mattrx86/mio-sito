@@ -4,20 +4,20 @@ date: 1999-12-18
 description: "Mattia Riccadonna vince una borsa di studio al 1° Concorso Provinciale Giovanni Segantini ad Arco, dicembre 1999. Diploma e articoli di giornale."
 ---
 
-Dicembre 1999. Avevo tredici anni e frequentavo la III A della scuola media G. Prati di Ponte Arche.  
-Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario della morte del pittore — vinsi una borsa di studio da 200.000 lire per la sezione grafica/pittura.  
-112 opere in concorso da dieci istituti della provincia di Trento.
-
----
-
 ## l'Adige, 19-12-1999
 
 ![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
 ---
 
+Dicembre 1999. Avevo tredici anni e frequentavo la III A della scuola media G. Prati di Ponte Arche.  
+Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario della morte del pittore — vinsi una borsa di studio da 200.000 lire per la sezione grafica/pittura.  
+112 opere in concorso da dieci istituti della provincia di Trento.
+
+---
+
 <details>
-<summary>apri articolo</summary>
+<summary>leggi articolo</summary>
 
 **Concorso Segantini, i vincitori**
 
