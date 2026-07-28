@@ -1,10 +1,22 @@
 ---
-title: "contatti"
+title: "Contatti — Mattia Riccadonna"
+heading: "contatti"
 date: 2026-07-25
+description: "Contatti di Mattia Riccadonna, pittore e illustratore trentino. Scrivimi per commissioni, collaborazioni o semplicemente per parlare d'arte."
 ---
 
 Puoi trovarmi qui:
 
 - **Instagram** [@riccadonna_art](https://www.instagram.com/riccadonna_art/)
+- **Email** <span id="email-contact"></span>
 
-Per commissioni, collaborazioni o semplicemente per fare due chiacchiere sull'arte, scrivimi sul profilo personale [@mattia.riccadonna](https://www.instagram.com/mattia.riccadonna/) è il modo più veloce.
+Per commissioni, collaborazioni o semplicemente per fare due chiacchiere sull'arte, scrivimi — Instagram o email, rispondo su entrambi.
+
+<script>
+(function() {
+  var u = 'info';
+  var d = 'mattiariccadonna.com';
+  var e = document.getElementById('email-contact');
+  e.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>';
+})();
+</script>
