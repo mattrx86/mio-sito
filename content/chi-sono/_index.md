@@ -1,14 +1,15 @@
 ---
-title: "chi sono"
+title: "Chi sono — Mattia Riccadonna, pittore trentino"
+heading: "chi sono"
 date: 2026-07-26
-description: "Chi ero e chi sono"
+description: "Pittore e disegnatore trentino attivo dal 1999. Oltre 70 opere tra disegni, olio su tela, acrilico e tecniche miste. Mostre, concorsi ed esposizioni tra il 1999 e il 2007."
 ---
 
 Mi chiamo Mattia e sono nato il 13-05-1986. Ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
 
 18 novembre 1999, ad Arco, al [1° Concorso Provinciale Giovanni `Segantini`](/rassegna-stampa/concorso-segantini-1999/) ho ricevuto in premio una borsa di studio di 200 mila Lire per la mia versione del [*pittore delle montagne*](/archivio/pittore-delle-montagne). Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
-Col tempo il disegno è diventato prima amore per i *comics* ([Benito Jacovitti](https://it.wikipedia.org/wiki/Benito_Jacovitti) e [Charles M. Schulz](https://it.wikipedia.org/wiki/Charles_M._Schulz) su tutti) poi *pittura* con l'amore per `Van Gogh` e `Sartori`. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo neglu ultimi anni, tecniche miste.
+Col tempo il disegno è diventato prima amore per *caricature e comics* (Benito Jacovitti e Charles M. Schulz su tutti) poi *pittura* con l'amore per `Van Gogh` e `Sartori`. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo neglu ultimi anni, tecniche miste.
 
 Tra il 2002 e il 2007 ho vissuto il periodo più intenso: mostre, concorsi, articoli di giornale, una piccola presenza nel mondo dell'arte locale trentina. Poi la vita ha preso altre strade — l'università, il lavoro, una famiglia — e la pittura è rimasta silenziosa. In questo periodo mi sono avvicinato alla `fotografia` cercando di mantenere un occhio tecnico ma curioso.
 
@@ -40,6 +41,6 @@ anni di pittura
 
 ---
 
-→ [archivio dipinti](/archivio)  
-→ [mostre ed esposizioni](/mostre)  
-→ [rassegna stampa](/rassegna-stampa)
+→ [archivio dipinti](/archivio/)  
+→ [mostre ed esposizioni](/mostre/)  
+→ [rassegna stampa](/rassegna-stampa/)

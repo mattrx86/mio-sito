@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article>
+    <nav style='display:flex;justify-content:space-between;margin-bottom:1.5rem;font-family:monospace;'>
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.Permalink }}" style='text-decoration:none;'>← indietro</a>
+        {{ else }}<span></span>{{ end }}
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.Permalink }}" style='text-decoration:none;'>avanti →</a>
+        {{ else }}<span></span>{{ end }}
+    </nav>
+    {{ if not .Params.hideDate }}
+    <p class="post-meta">
+        <time datetime="{{ .Date }}">
+            {{ .Date | time.Format site.Params.theme_config.date_format }}
+        </time>
+    </p>
+    {{ end }}
+    <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+    {{ if .Params.toc }}
+        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+            {{ .TableOfContents }}
+        </aside>
+    {{ end }}
+    {{ .Content }}
+</article>
+{{ end }}
