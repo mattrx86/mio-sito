@@ -15,8 +15,10 @@ Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario de
 
 ![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
+---
+
 <details>
-<summary>trascrizione articolo</summary>
+<summary>apri articolo</summary>
 
 **Concorso Segantini, i vincitori**
 
