@@ -6,7 +6,7 @@ tags: ["paesaggio", "olio-su-tela"]
 
 ![Luce mattutina, 2024](/static/images/galleria/luce-mattutina.jpg)
 
-**Tecnica:** olio su cartoncino telato  
+**Tecnica:** olio su cartoncino telato   
 **Dimensioni:** 35x40 cm  
 **Serie:** nessuna  
 
