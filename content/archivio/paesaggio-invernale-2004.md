@@ -1,21 +1,20 @@
 ---
-title: "paesaggio invernale"
+title: "Paesaggio invernale — Olio su tela, 2004 | Mattia Riccadonna"
+heading: "paesaggio invernale"
 date: 2004-02-10
+hideDate: true
+description: "Olio su tela, 50x70 cm. Paesaggio invernale trentino dipinto nel 2004. Opera del periodo giovanile di Mattia Riccadonna, tra il 1999 e il 2007."
 tags: ["olio", "paesaggio", "trentino"]
 ---
 
-![Paesaggio invernale 2004](/img/archivio/paesaggio-invernale-2004.jpg)
+![Opera senza fotografia disponibile](/img/opera_senza_foto_placeholder.svg)
 
-**Tecnica:** olio su tela  
-**Dimensioni:** 50 × 70 cm  
-**Anno:** 2004  
-.
----
-
-Inverno 2004. Stavo finendo il quarto anno di liceo. Fuori casa c'era quella luce piatta e bianca che ha solo febbraio in montagna — nessuna ombra, nessun contrasto, eppure tutto leggibilissimo.
-Ho cercato di catturare quella sensazione di silenzio. Non so se ci sono riuscito, ma ricordo ancora l'odore del trementina in camera.
+**tecnica:** olio su tela  
+**anno produzione:** 2004  
+**dimensioni:** 50x70 cm  
+**ubicazione:** sconosciuta  
 
 ---
 
-**Cosa succedeva nel 2004:**  
-Usciva Half-Life 2.
+**Cosa succedeva nel 2004?**  
+Usciva Half-Life 2. Il telefonino era ancora il Nokia 6600.
