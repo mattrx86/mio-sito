@@ -9,14 +9,13 @@ tags: ["olio", "paesaggio", "trentino"]
 **Tecnica:** olio su tela  
 **Dimensioni:** 50 × 70 cm  
 **Anno:** 2004  
-
+.
 ---
 
 Inverno 2004. Stavo finendo il quarto anno di liceo. Fuori casa c'era quella luce piatta e bianca che ha solo febbraio in montagna — nessuna ombra, nessun contrasto, eppure tutto leggibilissimo.
-
 Ho cercato di catturare quella sensazione di silenzio. Non so se ci sono riuscito, ma ricordo ancora l'odore del trementina in camera.
 
 ---
 
 **Cosa succedeva nel 2004:**  
-Usciva Half-Life 2. L'Italia vinceva gli Europei di calcio. Io passavo le serate a disegnare e ad ascoltare i Radiohead.
+Usciva Half-Life 2.
