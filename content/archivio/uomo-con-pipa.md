@@ -1,7 +1,7 @@
 ---
 title: "Paesaggio invernale — Olio su tela, 2004 | Mattia Riccadonna"
 heading: "uomo con pipa"
-date: 2006-7-12
+date: 2006-07-12
 hideDate: true
 description: "Olio su tela, 50x70 cm. Paesaggio invernale trentino dipinto nel 2004. Opera del periodo giovanile di Mattia Riccadonna, tra il 1999 e il 2007."
 tags: ["olio", "paesaggio", "trentino"]

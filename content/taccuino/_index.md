@@ -6,6 +6,6 @@ description: "Schizzi, prove ed esperimenti su carta di Mattia Riccadonna. Appun
 ---
 
 Schizzi, prove, esperimenti. Cose che non diventano quadri ma che esistono comunque.  
-Appunti visivi su carta — taccuini, fogli volanti, margini di qualcosa.
+Appunti su carta, taccuini, `fogli volanti`, margini di qualcosa.
 
 <br>
