@@ -5,7 +5,7 @@ date: 2026-07-26
 description: "Pittore e disegnatore trentino attivo dal 1999. Oltre 70 opere tra disegni, olio su tela, acrilico e tecniche miste. Mostre, concorsi ed esposizioni tra il 1999 e il 2007."
 ---
 
-Mi chiamo Mattia e sono nato il 13-05-1986. Ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
+Mi chiamo Mattia e ho iniziato a disegnare (con impegno) a tredici anni, *quasi* per caso.  
 
 18 novembre 1999, ad Arco, al [1° Concorso Provinciale Giovanni `Segantini`](/rassegna-stampa/concorso-segantini-1999/) ho ricevuto in premio una borsa di studio di 200 mila Lire per la mia versione del [*pittore delle montagne*](/archivio/pittore-delle-montagne). Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
