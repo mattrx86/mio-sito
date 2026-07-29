@@ -1,5 +1,6 @@
 ---
-title: "Esercizi di memoria — Mostra personale a Tione, 2003 | Mattia Riccadonna"
+title: "Esercizi di pittura — Mostra personale a Tione, 2003 | Mattia Riccadonna"
+heading: "esercizi di pittura"
 date: 2003-08-25
 hideTitle: true
 hideDate: true
@@ -8,11 +9,11 @@ description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di
 
 ## Trentino, 25-08-2003
 
-![Ritaglio di giornale — Mostra Esercizi di memoria, Tione 2003](/img/rassegna-stampa/riccadonna-da-oggi-in-mostra.jpg)
+![Articolo del Trentino, 25 agosto 2003 — Mostra Esercizi di pittura](/img/rassegna-stampa/riccadonna-da-oggi-in-mostra.jpg)
 
 ---
 
-Gennaio 2003. Avevo diciassette anni e frequentavo le superiori. La mostra si chiamava **"Esercizi di memoria"** ed è stata inaugurata alle ore 17 presso le sale espositive del Centro Studi Judicaria di Tione di Trento. In mostra i primi lavori e l'ultima produzione — copie autorizzate di artisti locali e internazionali (Sartori, Rocca) e lavori originali. Aperta fino a domenica 31.
+Agosto 2003. Avevo diciassette anni e frequentavo le superiori. La mostra si chiamava **"Esercizi di pittura"**, erroneamente riportata nell'articolo come *esercizi di memoria* (!) ed è stata inaugurata il 25-08-2003 presso le sale espositive del Centro Studi Judicaria di Tione di Trento. In mostra i primi lavori e l'ultima produzione — copie autorizzate di artisti locali e internazionali (Sartori, Rocca) e lavori originali.
 
 ---
 

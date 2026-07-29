@@ -1,5 +1,6 @@
 ---
 title: "1° Concorso Provinciale Giovanni Segantini, 1999"
+heading: "concorso segantini, i vincitori"
 date: 1999-12-18
 hideDate: true
 hideTitle: true
@@ -8,7 +9,7 @@ description: "Mattia Riccadonna vince una borsa di studio al 1° Concorso Provin
 
 ## l'Adige, 19-12-1999
 
-![Ritaglio di giornale — Concorso Segantini 1999](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
+![Articolo de l'Adige — 18-12-1999 — Concorso Segantini, i vincitori](/img/rassegna-stampa/articolo-concorso-segantini-1999.jpg)
 
 ---
 
