@@ -3,21 +3,18 @@
   url   = "/chi-sono/"
 
 [[entries]]
-  title = "opere"
+  title     = "archivio (1999–2007)"
+  url       = "/archivio/"
+  post_list = { section = "archivio", limit = 2, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
 
-  [[entries.entries]]
-    title     = "archivio (1999–2007)"
-    url       = "/archivio/"
-    post_list = { section = "archivio", limit = 2, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
+[[entries]]
+  title     = "dipinti recenti (dal 2024)"
+  url       = "/dipinti-recenti/"
+  post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
 
-  [[entries.entries]]
-    title     = "dipinti recenti (dal 2024)"
-    url       = "/dipinti-recenti/"
-    post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
-
-  [[entries.entries]]
-    title = "taccuino"
-    url   = "/taccuino/"
+[[entries]]
+  title = "taccuino"
+  url   = "/taccuino/"
 
 [[entries]]
   title = "storia"
@@ -30,7 +27,6 @@
     title = "rassegna stampa"
     url   = "/rassegna-stampa/"
     post_list = { section = "rassegna-stampa", limit = 2, show_more = true, show_more_url = "/rassegna-stampa/", show_more_text = ".. mostra tutti" }
-
 
 [[entries]]
   title = "blog"
