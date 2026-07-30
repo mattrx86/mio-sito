@@ -25,7 +25,7 @@
     <ul>
         {{- range $post := $posts -}}
         <li>
-            <span>{{- ($post.Date | time.Format site.Params.theme_config.date_format) }}</span>
+            <span>{{- ($post.Date | time.Format "2006") }}</span>
             <a href="{{ $post.Permalink | relURL }}">{{ if $post.Params.heading }}{{ $post.Params.heading }}{{ else }}{{ $post.Title }}{{ end }}</a>
         </li>
         {{ end }}
