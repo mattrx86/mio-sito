@@ -13,7 +13,7 @@ tags: ["olio", "natura-morta", "2025"]
 </div>
 
 <script>
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
   var g = document.querySelector('.gallery');
   if (!g) return;
   var imgs = Array.from(g.querySelectorAll('img'));
@@ -40,7 +40,7 @@ tags: ["olio", "natura-morta", "2025"]
   g.innerHTML = '';
   g.appendChild(main);
   g.appendChild(thumbs);
-})();
+});
 </script>
 
 **tecnica:** olio su masonite  
