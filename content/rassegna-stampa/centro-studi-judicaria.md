@@ -1,17 +1,32 @@
 ---
 title: "Esercizi di pittura — Articolo del Centro Informa, 2003"
-heading: "centro studi judicaria"
 date: 2003-08-25
-hideTitle: true
 hideDate: true
 description: "Articolo del Centro Informa sulla mostra personale Esercizi di pittura di Mattia Riccadonna al Centro Studi Judicaria di Tione, agosto 2003."
 ---
 
 ## Il Centro Informa, agosto 2003
 
-![Articolo Il Centro Informa, agosto 2003 — Esercizi di pittura di Mattia Riccadonna, pagina 2](/img/rassegna-stampa/esercizi-di-pittura-2.jpg)
+<div id="gallery-wrap">
+<img id="gallery-main" src="/img/rassegna-stampa/esercizi-di-pittura-1.jpg" alt="Articolo Il Centro Informa, agosto 2003 — pagina 1">
+<div id="gallery-thumbs">
+<img src="/img/rassegna-stampa/esercizi-di-pittura-1.jpg" alt="pagina 1">
+<img src="/img/rassegna-stampa/esercizi-di-pittura-2.jpg" alt="pagina 2">
+</div>
+</div>
 
-![Articolo Il Centro Informa, agosto 2003 — Esercizi di pittura di Mattia Riccadonna, pagina 1](/img/rassegna-stampa/esercizi-di-pittura-1.jpg)
+<script>
+var main = document.getElementById('gallery-main');
+var thumbs = document.querySelectorAll('#gallery-thumbs img');
+thumbs.forEach(function(t) {
+  t.addEventListener('click', function() {
+    main.src = t.src;
+    main.alt = t.alt;
+    thumbs.forEach(function(x) { x.style.opacity = '0.4'; });
+    t.style.opacity = '1';
+  });
+});
+</script>
 
 ---
 
@@ -42,12 +57,8 @@ Gusto del dettaglio, occhio puntiglioso che penetra fin nell'essenza della mater
 
 Per parte nostra ci fa piacere vedere e riconoscere qualità come quelle di Mattia Riccadonna, collaborare affinché anche la cultura figurativa possa ritagliarsi uno spazio nel panorama della storia e della cultura giudicariese, segnalare manifestazioni importanti e belle come questa.
 
-*Una delle sale espositive.*
-
 **Opere in mostra:**
 - *Catenaccio* — olio su tela, 30×50 cm
 - *I ricordi del nonno* — olio su tela, 50×70 cm
 
 </details>
-
->>>>>>> cba9f7cf45287f16870bb49666f46079241804c6
