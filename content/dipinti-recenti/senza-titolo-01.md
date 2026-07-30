@@ -7,7 +7,7 @@ description: "Olio su tela, 50x60cm. Studio pittorico da Peter Batchelder, dipin
 tags: ["olio", "paesaggio", "2025"]
 ---
 
-![Risveglio alpino, olio su tela 40x70 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/senza-titolo-01.jpg)
+![Studio da Batchelder, olio su tela 50x60 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/studio-Batchelder-01.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2025  
