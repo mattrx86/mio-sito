@@ -1,5 +1,5 @@
 ---
-title: "Esercizi di pittura"
+title: "centro judicaria"
 date: 2003-08-25
 hideDate: true
 description: "Articolo del Centro Informa sulla mostra personale Esercizi di pittura di Mattia Riccadonna al Centro Studi Judicaria di Tione, agosto 2003."
