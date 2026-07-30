@@ -7,6 +7,6 @@ description: "Dipinti recenti di Mattia Riccadonna dal 2024 ad oggi. Olio su tel
 
 I lavori di adesso. Olio, tecniche miste, acquerello, esperimenti. Alcune cose finite, molte ancora in corso. Aggiorno questa sezione quando posso e quando mi ricordo.
 
-Le `cornici nere` sono parte dell'opera — *float frame* minimali, con le loro imperfezioni, costruite da me.
+Le `cornici nere` sono parte dell'opera — *float frames* minimali, con le loro imperfezioni, costruite da me.
 
 <br>
