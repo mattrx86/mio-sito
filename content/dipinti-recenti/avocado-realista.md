@@ -9,7 +9,7 @@ tags: ["olio", "natura-morta", "2025"]
 
 <div class="gallery">
   <img src="/img/dipinti-recenti/avocado-1.jpg" alt="Avocado realista, vista frontale">
-  <img src="/img/dipinti-recenti/avocado-2.jpg" alt="Avocado realista, dettaglio">
+  <img src="/img/dipinti-recenti/avocado-2.jpg" alt="Avocado realista, cornice">
 </div>
 
 <script>
@@ -21,9 +21,9 @@ tags: ["olio", "natura-morta", "2025"]
   var main = document.createElement('img');
   main.src = imgs[0].src;
   main.alt = imgs[0].alt;
-  main.style.cssText = 'max-height:500px;width:auto;max-width:100%;display:block;margin:0 auto 1rem;';
+  main.style.cssText = 'max-height:500px;width:auto;max-width:100%;display:block;margin:0 0 1rem 0;';
   var thumbs = document.createElement('div');
-  thumbs.style.cssText = 'display:flex;gap:0.5rem;justify-content:center;margin-bottom:1.5rem;';
+  thumbs.style.cssText = 'display:flex;gap:0.5rem;justify-content:flex-start;margin-bottom:1.5rem;';
   imgs.forEach(function(img, i) {
     var t = document.createElement('img');
     t.src = img.src;
