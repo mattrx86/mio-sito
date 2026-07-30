@@ -17,4 +17,4 @@ tags: ["olio", "paesaggio", "trentino"]
 ---
 
 **Cosa succedeva nel 2004?**  
-MSN Messenger era il social network. Il telefonino era il Nokia 6600 e si ascoltava *Boulevard of Broken Dreams*  
+`MSN Messenger` era il social network. Il telefonino era il Nokia 6600 e si ascoltava *Boulevard of Broken Dreams*  

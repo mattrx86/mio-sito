@@ -44,4 +44,4 @@ thumbs.forEach(function(t) {
 ---
 
 **Cosa succedeva nel 2002?**  
-si usavano i floppy-disk da 1,44MB e cominciavano a diffondersi i CD-Rom. *Virgilio* era il motore di ricerca.
+si usavano i `floppy-disk` da 1,44MB e cominciavano a diffondersi i CD-Rom. *Virgilio* era il motore di ricerca.
