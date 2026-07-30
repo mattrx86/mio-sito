@@ -7,6 +7,7 @@ description: "Contatti di Mattia Riccadonna, pittore trentino. Scrivimi per comm
 ---
 
 Puoi trovarmi qui:
+<br>
 
 **Email** — <span id="email-contact"></span>
 **Instagram** — [@riccadonna_art](https://www.instagram.com/riccadonna_art/)
