@@ -9,9 +9,9 @@ description: "Articolo del Centro Informa sulla mostra personale Esercizi di pit
 
 ## Il Centro Informa, agosto 2003
 
-![Articolo Il Centro Informa, agosto 2003 — Esercizi di pittura di Mattia Riccadonna, pagina 1](/img/rassegna-stampa/esercizi-di-pittura-1.jpg)
-
 ![Articolo Il Centro Informa, agosto 2003 — Esercizi di pittura di Mattia Riccadonna, pagina 2](/img/rassegna-stampa/esercizi-di-pittura-2.jpg)
+
+![Articolo Il Centro Informa, agosto 2003 — Esercizi di pittura di Mattia Riccadonna, pagina 1](/img/rassegna-stampa/esercizi-di-pittura-1.jpg)
 
 ---
 
@@ -49,3 +49,5 @@ Per parte nostra ci fa piacere vedere e riconoscere qualità come quelle di Matt
 - *I ricordi del nonno* — olio su tela, 50×70 cm
 
 </details>
+
+>>>>>>> cba9f7cf45287f16870bb49666f46079241804c6

@@ -16,4 +16,4 @@ tags: ["olio", "paesaggio", "2024"]
 
 ---
 
-**annotazioni:** opera presentata al *Premio d'Arte Giulio Riccadonna* (Rango, 30-07-2024) e premiata dalla giuria con il `secondo posto`.
+**annotazioni:** opera presentata al *Premio d'Arte Giulio Riccadonna* (Rango, 30-07-2024) e premiata dalla giuria con il `secondo posto`
