@@ -2,24 +2,56 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  {{/* Description */}}
   {{ if .Params.description }}
     <meta name="description" content="{{ .Params.description }}">
   {{ else if or .IsPage .IsHome }}
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
   {{ end }}
+
+  {{/* Title */}}
   <title>
     {{ if .Params.seo_title }}
       {{ .Params.seo_title }}
     {{ else if .IsHome }}
       {{ $.Site.Params.seo_title | default $.Site.Title }}
     {{ else }}
-      {{ .Title }}
+      {{ .Title }} — {{ $.Site.Title }}
     {{ end }}
   </title>
+
+  {{/* Canonical */}}
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{/* Open Graph */}}
+  <meta property="og:site_name" content="{{ $.Site.Title }}">
+  <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ $.Site.Params.seo_title | default $.Site.Title }}{{ else }}{{ .Title }} — {{ $.Site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+  <meta property="og:locale" content="{{ $.Site.LanguageCode }}">
+
+  {{/* Twitter Card */}}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ $.Site.Params.seo_title | default $.Site.Title }}{{ else }}{{ .Title }} — {{ $.Site.Title }}{{ end }}">
+  <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+
+  {{/* Author e copyright */}}
+  <meta name="author" content="{{ $.Site.Params.author }}">
+  <meta name="copyright" content="{{ $.Site.Params.copyright }}">
+
+  {{/* RSS */}}
+  <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ "index.xml" | absURL }}">
+
+  {{/* Favicon */}}
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  {{/* CSS */}}
   {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
   {{ $sass := resources.Get "css/main.scss" }}
   {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
+
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 </head>
