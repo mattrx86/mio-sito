@@ -11,10 +11,9 @@ defaultContentLanguageInSubdir = false
     title        = "Mattia Riccadonna, strati."
     weight       = 1
     [languages.it.params]
-      seo_title   = "Mattia Riccadonna — Pittore e illustratore trentino"
-      description = "Pittore, illustratore e ingegnere. Dipingo dal 1999. Olio su tela, acquerello, sperimentazione. Archivio di opere, mostre e documenti dal 1999 ad oggi."
-      keywords    = ["pittore", "pittura ad olio", "acquerello", "Mattia Riccadonna", "Trentino", "arte contemporanea", "illustrazione", "ingegnere pittore", "pittore Trentino", "arte Trentino", "quadri originali"]
-
+      seo_title   = "Mattia Riccadonna — Pittore trentino. Olio su tela e disegno dal 1999."
+      description = "Pittore trentino dal 1999, Comano Terme. Olio su tela, disegno e sperimentazione. Archivio di opere, mostre e documenti."
+      keywords = ["Mattia Riccadonna", "pittore trentino", "pittura ad olio", "disegno", "arte Trentino", "quadri originali", "quadri in vendita", "acquisto quadri", "opere d'arte originali", "pittore Comano Terme", "arte contemporanea trentina", "quadri olio su tela"]
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
