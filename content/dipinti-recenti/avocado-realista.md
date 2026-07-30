@@ -8,7 +8,6 @@ tags: ["olio", "natura-morta", "2025"]
 ---
 
 ![Avocado realista!, olio su masonite 12x12 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/avocado-1.jpg)
-![Avocado realista!, olio su masonite 12x12 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/avocado-2.jpg)
 
 **tecnica:** olio su masonite  
 **anno produzione:** 2025  
