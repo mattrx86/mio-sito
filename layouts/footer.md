@@ -1,3 +1,3 @@
 <br>
 
-© MR 1999-2026. Un archivio personale.
+© 2026 MR — Un archivio personale.
