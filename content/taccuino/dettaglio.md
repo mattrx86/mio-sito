@@ -1,5 +1,5 @@
 ---
-title: "dettaglio n.001 — Olio su tela, 2024 | Mattia Riccadonna"
+title: "dettaglio n.001 — Olio su tela, 2024"
 heading: "dettaglio 001"
 date: 2024-07-30
 hideDate: true

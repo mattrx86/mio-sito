@@ -1,5 +1,5 @@
 ---
-title: "Esercizi di pittura — Articolo del Centro Informa, 2003 | Mattia Riccadonna"
+title: "Esercizi di pittura — Articolo del Centro Informa, 2003"
 heading: "centro studi judicaria"
 date: 2003-08-25
 hideTitle: true

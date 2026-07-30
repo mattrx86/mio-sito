@@ -1,5 +1,5 @@
 ---
-title: "Luce mattutina — Olio su tela, 2024 | Mattia Riccadonna"
+title: "Luce mattutina — Olio su tela, 2024"
 heading: "luce mattutina"
 date: 2024-07-30
 hideDate: true

@@ -1,5 +1,5 @@
 ---
-title: "Risveglio alpino — Olio su tela, 2025 | Mattia Riccadonna"
+title: "Risveglio alpino — Olio su tela, 2025"
 heading: "risveglio alpino"
 date: 2025-07-10
 hideDate: true

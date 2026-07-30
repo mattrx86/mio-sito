@@ -1,5 +1,5 @@
 ---
-title: "Studio da Batchelder — Olio su tela, 2025 | Mattia Riccadonna"
+title: "Studio da Batchelder — Olio su tela, 2025"
 heading: "studio da P. Batchelder"
 date: 2025-05-10
 hideDate: true
