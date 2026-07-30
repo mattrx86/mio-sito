@@ -1,9 +1,12 @@
 ---
-title: "Articolo del Centro Informa del 25 agosto 2003"
-heading: "centro judicaria"
+title: "Articolo della rivista Judicaria del 25 agosto 2003"
+heading: "rivista judicaria"
 date: 2003-08-25
-description: "Articolo del Centro Informa sulla mostra personale Esercizi di pittura di Mattia Riccadonna al Centro Studi Judicaria di Tione, agosto 2003."
+hideTitle: true
+description: "Articolo della rivista Judicaria del Centro Studi Judicaria sulla mostra personale Esercizi di pittura di Mattia Riccadonna al Centro Studi Judicaria di Tione, agosto 2003."
 ---
+
+## Rivista Judicaria, 25-08-2003
 
 <div id="gallery-wrap">
 <img id="gallery-main" src="/img/rassegna-stampa/esercizi-di-pittura-1.jpg" alt="Articolo Il Centro Informa, agosto 2003 — pagina 1">
