@@ -23,14 +23,6 @@ schema:
 </div>
 </div>
 
-<style>
-#gallery-wrap { text-align: left; }
-#gallery-main { max-height: 500px; width: auto; max-width: 100%; display: block; margin: 0 0 0.5rem 0 !important; }
-#gallery-thumbs { display: flex; gap: 0.5rem; justify-content: flex-start; margin-bottom: 1.5rem; }
-#gallery-thumbs img { width: 60px; height: 60px; object-fit: cover; cursor: pointer; opacity: 0.4; transition: opacity 0.2s; margin: 0 !important; display: block !important; }
-#gallery-thumbs img:first-child { opacity: 1; }
-</style>
-
 <script>
 var main = document.getElementById('gallery-main');
 var thumbs = document.querySelectorAll('#gallery-thumbs img');

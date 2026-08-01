@@ -7,4 +7,6 @@ description: "Cinque mostre tra il 2002 e il 2007 in Trentino — personali, col
   
 Ricordi di mostre personali, alcune collettive e qualche concorso.  
 
+*In costruzione*  
+
 <br>
