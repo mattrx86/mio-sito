@@ -7,13 +7,14 @@ description: "Olio su tela, 50x70 cm. L'opera evoca una natura morta di oggetti 
 tags: ["olio", "natura-morta", "trentino"]
 ---
 
-
-**Cosa succedeva nel 2003?**  
-nelle sale usciva *Il `Signore degli Anelli` — Il ritorno del re* e avevo il Nokia 3310. Zlatan Ibrahimović era appena arrivato alla Juve dall'Ajax.
-
 ![Ricordi, olio su tela 50x70 cm, Mattia Riccadonna, 2003](/img/archivio/ricordi.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2003  
 **dimensioni:** 50x70 cm  
 **ubicazione:** collezione privata
+
+---
+
+**Cosa succedeva nel 2003?**  
+Avevo il Nokia 3310. nelle sale usciva *Il `Signore degli Anelli` — Il ritorno del re*. Ibrahimović era appena arrivato alla Juve dall'Ajax.
