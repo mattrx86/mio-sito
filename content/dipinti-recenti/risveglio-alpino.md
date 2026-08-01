@@ -14,6 +14,8 @@ tags: ["olio", "paesaggio", "2025"]
 **dimensioni:** 40x70 cm    
 **ubicazione:** collezione privata    
 
+{{< navquadro >}}
+
 ---
 
 **annotazioni:** opera in concorso al `Premio d'Arte` Giulio Riccadonna di Rango il 26 luglio 2025

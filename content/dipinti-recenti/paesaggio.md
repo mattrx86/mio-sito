@@ -14,6 +14,8 @@ tags: ["olio", "paesaggio", "2024"]
 **dimensioni:** 35x40 cm    
 **ubicazione:** collezione privata    
 
+{{< navquadro >}}
+
 ---
 
 **annotazioni:** opera con forme giudicariesi, vagamente ispirato all'opera di Hopper e Batchelder

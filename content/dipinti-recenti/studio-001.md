@@ -14,6 +14,8 @@ tags: ["olio", "paesaggio", "2025"]
 **dimensioni:** 50x60 cm    
 **ubicazione:** collezione dell'autore
 
+{{< navquadro >}}
+
 ---
 
 **annotazioni:** studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto originale di Peter Batchelder. Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.

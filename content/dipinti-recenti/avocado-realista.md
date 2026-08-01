@@ -41,6 +41,8 @@ thumbs.forEach(function(t) {
 **dimensioni:** 12x12 cm  
 **ubicazione:** disponibile
 
+{{< navquadro >}}
+
 ---
 
 **annotazioni:** opera realizzata su supporto creato incollando foglio di giornale su pannello in legno di masonite e utilizzandolo come base per la pittura ad olio

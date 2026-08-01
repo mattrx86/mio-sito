@@ -14,6 +14,8 @@ tags: ["olio", "paesaggio", "2024"]
 **dimensioni:** 35x40 cm    
 **ubicazione:** collezione privata    
 
+{{< navquadro >}}
+
 ---
 
 **annotazioni:** opera in concorso al `Premio d'Arte` Giulio Riccadonna di Rango il 30 luglio 2024 e premiata dalla giuria con il `secondo posto` in gara
