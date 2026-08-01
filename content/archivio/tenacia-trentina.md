@@ -36,7 +36,7 @@ thumbs.forEach(function(t) {
 });
 </script>
 
-**tecnica:** tempera su carta 
+**tecnica:** tempera su carta  
 **anno produzione:** 2001  
 **dimensioni:** 21x30 cm  
 **ubicazione:** collezione dell'autore
