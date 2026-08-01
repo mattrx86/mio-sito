@@ -1,0 +1,10 @@
+{{ if or .Page.PrevInSection .Page.NextInSection }}
+<nav style='display:flex;justify-content:space-between;margin:1rem 0;font-family:monospace;font-size:0.9rem;'>
+    {{ if .Page.NextInSection }}
+    <a href="{{ .Page.NextInSection.Permalink }}" style='text-decoration:none;'>← precedente</a>
+    {{ else }}<span></span>{{ end }}
+    {{ if .Page.PrevInSection }}
+    <a href="{{ .Page.PrevInSection.Permalink }}" style='text-decoration:none;'>successivo →</a>
+    {{ else }}<span></span>{{ end }}
+</nav>
+{{ end }}

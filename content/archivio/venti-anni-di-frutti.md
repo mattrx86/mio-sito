@@ -14,6 +14,8 @@ tags: ["olio", "natura-morta", "trentino", "caravaggio"]
 **dimensioni:** 50x70 cm  
 **ubicazione:** collezione dell'autore
 
+{{< navquadro >}}
+
 ---
 
 **Cosa succedeva nel 2002?**  
