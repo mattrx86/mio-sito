@@ -4,7 +4,15 @@ heading: "avocado realista!"
 date: 2025-07-14
 hideDate: true
 description: "Olio su pannello in masonite, 12x12cm. Avocado con tecnica realista su pannello in legno e foglio di giornale dipinto nel 2025"
+image: "/img/dipinti-recenti/avocado-1.jpg"
 tags: ["olio", "natura-morta", "2025"]
+schema:
+  type: "VisualArtwork"
+  artist: "Mattia Riccadonna"
+  medium: "Olio su tela"
+  width: "12"
+  height: "12"
+  dateCreated: "2025"
 ---
 
 <div id="gallery-wrap">

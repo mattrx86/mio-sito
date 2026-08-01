@@ -4,7 +4,15 @@ heading: "radici"
 date: 2002-05-13
 hideDate: true
 description: "Olio su tela, 50x60 cm. Paesaggio di un borgo antico con portone e zona d'ombra dipinto nel 2002"
+image: "/img/archivio/radici.jpg"
 tags: ["olio", "paesaggio", "trentino"]
+schema:
+  type: "VisualArtwork"
+  artist: "Mattia Riccadonna"
+  medium: "Olio su tela"
+  width: "70"
+  height: "50"
+  dateCreated: "2002"
 ---
 
 <div id="gallery-wrap">
@@ -46,4 +54,4 @@ thumbs.forEach(function(t) {
 ---
 
 **Cosa succedeva nel 2002?**  
-si usavano i `floppy-disk` da 1,44MB e cominciavano a diffondersi i CD-Rom. *Virgilio* era il motore di ricerca.
+si usavano i `floppy-disk` da 1,44MB e cominciavano a diffondersi i CD-ROM. Virgilio era il motore di ricerca usato da tutti. Ricordo di aver dipinto questa tela partendo da una foto, non ricordo nè il luogo nè a chi è stata venduta.

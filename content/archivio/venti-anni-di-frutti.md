@@ -4,7 +4,15 @@ heading: "vent'anni di frutti"
 date: 2002-06-14
 hideDate: true
 description: "Olio su tela, 50x70 cm. Natura morta di cesto con frutta ispirata al Caravaggio dipinto nel 2002"
+image: "/img/archivio/venti-anni-frutti.jpg"
 tags: ["olio", "natura-morta", "trentino", "caravaggio"]
+schema:
+  type: "VisualArtwork"
+  artist: "Mattia Riccadonna"
+  medium: "Olio su tela"
+  width: "70"
+  height: "50"
+  dateCreated: "2002"
 ---
 
 ![Vent'anni di frutti, olio su tela 50x70 cm, Mattia Riccadonna, 2002](/img/archivio/venti-anni-frutti.jpg)

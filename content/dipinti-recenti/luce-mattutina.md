@@ -3,15 +3,23 @@ title: "Luce mattutina — Olio su tela, 2024"
 heading: "luce mattutina"
 date: 2024-07-30
 hideDate: true
-description: "Olio su tela, 35x40cm. Paesaggio trentino con tipica casa giudicariese dipinto nel 2024. Presentato e premiato con il secondo posto al premio d'arte 2024 Giulio Riccadonna di Rango, luglio 2024"
+description: "Olio su tela, 35x40cm. Paesaggio trentino con tipica casa giudicariese dipinto nel 2024. Presentato e premiato con il secondo posto al premio d'arte 2024 Giulio Riccadonna di Rango nel luglio 2024. L'opera si ispira alla tecnica dell'artista Salvatore Mangione in arte Salvo."
+image: "/img/dipinti-recenti/luce-mattutina.jpg"
 tags: ["olio", "paesaggio", "2024"]
+schema:
+  type: "VisualArtwork"
+  artist: "Mattia Riccadonna"
+  medium: "Olio su tela"
+  width: "24"
+  height: "30"
+  dateCreated: "2024"
 ---
 
-![Luce mattutina, olio su tela 35x40 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/luce-mattutina.jpg)
+![Luce mattutina, olio su tela 24x30 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/luce-mattutina.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2024  
-**dimensioni:** 35x40 cm    
+**dimensioni:** 24x30 cm    
 **ubicazione:** collezione privata    
 
 {{< navquadro >}}
