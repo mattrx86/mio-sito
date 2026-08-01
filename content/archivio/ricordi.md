@@ -14,6 +14,8 @@ tags: ["olio", "natura-morta", "trentino"]
 **dimensioni:** 50x70 cm  
 **ubicazione:** collezione privata
 
+{{< navquadro >}}
+
 ---
 
 **Cosa succedeva nel 2003?**  

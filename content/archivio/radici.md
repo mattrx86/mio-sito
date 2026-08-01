@@ -41,6 +41,8 @@ thumbs.forEach(function(t) {
 **dimensioni:** 50x60 cm  
 **ubicazione:** collezione privata
 
+{{< navquadro >}}
+
 ---
 
 **Cosa succedeva nel 2002?**  

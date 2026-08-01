@@ -14,6 +14,8 @@ tags: ["olio", "paesaggio", "trentino"]
 **dimensioni:** 30x50 cm  
 **ubicazione:** collezione dell'autore
 
+{{< navquadro >}}
+
 ---
 
 **Cosa succedeva nel 2004?**  
