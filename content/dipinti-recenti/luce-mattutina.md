@@ -19,8 +19,8 @@ schema:
 
 **tecnica:** olio su tela  
 **anno produzione:** 2024  
-**dimensioni:** 24x30 cm    
-**ubicazione:** collezione privata    
+**dimensioni:** 24x30 cm  
+**ubicazione:** collezione privata  
 
 {{< navquadro >}}
 

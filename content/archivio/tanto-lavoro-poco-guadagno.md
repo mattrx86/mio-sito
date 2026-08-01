@@ -26,5 +26,4 @@ schema:
 
 ---
 
-**Cosa succedeva nel 2001?**  
-Nel gennaio 2002 entrarono ufficialmente in circolazione le banconote e monete in euro. Gli SMS diventavano un fenomeno di massa.
+**annotazioni:** opera eseguita a scopo di studio e pratica pittorica. Soggetto originale di Carlo Sartori. Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.

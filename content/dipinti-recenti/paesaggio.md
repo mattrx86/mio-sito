@@ -1,5 +1,5 @@
 ---
-title: "Senza titolo — Olio su tela, 2024 | Mattia Riccadonna"
+title: "Senza titolo — Olio su tela, 2024"
 heading: "senza titolo"
 date: 2024-09-22
 hideDate: true

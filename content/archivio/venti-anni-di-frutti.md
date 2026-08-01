@@ -1,5 +1,5 @@
 ---
-title: "Vent'anni di frutti — Olio su tela, 2002 | Mattia Riccadonna"
+title: "Vent'anni di frutti — Olio su tela, 2002"
 heading: "vent'anni di frutti"
 date: 2002-06-14
 hideDate: true

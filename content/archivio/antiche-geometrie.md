@@ -1,5 +1,5 @@
 ---
-title: "Antiche geometrie — Olio su tela, 2002 | Mattia Riccadonna"
+title: "Antiche geometrie — Olio su tela, 2002"
 heading: "antiche geometrie"
 date: 2002-07-13
 hideDate: true

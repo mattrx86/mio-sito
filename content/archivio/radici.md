@@ -1,5 +1,5 @@
 ---
-title: "Radici — Olio su tela, 2002 | Mattia Riccadonna"
+title: "Radici — Olio su tela, 2002"
 heading: "radici"
 date: 2002-05-13
 hideDate: true

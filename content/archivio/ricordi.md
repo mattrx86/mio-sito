@@ -1,5 +1,5 @@
 ---
-title: "Ricordi — Olio su tela, 2003 | Mattia Riccadonna"
+title: "Ricordi — Olio su tela, 2003"
 heading: "ricordi"
 date: 2003-05-13
 hideDate: true

@@ -1,5 +1,5 @@
 ---
-title: "Catenaccio a Villa Banale — Olio su tela, 2004 | Mattia Riccadonna"
+title: "Catenaccio a Villa Banale — Olio su tela, 2004"
 heading: "catenaccio a villa banale"
 date: 2004-06-14
 hideDate: true
@@ -15,7 +15,7 @@ schema:
   dateCreated: "2004"
 ---
 
-![Catenaccio a Glolo, olio su tela 30x50 cm, Mattia Riccadonna, 2004](/img/archivio/catanaccio-villa-banale.jpg)
+![Catenaccio a Glolo, olio su tela 30x50 cm, Mattia Riccadonna, 2004](/img/archivio/catenaccio-villa-banale.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2004  

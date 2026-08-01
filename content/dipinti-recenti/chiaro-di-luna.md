@@ -1,5 +1,5 @@
 ---
-title: "Chiaro di Luna — Olio su tela, 2025 | Mattia Riccadonna"
+title: "Chiaro di Luna — Olio su tela, 2025"
 heading: "chiaro di luna"
 date: 2025-07-14
 hideDate: true
@@ -19,8 +19,8 @@ schema:
 
 **tecnica:** olio su tela  
 **anno produzione:** 2025  
-**dimensioni:** 30x50 cm    
-**ubicazione:** collezione privata    
+**dimensioni:** 30x50 cm  
+**ubicazione:** collezione privata  
 
 {{< navquadro >}}
 

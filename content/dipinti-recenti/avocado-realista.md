@@ -1,5 +1,5 @@
 ---
-title: "Avocado realista! — Olio su masonite, 2025 | Mattia Riccadonna"
+title: "Avocado realista! — Olio su masonite, 2025"
 heading: "avocado realista!"
 date: 2025-07-14
 hideDate: true
