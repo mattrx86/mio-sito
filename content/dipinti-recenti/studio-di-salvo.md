@@ -4,7 +4,7 @@ heading: "studio di salvo"
 date: 2025-05-10
 hideDate: true
 description: "Olio su tela, 30x40cm. Studio pittorico da Salvatore Mangione in arte Salvo, dipinto nel 2025"
-image: "/img/dipinti-recenti/studio-salvo-01.jpg"
+image: "/img/dipinti-recenti/studio-di-salvo-01.jpg"
 tags: ["olio", "paesaggio", "2025"]
 schema:
   type: "VisualArtwork"
@@ -15,7 +15,7 @@ schema:
   dateCreated: "2025"
 ---
 
-![Studio da Salvo, olio su tela 50x60 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/studio-salvo-01.jpg)
+![Studio da Salvo, olio su tela 50x60 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/studio-di-salvo-01.jpg)
 
 **tecnica:** olio su tela  
 **anno produzione:** 2025  
