@@ -24,7 +24,7 @@
   {{/* Canonical */}}
   <link rel="canonical" href="{{ .Permalink }}">
 
-{{/* Open Graph */}}
+  {{/* Open Graph */}}
   <meta property="og:site_name" content="{{ $.Site.Title }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
@@ -39,14 +39,14 @@
   <meta property="og:image" content="{{ "/img/og-home.jpg" | absURL }}">
   {{ end }}
 
- {{/* Twitter Card */}}
+  {{/* Twitter Card */}}
   <meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}">
   <meta name="twitter:title" content="{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ $.Site.Params.seo_title | default $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
   <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
   {{ if .Params.image }}
   <meta name="twitter:image" content="{{ .Params.image | absURL }}">
   {{ end }}
-  
+
   {{/* Author e copyright */}}
   <meta name="author" content="{{ $.Site.Params.author }}">
   <meta name="copyright" content="{{ $.Site.Params.copyright }}">
@@ -65,9 +65,7 @@
 
   {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
 
-  {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
-
-  {{/* Schema.org VisualArtwork */}}
+  {{/* Schema.org */}}
   {{ if .IsPage }}
   <script type="application/ld+json">
   {
@@ -77,6 +75,7 @@
     "description": "{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}",
     "url": "{{ .Permalink }}",
     {{ if .Params.image }}
+    "primaryImageOfPage": "{{ .Params.image | absURL }}",
     "image": "{{ .Params.image | absURL }}",
     {{ end }}
     {{ if .Params.schema }}

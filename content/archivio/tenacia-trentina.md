@@ -1,6 +1,6 @@
 ---
 title: "Tenacia trentina — Tempera su carta, 2001"
-heading: "tenacia trentina"
+heading: "tenacia trentina*"
 date: 2001-02-17
 hideDate: true
 description: "Tempera su carta, 21x30 cm. Omaggio all'opera Tenacia Trentina di Carlo Sartori, dipinta nel 2001."
@@ -46,4 +46,4 @@ thumbs.forEach(function(t) {
 ---
 
 **Annotazioni:**  
-opera omaggio a `Carlo Sartori` e alla sua tela *tenacia trentina* a cui il lavoro è ispirato. Dipinta nel 2001 quando avevo 14 anni e frequentavo la seconda superiore Tione di Trento. Oggi ricordo con piacere quando Sartori lasciò una sua dedica sul retro del quadro.
+opera omaggio a `Carlo Sartori` e alla sua tela *tenacia trentina* a cui il lavoro è ispirato. Dipinta nel 2001 quando avevo 14 anni e frequentavo la seconda superiore Tione di Trento. Oggi ricordo con piacere quando Sartori lasciò una sua dedica sul retro del quadro. Soggetto originale di Carlo Sartori. Tutti i diritti sull'opera originale appartengono all'autore.

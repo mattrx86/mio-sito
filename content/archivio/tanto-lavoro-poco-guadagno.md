@@ -1,6 +1,6 @@
 ---
 title: "Tanta fatica e poco guadagno — Olio su tela, 2001"
-heading: "tanta fatica e poco guadagno"
+heading: "tanta fatica e poco guadagno*"
 date: 2001-06-14
 hideDate: true
 description: "Olio su tela, 50x70 cm. Paesaggio naif ispirato ad un quadro del pittore giudicariese Carlo Sartori dall'omonimo titolo"

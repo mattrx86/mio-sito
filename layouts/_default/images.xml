@@ -1,0 +1,16 @@
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  {{ range where site.RegularPages ".Params.image" "!=" nil }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    <image:image>
+      <image:loc>{{ .Params.image | absURL }}</image:loc>
+      <image:title>{{ .Title | htmlEscape }}</image:title>
+      {{ with .Params.description }}
+      <image:caption>{{ . | htmlEscape }}</image:caption>
+      {{ end }}
+    </image:image>
+  </url>
+  {{ end }}
+</urlset>

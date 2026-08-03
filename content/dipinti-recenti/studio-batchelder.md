@@ -1,6 +1,6 @@
 ---
 title: "Studio da Batchelder — Olio su tela, 2025"
-heading: "studio n.001"
+heading: "studio batchelder*"
 date: 2025-05-10
 hideDate: true
 description: "Olio su tela, 50x60cm. Studio pittorico da Peter Batchelder, dipinto nel 2025"

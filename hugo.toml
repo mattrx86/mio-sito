@@ -13,7 +13,8 @@ defaultContentLanguageInSubdir = false
     [languages.it.params]
       seo_title   = "Mattia Riccadonna — Pittore trentino. Olio su tela e disegno dal 1999."
       description = "Pittore trentino dal 1999, Comano Terme. Olio su tela, disegno e sperimentazione. Archivio di opere, mostre e documenti."
-      keywords = ["Mattia Riccadonna", "pittore trentino", "pittura ad olio", "disegno", "arte Trentino", "quadri originali", "quadri in vendita", "acquisto quadri", "opere d'arte originali", "pittore Comano Terme", "arte contemporanea trentina", "quadri olio su tela"]
+      keywords    = ["Mattia Riccadonna", "pittore trentino", "pittura ad olio", "disegno", "arte Trentino", "quadri originali", "quadri in vendita", "acquisto quadri", "opere d'arte originali", "pittore Comano Terme", "arte contemporanea trentina", "quadri olio su tela"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.parser]
@@ -47,7 +48,18 @@ defaultContentLanguageInSubdir = false
   priority   = 0.8
   filename   = "sitemap.xml"
 
+[mediaTypes]
+  [mediaTypes."application/xml"]
+    suffixes = ["xml"]
+
+[outputFormats]
+  [outputFormats.ImageSitemap]
+    mediaType    = "application/xml"
+    baseName     = "sitemap-images"
+    isPlainText  = true
+    notAlternative = true
+
 [outputs]
-  home    = ["HTML", "RSS"]
+  home    = ["HTML", "RSS", "ImageSitemap"]
   section = ["HTML", "RSS"]
   page    = ["HTML"]
