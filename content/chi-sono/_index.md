@@ -43,4 +43,4 @@ anni di pittura
 
 → [archivio (1999–2007)](/archivio/)  
 → [dipinti recenti (2024–..)](/dipinti-recenti/)  
-→ [mostre ed esposizioni](/mostre/)  
+→ [taccuino](/taccuino/)  

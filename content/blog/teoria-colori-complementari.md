@@ -21,15 +21,11 @@ Con l'acquerello questo funziona ancora meglio che con l'olio
 perché puoi lavorare bagnato su bagnato e i colori si mescolano 
 in modo imprevedibile — il che è spesso esattamente quello che vuoi.
 
-**Prova pratica:** stendi un'area di giallo di cadmio bagnato, 
-poi tocca con la punta del pennello impregnata di violetto di cobalto. 
-Guarda cosa succede mentre asciuga.
-
 ## I complementari che uso di più
 
 - Arancio ↔ blu di Prussia
 - Giallo ↔ violetto di cobalto  
-- Rosso ↔ verde vescica (ma attenzione, questo tende al marrone)
+- Rosso ↔ verde vescica
 
 ---
 
