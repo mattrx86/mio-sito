@@ -24,3 +24,8 @@ Matita, penna, pennarello — qualsiasi cosa avessi a portata di mano.
 ![Foglio sparso 03 — studio di edifici, matita, 2025](/img/taccuino/fogli-sparsi/foglio-4.jpg)
 
 *matita, inchiostro e gesso su carta — studio di edifici — 2025*  
+
+---
+
+→ [archivio (1999–2007)](/archivio/)  
+→ [dipinti recenti (2024–..)](/dipinti-recenti/)  

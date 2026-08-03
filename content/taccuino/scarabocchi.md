@@ -22,6 +22,15 @@ Ritratti veloci, buttati giù in pochi minuti — spesso da una foto, a volte da
 
 *matita su carta — ritratto, uomo diffidente — 2026*
 
+![agricoltore, matita](/img/taccuino/scarabocchi/pescatore.jpg)
+
+*matita su carta — ritratto, pescatore soddisfatto — 2026*
+
+![agricoltore, matita](/img/taccuino/scarabocchi/facce-2.jpg)
+
+*matita su carta — ritratto, facce e facce — 2026*
+
 ---
 
-*Vedi anche: [fogli sparsi](/taccuino/fogli-sparsi/), altri appunti dal taccuino.*
+→ [archivio (1999–2007)](/archivio/)  
+→ [dipinti recenti (2024–..)](/dipinti-recenti/)  
