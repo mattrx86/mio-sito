@@ -3,11 +3,104 @@
   command = """rm -rf themes/typo themes/nostyleplease && git clone https://github.com/mattrx86/hugo-theme-nostyleplease themes/nostyleplease && hugo --minify"""
 
 [build.environment]
-  HUGO_VERSION       = "0.128.0"
+  HUGO_VERSION      = "0.128.0"
   HUGO_ENABLEGITINFO = "true"
 
+# --- Redirect 301 per vecchi URL di singole opere (rinominate) ---
 [[redirects]]
-  from   = "https://www.mattiariccadonna.com/*"
-  to     = "https://mattiariccadonna.com/:splat"
+  from = "/archivio/catenaccio-a-glolo/"
+  to = "/archivio/catenaccio-a-villa-banale/"
   status = 301
-  force  = true
+  force = true
+
+[[redirects]]
+  from = "/galleria/risveglio-alpino/"
+  to = "/dipinti-recenti/risveglio-alpino/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/studio/risveglio-alpino/"
+  to = "/dipinti-recenti/risveglio-alpino/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galleria/luce-mattutina/"
+  to = "/dipinti-recenti/luce-mattutina/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/studio/luce-mattutina/"
+  to = "/dipinti-recenti/luce-mattutina/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galleria/batchelder-copia-di-autore/"
+  to = "/dipinti-recenti/studio-batchelder/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/teoria-del-colore-complementari/"
+  to = "/blog/teoria-colori-complementari/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/tags/olio-su-tela/"
+  to = "/tags/olio/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dipinti-recenti/miniatura-lavanda/"
+  to = "/dipinti-recenti/mini-lavanda/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/dipinti-recenti/studio-di-salvo/"
+  to = "/dipinti-recenti/studio-salvo/"
+  status = 301
+  force = true
+
+# --- Redirect 301 per vecchie sezioni del sito (struttura cambiata) ---
+[[redirects]]
+  from = "/studio"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/studio/"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mostre"
+  to = "/mostre-e-concorsi/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mostre/"
+  to = "/mostre-e-concorsi/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/lavori-recenti"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+# --- Redirect esistente: normalizza www verso apex domain ---
+[[redirects]]
+  from = "https://www.mattiariccadonna.com/*"
+  to = "https://mattiariccadonna.com/:splat"
+  status = 301
+  force = true
