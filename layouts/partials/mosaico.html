@@ -11,10 +11,11 @@
 
   Scala: k = DENSITA / √(area totale in cm²), in % della larghezza della
   colonna per ogni cm (vedi partials/mosaico-dati.html, dove si regola
-  DENSITA). Larghezza tessera = larghezza opera × k.
+  DENSITA). Larghezza tessera = tw × k, dove tw·th = area della tela.
 
-  Le immagini sono ritagliate (dal centro) esattamente alla proporzione
-  della tela, in WebP, in due misure (1x e 2x) scelte dal browser.
+  Le foto sono mostrate intere (cornice compresa, nessun ritaglio): la
+  tessera ha la proporzione della foto e la stessa AREA in scala della tela
+  (vedi mosaico-dati.html). WebP in due misure (1x e 2x) scelte dal browser.
 */ -}}
 {{- $dati := partialCached "mosaico-dati.html" . .RelPermalink -}}
 {{- $k := $dati.k -}}
@@ -25,21 +26,17 @@
 <ul class="mosaico" aria-label="Le opere della sezione, in scala tra loro">
   {{- range . -}}
     {{- $p := .page -}}
-    {{- $pct := math.Min 100.0 (mul .w $k) -}}
-    {{- /* misura in pixel per schermi 2x, mai più grande dell'originale */ -}}
+    {{- $pct := math.Min 100.0 (mul .tw $k) -}}
+    {{- /* foto intera (nessun ritaglio), larga quanto serve per schermi 2x,
+           mai più grande dell'originale */ -}}
     {{- $px := int (math.Ceil (mul (div $pct 100.0) (mul $colonnaPx 2))) -}}
     {{- $px = math.Max 12 (math.Min $px .img.Width) | int -}}
-    {{- $pxh := int (math.Max 12 (math.Ceil (div (mul $px .h) .w))) -}}
-    {{- if gt $pxh .img.Height -}}
-      {{- $pxh = .img.Height -}}
-      {{- $px = int (math.Max 12 (math.Ceil (div (mul $pxh .w) .h))) -}}
-    {{- end -}}
-    {{- $thumb := .img.Fill (printf "%dx%d webp q78 Center" $px $pxh) -}}
+    {{- $thumb := .img.Resize (printf "%dx webp q78" $px) -}}
     {{- $px1 := math.Max 12 (math.Ceil (div $px 2.0)) | int -}}
-    {{- $thumb1 := .img.Fill (printf "%dx%d webp q78 Center" $px1 (int (math.Max 12 (math.Ceil (div (mul $px1 .h) .w))))) -}}
+    {{- $thumb1 := .img.Resize (printf "%dx webp q78" $px1) -}}
     {{- $srcset := printf "%s %dw, %s %dw" $thumb1.RelPermalink $thumb1.Width $thumb.RelPermalink $thumb.Width -}}
     {{- $sizes := printf "(max-width: 704px) calc((100vw - 4rem) * %.4f), %.0fpx" (div $pct 100.0) (mul (div $pct 100.0) $colonnaPx) -}}
-    {{- $stile := printf "width:%.3f%%;aspect-ratio:%g/%g" $pct .w .h -}}
+    {{- $stile := printf "width:%.3f%%;aspect-ratio:%d/%d" $pct .img.Width .img.Height -}}
     {{- $classi := slice "mosaico-tessera" -}}
     {{- /* su smartphone: "piccola" < 40px (puntino fuori dall'angolo),
            "minuscola" < 24px (un po' di spazio intorno per l'area di tocco) */ -}}

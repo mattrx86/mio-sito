@@ -54,8 +54,10 @@ a due condizioni per ogni opera:
 
 Se manca uno dei due, l'opera viene esclusa dal mosaico (resta nell'elenco)
 e nel log della build Netlify compare un avviso `[mosaico]`.
-La foto viene ritagliata dal centro alla proporzione della tela: conviene
-fotografare il quadro dritto, con poco margine intorno.
+La foto viene mostrata intera, cornice compresa (nessun ritaglio): la
+tessera ha la proporzione della foto e la stessa superficie in scala della
+tela. Conviene fotografare il quadro dritto, con poco sfondo intorno
+(lo sfondo entra nel mosaico).
 Per attivare il mosaico in un'altra sezione: aggiungi `mosaico: true` nel
 suo `_index.md`.
 

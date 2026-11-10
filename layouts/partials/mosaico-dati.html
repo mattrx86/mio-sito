@@ -4,7 +4,13 @@
   contengono sempre le stesse opere nello stesso ordine.
 
   Restituisce: dict "items" (lista ordinata) "k" (scala, % di colonna per cm)
-  Ogni item: page, w, h (cm), img (risorsa), disponibile (bool), nome, etichetta
+  Ogni item: page, w, h (cm della tela), tw, th (cm "equivalenti" della
+  tessera), img (risorsa), disponibile (bool), nome, etichetta
+
+  La foto viene mostrata INTERA (cornice compresa, nessun ritaglio): la
+  tessera ha la proporzione della foto e la stessa AREA della tela.
+  tw = √(w·h·r), th = √(w·h / r), con r = larghezza/altezza della foto,
+  quindi tw·th = w·h: la grandezza relativa tra le opere resta quella vera.
 */ -}}
 {{- $densita := 42.0 -}}   {{- /* più basso = tessere più piccole */ -}}
 {{- $items := slice -}}
@@ -46,14 +52,17 @@
   {{- if $disp -}}{{- $parti = $parti | append "disponibile" -}}{{- end -}}
   {{- $etichetta := delimit $parti ", " -}}
 
+  {{- $r := div (float $img.Width) (float $img.Height) -}}
+  {{- $tw := math.Sqrt (mul (mul $w $h) $r) -}}
+  {{- $th := math.Sqrt (div (mul $w $h) $r) -}}
   {{- $area = add $area (mul $w $h) -}}
-  {{- $items = $items | append (dict "page" $p "w" $w "h" $h "img" $img "disponibile" $disp "nome" $nome "etichetta" $etichetta) -}}
+  {{- $items = $items | append (dict "page" $p "w" $w "h" $h "tw" $tw "th" $th "img" $img "disponibile" $disp "nome" $nome "etichetta" $etichetta) -}}
 {{- end -}}
 
 {{- $k := 0.0 -}}
 {{- if $items -}}
   {{- $k = div $densita (math.Sqrt $area) -}}
   {{- /* dalla più alta alla più bassa: righe di altezza simile = meno vuoti */ -}}
-  {{- $items = sort $items "h" "desc" -}}
+  {{- $items = sort $items "th" "desc" -}}
 {{- end -}}
 {{- return (dict "items" $items "k" $k) -}}
