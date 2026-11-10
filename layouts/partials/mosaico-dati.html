@@ -44,6 +44,7 @@
 
   {{- /* etichetta: nome, tecnica, misure, anno (solo le parti presenti) */ -}}
   {{- $nome := $p.Params.schema.name | default $p.Params.heading | default (index (split $p.Title " — ") 0) -}}
+  {{- $nome = trim (replace $nome "*" "") " " -}}   {{- /* l'asterisco degli studi non serve nell'etichetta */ -}}
   {{- $misure := replace (printf "%g×%g cm" $w $h) "." "," -}}
   {{- $parti := slice $nome -}}
   {{- with $p.Params.schema.medium -}}{{- $parti = $parti | append (lower .) -}}{{- end -}}
