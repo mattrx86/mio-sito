@@ -1,5 +1,6 @@
 ---
 title: "Archivio dipinti 1999–2007 | Mattia Riccadonna"
+mosaico: true
 heading: "archivio"
 date: 2024-01-01
 description: "Archivio dei dipinti di Mattia Riccadonna dal 1999 al 2007: olio, acrilico e pastello realizzati tra i 13 e i 21 anni, gli anni delle prime mostre in Trentino."

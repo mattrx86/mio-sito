@@ -1,0 +1,59 @@
+{{- /*
+  Dati del mosaico di una sezione: usati sia dal mosaico (mosaico.html)
+  sia dai dati strutturati ItemList (head.html), così le due cose
+  contengono sempre le stesse opere nello stesso ordine.
+
+  Restituisce: dict "items" (lista ordinata) "k" (scala, % di colonna per cm)
+  Ogni item: page, w, h (cm), img (risorsa), disponibile (bool), nome, etichetta
+*/ -}}
+{{- $densita := 42.0 -}}   {{- /* più basso = tessere più piccole */ -}}
+{{- $items := slice -}}
+{{- $area := 0.0 -}}
+{{- range .RegularPages.ByDate.Reverse -}}
+  {{- $p := . -}}
+  {{- $w := 0.0 -}}
+  {{- $h := 0.0 -}}
+  {{- with $p.Params.schema -}}
+    {{- $w = partial "numero-cm.html" .width -}}
+    {{- $h = partial "numero-cm.html" .height -}}
+  {{- end -}}
+  {{- $img := "" -}}
+  {{- with $p.Params.image -}}{{- $img = resources.Get (strings.TrimPrefix "/" .) -}}{{- end -}}
+  {{- if not $img -}}
+    {{- warnf "[mosaico] %s escluso: immagine (image) mancante o non trovata" $p.File.Path -}}
+    {{- continue -}}
+  {{- end -}}
+  {{- if or (le $w 0.0) (le $h 0.0) -}}
+    {{- warnf "[mosaico] %s escluso: misure in cm mancanti o non numeriche (schema.width / schema.height)" $p.File.Path -}}
+    {{- continue -}}
+  {{- end -}}
+
+  {{- /* disponibilità: stessa regola di partials/vendita.html (vendita ha la precedenza) */ -}}
+  {{- $disp := false -}}
+  {{- with $p.Params.vendita -}}
+    {{- $disp = eq (.stato | default "disponibile") "disponibile" -}}
+  {{- else -}}
+    {{- $disp = $p.Params.disponibile | default false -}}
+  {{- end -}}
+
+  {{- /* etichetta: nome, tecnica, misure, anno (solo le parti presenti) */ -}}
+  {{- $nome := $p.Params.schema.name | default $p.Params.heading | default (index (split $p.Title " — ") 0) -}}
+  {{- $misure := replace (printf "%g×%g cm" $w $h) "." "," -}}
+  {{- $parti := slice $nome -}}
+  {{- with $p.Params.schema.medium -}}{{- $parti = $parti | append (lower .) -}}{{- end -}}
+  {{- $parti = $parti | append $misure -}}
+  {{- with $p.Params.schema.dateCreated -}}{{- $parti = $parti | append (printf "%v" .) -}}{{- end -}}
+  {{- if $disp -}}{{- $parti = $parti | append "disponibile" -}}{{- end -}}
+  {{- $etichetta := delimit $parti ", " -}}
+
+  {{- $area = add $area (mul $w $h) -}}
+  {{- $items = $items | append (dict "page" $p "w" $w "h" $h "img" $img "disponibile" $disp "nome" $nome "etichetta" $etichetta) -}}
+{{- end -}}
+
+{{- $k := 0.0 -}}
+{{- if $items -}}
+  {{- $k = div $densita (math.Sqrt $area) -}}
+  {{- /* dalla più alta alla più bassa: righe di altezza simile = meno vuoti */ -}}
+  {{- $items = sort $items "h" "desc" -}}
+{{- end -}}
+{{- return (dict "items" $items "k" $k) -}}

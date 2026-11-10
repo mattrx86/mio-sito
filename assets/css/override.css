@@ -73,3 +73,102 @@ article img,
 .negozio-titolo { display: block; }
 .negozio-prezzo { font-family: monospace; font-weight: bold; }
 .negozio-non-disponibile img { opacity: 0.5; }
+
+/* ---------- Mosaico in scala reale (layouts/partials/mosaico.html) ----------
+   Larghezza e proporzione di ogni tessera arrivano dal template (style
+   inline calcolato dalle misure in cm). Qui solo l'aspetto. */
+.mosaico {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;      /* allineate in alto */
+  justify-content: flex-start;  /* e a sinistra */
+  gap: 2px;
+  margin: 0 0 0.5rem;
+}
+.mosaico > li { margin: 0; }    /* il tema dà un margine a ogni li */
+.mosaico-tessera {
+  position: relative;
+  flex: 0 0 auto;
+  line-height: 0;
+  background: rgba(163, 119, 117, 0.12);   /* segnaposto durante il caricamento */
+  transition: opacity 0.2s ease;
+}
+.mosaico-tessera > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;
+  background: none !important;
+}
+.mosaico-tessera img {
+  width: 100% !important;
+  height: 100% !important;
+  max-height: none !important;
+  object-fit: cover;
+  display: block;
+  margin: 0 !important;
+}
+/* area cliccabile di almeno 24x24 px anche per le miniature minuscole,
+   senza cambiare la scala dell'immagine */
+.mosaico-tessera > a::after {
+  content: "";
+  position: absolute;
+  inset: min(0px, calc(50% - 12px));
+}
+.mosaico > li.mosaico-tessera--minuscola {
+  margin: 0 11px;               /* aria solo intorno alle minuscole: aree di tocco da 24px senza sovrapporsi */
+  z-index: 1;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+}
+.mosaico-tessera > a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+/* "riflettore": solo con mouse, e solo quando si punta davvero un'opera */
+@media (hover: hover) {
+  .mosaico:has(.mosaico-tessera:hover) .mosaico-tessera:not(:hover) { opacity: 0.45; }
+}
+/* opere disponibili: piccolo segno discreto */
+.mosaico-tessera--disponibile::before {
+  content: "";
+  position: absolute;
+  top: 4px; right: 4px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1.5px currentColor;
+  z-index: 2;
+  pointer-events: none;
+}
+/* tessere piccole: puntino ridotto dentro l'angolo */
+.mosaico-tessera--piccola.mosaico-tessera--disponibile::before {
+  top: 2px; right: 2px;
+  width: 4px; height: 4px;
+  box-shadow: 0 0 0 1px currentColor;
+}
+/* tessere minuscole: puntino accanto, nello spazio laterale della tessera */
+.mosaico-tessera--minuscola.mosaico-tessera--disponibile::before {
+  top: 0; right: -8px;
+}
+.mosaico-legenda-punto {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+  box-shadow: 0 0 0 1.5px currentColor; vertical-align: middle;
+}
+.mosaico-scala {
+  font-family: monospace;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 0.4rem 0 1.5rem;
+  text-align: left;
+}
+/* la barra è lunga quanto la misura indicata, alla stessa scala delle tessere */
+.mosaico-barra {
+  display: block;
+  height: 6px;
+  margin: 0 0 0.3rem;
+  border: 1.5px solid currentColor;
+  border-top: none;
+  box-sizing: border-box;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mosaico-tessera { transition: none; }
+}

@@ -1,0 +1,15 @@
+{{- /*
+  Converte una misura del frontmatter in numero (cm).
+  Accetta 30, "30", "2.6", "2,6", "30 cm". Restituisce 0.0 se il valore
+  non è un numero valido (così chi lo usa può escludere l'opera con un
+  avviso invece di far fallire la build).
+  Uso: partial "numero-cm.html" .Params.schema.width
+*/ -}}
+{{- $out := 0.0 -}}
+{{- with . -}}
+  {{- $s := replace (replaceRE `[^0-9.,]` "" (printf "%v" .)) "," "." -}}
+  {{- if findRE `^\d+(\.\d+)?$` $s -}}
+    {{- $out = float $s -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

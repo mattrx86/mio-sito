@@ -178,8 +178,10 @@
       -}}
       {{- with $s.medium -}}{{- $art = merge $art (dict "artMedium" .) -}}{{- end -}}
       {{- with $s.dateCreated -}}{{- $art = merge $art (dict "dateCreated" (string .)) -}}{{- end -}}
-      {{- with $s.width -}}{{- $art = merge $art (dict "width" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
-      {{- with $s.height -}}{{- $art = merge $art (dict "height" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
+      {{- $wcm := partial "numero-cm.html" $s.width -}}
+      {{- $hcm := partial "numero-cm.html" $s.height -}}
+      {{- if gt $wcm 0.0 -}}{{- $art = merge $art (dict "width" (dict "@type" "QuantitativeValue" "value" $wcm "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
+      {{- if gt $hcm 0.0 -}}{{- $art = merge $art (dict "height" (dict "@type" "QuantitativeValue" "value" $hcm "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
       {{- /* Opera in vendita: diventa anche "Product" con prezzo e disponibilità */ -}}
       {{- with partial "offerta.html" (dict "page" $ "seller" $personRef) -}}
         {{- $art = merge $art (dict "@type" (slice "VisualArtwork" "Product") "sku" $.File.ContentBaseName "brand" (dict "@type" "Brand" "name" $brand) "offers" .) -}}
@@ -219,6 +221,16 @@
       -}}
       {{- with .Params.image -}}{{- $page = merge $page (dict "primaryImageOfPage" (. | absURL)) -}}{{- end -}}
       {{- if eq $type "ProfilePage" -}}{{- $page = merge $page (dict "mainEntity" $personRef) -}}{{- end -}}
+      {{- /* Sezioni con il mosaico: stesse opere e stesso ordine del mosaico */ -}}
+      {{- if and .IsSection .Params.mosaico -}}
+        {{- $lista := slice -}}
+        {{- range $i, $o := (partialCached "mosaico-dati.html" . .RelPermalink).items -}}
+          {{- $lista = $lista | append (dict "@type" "ListItem" "position" (add $i 1) "url" $o.page.Permalink "name" $o.nome "image" ($o.page.Params.image | absURL) "item" (dict "@id" (printf "%s#opera" $o.page.Permalink))) -}}
+        {{- end -}}
+        {{- with $lista -}}
+          {{- $page = merge $page (dict "mainEntity" (dict "@type" "ItemList" "numberOfItems" (len .) "itemListElement" .)) -}}
+        {{- end -}}
+      {{- end -}}
       {{- $graph = $graph | append $page -}}
     {{- end -}}
 

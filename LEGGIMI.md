@@ -43,6 +43,22 @@ Consigli:
    - `disponibile: true` → compare "disponibile, scrivimi"
 5. **Commit changes**.
 
+### Il mosaico in scala
+
+In cima ad **archivio** e **dipinti recenti** c'è il mosaico con tutte le
+opere **in scala reale tra loro**. Si aggiorna da solo a ogni pubblicazione,
+a due condizioni per ogni opera:
+- `image` deve puntare a una foto esistente;
+- `schema.width` e `schema.height` devono contenere larghezza e altezza
+  **in cm** (numeri, anche decimali: `"2.6"`).
+
+Se manca uno dei due, l'opera viene esclusa dal mosaico (resta nell'elenco)
+e nel log della build Netlify compare un avviso `[mosaico]`.
+La foto viene ritagliata dal centro alla proporzione della tela: conviene
+fotografare il quadro dritto, con poco margine intorno.
+Per attivare il mosaico in un'altra sezione: aggiungi `mosaico: true` nel
+suo `_index.md`.
+
 ---
 
 ## 3. Mettere in vendita un piccolo quadro

@@ -1,0 +1,68 @@
+{{- /*
+  MOSAICO IN SCALA REALE
+  ----------------------------------------------------------------------
+  Mostra tutte le opere di una sezione: ogni miniatura ha la stessa
+  proporzione e la stessa grandezza RELATIVA dell'opera vera, calcolate
+  dalle misure in cm del frontmatter (schema.width / schema.height).
+
+  Si attiva mettendo "mosaico: true" nel file _index.md della sezione e si
+  aggiorna da solo: ogni nuova opera con "image" e misure compare in
+  automatico alla pubblicazione successiva.
+
+  Scala: k = DENSITA / √(area totale in cm²), in % della larghezza della
+  colonna per ogni cm (vedi partials/mosaico-dati.html, dove si regola
+  DENSITA). Larghezza tessera = larghezza opera × k.
+
+  Le immagini sono ritagliate (dal centro) esattamente alla proporzione
+  della tela, in WebP, in due misure (1x e 2x) scelte dal browser.
+*/ -}}
+{{- $dati := partialCached "mosaico-dati.html" . .RelPermalink -}}
+{{- $k := $dati.k -}}
+{{- $colonnaPx := 640.0 -}}   {{- /* larghezza della colonna su desktop */ -}}
+{{- $colonnaMobilePx := 326.0 -}}   {{- /* colonna su uno smartphone da 390px */ -}}
+
+{{- with $dati.items -}}
+<ul class="mosaico" aria-label="Le opere della sezione, in scala tra loro">
+  {{- range . -}}
+    {{- $p := .page -}}
+    {{- $pct := math.Min 100.0 (mul .w $k) -}}
+    {{- /* misura in pixel per schermi 2x, mai più grande dell'originale */ -}}
+    {{- $px := int (math.Ceil (mul (div $pct 100.0) (mul $colonnaPx 2))) -}}
+    {{- $px = math.Max 12 (math.Min $px .img.Width) | int -}}
+    {{- $pxh := int (math.Max 12 (math.Ceil (div (mul $px .h) .w))) -}}
+    {{- if gt $pxh .img.Height -}}
+      {{- $pxh = .img.Height -}}
+      {{- $px = int (math.Max 12 (math.Ceil (div (mul $pxh .w) .h))) -}}
+    {{- end -}}
+    {{- $thumb := .img.Fill (printf "%dx%d webp q78 Center" $px $pxh) -}}
+    {{- $px1 := math.Max 12 (math.Ceil (div $px 2.0)) | int -}}
+    {{- $thumb1 := .img.Fill (printf "%dx%d webp q78 Center" $px1 (int (math.Max 12 (math.Ceil (div (mul $px1 .h) .w))))) -}}
+    {{- $srcset := printf "%s %dw, %s %dw" $thumb1.RelPermalink $thumb1.Width $thumb.RelPermalink $thumb.Width -}}
+    {{- $sizes := printf "(max-width: 704px) calc((100vw - 4rem) * %.4f), %.0fpx" (div $pct 100.0) (mul (div $pct 100.0) $colonnaPx) -}}
+    {{- $stile := printf "width:%.3f%%;aspect-ratio:%g/%g" $pct .w .h -}}
+    {{- $classi := slice "mosaico-tessera" -}}
+    {{- /* su smartphone: "piccola" < 40px (puntino fuori dall'angolo),
+           "minuscola" < 24px (un po' di spazio intorno per l'area di tocco) */ -}}
+    {{- $pxMobile := mul (div $pct 100.0) $colonnaMobilePx -}}
+    {{- if lt $pxMobile 40.0 -}}{{- $classi = $classi | append "mosaico-tessera--piccola" -}}{{- end -}}
+    {{- if lt $pxMobile 24.0 -}}{{- $classi = $classi | append "mosaico-tessera--minuscola" -}}{{- end -}}
+    {{- if .disponibile -}}{{- $classi = $classi | append "mosaico-tessera--disponibile" -}}{{- end }}
+  <li class="{{ delimit $classi " " }}" style="{{ $stile | safeCSS }}">
+    <a href="{{ $p.RelPermalink }}" title="{{ .etichetta }}"><img src="{{ $thumb1.RelPermalink }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .etichetta }}" decoding="async"></a>
+  </li>
+  {{- end }}
+</ul>
+
+{{- /* barra di scala: la prima lunghezza tra 10, 20, 50 e 100 cm che occupa
+       almeno il 12% della colonna (così resta leggibile a ogni densità) */ -}}
+{{- $cm := 100 -}}
+{{- $trovato := false -}}
+{{- range slice 10 20 50 100 -}}
+  {{- if and (not $trovato) (ge (mul (float .) $k) 12.0) -}}{{- $cm = . -}}{{- $trovato = true -}}{{- end -}}
+{{- end -}}
+{{- $haDisponibili := where . "disponibile" true }}
+<div class="mosaico-scala">
+  <span class="mosaico-barra" aria-hidden="true" style="{{ printf "width:%.3f%%" (math.Min 100.0 (mul (float $cm) $k)) | safeCSS }}"></span>
+  <span>{{ $cm }} cm · opere in scala tra loro{{ with $haDisponibili }} · <span class="mosaico-legenda-punto" aria-hidden="true"></span> disponibile{{ end }}</span>
+</div>
+{{- end -}}

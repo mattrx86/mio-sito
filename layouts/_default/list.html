@@ -4,5 +4,9 @@
 <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
 
 {{ .Content }}
+
+{{- /* Parete con le opere in scala reale (si attiva con "mosaico: true" nel _index.md) */}}
+{{ if .Params.mosaico }}{{ partial "mosaico.html" . }}{{ end }}
+
 {{ partial "post_list.html" (dict "context" . "section" .Section)}}
 {{ end }}
