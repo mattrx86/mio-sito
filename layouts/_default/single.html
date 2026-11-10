@@ -16,5 +16,11 @@
         </aside>
     {{ end }}
     {{ .Content }}
+
+    {{- /* Acquisto / disponibilità / commissioni (vedi partials/vendita.html) */}}
+    {{ partial "vendita.html" . }}
+
+    {{- /* Opere correlate per tag (vedi partials/correlate.html) */}}
+    {{ partial "correlate.html" . }}
 </article>
 {{ end }}

@@ -1,0 +1,58 @@
+{{- /*
+  Blocco "acquisto" in fondo alle pagine delle opere.
+
+  1) Opera in vendita online: nel frontmatter
+
+     vendita:
+       stato: "disponibile"        # disponibile | riservato | venduto
+       prezzo: 100                 # in euro, solo il numero
+       link_pagamento: "https://buy.stripe.com/xxxxxxxx"
+       spedizione: "Spedizione tracciata in Italia inclusa"   # facoltativo
+
+     → prezzo, pulsante di pagamento Stripe e link "domande?"
+
+  2) Opera disponibile ma senza prezzo online: "disponibile: true"
+     → invito a scrivere per informazioni
+
+  3) Tutte le altre opere di archivio, dipinti recenti e piccoli quadri
+     → riga discreta per commissioni
+
+  Per sicurezza il pulsante compare solo se il link inizia con
+  https://buy.stripe.com/ (evita errori di battitura o link sbagliati).
+*/ -}}
+{{- $contatti := "/contatti/" -}}
+{{- $comeAcquistare := site.GetPage "/come-acquistare" -}}
+{{- with .Params.vendita -}}
+  {{- $stato := .stato | default "disponibile" -}}
+  <section class="vendita" aria-label="Acquisto">
+  {{- if eq $stato "venduto" }}
+    <p class="vendita-stato">venduto</p>
+    <p>Quest'opera ha già trovato casa. Ne vuoi una simile? <a href="{{ $contatti }}">Scrivimi</a>.</p>
+  {{- else if eq $stato "riservato" }}
+    <p class="vendita-stato">riservato</p>
+    <p>Quest'opera è riservata. Per informazioni <a href="{{ $contatti }}">scrivimi</a>.</p>
+  {{- else }}
+    {{- with .prezzo }}
+    <p class="vendita-prezzo">{{ lang.FormatNumber 0 . }} €</p>
+    {{- end }}
+    {{- $link := .link_pagamento | default "" -}}
+    {{- if hasPrefix $link "https://buy.stripe.com/" }}
+    <p><a class="vendita-pulsante" href="{{ $link }}" rel="noopener">acquista ora →</a></p>
+    <p class="vendita-nota">Pagamento sicuro su Stripe: carta, Apple Pay o Google Pay. I dati della carta non passano da questo sito.{{ with .spedizione }}<br>{{ . }}{{ end }}</p>
+    {{- else }}
+      {{- if $link }}{{ warnf "[vendita] link_pagamento non valido in %s: deve iniziare con https://buy.stripe.com/" $.File.Path }}{{ end }}
+    <p>Disponibile: <a href="{{ $contatti }}">scrivimi per acquistarla</a>.</p>
+    {{- end }}
+    <p class="vendita-nota">Domande su quest'opera? <a href="{{ $contatti }}">Scrivimi</a>{{ with $comeAcquistare }} · <a href="{{ .RelPermalink }}">come funziona l'acquisto</a>{{ end }}</p>
+  {{- end }}
+  </section>
+{{- else -}}
+  {{- if .Params.disponibile }}
+  <section class="vendita" aria-label="Disponibilità">
+    <p class="vendita-stato">disponibile</p>
+    <p>Quest'opera è disponibile. Per prezzo e spedizione <a href="{{ $contatti }}">scrivimi</a>.</p>
+  </section>
+  {{- else if in (slice "archivio" "dipinti-recenti" "piccoli-quadri") .Section }}
+  <p class="vendita-nota">Per commissioni o informazioni sulle opere <a href="{{ $contatti }}">scrivimi</a>.</p>
+  {{- end }}
+{{- end -}}

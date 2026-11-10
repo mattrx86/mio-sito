@@ -11,7 +11,7 @@ description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di
 
 ---
 
-Agosto 2003. Avevo diciassette anni e frequentavo le superiori. La mostra si chiamava **"Esercizi di pittura"**, erroneamente riportata nell'articolo come *esercizi di memoria* (!) ed è stata inaugurata il 25-08-2003 presso le sale espositive del Centro Studi Judicaria di Tione di Trento. In mostra i primi lavori e l'ultima produzione — copie autorizzate di artisti locali e internazionali (Sartori, Rocca) e lavori originali.
+Agosto 2003. Avevo diciassette anni e frequentavo le superiori. La mostra si chiamava **"Esercizi di pittura"**, erroneamente riportata nell'articolo come *esercizi di memoria* (!) ed è stata inaugurata il 25-08-2003 presso le sale espositive del Centro Studi Judicaria di Tione di Trento. In mostra i primi lavori e l'ultima produzione — copie autorizzate di artisti locali e internazionali (Sartori, Rocca) e lavori originali. Vedi anche [mostre e concorsi](/mostre-e-concorsi/#esercizi-di-pittura-2003) e [l'articolo della rivista Judicaria](/rassegna-stampa/centro-studi-judicaria/).
 
 ---
 

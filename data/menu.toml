@@ -12,6 +12,12 @@
   url       = "/dipinti-recenti/"
   post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
 
+# Voce nascosta in automatico finché la sezione è in bozza (draft: true)
+[[entries]]
+  title     = "piccoli quadri in vendita"
+  url       = "/piccoli-quadri/"
+  post_list = { section = "piccoli-quadri", limit = 2, show_more = true, show_more_url = "/piccoli-quadri/", show_more_text = ".. mostra tutti" }
+
 [[entries]]
   title = "taccuino"
   url   = "/taccuino/"

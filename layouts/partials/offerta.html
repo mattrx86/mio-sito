@@ -1,0 +1,25 @@
+{{- /*
+  Costruisce l'oggetto schema.org "Offer" per un'opera in vendita
+  (frontmatter "vendita"). Restituisce "" se l'opera non ha un prezzo.
+  Uso: partial "offerta.html" (dict "page" . "seller" $personRef)
+*/ -}}
+{{- $out := "" -}}
+{{- $p := .page -}}
+{{- with $p.Params.vendita -}}
+  {{- if .prezzo -}}
+    {{- $stato := .stato | default "disponibile" -}}
+    {{- $availability := "https://schema.org/InStock" -}}
+    {{- if eq $stato "venduto" -}}{{- $availability = "https://schema.org/SoldOut" -}}{{- end -}}
+    {{- if eq $stato "riservato" -}}{{- $availability = "https://schema.org/LimitedAvailability" -}}{{- end -}}
+    {{- $out = dict
+        "@type" "Offer"
+        "price" (printf "%.2f" (float .prezzo))
+        "priceCurrency" "EUR"
+        "availability" $availability
+        "itemCondition" "https://schema.org/NewCondition"
+        "url" $p.Permalink
+        "seller" $.seller
+    -}}
+  {{- end -}}
+{{- end -}}
+{{- return $out -}}

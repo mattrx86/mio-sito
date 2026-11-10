@@ -1,0 +1,34 @@
+{{- /*
+  Copia del menu del tema con una sola differenza: una voce che punta a
+  una pagina interna non ancora pubblicata (per esempio una sezione in
+  bozza, "draft: true") viene nascosta invece di produrre un link rotto.
+*/ -}}
+<ul>
+    {{- range $item := .collection -}}
+        {{- $show := true -}}
+        {{- with $item.url -}}
+            {{- if and (hasPrefix . "/") (ne . "/") -}}
+                {{- $pg := site.GetPage (strings.TrimSuffix "/" .) -}}
+                {{- /* nascosta se non esiste o non viene pubblicata (es. bozza) */ -}}
+                {{- if or (not $pg) (eq $pg.RelPermalink "") -}}{{- $show = false -}}{{- end -}}
+            {{- end -}}
+        {{- end -}}
+        {{- if $show }}
+        <li>
+            {{- with $item.url -}}
+                <a href="{{ $item.url | relURL }}">{{ safeHTML $item.title }}</a>
+            {{- else -}}
+                {{ safeHTML $item.title }}
+            {{- end -}}
+        </li>
+
+        {{- if $item.entries }}
+            {{ partial "menu_item.html" (dict "context" . "collection" $item.entries) }}
+        {{- end -}}
+
+        {{- if $item.post_list -}}
+            {{ partial "post_list.html" (dict "context" . "section" $item.post_list.section "limit" $item.post_list.limit "show_more" $item.post_list.show_more "show_more_text" $item.post_list.show_more_text "show_more_url" $item.post_list.show_more_url) -}}
+        {{- end -}}
+        {{- end -}}
+    {{- end -}}
+</ul>

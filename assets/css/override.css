@@ -10,9 +10,66 @@ article img,
   height: auto;
 }
 
+/* ---------- Blocco acquisto (partials/vendita.html) ---------- */
+.vendita {
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+  border-left: 3px solid currentColor;
+  background: rgba(163, 119, 117, 0.08);
+}
+.vendita p { margin: 0.4rem 0; }
+.vendita-stato,
+.vendita-prezzo {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.15rem;
+}
+.vendita-pulsante {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  min-height: 44px;            /* area di tocco comoda su smartphone */
+  box-sizing: border-box;
+  border: 2px solid currentColor;
+  font-family: monospace;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+.vendita-nota {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ---------- Opere correlate (partials/correlate.html) ---------- */
+.correlate { margin-top: 2.5rem; }
+.correlate h2 { font-size: 1rem; }
+.correlate ul { padding-left: 1.2rem; }
+.correlate span { font-family: monospace; opacity: 0.7; }
+
 /* Miniature della galleria raggiungibili anche da tastiera */
 #gallery-thumbs img:focus-visible {
   opacity: 1;
   outline: 2px solid currentColor;
   outline-offset: 2px;
 }
+
+/* ---------- Griglia "piccoli quadri" (layouts/piccoli-quadri/list.html) ---------- */
+.negozio {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.5rem 1rem;
+}
+.negozio li { margin: 0; }
+.negozio a { text-decoration: none; display: block; }
+.negozio img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 0 0 0.4rem;
+}
+.negozio-titolo { display: block; }
+.negozio-prezzo { font-family: monospace; font-weight: bold; }
+.negozio-non-disponibile img { opacity: 0.5; }

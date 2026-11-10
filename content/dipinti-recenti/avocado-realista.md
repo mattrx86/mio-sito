@@ -3,6 +3,7 @@ title: "Avocado realista! — Olio su masonite, 2025"
 heading: "avocado realista!"
 date: 2025-07-14
 hideDate: true
+disponibile: true
 description: "Olio su masonite, 12x12 cm, 2025. Avocado dipinto con tecnica realista su un pannello di masonite rivestito con un foglio di giornale."
 image: "/img/dipinti-recenti/avocado-1.jpg"
 tags: ["olio", "natura-morta", "2025"]

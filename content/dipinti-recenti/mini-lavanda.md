@@ -3,6 +3,7 @@ title: "Lavanda — miniatura 30x30 mm — acquerello su carta, 2022"
 heading: "mini — lavanda"
 date: 2022-07-14
 hideDate: true
+disponibile: true
 description: "Acquerello su carta, 30x30 mm, 2022. Miniatura di un edificio arancione in un campo di lavanda, dipinta con pennelli finissimi e pochissima acqua."
 image: "/img/dipinti-recenti/miniatura-lavanda.jpg"
 tags: ["acquerello", "miniatura", "2022"]

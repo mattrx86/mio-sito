@@ -1,0 +1,49 @@
+{{- /*
+  Pagina elenco della sezione "piccoli quadri": griglia con foto, titolo
+  e prezzo (oppure "venduto"). I disponibili compaiono per primi.
+*/ -}}
+{{ define "main" }}
+{{ partial "back_link.html" . }}
+
+<h1>{{ .Params.heading | default .Title }}</h1>
+
+{{ .Content }}
+
+{{- $disponibili := slice -}}
+{{- $altri := slice -}}
+{{- range .RegularPages.ByDate.Reverse -}}
+  {{- if eq (.Params.vendita.stato | default "disponibile") "disponibile" -}}
+    {{- $disponibili = $disponibili | append . -}}
+  {{- else -}}
+    {{- $altri = $altri | append . -}}
+  {{- end -}}
+{{- end }}
+
+<ul class="negozio">
+{{- range ($disponibili | append $altri) }}
+  {{- $stato := .Params.vendita.stato | default "disponibile" -}}
+  {{- $titolo := .Params.heading | default .Title -}}
+  {{- $alt := index (split .Title " — ") 0 -}}
+  {{- $thumb := "" -}}
+  {{- with .Params.image -}}
+    {{- with resources.Get (strings.TrimPrefix "/" .) -}}
+      {{- $thumb = .Fill "480x480 webp q78 Center" -}}
+    {{- end -}}
+  {{- end }}
+  <li{{ if ne $stato "disponibile" }} class="negozio-non-disponibile"{{ end }}>
+    <a href="{{ .RelPermalink }}">
+      {{- with $thumb }}
+      <img src="{{ .RelPermalink }}" width="240" height="240" alt="{{ $alt }}, quadro di Mattia Riccadonna" loading="lazy" decoding="async">
+      {{- end }}
+      <span class="negozio-titolo">{{ $titolo }}</span>
+    </a>
+    <span class="negozio-prezzo">
+      {{- if eq $stato "venduto" -}}venduto
+      {{- else if eq $stato "riservato" -}}riservato
+      {{- else -}}{{ with .Params.vendita.prezzo }}{{ lang.FormatNumber 0 . }} €{{ end }}
+      {{- end -}}
+    </span>
+  </li>
+{{- end }}
+</ul>
+{{ end }}

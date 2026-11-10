@@ -180,6 +180,10 @@
       {{- with $s.dateCreated -}}{{- $art = merge $art (dict "dateCreated" (string .)) -}}{{- end -}}
       {{- with $s.width -}}{{- $art = merge $art (dict "width" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
       {{- with $s.height -}}{{- $art = merge $art (dict "height" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
+      {{- /* Opera in vendita: diventa anche "Product" con prezzo e disponibilità */ -}}
+      {{- with partial "offerta.html" (dict "page" $ "seller" $personRef) -}}
+        {{- $art = merge $art (dict "@type" (slice "VisualArtwork" "Product") "sku" $.File.ContentBaseName "brand" (dict "@type" "Brand" "name" $brand) "offers" .) -}}
+      {{- end -}}
       {{- $graph = $graph | append $art -}}
 
     {{- else if $isBlogPost -}}

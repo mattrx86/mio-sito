@@ -26,4 +26,4 @@ schema:
 
 ---
 
-**annotazioni:** opera in concorso al `Premio d'Arte` Giulio Riccadonna di Rango il 26 luglio 2025
+**annotazioni:** opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concorsi/#premio-rango-2025) il 26 luglio 2025

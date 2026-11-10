@@ -16,6 +16,8 @@ description: "Articolo della rivista Judicaria (Centro Studi Judicaria) sulla mo
 
 Agosto 2003. La rivista **Il Centro Informa** del Centro Studi Judicaria ha dedicato un articolo alla mostra **"Esercizi di pittura"**, con testo critico di Alessandro Togni e fotografie delle sale espositive e delle opere.
 
+Nell'archivio trovi gli omaggi citati nell'articolo: a Carlo Sartori ([tenacia trentina](/archivio/tenacia-trentina/), [tanta fatica e poco guadagno](/archivio/tanto-lavoro-poco-guadagno/)) e a Gianluigi Rocca ([antiche geometrie](/archivio/antiche-geometrie/)). Tutte le esposizioni sono nella pagina [mostre e concorsi](/mostre-e-concorsi/#esercizi-di-pittura-2003).
+
 ---
 
 <details>

@@ -26,4 +26,4 @@ schema:
 
 ---
 
-**annotazioni:** opera in concorso al `Premio d'Arte` Giulio Riccadonna di Rango il 30 luglio 2024 e premiata dalla giuria con il `secondo posto` in gara
+**annotazioni:** opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concorsi/#premio-rango-2024) il 30 luglio 2024 e premiata dalla giuria con il `secondo posto` in gara

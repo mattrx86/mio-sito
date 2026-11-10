@@ -11,7 +11,7 @@ description: "Mattia Riccadonna vince una borsa di studio al 1° Concorso Provin
 
 ---
 
-Dicembre 1999. Avevo tredici anni e frequentavo la III A della scuola media G. Prati di Ponte Arche. Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario della morte del pittore — vinsi una borsa di studio da 200.000 lire per la sezione grafica/pittura. 112 opere in concorso da dieci istituti della provincia di Trento.
+Dicembre 1999. Avevo tredici anni e frequentavo la III A della scuola media G. Prati di Ponte Arche. Al 1° Concorso Provinciale Giovanni Segantini — organizzato nel centenario della morte del pittore — vinsi una borsa di studio da 200.000 lire per la sezione grafica/pittura. 112 opere in concorso da dieci istituti della provincia di Trento. È il primo dei [concorsi e delle mostre](/mostre-e-concorsi/) a cui ho partecipato.
 
 ---
 

@@ -1,0 +1,20 @@
+{{- /*
+  "Potrebbe interessarti": fino a 3 opere con tag in comune.
+  Compare sulle pagine delle opere e del blog. I criteri sono in
+  hugo.toml, sezione [related].
+*/ -}}
+{{- $sezioniOpere := slice "archivio" "dipinti-recenti" "piccoli-quadri" -}}
+{{- if in (slice "archivio" "dipinti-recenti" "piccoli-quadri" "blog") .Section -}}
+  {{- $correlate := where (site.RegularPages.Related .) "Section" "in" $sezioniOpere -}}
+  {{- $correlate = first 3 $correlate -}}
+  {{- with $correlate }}
+  <nav class="correlate" aria-label="Opere correlate">
+    <h2>potrebbe interessarti</h2>
+    <ul>
+      {{- range . }}
+      <li><span>{{ .Date.Format "2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Params.heading | default .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+  {{- end -}}
+{{- end -}}

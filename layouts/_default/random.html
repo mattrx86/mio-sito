@@ -7,6 +7,9 @@ const opere = [
   {{ range where site.RegularPages "Section" "dipinti-recenti" }}
   "{{ .Permalink }}",
   {{ end }}
+  {{ range where site.RegularPages "Section" "piccoli-quadri" }}
+  "{{ .Permalink }}",
+  {{ end }}
 ];
 
 const casuale = opere[Math.floor(Math.random() * opere.length)];

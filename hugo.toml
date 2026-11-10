@@ -75,6 +75,20 @@ defaultContentLanguageInSubdir = false
     source = "static"
     target = "static"
 
+# Criteri per "potrebbe interessarti" (partials/correlate.html):
+# conta soprattutto avere tag in comune, poco la vicinanza di data
+[related]
+  includeNewer = true
+  threshold    = 20
+  toLower      = true
+  [[related.indices]]
+    name   = "tags"
+    weight = 100
+  [[related.indices]]
+    name    = "date"
+    weight  = 10
+    pattern = "2006"
+
 [sitemap]
   filename = "sitemap.xml"
 
