@@ -3,7 +3,6 @@
 # Quando la approvi, il testo va a SOSTITUIRE content/blog/teoria-colori-complementari.md
 # (stesso indirizzo, così non si perde la posizione già raggiunta su Google)
 # e questo file va cancellato.
-draft: true
 title: "sui colori complementari"
 seo_title: "Colori complementari: cosa sono e come usarli in pittura"
 date: 2025-06-15
