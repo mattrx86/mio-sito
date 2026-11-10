@@ -176,6 +176,12 @@
           "inLanguage" site.LanguageCode
           "locationCreated" (dict "@type" "Place" "name" "Comano Terme, Trentino, Italia")
       -}}
+      {{- /* coautori facoltativi: schema.coautori: ["Nome Cognome", ...] */ -}}
+      {{- with $s.coautori -}}
+        {{- $autori := slice $personRef -}}
+        {{- range . -}}{{- $autori = $autori | append (dict "@type" "Person" "name" .) -}}{{- end -}}
+        {{- $art = merge $art (dict "creator" $autori "artist" $autori) -}}
+      {{- end -}}
       {{- with $s.medium -}}{{- $art = merge $art (dict "artMedium" .) -}}{{- end -}}
       {{- with $s.dateCreated -}}{{- $art = merge $art (dict "dateCreated" (string .)) -}}{{- end -}}
       {{- $wcm := partial "numero-cm.html" $s.width -}}

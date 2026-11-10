@@ -2,12 +2,16 @@
 title: "Mostre e concorsi 1999–2025"
 heading: "mostre e concorsi"
 date: 2024-01-01
-description: "Mostre, concorsi e premi di Mattia Riccadonna dal 1999: Concorso Segantini, la personale di Tione del 2003 e il Premio d'Arte Giulio Riccadonna di Rango."
+description: "Mostre, concorsi e premi di Mattia Riccadonna dal 1999: Concorso Segantini, la personale di Tione 2003, il Premio di Rango e i Mercatini di Rango 2025."
 ---
 
 Ricordi di mostre personali, alcune collettive e qualche concorso, dal primo premio da ragazzo alle partecipazioni di oggi.
 
 ---
+
+## 2025 — Mercatini di Natale di Rango {#mercatini-rango-2025}
+
+Esposta ai Mercatini di Natale di Rango l'opera [tre arche, una storia](/taccuino/tre-arche-una-storia/), realizzata con Tommaso Pohl: corten, legno e metallo, 250 × 150 cm.
 
 ## 2025 — Premio d'Arte Giulio Riccadonna, Rango {#premio-rango-2025}
 
