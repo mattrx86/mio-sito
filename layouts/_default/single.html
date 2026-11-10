@@ -1,5 +1,9 @@
 {{ define "main" }}
 <article>
+    {{- /* ritorno alla sezione: "← dipinti recenti", "← archivio", "← note & blog"... */}}
+    {{ with .Parent }}{{ if not .IsHome }}
+    <a class="torna-sezione" href="{{ .RelPermalink }}">← {{ .Params.heading | default .Title }}</a>
+    {{ end }}{{ end }}
     {{ if not .Params.hideDate }}
     <p class="post-meta">
         <time datetime="{{ .Date }}">

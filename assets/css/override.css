@@ -172,3 +172,9 @@ article img,
 @media (prefers-reduced-motion: reduce) {
   .mosaico-tessera { transition: none; }
 }
+
+/* ---------- Ritorno alla sezione (layouts/_default/single.html) ---------- */
+.torna-sezione {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
