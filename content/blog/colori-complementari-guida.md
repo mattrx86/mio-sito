@@ -1,8 +1,4 @@
 ---
-# BOZZA: versione ampliata di "sui colori complementari".
-# Quando la approvi, il testo va a SOSTITUIRE content/blog/teoria-colori-complementari.md
-# (stesso indirizzo, così non si perde la posizione già raggiunta su Google)
-# e questo file va cancellato.
 title: "sui colori complementari"
 seo_title: "Colori complementari: cosa sono e come usarli in pittura"
 date: 2025-06-15
@@ -91,10 +87,6 @@ A olio i complementari si possono usare in tre modi:
 
 Nei paesaggi di montagna la coppia **blu ↔ arancio** torna continuamente:
 ombre fredde sulla neve e luce calda del mattino sulle rocce.
-
-[DA VERIFICARE: se è vero, aggiungi qui un esempio dai tuoi quadri, per
-esempio "è la coppia che regge [risveglio alpino](/dipinti-recenti/risveglio-alpino/)".
-Altrimenti cancella questo paragrafo.]
 
 ## I complementari che uso di più
 

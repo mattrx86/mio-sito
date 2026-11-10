@@ -1,6 +1,4 @@
 ---
-# BOZZA: da rileggere prima di pubblicare (togliere "draft: true").
-# Le parti [DA PERSONALIZZARE] sono facoltative: se non le completi, cancellale.
 title: "dipingere a olio su masonite"
 seo_title: "Olio su masonite: come preparare il pannello per dipingere"
 date: 2026-11-10

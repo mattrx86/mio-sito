@@ -1,6 +1,4 @@
 ---
-# BOZZA: da rileggere prima di pubblicare (togliere "draft: true").
-# Le parti [DA PERSONALIZZARE] sono facoltative: se non le completi, cancellale.
 title: "dipingere miniature ad acquerello"
 seo_title: "Miniature ad acquerello: come dipingere quadri di 3 cm"
 date: 2026-11-10

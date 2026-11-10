@@ -64,7 +64,7 @@
 
 [[redirects]]
   from = "/blog/teoria-del-colore-complementari/"
-  to = "/blog/teoria-colori-complementari/"
+  to = "/blog/colori-complementari-guida/"
   status = 301
   force = true
 
@@ -83,6 +83,20 @@
 [[redirects]]
   from = "/dipinti-recenti/studio-di-salvo/"
   to = "/dipinti-recenti/studio-salvo/"
+  status = 301
+  force = true
+
+# L'articolo sui complementari è stato ampliato e spostato (novembre 2026):
+# il vecchio indirizzo aveva già visibilità su Google, il 301 la trasferisce
+[[redirects]]
+  from = "/blog/teoria-colori-complementari/"
+  to = "/blog/colori-complementari-guida/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/teoria-colori-complementari"
+  to = "/blog/colori-complementari-guida/"
   status = 301
   force = true
 
