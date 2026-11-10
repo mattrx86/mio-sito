@@ -1,0 +1,74 @@
+# Dopo ogni modifica sul branch main:
+# 1. aspetta che Netlify pubblichi il sito (4 minuti)
+# 2. legge la sitemap e prende le pagine modificate nelle ultime 48 ore
+# 3. le segnala a IndexNow (Bing, Yandex, Seznam, Naver e servizi collegati)
+#
+# Non usa password né segreti: la chiave IndexNow è pubblica per design
+# (il file static/<chiave>.txt serve proprio a dimostrare che il sito è tuo).
+# Si può avviare anche a mano: GitHub → Actions → IndexNow → Run workflow.
+
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Attendi la pubblicazione su Netlify
+        run: sleep 240
+
+      - name: Segnala le pagine modificate a IndexNow
+        env:
+          INDEXNOW_KEY: 5907f135a68e9adadfa7cb66b6c66c77
+          SITE_HOST: mattiariccadonna.com
+          GIORNI: "2"
+        run: |
+          python3 - <<'PY'
+          import os, re, json, sys, urllib.request
+          from datetime import datetime, timedelta, timezone
+
+          key, host = os.environ["INDEXNOW_KEY"], os.environ["SITE_HOST"]
+          base = f"https://{host}"
+          ua = {"User-Agent": "indexnow-github-action"}
+
+          # 1. la chiave deve essere online, altrimenti IndexNow rifiuta
+          with urllib.request.urlopen(urllib.request.Request(f"{base}/{key}.txt", headers=ua), timeout=30) as r:
+              if r.read().decode().strip() != key:
+                  sys.exit("File chiave IndexNow non trovato o diverso: deploy non ancora completato?")
+
+          # 2. pagine con lastmod recente nella sitemap
+          with urllib.request.urlopen(urllib.request.Request(f"{base}/sitemap.xml", headers=ua), timeout=30) as r:
+              xml = r.read().decode()
+          limite = datetime.now(timezone.utc) - timedelta(days=int(os.environ["GIORNI"]))
+          urls = []
+          for blocco in re.findall(r"<url>(.*?)</url>", xml, re.S):
+              loc = re.search(r"<loc>(.*?)</loc>", blocco)
+              mod = re.search(r"<lastmod>(.*?)</lastmod>", blocco)
+              if not loc:
+                  continue
+              if mod and datetime.fromisoformat(mod.group(1)) < limite:
+                  continue
+              urls.append(loc.group(1))
+          if not urls:
+              print("Nessuna pagina modificata di recente: niente da segnalare.")
+              sys.exit(0)
+
+          # 3. invio
+          dati = json.dumps({"host": host, "key": key,
+                             "keyLocation": f"{base}/{key}.txt",
+                             "urlList": urls[:10000]}).encode()
+          req = urllib.request.Request("https://api.indexnow.org/indexnow", data=dati,
+                                       headers={"Content-Type": "application/json; charset=utf-8", **ua})
+          with urllib.request.urlopen(req, timeout=30) as r:
+              print(f"IndexNow: risposta {r.status} per {len(urls)} pagine")
+          for u in urls:
+              print(" -", u)
+          PY

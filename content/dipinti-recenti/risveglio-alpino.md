@@ -1,5 +1,6 @@
 ---
 title: "Risveglio alpino — Olio su tela, 2025"
+seo_title: "Risveglio alpino: malghe e Dolomiti, olio su tela 40x70"
 heading: "risveglio alpino"
 date: 2025-07-10
 hideDate: true

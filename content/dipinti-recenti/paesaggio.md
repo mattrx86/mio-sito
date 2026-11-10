@@ -1,5 +1,6 @@
 ---
 title: "Senza titolo — Olio su tela, 2024"
+seo_title: "Paesaggio del Bleggio e Lomaso, quadro a olio 35x40 (2024)"
 heading: "senza titolo"
 date: 2024-09-22
 hideDate: true

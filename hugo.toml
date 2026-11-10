@@ -11,7 +11,7 @@ defaultContentLanguageInSubdir = false
     title        = "Mattia Riccadonna, strati."
     weight       = 1
     [languages.it.params]
-      seo_title   = "Mattia Riccadonna — Pittore trentino, olio su tela dal 1999"
+      seo_title   = "Mattia Riccadonna, pittore trentino — paesaggi delle Giudicarie"
       description = "Mattia Riccadonna, pittore trentino di Comano Terme dal 1999: olio su tela, acquerello e disegno. Archivio di opere, dipinti recenti, mostre e rassegna stampa."
       keywords    = ["Mattia Riccadonna", "pittore trentino", "pittura ad olio", "disegno", "arte Trentino", "quadri originali", "quadri in vendita", "acquisto quadri", "opere d'arte originali", "pittore Comano Terme", "arte contemporanea trentina", "quadri olio su tela"]
 

@@ -1,5 +1,6 @@
 ---
 title: "Monet — miniatura 26x26 mm — acquerello su carta, 2022"
+seo_title: "Mini Monet: il ponte giapponese in miniatura ad acquerello"
 heading: "mini — Monet"
 date: 2022-07-15
 hideDate: true

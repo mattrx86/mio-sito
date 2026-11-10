@@ -1,5 +1,6 @@
 ---
 title: "Luce mattutina — Olio su tela, 2024"
+seo_title: "Luce mattutina: casa delle Giudicarie, olio su tela 24x30"
 heading: "luce mattutina"
 date: 2024-07-30
 hideDate: true

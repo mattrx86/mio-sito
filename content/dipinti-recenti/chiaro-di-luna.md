@@ -1,5 +1,6 @@
 ---
 title: "Chiaro di Luna — Olio su tela, 2025"
+seo_title: "Chiaro di luna: chiesa trentina di notte, olio su tela 30x50"
 heading: "chiaro di luna"
 date: 2025-07-14
 hideDate: true

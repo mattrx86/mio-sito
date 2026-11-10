@@ -1,5 +1,6 @@
 ---
 title: "Avocado realista! — Olio su masonite, 2025"
+seo_title: "Avocado realista: quadro a olio su masonite 12x12 cm"
 heading: "avocado realista!"
 date: 2025-07-14
 hideDate: true
