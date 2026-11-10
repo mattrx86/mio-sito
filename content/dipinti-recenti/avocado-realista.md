@@ -3,38 +3,22 @@ title: "Avocado realista! — Olio su masonite, 2025"
 heading: "avocado realista!"
 date: 2025-07-14
 hideDate: true
-description: "Olio su pannello in masonite, 12x12cm. Avocado con tecnica realista su pannello in legno e foglio di giornale dipinto nel 2025"
+description: "Olio su masonite, 12x12 cm, 2025. Avocado dipinto con tecnica realista su un pannello di masonite rivestito con un foglio di giornale."
 image: "/img/dipinti-recenti/avocado-1.jpg"
 tags: ["olio", "natura-morta", "2025"]
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
-  medium: "Olio su tela"
+  medium: "Olio su masonite"
   width: "12"
   height: "12"
   dateCreated: "2025"
 ---
 
-<div id="gallery-wrap">
-<img id="gallery-main" src="/img/dipinti-recenti/avocado-1.jpg" alt="Avocado realista, vista frontale">
-<div id="gallery-thumbs">
-<img src="/img/dipinti-recenti/avocado-1.jpg" alt="vista frontale">
-<img src="/img/dipinti-recenti/avocado-2.jpg" alt="cornice">
-</div>
-</div>
-
-<script>
-var main = document.getElementById('gallery-main');
-var thumbs = document.querySelectorAll('#gallery-thumbs img');
-thumbs.forEach(function(t) {
-  t.addEventListener('click', function() {
-    main.src = t.src;
-    main.alt = t.alt;
-    thumbs.forEach(function(x) { x.style.opacity = '0.4'; });
-    t.style.opacity = '1';
-  });
-});
-</script>
+{{< galleria >}}
+/img/dipinti-recenti/avocado-1.jpg | Avocado realista, vista frontale
+/img/dipinti-recenti/avocado-2.jpg | Avocado realista, cornice
+{{< /galleria >}}
 
 **tecnica:** olio su masonite  
 **anno produzione:** 2025  

@@ -4,7 +4,7 @@ date: 2025-01-01
 hideDate: true
 description: "Schizzi, disegni a matita e inchiostro. Fogli sparsi dal taccuino di Mattia Riccadonna, pittore trentino."
 schematype: "ImageGallery"
-image: "/img/taccuino/foglio-1.jpg"
+image: "/img/taccuino/fogli-sparsi/foglio-1.jpg"
 
 ---
 

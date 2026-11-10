@@ -1,0 +1,17 @@
+{{- /*
+  Restituisce true se la pagina NON deve essere indicizzata da Google.
+  Usato da head.html (meta robots) e dalle sitemap (per escluderla).
+
+  Pagine escluse:
+  - quelle con "noindex: true" nel frontmatter
+  - pagine di tassonomia (/tags/ e i singoli tag): contenuto sottile e duplicato
+  - la sezione "posts" che arriva dal tema
+  - la pagina /random/ (fa solo un redirect JavaScript)
+  - la pagina 404
+*/ -}}
+{{- $noindex := false -}}
+{{- if .Params.noindex -}}{{- $noindex = true -}}{{- end -}}
+{{- if in (slice "taxonomy" "term" "404") .Kind -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Section "posts" -}}{{- $noindex = true -}}{{- end -}}
+{{- if eq .Layout "random" -}}{{- $noindex = true -}}{{- end -}}
+{{- return $noindex -}}

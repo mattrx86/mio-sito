@@ -2,6 +2,7 @@
 title: "Contatti — Mattia Riccadonna"
 heading: "contatti"
 date: 2026-07-25
+schematype: "ContactPage"
 hideDate: true
 description: "Contatti di Mattia Riccadonna, pittore trentino. Scrivimi per commissioni, collaborazioni o per parlare d'arte."
 ---

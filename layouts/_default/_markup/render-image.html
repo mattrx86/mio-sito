@@ -1,0 +1,14 @@
+{{- /*
+  Render hook per le immagini scritte in Markdown: ![testo alternativo](/img/...)
+  - converte in WebP e ridimensiona (800 e 1600 px)
+  - aggiunge width/height (meno spostamenti della pagina durante il caricamento)
+  - la prima immagine della pagina si carica subito, le altre in lazy loading
+*/ -}}
+{{- $v := partial "img-varianti.html" .Destination -}}
+{{- $lazy := gt .Ordinal 0 -}}
+<img src="{{ $v.src }}"
+  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) calc(100vw - 4rem), 640px"{{ end }}
+  {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
+  alt="{{ .PlainText }}"
+  {{- with .Title }} title="{{ . }}"{{ end }}
+  {{- if $lazy }} loading="lazy"{{ else }} fetchpriority="high"{{ end }} decoding="async">

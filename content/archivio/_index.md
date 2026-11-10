@@ -2,7 +2,7 @@
 title: "Archivio dipinti 1999–2007 | Mattia Riccadonna"
 heading: "archivio"
 date: 2024-01-01
-description: "Archivio dei dipinti di Mattia Riccadonna dal 1999 al 2007. Olio, acrilico e pastello prodotti tra i 13 e i 21 anni. Il periodo delle prime mostre ed esposizioni trentine."
+description: "Archivio dei dipinti di Mattia Riccadonna dal 1999 al 2007: olio, acrilico e pastello realizzati tra i 13 e i 21 anni, gli anni delle prime mostre in Trentino."
 ---
 
 Questi sono i dipinti del periodo in cui tutto è iniziato. Olio, acrilico, qualche pastello. Avevo tra i 13 e i 21 anni. I pomeriggi dopo scuola erano lunghissimi e il mondo era diverso.

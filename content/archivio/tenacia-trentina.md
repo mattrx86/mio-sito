@@ -3,7 +3,7 @@ title: "Tenacia trentina — Tempera su carta, 2001"
 heading: "tenacia trentina*"
 date: 2001-02-17
 hideDate: true
-description: "Tempera su carta, 21x30 cm. Omaggio all'opera Tenacia Trentina di Carlo Sartori, dipinta nel 2001."
+description: "Tempera su carta, 21x30 cm, 2001. Omaggio a «Tenacia trentina» di Carlo Sartori, che lasciò una sua dedica sul retro del quadro."
 image: "/img/archivio/tenacia-trentina.jpg"
 tags: ["tempera", "paesaggio", "trentino", "omaggio"]
 schema:
@@ -15,26 +15,10 @@ schema:
   dateCreated: "2001"
 ---
 
-<div id="gallery-wrap">
-<img id="gallery-main" src="/img/archivio/tenacia-trentina.jpg" alt="Tenacia trentina, vista frontale">
-<div id="gallery-thumbs">
-<img src="/img/archivio/tenacia-trentina.jpg" alt="vista frontale">
-<img src="/img/archivio/tenacia-trentina-retro.jpg" alt="retro">
-</div>
-</div>
-
-<script>
-var main = document.getElementById('gallery-main');
-var thumbs = document.querySelectorAll('#gallery-thumbs img');
-thumbs.forEach(function(t) {
-  t.addEventListener('click', function() {
-    main.src = t.src;
-    main.alt = t.alt;
-    thumbs.forEach(function(x) { x.style.opacity = '0.4'; });
-    t.style.opacity = '1';
-  });
-});
-</script>
+{{< galleria >}}
+/img/archivio/tenacia-trentina.jpg | Tenacia trentina, vista frontale
+/img/archivio/tenacia-trentina-retro.jpg | Tenacia trentina, retro
+{{< /galleria >}}
 
 **tecnica:** tempera su carta  
 **anno produzione:** 2001  

@@ -1,6 +1,7 @@
 ---
 title: "il valore prima del colore"
 date: 2025-09-02
+description: "Appunti di tecnica pittorica: perché decidere il valore prima del colore, il trucco della foto in bianco e nero e la scala di valori che uso di più."
 tags: ["teoria-del-colore", "tecnica", "acquerello"]
 toc: true
 ---

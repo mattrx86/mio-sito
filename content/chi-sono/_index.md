@@ -2,18 +2,19 @@
 title: "Chi sono — Mattia Riccadonna, pittore trentino"
 heading: "chi sono"
 date: 2026-07-26
-description: "Pittore e disegnatore trentino attivo dal 1999. Oltre 70 opere tra disegni, olio su tela, acrilico e tecniche miste. Mostre, concorsi ed esposizioni tra il 1999 e il 2007."
+description: "Pittore e disegnatore trentino attivo dal 1999: circa 70-80 opere tra olio su tela, acrilico, disegno e tecniche miste. Mostre e concorsi dal 1999 al 2007."
+schematype: "ProfilePage"
 ---
 
 Mi chiamo Mattia, sono nato nel 1986 e ho iniziato a disegnare a tredici anni, *quasi* per caso.  
 
-18 novembre 1999, ad Arco, al [1° Concorso Provinciale Giovanni Segantini](/rassegna-stampa/concorso-segantini-1999/) ho ricevuto in premio una borsa di studio di 200 mila Lire per la mia versione del [*pittore delle montagne*](/archivio/pittore-delle-montagne). Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
+18 novembre 1999, ad Arco, al [1° Concorso Provinciale Giovanni Segantini](/rassegna-stampa/concorso-segantini-i-vincitori/) ho ricevuto in premio una borsa di studio di 200 mila Lire per la mia versione del *pittore delle montagne*. Frequentavo la classe III A della S.M. Giovanni Prati di Ponte Arche.
 
 Col tempo il disegno è diventato prima passione per *caricature e comics* (Benito Jacovitti e Charles M. Schulz su tutti) poi *pittura* con l'amore per Van Gogh e Sartori. L'olio su tela è stato il mezzo che ho usato di più, ma ho anche sperimentato l'acrilico e, solo negli ultimi anni, tecniche miste.
 
 Tra il 2002 e il 2007 ho vissuto il periodo più intenso: le prime mostre e alcuni articoli di giornale. Poi la vita ha preso altre strade — l'università, il lavoro, una famiglia — e la pittura è rimasta in silenzio. In questo periodo, anche per la scarsità di tempo, mi sono avvicinato alla fotografia.
 
-Oggi dipingo ancora. Con meno rigidità e più libertà espressiva e maggiore ricerca sul colore. In tutto credo di aver prodoto circa 70-80 tele in più di `venticinque anni` di produzione. Alcuni quadri li ho conservati, altri venduti e qualcuno perso per strada.
+Oggi dipingo ancora. Con meno rigidità e più libertà espressiva e maggiore ricerca sul colore. In tutto credo di aver prodotto circa 70-80 tele in più di `venticinque anni` di produzione. Alcuni quadri li ho conservati, altri venduti e qualcuno perso per strada.
 
 ---
 

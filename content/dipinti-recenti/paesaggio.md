@@ -3,7 +3,7 @@ title: "Senza titolo — Olio su tela, 2024"
 heading: "senza titolo"
 date: 2024-09-22
 hideDate: true
-description: "Olio su tela, 35x40cm. Paesaggio metafisico ispirato a Peter Batchelder e al paesaggio giudicariese del Bleggio e del Lomaso. Quadro dipinto nel 2024. Collezione privata."
+description: "Olio su tela, 35x40 cm, 2024. Paesaggio metafisico tra Bleggio e Lomaso, ispirato a Peter Batchelder e Hopper. Collezione privata."
 image: "/img/dipinti-recenti/paesaggio.jpg"
 tags: ["olio", "paesaggio", "2024"]
 schema:

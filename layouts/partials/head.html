@@ -1,104 +1,236 @@
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {{/* Description */}}
-  {{ if .Params.description }}
-    <meta name="description" content="{{ .Params.description }}">
-  {{ else if or .IsPage .IsHome }}
-    <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
-  {{ end }}
+  {{- /* ================================================================
+       VARIABILI COMUNI
+       ================================================================ */ -}}
+  {{- $brand   := site.Params.author | default "Mattia Riccadonna" -}}
+  {{- $noindex := partial "noindex.html" . -}}
+  {{- $isArtwork := and .IsPage .Params.schema (eq .Params.schema.type "VisualArtwork") -}}
+  {{- $isBlogPost := and .IsPage (eq .Section "blog") -}}
 
-  {{/* Title */}}
-  <title>
-    {{ if .Params.seo_title }}
-      {{ .Params.seo_title }}
-    {{ else if .IsHome }}
-      {{ $.Site.Params.seo_title | default $.Site.Title }}
-    {{ else }}
-      {{ .Title }} | Mattia Riccadonna
-    {{ end }}
-  </title>
+  {{- /* ================================================================
+       TITOLO
+       - home: seo_title del sito
+       - pagine con seo_title nel frontmatter: quello
+       - altre: "Titolo | Mattia Riccadonna", ma senza ripetere il nome
+         se il titolo lo contiene già
+       ================================================================ */ -}}
+  {{- $label := .Title -}}
+  {{- if eq .Kind "term" -}}{{- $label = printf "%s — opere e appunti" (humanize .Data.Term) -}}{{- end -}}
+  {{- if eq .Kind "404" -}}{{- $label = "Pagina non trovata" -}}{{- end -}}
+  {{- $ogTitle := $label -}}
+  {{- with .Params.seo_title -}}{{- $ogTitle = . -}}{{- end -}}
+  {{- if .IsHome -}}{{- $ogTitle = site.Params.seo_title | default site.Title -}}{{- end -}}
+  {{- $title := $ogTitle -}}
+  {{- if and (not .IsHome) (not .Params.seo_title) (not (in $label $brand)) -}}
+    {{- $title = printf "%s | %s" $label $brand -}}
+  {{- end }}
+  <title>{{ $title }}</title>
 
-  {{/* Canonical */}}
+  {{- /* ================================================================
+       DESCRIPTION
+       - frontmatter "description" se presente
+       - altrimenti un testo di ripiego pulito e lungo max 155 caratteri
+       ================================================================ */ -}}
+  {{- $desc := "" -}}
+  {{- with .Params.description -}}
+    {{- $desc = . -}}
+  {{- else -}}
+    {{- if .IsHome -}}
+      {{- $desc = site.Params.description -}}
+    {{- else if eq .Kind "term" -}}
+      {{- $desc = printf "Opere e appunti di %s con il tag «%s»." $brand (humanize .Data.Term) -}}
+    {{- else if .IsPage -}}
+      {{- $desc = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^\s+|\s+$` "" | truncate 155 -}}
+    {{- else -}}
+      {{- $desc = site.Params.description -}}
+    {{- end -}}
+  {{- end }}
+  <meta name="description" content="{{ $desc }}">
+
+  {{- /* ================================================================
+       INDICIZZAZIONE E CANONICAL
+       ================================================================ */ -}}
+  {{- if $noindex }}
+  <meta name="robots" content="noindex, follow">
+  {{- else }}
   <link rel="canonical" href="{{ .Permalink }}">
+  {{- end }}
 
-  {{/* Open Graph */}}
-  <meta property="og:site_name" content="{{ $.Site.Title }}">
+  {{- /* ================================================================
+       IMMAGINE DI CONDIVISIONE (og:image / twitter:image)
+       - "image" del frontmatter, altrimenti l'immagine di default del sito
+       - larghezza e altezza lette dal file vero
+       ================================================================ */ -}}
+  {{- $imgPath := .Params.image | default site.Params.defaultImage | default "/img/og-home.jpg" -}}
+  {{- $imgURL := $imgPath | absURL -}}
+  {{- $imgW := 0 -}}
+  {{- $imgH := 0 -}}
+  {{- with resources.Get (strings.TrimPrefix "/" $imgPath) -}}
+    {{- $imgW = .Width -}}
+    {{- $imgH = .Height -}}
+  {{- else -}}
+    {{- warnf "[SEO] Immagine di condivisione non trovata: %s (pagina %s)" $imgPath $.RelPermalink -}}
+  {{- end }}
+
+  {{- /* Open Graph */}}
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:locale" content="{{ replace site.LanguageCode "-" "_" }}">
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:title" content="{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ $.Site.Params.seo_title | default $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta property="og:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
-  <meta property="og:locale" content="{{ $.Site.LanguageCode }}">
-  {{ if .Params.image }}
-  <meta property="og:image" content="{{ .Params.image | absURL }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  {{ else if .IsHome }}
-  <meta property="og:image" content="{{ "/img/og-home.jpg" | absURL }}">
-  {{ end }}
+  <meta property="og:title" content="{{ $ogTitle }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:image" content="{{ $imgURL }}">
+  {{- if gt $imgW 0 }}
+  <meta property="og:image:width" content="{{ $imgW }}">
+  <meta property="og:image:height" content="{{ $imgH }}">
+  {{- end }}
+  <meta property="og:image:alt" content="{{ $ogTitle }}">
+  {{- if $isBlogPost }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{- end }}
 
-  {{/* Twitter Card */}}
-  <meta name="twitter:card" content="{{ if .Params.image }}summary_large_image{{ else }}summary{{ end }}">
-  <meta name="twitter:title" content="{{ if .Params.seo_title }}{{ .Params.seo_title }}{{ else if .IsHome }}{{ $.Site.Params.seo_title | default $.Site.Title }}{{ else }}{{ .Title }}{{ end }}">
-  <meta name="twitter:description" content="{{ if .Params.description }}{{ .Params.description }}{{ else if .IsHome }}{{ $.Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
-  {{ if .Params.image }}
-  <meta name="twitter:image" content="{{ .Params.image | absURL }}">
-  {{ end }}
+  {{- /* Twitter / X Card */}}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ $ogTitle }}">
+  <meta name="twitter:description" content="{{ $desc }}">
+  <meta name="twitter:image" content="{{ $imgURL }}">
 
-  {{/* Author e copyright */}}
-  <meta name="author" content="{{ $.Site.Params.author }}">
-  <meta name="copyright" content="{{ $.Site.Params.copyright }}">
+  {{- /* Autore e copyright */}}
+  <meta name="author" content="{{ site.Params.author }}">
+  <meta name="copyright" content="{{ site.Params.copyright }}">
 
-  {{/* RSS */}}
-  <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ "index.xml" | absURL }}">
+  {{- /* RSS */}}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
 
-  {{/* Favicon */}}
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  {{- /* Favicon */}}
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
-  {{/* CSS */}}
-  {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
-  {{ $sass := resources.Get "css/main.scss" }}
-  {{ $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
-  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" integrity="{{ $style.Data.Integrity }}" />
+  {{- /* CSS del tema */}}
+  {{- $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) -}}
+  {{- $sass := resources.Get "css/main.scss" -}}
+  {{- $style := $sass | css.Sass $options | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 
-  {{ if .Params.mathjax }} {{ partial "mathjax.html" . }} {{ end }}
+  {{- /* CSS aggiuntivo del sito (immagini responsive, galleria) */}}
+  {{- with resources.Get "css/override.css" -}}
+    {{- $extra := . | resources.Minify | resources.Fingerprint "sha512" }}
+  <link rel="stylesheet" href="{{ $extra.RelPermalink }}" integrity="{{ $extra.Data.Integrity }}">
+  {{- end }}
 
-  {{/* Schema.org */}}
-  {{ if .IsPage }}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "{{ if .Params.schema }}{{ .Params.schema.type | default "WebPage" }}{{ else }}WebPage{{ end }}",
-    "name": "{{ .Title }}",
-    "description": "{{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary }}{{ end }}",
-    "url": "{{ .Permalink }}",
-    {{ if .Params.image }}
-    "primaryImageOfPage": "{{ .Params.image | absURL }}",
-    "image": "{{ .Params.image | absURL }}",
-    {{ end }}
-    {{ if .Params.schema }}
-    "artist": {
-      "@type": "Person",
-      "name": "{{ .Params.schema.artist | default "Mattia Riccadonna" }}",
-      "url": "https://mattiariccadonna.com"
-    },
-    "artMedium": "{{ .Params.schema.medium }}",
-    "width": "{{ .Params.schema.width }} cm",
-    "height": "{{ .Params.schema.height }} cm",
-    "dateCreated": "{{ .Params.schema.dateCreated }}",
-    "locationCreated": {
-      "@type": "Place",
-      "name": "Comano Terme, Trentino, Italia"
-    },
-    {{ end }}
-    "author": {
-      "@type": "Person",
-      "name": "Mattia Riccadonna",
-      "url": "https://mattiariccadonna.com"
-    }
-  }
-  </script>
-  {{ end }}
+  {{ if .Params.mathjax }}{{ partial "mathjax.html" . }}{{ end }}
+
+  {{- /* ================================================================
+       DATI STRUTTURATI (JSON-LD, schema.org)
+       Costruiti come oggetti Hugo e convertiti con jsonify: niente
+       problemi di virgolette, apostrofi o a capo nel testo.
+       ================================================================ */ -}}
+  {{- if not $noindex -}}
+    {{- $base      := site.BaseURL -}}
+    {{- $personID  := printf "%s#persona" $base -}}
+    {{- $siteID    := printf "%s#sito" $base -}}
+    {{- $personRef := dict "@id" $personID -}}
+    {{- $siteRef   := dict "@id" $siteID -}}
+
+    {{- $person := dict
+        "@type" "Person"
+        "@id" $personID
+        "name" $brand
+        "url" $base
+        "jobTitle" "Pittore"
+        "description" site.Params.description
+        "address" (dict "@type" "PostalAddress" "addressLocality" "Comano Terme" "addressRegion" "Trentino" "addressCountry" "IT")
+        "knowsAbout" (slice "Pittura a olio" "Acquerello" "Disegno")
+    -}}
+    {{- with site.Params.sameAs -}}{{- $person = merge $person (dict "sameAs" .) -}}{{- end -}}
+
+    {{- $website := dict
+        "@type" "WebSite"
+        "@id" $siteID
+        "url" $base
+        "name" site.Title
+        "description" site.Params.description
+        "inLanguage" site.LanguageCode
+        "publisher" $personRef
+    -}}
+
+    {{- $graph := slice $website $person -}}
+
+    {{- /* Nodo principale della pagina */ -}}
+    {{- if $isArtwork -}}
+      {{- $s := .Params.schema -}}
+      {{- $name := $s.name | default (index (split .Title " — ") 0) -}}
+      {{- $art := dict
+          "@type" "VisualArtwork"
+          "@id" (printf "%s#opera" .Permalink)
+          "name" $name
+          "url" .Permalink
+          "mainEntityOfPage" .Permalink
+          "description" $desc
+          "image" $imgURL
+          "artist" $personRef
+          "creator" $personRef
+          "inLanguage" site.LanguageCode
+          "locationCreated" (dict "@type" "Place" "name" "Comano Terme, Trentino, Italia")
+      -}}
+      {{- with $s.medium -}}{{- $art = merge $art (dict "artMedium" .) -}}{{- end -}}
+      {{- with $s.dateCreated -}}{{- $art = merge $art (dict "dateCreated" (string .)) -}}{{- end -}}
+      {{- with $s.width -}}{{- $art = merge $art (dict "width" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
+      {{- with $s.height -}}{{- $art = merge $art (dict "height" (dict "@type" "QuantitativeValue" "value" (float .) "unitCode" "CMT" "unitText" "cm")) -}}{{- end -}}
+      {{- $graph = $graph | append $art -}}
+
+    {{- else if $isBlogPost -}}
+      {{- $post := dict
+          "@type" "BlogPosting"
+          "@id" (printf "%s#articolo" .Permalink)
+          "headline" .Title
+          "description" $desc
+          "url" .Permalink
+          "mainEntityOfPage" .Permalink
+          "image" $imgURL
+          "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+          "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+          "author" $personRef
+          "publisher" $personRef
+          "inLanguage" site.LanguageCode
+          "isPartOf" $siteRef
+      -}}
+      {{- with .Params.tags -}}{{- $post = merge $post (dict "keywords" (delimit . ", ")) -}}{{- end -}}
+      {{- $graph = $graph | append $post -}}
+
+    {{- else if not .IsHome -}}
+      {{- $type := .Params.schematype | default (cond .IsPage "WebPage" "CollectionPage") -}}
+      {{- $page := dict
+          "@type" $type
+          "@id" .Permalink
+          "name" $ogTitle
+          "description" $desc
+          "url" .Permalink
+          "inLanguage" site.LanguageCode
+          "isPartOf" $siteRef
+          "author" $personRef
+      -}}
+      {{- with .Params.image -}}{{- $page = merge $page (dict "primaryImageOfPage" (. | absURL)) -}}{{- end -}}
+      {{- if eq $type "ProfilePage" -}}{{- $page = merge $page (dict "mainEntity" $personRef) -}}{{- end -}}
+      {{- $graph = $graph | append $page -}}
+    {{- end -}}
+
+    {{- /* Briciole di pane: Home > sezione > pagina */ -}}
+    {{- if not .IsHome -}}
+      {{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $base) -}}
+      {{- $pos := 2 -}}
+      {{- with .Parent -}}
+        {{- if not .IsHome -}}
+          {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (index (split (.Params.heading | default .Title) " | ") 0) "item" .Permalink) -}}
+          {{- $pos = add $pos 1 -}}
+        {{- end -}}
+      {{- end -}}
+      {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (index (split (.Params.heading | default .Title) " | ") 0) "item" .Permalink) -}}
+      {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" $crumbs) -}}
+    {{- end }}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>
+  {{- end }}
 </head>

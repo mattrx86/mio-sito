@@ -1,0 +1,7 @@
+# File generati da Hugo durante la build: non vanno nel repository
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Il tema viene scaricato da Netlify a ogni build (vedi netlify.toml)
+themes/

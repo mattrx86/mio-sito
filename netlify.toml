@@ -6,6 +6,25 @@
   HUGO_VERSION      = "0.128.0"
   HUGO_ENABLEGITINFO = "true"
 
+# --- Header di sicurezza (valgono per tutte le pagine) ---
+# HSTS senza includeSubDomains/preload: non tocca eventuali sottodomini.
+# Nessuna Content-Security-Policy per ora: con Umami e gli script inline
+# va prima provata in modalità "Report-Only" per non rompere il sito.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000"
+    X-Content-Type-Options    = "nosniff"
+    X-Frame-Options           = "SAMEORIGIN"
+    Referrer-Policy           = "strict-origin-when-cross-origin"
+    Permissions-Policy        = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()"
+
+# I CSS hanno l'impronta (hash) nel nome: si possono tenere in cache a lungo
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # --- Redirect 301 per vecchi URL di singole opere (rinominate) ---
 [[redirects]]
   from = "/archivio/catenaccio-a-glolo/"

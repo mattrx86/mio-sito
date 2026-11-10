@@ -34,4 +34,4 @@
   url   = "/contatti/"
 
 [[entries]]
-  title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank'>opere in vendita</a>"
+  title = "<a href='https://www.ebay.it/usr/mattia_riccadonna_art' target='_blank' rel='noopener'>opere in vendita</a>"

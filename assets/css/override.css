@@ -1,0 +1,18 @@
+/* ----------------------------------------------------------------
+   CSS aggiuntivo del sito (caricato dopo quello del tema)
+   ---------------------------------------------------------------- */
+
+/* Le immagini ora hanno gli attributi width/height (utile per la SEO
+   e per il punteggio Core Web Vitals). height:auto evita che vengano
+   deformate quando la larghezza viene ridotta dal max-width. */
+article img,
+#gallery-main {
+  height: auto;
+}
+
+/* Miniature della galleria raggiungibili anche da tastiera */
+#gallery-thumbs img:focus-visible {
+  opacity: 1;
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

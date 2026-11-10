@@ -1,0 +1,35 @@
+{{- /*
+  Crea le versioni ottimizzate (WebP) di un'immagine del sito.
+
+  Uso:  partial "img-varianti.html" "/img/archivio/radici.jpg"
+  Restituisce un dizionario con:
+    src     URL della versione più grande (max 1600 px di larghezza)
+    srcset  elenco delle versioni per il browser (800w, 1600w...)
+    w, h    larghezza e altezza della versione più grande
+    thumb   URL della miniatura quadrata 120x120 (per la galleria)
+    found   false se l'immagine non esiste in static/img
+  Le immagini originali in static/img non vengono toccate.
+*/ -}}
+{{- $path := . -}}
+{{- $out := dict "src" $path "srcset" "" "w" 0 "h" 0 "thumb" $path "found" false -}}
+{{- $r := "" -}}
+{{- if hasPrefix $path "/img/" -}}
+  {{- $r = resources.Get (strings.TrimPrefix "/" $path) -}}
+{{- end -}}
+{{- with $r -}}
+  {{- $widths := slice -}}
+  {{- if gt .Width 800 -}}{{- $widths = $widths | append 800 -}}{{- end -}}
+  {{- $widths = $widths | append (cond (gt .Width 1600) 1600 .Width) -}}
+  {{- $set := slice -}}
+  {{- $big := "" -}}
+  {{- range $widths -}}
+    {{- $v := $r.Resize (printf "%dx webp q82" .) -}}
+    {{- $set = $set | append (printf "%s %dw" $v.RelPermalink .) -}}
+    {{- $big = $v -}}
+  {{- end -}}
+  {{- $thumb := .Fill "120x120 webp q75 Center" -}}
+  {{- $out = dict "src" $big.RelPermalink "srcset" (delimit $set ", ") "w" $big.Width "h" $big.Height "thumb" $thumb.RelPermalink "found" true -}}
+{{- else -}}
+  {{- warnf "[immagini] File non trovato, uso il percorso originale: %s" $path -}}
+{{- end -}}
+{{- return $out -}}

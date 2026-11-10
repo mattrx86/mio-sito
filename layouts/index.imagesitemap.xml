@@ -1,16 +1,31 @@
+{{- /*
+  Sitemap delle immagini (sitemap-images.xml).
+  Per ogni pagina indicizzabile elenca l'immagine principale ("image" nel
+  frontmatter) e tutte le altre immagini /img/... usate nel testo, comprese
+  quelle delle gallerie. I tag image:title e image:caption non ci sono più
+  perché Google li ha dismessi nel 2022.
+*/ -}}
 {{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {{ range where site.RegularPages ".Params.image" "!=" nil }}
+{{- range site.RegularPages }}
+  {{- if not (partial "noindex.html" .) }}
+    {{- $imgs := slice -}}
+    {{- with .Params.image }}{{ $imgs = $imgs | append . }}{{ end -}}
+    {{- range findRE `/img/[^\s"')|]+\.(?:jpe?g|png|webp|gif)` .RawContent -}}
+      {{- $imgs = $imgs | append . -}}
+    {{- end -}}
+    {{- $imgs = uniq $imgs -}}
+    {{- if $imgs }}
   <url>
     <loc>{{ .Permalink }}</loc>
+      {{- range $imgs }}
     <image:image>
-      <image:loc>{{ .Params.image | absURL }}</image:loc>
-      <image:title>{{ .Title | htmlEscape }}</image:title>
-      {{ with .Params.description }}
-      <image:caption>{{ . | htmlEscape }}</image:caption>
-      {{ end }}
+      <image:loc>{{ . | absURL }}</image:loc>
     </image:image>
+      {{- end }}
   </url>
-  {{ end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
 </urlset>

@@ -3,7 +3,7 @@ title: "Studio da Batchelder — Olio su tela, 2025"
 heading: "studio batchelder*"
 date: 2025-05-10
 hideDate: true
-description: "Olio su tela, 50x60cm. Studio pittorico da Peter Batchelder, dipinto nel 2025"
+description: "Olio su tela, 50x60 cm, 2025. Studio da un'opera di Peter Batchelder, eseguito a scopo di studio e pratica pittorica. Non in vendita."
 image: "/img/dipinti-recenti/studio-Batchelder-01.jpg"
 tags: ["olio", "paesaggio", "2025"]
 schema:
