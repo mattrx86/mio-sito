@@ -60,9 +60,6 @@ subito con un **passe-partout** largo, che le protegge e le valorizza.
 Una miniatura di 3 cm in una cornice di 10–15 cm diventa un oggetto
 prezioso, perfetto come regalo.
 
-[DA PERSONALIZZARE: quanto tempo ti richiede una miniatura, che pigmenti
-usi, se le incornici tu.]
-
 Le miniature disponibili sono indicate nella pagina di ogni opera; per
 informazioni [scrivimi](/contatti/).
 
