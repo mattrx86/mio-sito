@@ -1,7 +1,6 @@
 ---
 # BOZZA: da rileggere prima di pubblicare (togliere "draft: true").
 # Le parti [DA PERSONALIZZARE] sono facoltative: se non le completi, cancellale.
-draft: true
 title: "dipingere a olio su masonite"
 seo_title: "Olio su masonite: come preparare il pannello per dipingere"
 date: 2026-11-10
@@ -71,9 +70,6 @@ dipingere. Per l'avocado ho incollato un foglio di giornale sul pannello e
 l'ho usato come base per l'olio. La carta di giornale però è acida e
 ingiallisce: conviene incollarla con un medium acrilico e ricoprirla con
 un'altra mano dello stesso medium, così resta protetta e non assorbe l'olio.
-
-[DA PERSONALIZZARE: due righe su come prepari tu i pannelli, che marca di
-gesso o sigillante usi, che misure preferisci per i piccoli quadri.]
 
 ---
 
