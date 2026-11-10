@@ -1,7 +1,6 @@
 ---
 # BOZZA: da rileggere prima di pubblicare (togliere "draft: true").
 # Le parti [DA PERSONALIZZARE] sono facoltative: se non le completi, cancellale.
-draft: true
 title: "il notan, prima ancora del valore"
 seo_title: "Notan: cos'è e come usarlo per comporre un quadro"
 date: 2026-11-10
@@ -63,9 +62,6 @@ Nella versione a due valori restano poche forme grandi: le malghe chiare
 contro la massa scura delle montagne, il cielo chiaro in alto, il prato in
 basso. Il colore nel quadro è acceso e saturo, ma è questa struttura di
 chiaro e scuro che lo tiene in piedi.
-
-[DA PERSONALIZZARE: se vuoi, aggiungi qui come hai pensato la composizione
-di questo quadro, per esempio se hai fatto bozzetti prima di dipingerlo.]
 
 ## Come fare uno studio notan
 
