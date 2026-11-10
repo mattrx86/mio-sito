@@ -1,0 +1,28 @@
+{{- /*
+  "Costo" di una disposizione del mosaico = superficie bianca lasciata
+  dalle tessere, simulando l'impaginazione del browser (flex-wrap, righe
+  allineate in alto) su una colonna larga 100 unità.
+
+  Riceve una lista di dict con:  lw = larghezza occupata (tessera + spazi)
+                                 lh = altezza della tessera
+  Per ogni riga conta il vuoto sotto le tessere più basse della riga e,
+  per tutte le righe tranne l'ultima, anche il vuoto a destra.
+*/ -}}
+{{- $W := 100.0 -}}
+{{- $costo := 0.0 -}}
+{{- $rigaW := 0.0 -}}
+{{- $rigaH := 0.0 -}}
+{{- $rigaA := 0.0 -}}
+{{- range . -}}
+  {{- if and (gt $rigaW 0.0) (gt (add $rigaW .lw) $W) -}}
+    {{- $costo = add $costo (sub (mul $rigaH $W) $rigaA) -}}
+    {{- $rigaW = 0.0 -}}
+    {{- $rigaH = 0.0 -}}
+    {{- $rigaA = 0.0 -}}
+  {{- end -}}
+  {{- $rigaW = add $rigaW .lw -}}
+  {{- $rigaH = math.Max $rigaH .lh -}}
+  {{- $rigaA = add $rigaA (mul .lw .lh) -}}
+{{- end -}}
+{{- $costo = add $costo (sub (mul $rigaH $rigaW) $rigaA) -}}
+{{- return $costo -}}

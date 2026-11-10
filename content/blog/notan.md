@@ -1,6 +1,4 @@
 ---
-# BOZZA: da rileggere prima di pubblicare (togliere "draft: true").
-# Le parti [DA PERSONALIZZARE] sono facoltative: se non le completi, cancellale.
 title: "il notan, prima ancora del valore"
 seo_title: "Notan: cos'è e come usarlo per comporre un quadro"
 date: 2026-11-10

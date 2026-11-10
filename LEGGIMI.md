@@ -58,6 +58,20 @@ La foto viene mostrata intera, cornice compresa (nessun ritaglio): la
 tessera ha la proporzione della foto e la stessa superficie in scala della
 tela. Conviene fotografare il quadro dritto, con poco sfondo intorno
 (lo sfondo entra nel mosaico).
+Se la foto comprende una **cornice grande** (oro, passe-partout...), la
+tessera sembra più piccola del vero rispetto ai quadri con cornici sottili.
+Per avere la scala esatta aggiungi le misure ESTERNE della cornice in cm:
+
+```
+cornice:
+  larghezza: 90
+  altezza: 70
+```
+
+L'ordine delle tessere lo decide il sito: sceglie in automatico la
+disposizione che lascia meno spazi bianchi (non quella cronologica, che
+resta nell'elenco sotto il mosaico).
+
 Per attivare il mosaico in un'altra sezione: aggiungi `mosaico: true` nel
 suo `_index.md`.
 

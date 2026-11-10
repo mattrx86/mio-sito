@@ -20,13 +20,12 @@
 {{- $dati := partialCached "mosaico-dati.html" . .RelPermalink -}}
 {{- $k := $dati.k -}}
 {{- $colonnaPx := 640.0 -}}   {{- /* larghezza della colonna su desktop */ -}}
-{{- $colonnaMobilePx := 326.0 -}}   {{- /* colonna su uno smartphone da 390px */ -}}
 
 {{- with $dati.items -}}
 <ul class="mosaico" aria-label="Le opere della sezione, in scala tra loro">
   {{- range . -}}
     {{- $p := .page -}}
-    {{- $pct := math.Min 100.0 (mul .tw $k) -}}
+    {{- $pct := .pct -}}
     {{- /* foto intera (nessun ritaglio), larga quanto serve per schermi 2x,
            mai più grande dell'originale */ -}}
     {{- $px := int (math.Ceil (mul (div $pct 100.0) (mul $colonnaPx 2))) -}}
@@ -38,11 +37,10 @@
     {{- $sizes := printf "(max-width: 704px) calc((100vw - 4rem) * %.4f), %.0fpx" (div $pct 100.0) (mul (div $pct 100.0) $colonnaPx) -}}
     {{- $stile := printf "width:%.3f%%;aspect-ratio:%d/%d" $pct .img.Width .img.Height -}}
     {{- $classi := slice "mosaico-tessera" -}}
-    {{- /* su smartphone: "piccola" < 40px (puntino fuori dall'angolo),
-           "minuscola" < 24px (un po' di spazio intorno per l'area di tocco) */ -}}
-    {{- $pxMobile := mul (div $pct 100.0) $colonnaMobilePx -}}
-    {{- if lt $pxMobile 40.0 -}}{{- $classi = $classi | append "mosaico-tessera--piccola" -}}{{- end -}}
-    {{- if lt $pxMobile 24.0 -}}{{- $classi = $classi | append "mosaico-tessera--minuscola" -}}{{- end -}}
+    {{- /* su smartphone: "piccola" < 40px (puntino adattato), "minuscola" < 24px
+           (spazio intorno per l'area di tocco) — calcolate in mosaico-dati.html */ -}}
+    {{- if .piccola -}}{{- $classi = $classi | append "mosaico-tessera--piccola" -}}{{- end -}}
+    {{- if .minuscola -}}{{- $classi = $classi | append "mosaico-tessera--minuscola" -}}{{- end -}}
     {{- if .disponibile -}}{{- $classi = $classi | append "mosaico-tessera--disponibile" -}}{{- end }}
   <li class="{{ delimit $classi " " }}" style="{{ $stile | safeCSS }}">
     <a href="{{ $p.RelPermalink }}" title="{{ .etichetta }}"><img src="{{ $thumb1.RelPermalink }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .etichetta }}" decoding="async"></a>
