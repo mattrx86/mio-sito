@@ -1,6 +1,7 @@
 ---
 title: "sui colori complementari"
 seo_title: "Colori complementari: cosa sono e come usarli in pittura"
+draft: true
 date: 2025-06-15
 description: "Appunti di tecnica pittorica: usare i colori complementari non solo per il contrasto ma per spegnere un colore, con esempi pratici all'acquerello."
 tags: ["teoria-del-colore", "tecnica", "acquerello"]
