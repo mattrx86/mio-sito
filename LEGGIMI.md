@@ -8,6 +8,17 @@ Tutto si può fare **da browser** su https://github.com/mattrx86/mio-sito
 
 ---
 
+## 0. Il modo più veloce: caricamento massivo
+
+Per aggiungere tante opere insieme: compila `importa/opere.csv` (una riga
+per opera) e carica CSV e foto nella cartella `importa/`. Il sito crea da
+solo pagine, testi per Google, mosaico e foto ottimizzate.
+Istruzioni complete e significato delle colonne: **`importa/LEGGIMI.md`**.
+
+I punti seguenti servono per fare le cose a mano, una per una.
+
+---
+
 ## 1. Caricare un'immagine
 
 1. Vai nella cartella giusta dentro `static/img/`:

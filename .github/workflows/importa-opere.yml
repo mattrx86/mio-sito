@@ -1,0 +1,67 @@
+# CARICAMENTO MASSIVO DELLE OPERE
+# Quando carichi file nella cartella importa/ (CSV e/o foto) su main:
+#   1. esegue strumenti/importa_opere.py (crea pagine e sistema le foto)
+#   2. compila il sito con Hugo per verificare che sia tutto a posto
+#   3. salva le modifiche con un commit -> Netlify pubblica da solo
+# L'esito (pagine create, righe con errori) finisce in importa/ESITO.md e
+# nel riepilogo di questa esecuzione (GitHub → Actions → Importa opere).
+# Se la verifica con Hugo fallisce non viene salvato nulla e GitHub ti
+# manda un'email: il sito online resta com'era.
+
+name: Importa opere
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "importa/**"
+      - "!importa/ESITO.md"
+      - "!importa/LEGGIMI.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: importa-opere
+  cancel-in-progress: false
+
+jobs:
+  importa:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Scarica il sito
+        uses: actions/checkout@v4
+
+      - name: Prepara Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa Pillow (elaborazione immagini)
+        run: pip install --quiet "pillow>=11,<13"
+
+      - name: Importa le opere
+        run: python3 strumenti/importa_opere.py
+
+      - name: Verifica con Hugo (stessa versione di Netlify)
+        run: |
+          curl -sSL -o /tmp/hugo.tgz https://github.com/gohugoio/hugo/releases/download/v0.128.0/hugo_extended_0.128.0_linux-amd64.tar.gz
+          tar -xzf /tmp/hugo.tgz -C /tmp hugo
+          git clone --quiet --depth 1 https://github.com/mattrx86/hugo-theme-nostyleplease themes/nostyleplease
+          /tmp/hugo --minify --destination /tmp/sito-di-prova
+          rm -rf themes resources .hugo_build.lock
+
+      - name: Salva le modifiche
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A content static importa
+          if git diff --cached --quiet; then
+            echo "Niente da salvare."
+            exit 0
+          fi
+          git commit -m "Importazione opere da importa/opere.csv"
+          git push
