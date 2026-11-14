@@ -5,3 +5,7 @@ resources/_gen/
 
 # Il tema viene scaricato da Netlify a ogni build (vedi netlify.toml)
 themes/
+
+# File temporanei di Python
+__pycache__/
+*.pyc
