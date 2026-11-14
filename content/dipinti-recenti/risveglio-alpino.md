@@ -28,3 +28,11 @@ schema:
 ---
 
 **annotazioni:** opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concorsi/#premio-rango-2025) il 26 luglio 2025. L'opera raffigura due malghe alpine con sullo sfondo una tipica formazione dolomitica. I colori sono volutamente *bold* per esagerare la luce mattutina — in modo da farla `sentire`, oltre che vedere.
+
+## dietro le quinte
+
+![Risveglio alpino quasi finito sul cavalletto dello studio: malghe gialle e rosse con le Dolomiti illuminate sullo sfondo](/img/taccuino/studio/07-risveglio-alpino-sul-cavalletto.jpg)
+
+*quasi finito, sul cavalletto: le montagne già accese dalla luce, le malghe e il prato*
+
+Tutte le fasi, dagli schizzi a matita alla cornice: [come nasce un quadro](/taccuino/come-nasce-un-quadro/).

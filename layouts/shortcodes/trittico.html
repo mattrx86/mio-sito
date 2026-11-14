@@ -1,0 +1,50 @@
+{{- /*
+  TRITTICO: 2 o 3 foto affiancate sulla stessa riga, con la stessa altezza.
+  Ogni foto resta INTERA (nessun ritaglio): la sua larghezza è proporzionale
+  alla sua forma, così le altezze coincidono e i bordi sono allineati.
+  Pensato per foto verticali. Un tocco/clic apre la foto più grande.
+
+  Uso nel file .md (una riga per foto:  percorso | testo alternativo | didascalia):
+
+  {{< trittico >}}
+  /img/taccuino/studio/a.jpg | descrizione per Google e screen reader | didascalia breve
+  /img/taccuino/studio/b.jpg | ... | ...
+  /img/taccuino/studio/c.jpg | ... | ...
+  {{< /trittico >}}
+
+  La didascalia è facoltativa. Le immagini compaiono anche nella sitemap
+  delle immagini (sitemap-images.xml) come tutte le altre.
+*/ -}}
+{{- $foto := slice -}}
+{{- $somma := 0.0 -}}
+{{- range split (trim .Inner "\r\n ") "\n" -}}
+  {{- $riga := trim . " \r\t" -}}
+  {{- if $riga -}}
+    {{- $parti := split $riga "|" -}}
+    {{- $src := trim (index $parti 0) " " -}}
+    {{- $alt := "" -}}{{- $didascalia := "" -}}
+    {{- if ge (len $parti) 2 -}}{{- $alt = trim (index $parti 1) " " -}}{{- end -}}
+    {{- if ge (len $parti) 3 -}}{{- $didascalia = trim (index $parti 2) " " -}}{{- end -}}
+    {{- $v := partial "img-varianti.html" $src -}}
+    {{- $r := 0.75 -}}
+    {{- if gt $v.h 0 -}}{{- $r = div (float $v.w) (float $v.h) -}}{{- end -}}
+    {{- $somma = add $somma $r -}}
+    {{- $foto = $foto | append (merge $v (dict "alt" $alt "didascalia" $didascalia "r" $r)) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $foto }}
+<div class="trittico">
+  {{- range . }}
+  {{- $quota := div .r $somma }}
+  <figure style="{{ printf "flex:%.4f 1 0%%" .r | safeCSS }}">
+    <a href="{{ .src }}" title="{{ .alt }}"><img src="{{ .src }}"
+      {{- with .srcset }} srcset="{{ . }}" sizes="{{ printf "(max-width: 704px) calc((100vw - 4rem) * %.3f), %.0fpx" $quota (mul $quota 640.0) }}"{{ end }}
+      {{- if gt .w 0 }} width="{{ .w }}" height="{{ .h }}"{{ end }}
+      alt="{{ .alt }}" loading="lazy" decoding="async"></a>
+    {{- with .didascalia }}
+    <figcaption>{{ . }}</figcaption>
+    {{- end }}
+  </figure>
+  {{- end }}
+</div>
+{{- end -}}

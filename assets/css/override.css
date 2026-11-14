@@ -178,3 +178,41 @@ article img,
   display: inline-block;
   margin-bottom: 0.5rem;
 }
+
+/* ---------- Trittico: 2-3 foto affiancate (layouts/shortcodes/trittico.html) ----------
+   Ogni foto ha flex-grow pari al suo rapporto larghezza/altezza: stessa altezza
+   per tutte, nessun ritaglio. */
+.trittico {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin: 1.5rem 0;
+}
+.trittico figure {
+  margin: 0;
+  min-width: 0;
+}
+.trittico a {
+  display: block;
+  line-height: 0;
+  background: none !important;
+}
+.trittico img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: none !important;
+  display: block;
+  margin: 0 !important;
+}
+.trittico figcaption {
+  font-family: monospace;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  opacity: 0.75;
+  margin-top: 0.35rem;
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .trittico { gap: 4px; }
+  .trittico figcaption { font-size: 0.65rem; }
+}
