@@ -33,10 +33,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Scarica il sito
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Prepara Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -64,4 +64,10 @@ jobs:
             exit 0
           fi
           git commit -m "Importazione opere da importa/opere.csv"
-          git push
+          # se nel frattempo è arrivata un'altra modifica: riallinea e riprova
+          for tentativo in 1 2 3; do
+            git pull --rebase --quiet origin main && git push && exit 0
+            echo "Push non riuscito, nuovo tentativo tra 10 secondi..."
+            sleep 10
+          done
+          exit 1
