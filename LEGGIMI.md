@@ -194,3 +194,16 @@ Nel testo di un'opera, al posto di una singola immagine:
 /img/dipinti-recenti/nome-2.jpg | Titolo, dettaglio
 {{< /galleria >}}
 ```
+
+## Trittico: 2-3 foto verticali affiancate
+
+Per mostrare foto verticali una accanto all'altra (stessa altezza, nessun
+ritaglio, didascalia piccola sotto). Una riga per foto:
+`percorso | testo alternativo (per Google) | didascalia breve`
+
+```
+{{< trittico >}}
+/img/taccuino/studio/a.jpg | Studio da Salvo in lavorazione, forme stese in grigio | studio da Salvo in lavorazione
+/img/taccuino/studio/b.jpg | Chiaro di luna sul cavalletto con il disegno a vista | chiaro di luna sul cavalletto
+{{< /trittico >}}
+```
