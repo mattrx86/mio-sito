@@ -60,7 +60,7 @@ Se metti un **asterisco** in fondo al titolo (`Casa colonica *`), resta solo nel
 
 | colonna | quando serve |
 |---|---|
-| `cornice_larghezza_cm`, `cornice_altezza_cm` | misure esterne di una cornice grande, per il mosaico in scala |
+| `cornice_larghezza_cm`, `cornice_altezza_cm` | misure esterne della cornice (facoltative: oggi il mosaico non è in scala e non le usa) |
 | `coautori` | altri autori, separati da virgola |
 | `indirizzo` | se due opere hanno lo stesso titolo (es. "Senza titolo"): scrivi un indirizzo diverso, es. `senza-titolo-2026` |
 | `sovrascrivi` | scrivi `si` per aggiornare una pagina che esiste già (stesso titolo o indirizzo) |

@@ -54,34 +54,25 @@ Consigli:
    - `disponibile: true` → compare "disponibile, scrivimi"
 5. **Commit changes**.
 
-### Il mosaico in scala
+### Il mosaico delle opere
 
 In cima ad **archivio** e **dipinti recenti** c'è il mosaico con tutte le
-opere **in scala reale tra loro**. Si aggiorna da solo a ogni pubblicazione,
-a due condizioni per ogni opera:
-- `image` deve puntare a una foto esistente;
-- `schema.width` e `schema.height` devono contenere larghezza e altezza
-  **in cm** (numeri, anche decimali: `"2.6"`).
-
-Se manca uno dei due, l'opera viene esclusa dal mosaico (resta nell'elenco)
-e nel log della build Netlify compare un avviso `[mosaico]`.
-La foto viene mostrata intera, cornice compresa (nessun ritaglio): la
-tessera ha la proporzione della foto e la stessa superficie in scala della
-tela. Conviene fotografare il quadro dritto, con poco sfondo intorno
-(lo sfondo entra nel mosaico).
-Se la foto comprende una **cornice grande** (oro, passe-partout...), la
-tessera sembra più piccola del vero rispetto ai quadri con cornici sottili.
-Per avere la scala esatta aggiungi le misure ESTERNE della cornice in cm:
-
-```
-cornice:
-  larghezza: 90
-  altezza: 70
-```
-
-L'ordine delle tessere lo decide il sito: sceglie in automatico la
-disposizione che lascia meno spazi bianchi (non quella cronologica, che
-resta nell'elenco sotto il mosaico).
+opere, come quadri appesi a una parete: **tutte alte uguali** (non in
+scala), foto intera con la cornice, righe centrate, **nello stesso ordine
+dell'elenco** sotto (dalla più recente). Si aggiorna da solo a ogni
+pubblicazione: basta che `image` punti a una foto esistente. Se manca, l'opera
+viene esclusa dal mosaico (resta nell'elenco) e nel log della build Netlify
+compare un avviso `[mosaico]`.
+Conviene fotografare il quadro dritto, con poco sfondo intorno (lo sfondo
+entra nel mosaico). Le misure in cm (`schema.width` / `schema.height`)
+servono per l'etichetta e per Google, non per la grandezza della miniatura.
+L'altezza delle miniature si regola in `layouts/partials/mosaico.html`
+(`$altezza`, `$altezzaMobile`) e in `assets/css/override.css` (`.mosaico-tessera`).
+Se la foto principale ha molto sfondo intorno (es. una miniatura su un
+foglio bianco), si può dare al mosaico una foto ritagliata a parte:
+`miniatura_mosaico: "/img/dipinti-recenti/nome-mosaico.jpg"`.
+La voce `cornice:` nel frontmatter non è più usata dal mosaico (si può
+lasciare, non dà fastidio).
 
 Per attivare il mosaico in un'altra sezione: aggiungi `mosaico: true` nel
 suo `_index.md`.

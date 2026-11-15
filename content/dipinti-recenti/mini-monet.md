@@ -7,6 +7,7 @@ hideDate: true
 disponibile: true
 description: "Acquerello su carta, 26x26 mm, 2022. Miniatura del ponte giapponese di Monet (Bridge over a Pond of Water Lilies) dipinta in formato minuscolo."
 image: "/img/dipinti-recenti/miniatura-monet.jpg"
+miniatura_mosaico: "/img/dipinti-recenti/miniatura-monet-mosaico.jpg"
 tags: ["acquerello", "miniatura", "2022"]
 schema:
   type: "VisualArtwork"

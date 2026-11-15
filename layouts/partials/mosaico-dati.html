@@ -3,32 +3,18 @@
   sia dai dati strutturati ItemList (head.html), così le due cose
   contengono sempre le stesse opere nello stesso ordine.
 
-  Restituisce: dict "items" (lista ordinata) "k" (scala, % di colonna per cm)
-  Ogni item: page, w, h (cm della tela), tw, th (cm "equivalenti" della
-  tessera), img (risorsa), disponibile, piccola, minuscola (bool), nome,
-  etichetta, pct (larghezza in % della colonna)
+  Restituisce: dict "items" (lista ordinata)
+  Ogni item: page, w, h (cm della tela, per l'etichetta), img (risorsa),
+  r (proporzione larghezza/altezza della foto), disponibile, nome, etichetta
 
-  MISURE DELLA CORNICE (facoltative): se la foto comprende una cornice
-  grande, nel frontmatter si può aggiungere
-      cornice:
-        larghezza: 90
-        altezza: 70
-  (misure esterne in cm). La tessera userà la superficie della cornice
-  invece di quella della tela, così l'opera fotografata è in scala vera.
+  ORDINE: lo stesso dell'elenco sotto il mosaico (dalla più recente alla
+  più vecchia), così miniature ed elenco si leggono insieme.
 
-  ORDINE: le opere vengono disposte nell'ordine che lascia meno spazi
-  bianchi (vedi mosaico-costo.html): si parte dalla più alta alla più bassa
-  e si migliora scambiando e spostando le tessere finché il bianco cala.
-
-  La foto viene mostrata INTERA (cornice compresa, nessun ritaglio): la
-  tessera ha la proporzione della foto e la stessa AREA della tela.
-  tw = √(w·h·r), th = √(w·h / r), con r = larghezza/altezza della foto,
-  quindi tw·th = w·h: la grandezza relativa tra le opere resta quella vera.
+  Le miniature NON sono in scala: hanno tutte la stessa altezza (vedi
+  .mosaico-tessera in assets/css/override.css) e la foto è mostrata intera.
 */ -}}
-{{- $densita := 50.0 -}}   {{- /* più basso = tessere più piccole */ -}}
 {{- $items := slice -}}
-{{- $area := 0.0 -}}
-{{- range .RegularPages.ByDate.Reverse -}}
+{{- range where site.RegularPages "Section" .Section -}}   {{- /* stesso elenco e stesso ordine di partials/post_list.html */ -}}
   {{- $p := . -}}
   {{- $w := 0.0 -}}
   {{- $h := 0.0 -}}
@@ -37,13 +23,11 @@
     {{- $h = partial "numero-cm.html" .height -}}
   {{- end -}}
   {{- $img := "" -}}
-  {{- with $p.Params.image -}}{{- $img = resources.Get (strings.TrimPrefix "/" .) -}}{{- end -}}
+  {{- /* "miniatura_mosaico" (facoltativa): foto ritagliata solo per il mosaico,
+         utile quando la foto principale ha molto sfondo intorno */ -}}
+  {{- with $p.Params.miniatura_mosaico | default $p.Params.image -}}{{- $img = resources.Get (strings.TrimPrefix "/" .) -}}{{- end -}}
   {{- if not $img -}}
     {{- warnf "[mosaico] %s escluso: immagine (image) mancante o non trovata" $p.File.Path -}}
-    {{- continue -}}
-  {{- end -}}
-  {{- if or (le $w 0.0) (le $h 0.0) -}}
-    {{- warnf "[mosaico] %s escluso: misure in cm mancanti o non numeriche (schema.width / schema.height)" $p.File.Path -}}
     {{- continue -}}
   {{- end -}}
 
@@ -58,96 +42,16 @@
   {{- /* etichetta: nome, tecnica, misure, anno (solo le parti presenti) */ -}}
   {{- $nome := $p.Params.schema.name | default $p.Params.heading | default (index (split $p.Title " — ") 0) -}}
   {{- $nome = trim (replace $nome "*" "") " " -}}   {{- /* l'asterisco degli studi non serve nell'etichetta */ -}}
-  {{- $misure := replace (printf "%g×%g cm" $w $h) "." "," -}}
   {{- $parti := slice $nome -}}
   {{- with $p.Params.schema.medium -}}{{- $parti = $parti | append (lower .) -}}{{- end -}}
-  {{- $parti = $parti | append $misure -}}
+  {{- if and (gt $w 0.0) (gt $h 0.0) -}}
+    {{- $parti = $parti | append (replace (printf "%g×%g cm" $w $h) "." ",") -}}
+  {{- end -}}
   {{- with $p.Params.schema.dateCreated -}}{{- $parti = $parti | append (printf "%v" .) -}}{{- end -}}
   {{- if $disp -}}{{- $parti = $parti | append "disponibile" -}}{{- end -}}
   {{- $etichetta := delimit $parti ", " -}}
 
-  {{- /* superficie da rappresentare: cornice (se indicata) oppure tela */ -}}
-  {{- $areaOpera := mul $w $h -}}
-  {{- with $p.Params.cornice -}}
-    {{- $cw := partial "numero-cm.html" .larghezza -}}
-    {{- $ch := partial "numero-cm.html" .altezza -}}
-    {{- if and (gt $cw 0.0) (gt $ch 0.0) -}}
-      {{- $areaOpera = mul $cw $ch -}}
-    {{- else -}}
-      {{- warnf "[mosaico] %s: misure della cornice non valide, uso quelle della tela" $p.File.Path -}}
-    {{- end -}}
-  {{- end -}}
   {{- $r := div (float $img.Width) (float $img.Height) -}}
-  {{- $tw := math.Sqrt (mul $areaOpera $r) -}}
-  {{- $th := math.Sqrt (div $areaOpera $r) -}}
-  {{- $area = add $area $areaOpera -}}
-  {{- $items = $items | append (dict "page" $p "w" $w "h" $h "tw" $tw "th" $th "img" $img "disponibile" $disp "nome" $nome "etichetta" $etichetta) -}}
+  {{- $items = $items | append (dict "page" $p "w" $w "h" $h "img" $img "r" $r "disponibile" $disp "nome" $nome "etichetta" $etichetta) -}}
 {{- end -}}
-
-{{- $k := 0.0 -}}
-{{- if $items -}}
-  {{- $k = div $densita (math.Sqrt $area) -}}
-
-  {{- /* misure in % della colonna desktop (640px): spazio di 8px tra le
-         tessere, come quadri appesi a una parete */ -}}
-  {{- $colonnaPx := 640.0 -}}
-  {{- $colonnaMobilePx := 326.0 -}}
-  {{- $gap := div 800.0 $colonnaPx -}}
-  {{- $conMisure := slice -}}
-  {{- range $items -}}
-    {{- $pct := math.Min 100.0 (mul .tw $k) -}}
-    {{- $pxMobile := mul (div $pct 100.0) $colonnaMobilePx -}}
-    {{- $minuscola := lt $pxMobile 24.0 -}}
-    {{- $lw := add $pct $gap -}}
-    {{- $conMisure = $conMisure | append (merge . (dict "pct" $pct "piccola" (lt $pxMobile 40.0) "minuscola" $minuscola "lw" $lw "lh" (mul .th $k))) -}}
-  {{- end -}}
-
-  {{- /* punto di partenza: dalla più alta alla più bassa */ -}}
-  {{- $migliore := sort $conMisure "lh" "desc" -}}
-  {{- $costoMigliore := partial "mosaico-costo.html" $migliore -}}
-  {{- $n := len $migliore -}}
-
-  {{- /* ricerca locale: prova a SPOSTARE ogni tessera in ogni posizione e a
-         SCAMBIARE ogni coppia; tiene ogni modifica che riduce il bianco.
-         Al massimo 4 giri (con poche decine di opere bastano e avanzano). */ -}}
-  {{- if gt $n 2 -}}
-  {{- range seq 4 -}}
-    {{- $migliorato := false -}}
-    {{- range $i := seq 0 (sub $n 1) -}}
-      {{- range $j := seq 0 (sub $n 1) -}}
-        {{- if ne $i $j -}}
-          {{- /* spostamento: togli la tessera i e reinseriscila in posizione j */ -}}
-          {{- $senza := slice -}}
-          {{- range $x, $it := $migliore -}}{{- if ne $x $i -}}{{- $senza = $senza | append $it -}}{{- end -}}{{- end -}}
-          {{- $prova := slice -}}
-          {{- range $x, $it := $senza -}}
-            {{- if eq $x $j -}}{{- $prova = $prova | append (index $migliore $i) -}}{{- end -}}
-            {{- $prova = $prova | append $it -}}
-          {{- end -}}
-          {{- if eq $j (sub $n 1) -}}{{- $prova = $prova | append (index $migliore $i) -}}{{- end -}}
-          {{- $c := partial "mosaico-costo.html" $prova -}}
-          {{- if lt (add $c 0.001) $costoMigliore -}}
-            {{- $migliore = $prova -}}{{- $costoMigliore = $c -}}{{- $migliorato = true -}}
-          {{- end -}}
-          {{- /* scambio delle tessere i e j */ -}}
-          {{- if lt $i $j -}}
-            {{- $prova = slice -}}
-            {{- range $x, $it := $migliore -}}
-              {{- if eq $x $i -}}{{- $prova = $prova | append (index $migliore $j) -}}
-              {{- else if eq $x $j -}}{{- $prova = $prova | append (index $migliore $i) -}}
-              {{- else -}}{{- $prova = $prova | append $it -}}{{- end -}}
-            {{- end -}}
-            {{- $c = partial "mosaico-costo.html" $prova -}}
-            {{- if lt (add $c 0.001) $costoMigliore -}}
-              {{- $migliore = $prova -}}{{- $costoMigliore = $c -}}{{- $migliorato = true -}}
-            {{- end -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-    {{- if not $migliorato -}}{{- break -}}{{- end -}}
-  {{- end -}}
-  {{- end -}}
-  {{- $items = $migliore -}}
-{{- end -}}
-{{- return (dict "items" $items "k" $k) -}}
+{{- return (dict "items" $items) -}}

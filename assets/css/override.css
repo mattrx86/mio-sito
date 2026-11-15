@@ -74,15 +74,16 @@ article img,
 .negozio-prezzo { font-family: monospace; font-weight: bold; }
 .negozio-non-disponibile img { opacity: 0.5; }
 
-/* ---------- Mosaico in scala reale (layouts/partials/mosaico.html) ----------
-   Larghezza e proporzione di ogni tessera arrivano dal template (style
-   inline calcolato dalle misure in cm). Qui solo l'aspetto. */
+/* ---------- Mosaico delle opere, "parete di galleria" (layouts/partials/mosaico.html) ----------
+   Tutte le miniature alte uguali (non in scala), foto intera con la
+   cornice, righe centrate. La proporzione arriva dal template (aspect-ratio
+   inline). L'altezza va tenuta uguale a $altezza / $altezzaMobile del template. */
 .mosaico {
   list-style: none;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;          /* "parete di galleria": ogni riga appesa sulla sua linea centrale */
+  align-items: center;
   justify-content: center;
   gap: 12px 8px;                /* spazio regolare tra i quadri */
   margin: 0 0 0.5rem;
@@ -91,9 +92,16 @@ article img,
 .mosaico-tessera {
   position: relative;
   flex: 0 0 auto;
+  height: 110px;                /* = $altezza in mosaico.html */
+  width: auto;                  /* larghezza dalla proporzione della foto */
+  max-width: 100%;
   line-height: 0;
   background: rgba(163, 119, 117, 0.12);   /* segnaposto durante il caricamento */
   transition: opacity 0.2s ease;
+}
+@media (max-width: 704px) {
+  .mosaico-tessera { height: 76px; }      /* = $altezzaMobile in mosaico.html */
+  .mosaico { gap: 10px 6px; }
 }
 .mosaico-tessera > a {
   display: block;
@@ -106,47 +114,26 @@ article img,
   width: 100% !important;
   height: 100% !important;
   max-height: none !important;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   margin: 0 !important;
-}
-/* area cliccabile di almeno 24x24 px anche per le miniature minuscole,
-   senza cambiare la scala dell'immagine */
-.mosaico-tessera > a::after {
-  content: "";
-  position: absolute;
-  inset: min(0px, calc(50% - 12px));
-}
-.mosaico > li.mosaico-tessera--minuscola {
-  z-index: 1;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 .mosaico-tessera > a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 /* "riflettore": solo con mouse, e solo quando si punta davvero un'opera */
 @media (hover: hover) {
   .mosaico:has(.mosaico-tessera:hover) .mosaico-tessera:not(:hover) { opacity: 0.45; }
 }
-/* opere disponibili: piccolo segno discreto */
+/* opere disponibili: piccolo segno discreto nell'angolo */
 .mosaico-tessera--disponibile::before {
   content: "";
   position: absolute;
-  top: 4px; right: 4px;
+  top: 5px; right: 5px;
   width: 7px; height: 7px;
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 0 0 1.5px currentColor;
   z-index: 2;
   pointer-events: none;
-}
-/* tessere piccole: puntino ridotto dentro l'angolo */
-.mosaico-tessera--piccola.mosaico-tessera--disponibile::before {
-  top: 2px; right: 2px;
-  width: 4px; height: 4px;
-  box-shadow: 0 0 0 1px currentColor;
-}
-/* tessere minuscole: puntino accanto, nello spazio laterale della tessera */
-.mosaico-tessera--minuscola.mosaico-tessera--disponibile::before {
-  top: 0; right: -7px;
 }
 .mosaico-legenda-punto {
   display: inline-block; width: 7px; height: 7px; border-radius: 50%;
@@ -159,15 +146,7 @@ article img,
   margin: 0.6rem 0 1.5rem;
   text-align: center;
 }
-/* la barra è lunga quanto la misura indicata, alla stessa scala delle tessere */
-.mosaico-barra {
-  display: block;
-  height: 6px;
-  margin: 0 auto 0.3rem;
-  border: 1.5px solid currentColor;
-  border-top: none;
-  box-sizing: border-box;
-}
+.mosaico-fine { margin: 0 0 1.5rem; }
 @media (prefers-reduced-motion: reduce) {
   .mosaico-tessera { transition: none; }
 }
