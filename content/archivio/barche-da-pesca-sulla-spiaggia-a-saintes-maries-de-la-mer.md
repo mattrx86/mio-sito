@@ -1,11 +1,12 @@
 ---
-title: "Barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer * — Olio su cartoncino telato, 2000"
-heading: "barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer *"
+title: "Barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer — Olio su cartoncino telato, 2000"
+seo_title: "Barche a Saintes-Maries-de-la-Mer, da Van Gogh: olio 40x30 cm"
+heading: "barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer*"
 date: 2000-01-01
 hideDate: true
-description: "Olio su cartoncino telato, 40x30 cm, 2000. Paesaggio — Ponte Arche. Opera di Mattia Riccadonna. Collezione privata."
+description: "Olio su cartoncino telato, 40x30 cm, 2000. Studio da un'opera di Van Gogh (paesaggio). Opera di Mattia Riccadonna. Collezione privata."
 image: "/img/archivio/barche-da-pesca-sulla-spiaggia-a-saintes-maries-de-la-mer.jpg"
-tags: ["olio", "2000"]
+tags: ["olio", "van-gogh", "paesaggio", "2000"]
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
@@ -15,11 +16,12 @@ schema:
   dateCreated: "2000"
 ---
 
-![Barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer *: paesaggio, olio su cartoncino telato 40x30 cm, Mattia Riccadonna, 2000](/img/archivio/barche-da-pesca-sulla-spiaggia-a-saintes-maries-de-la-mer.jpg)
+![Barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer, studio da Van Gogh, olio su cartoncino telato 40x30 cm, Mattia Riccadonna, 2000](/img/archivio/barche-da-pesca-sulla-spiaggia-a-saintes-maries-de-la-mer.jpg)
 
 **tecnica:** olio su cartoncino telato  
 **anno produzione:** 2000  
 **dimensioni:** 40x30 cm  
 **ubicazione:** collezione privata  
+**studio da:** Van Gogh  
 
 {{< navquadro >}}

@@ -28,6 +28,8 @@ ricarica solo `opere.csv`.
 | `file_immagine` | nome esatto del file della foto | `alpi-rosse.jpg` |
 | `sezione` | `dipinti-recenti`, `archivio`, `piccoli-quadri` o `taccuino` | `dipinti-recenti` |
 | `titolo` | titolo dell'opera, maiuscole solo per i nomi propri | `Tramonto su Rango` |
+
+Se metti un **asterisco** in fondo al titolo (`Casa colonica *`), resta solo nell'intestazione della pagina, come nelle altre opere del sito: titolo per Google, descrizione e testo dell'immagine escono senza.
 | `tecnica` | tecnica e supporto | `olio su tela` |
 | `larghezza_cm` | larghezza della tela in cm (decimali con la virgola) | `40` |
 | `altezza_cm` | altezza della tela in cm | `60` |
@@ -38,7 +40,8 @@ ricarica solo `opere.csv`.
 | colonna | cosa scrivere | esempio |
 |---|---|---|
 | `soggetto` | cosa rappresenta, in poche parole: va nel titolo per Google | `campanile e montagna rossa tra le nuvole` |
-| `luogo` | dove, se è un luogo reale | `Giudicarie` |
+| `luogo` | il luogo **raffigurato** nel quadro (finisce nel titolo per Google); lascialo vuoto se non è un luogo reale | `Rango` |
+| `autore_originale` | solo per studi e copie da un altro artista: il suo nome. Va nel titolo per Google al posto del luogo | `Van Gogh` |
 | `collocazione` | `collezione dell'autore`, `collezione privata`, `disponibile`, `in vendita` | `collezione privata` |
 | `annotazioni` | una o due frasi per la pagina | `Dipinto nell'estate 2026.` |
 | `descrizione` | descrizione per Google (max 160 caratteri); se vuota la scrive lo script | |

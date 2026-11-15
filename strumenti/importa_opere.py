@@ -55,14 +55,16 @@ OBBLIGATORI = ["file_immagine", "sezione", "titolo", "tecnica", "larghezza_cm", 
 COLONNE = OBBLIGATORI + [
     "soggetto", "luogo", "descrizione", "annotazioni", "collocazione", "prezzo",
     "link_pagamento", "spedizione", "tags", "data", "cornice_larghezza_cm",
-    "cornice_altezza_cm", "coautori", "indirizzo", "sovrascrivi",
+    "cornice_altezza_cm", "coautori", "indirizzo", "sovrascrivi", "autore_originale",
 ]
 SINONIMI = {  # intestazioni alternative accettate
     "immagine": "file_immagine", "foto": "file_immagine", "file": "file_immagine",
     "larghezza": "larghezza_cm", "altezza": "altezza_cm",
     "cornice_larghezza": "cornice_larghezza_cm", "cornice_altezza": "cornice_altezza_cm",
     "tag": "tags", "slug": "indirizzo", "ubicazione": "collocazione",
+    "da": "autore_originale", "studio_da": "autore_originale", "copia_da": "autore_originale",
 }
+VALORI_VUOTI = {"sconosciuto", "sconosciuta", "ignoto", "ignota", "n/d", "nd", "n.d.", "-", "--", "?", "na", "n/a", "nessuno", "nessuna"}
 TECNICHE_TAG = ["olio", "acrilico", "acquerello", "tempera", "pastello", "matita", "china", "carboncino", "tecnica-mista"]
 
 
@@ -220,14 +222,25 @@ def prepara_foto(sorgente: Path, destinazione: Path, prova: bool) -> str:
 
 # ----------------------------------------------------------------- pagina
 
-def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: int):
-    titolo = d["titolo"].strip()
+def pulito(valore: str) -> str:
+    """'sconosciuto', '-', 'n/d'... valgono come campo vuoto"""
+    v = (valore or "").strip()
+    return "" if v.lower() in VALORI_VUOTI else v
+
+
+def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: int, avvisi: list):
+    # l'asterisco finale ("casa viola *") resta solo nell'intestazione della
+    # pagina, come nelle altre opere del sito: fuori da titolo Google, alt e descrizione
+    grezzo = d["titolo"].strip()
+    asterisco = grezzo.endswith("*")
+    titolo = maiuscola(grezzo.rstrip("*").strip())   # per Google e testi: maiuscola iniziale
+    autore_orig = pulito(d.get("autore_originale", ""))
     tecnica = maiuscola(d["tecnica"].strip())
     tec_low = tecnica.lower()
-    soggetto = d.get("soggetto", "").strip()
-    luogo = d.get("luogo", "").strip()
+    soggetto = pulito(d.get("soggetto", ""))
+    luogo = pulito(d.get("luogo", ""))
     misure = f"{fmt_it(w)}x{fmt_it(h)}"   # per i testi, con la virgola: 2,6x3,5
-    colloc = d.get("collocazione", "").strip().lower()
+    colloc = pulito(d.get("collocazione", "")).lower()
     prezzo = numero(d.get("prezzo", ""))
     link = d.get("link_pagamento", "").strip()
     in_vendita = sez == "piccoli-quadri" or bool(prezzo) or colloc == "in vendita"
@@ -235,7 +248,20 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     # --- titolo per Google
     sogg_luogo = ", ".join(x for x in (soggetto, luogo) if x)
     seo = ""
-    if sogg_luogo:
+    if autore_orig and autore_orig.lower() in titolo.lower():   # "Omaggio a Salvo": nome già nel titolo
+        for cand in ((f"{titolo}: {soggetto}, {tec_low} {misure} cm" if soggetto else f"{titolo}: {tec_low} {misure} cm"),
+                     f"{titolo}: {tec_low} {misure} cm"):
+            if len(cand) <= SEO_TITLE_MAX:
+                seo = cand
+                break
+    elif autore_orig:   # studio/copia da un altro artista: il nome dell'artista conta più del luogo
+        for cand in (f"{titolo}, da {autore_orig}: {tec_low} {misure} cm",
+                     f"{titolo}, da {autore_orig}: {tec_low}",
+                     f"{titolo}, da {autore_orig}"):
+            if len(cand) <= SEO_TITLE_MAX:
+                seo = cand
+                break
+    elif sogg_luogo:
         for cand in (f"{titolo}: {sogg_luogo}, {tec_low} {misure}",
                      f"{titolo}: {sogg_luogo}",
                      f"{titolo}: {soggetto}"):
@@ -245,11 +271,23 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     if in_vendita and not seo:
         seo = taglia(f"{titolo} — quadro originale, {tec_low} {misure} cm", SEO_TITLE_MAX)
 
-    # --- descrizione
+    # --- descrizione: se quella scritta è troppo lunga per Google non la
+    #     taglio a metà: diventa il testo della pagina (annotazioni) e la
+    #     descrizione per Google la scrivo io
     descr = d.get("descrizione", "").strip()
+    note_pagina = d.get("annotazioni", "").strip()
+    if len(descr) > DESCRIZIONE_MAX:
+        if not note_pagina:
+            note_pagina = descr
+            avvisi.append("descrizione troppo lunga per Google (max 160 caratteri): spostata nel testo della pagina, quella per Google è stata scritta in automatico")
+        else:
+            avvisi.append("descrizione troppo lunga per Google (max 160 caratteri): ignorata, scritta in automatico")
+        descr = ""
     if not descr:
         parti = [f"{tecnica}, {misure} cm, {anno}."]
-        if soggetto:
+        if autore_orig:
+            parti.append(f"Studio da un'opera di {autore_orig}" + (f" ({soggetto})." if soggetto else "."))
+        elif soggetto:
             parti.append(maiuscola(soggetto) + (f" — {luogo}." if luogo else "."))
         elif luogo:
             parti.append(f"{maiuscola(luogo)}.")
@@ -265,8 +303,9 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     # --- tag
     tags = []
     for t in re.split(r"[,\s]+", d.get("tags", "")):
-        if t.strip():
-            tags.append(slug(t))
+        s = slug(t)
+        if s and s != slug(tecnica) and s not in tags:   # "olio-su-tela" = tecnica: basta il tag "olio"
+            tags.append(s)
     for k in TECNICHE_TAG:
         if k.replace("-", " ") in tec_low and k not in tags:
             tags.insert(0, k)
@@ -277,13 +316,15 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     alt = f"{titolo}, {tec_low} {misure} cm, {AUTORE}, {anno}"
     if soggetto:
         alt = f"{titolo}: {soggetto}, {tec_low} {misure} cm, {AUTORE}, {anno}"
+    if autore_orig and autore_orig.lower() not in titolo.lower():
+        alt = f"{titolo}, studio da {autore_orig}, {tec_low} {misure} cm, {AUTORE}, {anno}"
 
     # --- frontmatter
     fm = ["---",
           f"title: {q(f'{titolo} — {tecnica}, {anno}')}"]
     if seo:
         fm.append(f"seo_title: {q(seo)}")
-    fm += [f"heading: {q(prima_minuscola(titolo))}",
+    fm += [f"heading: {q(prima_minuscola(titolo) + ('*' if asterisco else ''))}",
            f"date: {data_iso(d.get('data', ''), anno)}",
            "hideDate: true",
            f"description: {q(descr)}",
@@ -324,10 +365,11 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
         corpo.append(f"**ubicazione:** {colloc}  ")
     if coautori:
         corpo.append(f"**con:** {', '.join(coautori)}  ")
+    if autore_orig:
+        corpo.append(f"**studio da:** {autore_orig}  ")
     corpo += ["", "{{< navquadro >}}"]
-    note = d.get("annotazioni", "").strip()
-    if note:
-        corpo += ["", "---", "", f"**annotazioni:** {note}"]
+    if note_pagina:
+        corpo += ["", "---", "", f"**annotazioni:** {note_pagina}"]
     return "\n".join(fm + corpo) + "\n", seo, descr
 
 
@@ -349,12 +391,15 @@ def main():
         return 0
     intest, record, sep = leggi_csv(percorso_csv)
     if not record:
-        print("Il CSV non contiene righe da importare.")
+        in_attesa = sorted(f.name for f in cart.iterdir()
+                           if f.is_file() and f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff"))
+        scrivi_esito(cart, [], [], a.prova, in_attesa)
+        print(f"Il CSV non contiene righe da importare. Foto senza riga: {len(in_attesa)}")
         return 0
     mancanti = [c for c in OBBLIGATORI if c not in intest]
     if mancanti:
         msg = f"Nel CSV mancano le colonne obbligatorie: {', '.join(mancanti)}"
-        scrivi_esito(cart, [], [(1, "intestazione", [msg])], a.prova)
+        scrivi_esito(cart, [], [(1, "intestazione", [msg])], a.prova, [])
         print(msg)
         return 1
 
@@ -416,7 +461,10 @@ def main():
             errori.append((n, d["titolo"], [f"errore nella foto: {e}"]))
             rimaste.append(grezza)
             continue
-        testo, seo, descr = genera_pagina(d, sez, nome_img, w, h, anno)
+        avvisi = []
+        testo, seo, descr = genera_pagina(d, sez, nome_img, w, h, anno, avvisi)
+        if avvisi:
+            nota_foto += " | " + "; ".join(avvisi)
         dest_md = sito / "content" / sez / f"{indirizzo}.md"
         if not a.prova:
             dest_md.parent.mkdir(parents=True, exist_ok=True)
@@ -436,9 +484,20 @@ def main():
         for r in rimaste:
             wr.writerow(r)
         percorso_csv.write_text(buf.getvalue(), encoding="utf-8-sig")
-    scrivi_esito(cart, ok, errori, a.prova)
+    # foto presenti in importa/ che nessuna riga del CSV usa ancora
+    usate_da_righe = set()
+    if "file_immagine" in intest:
+        i_img = intest.index("file_immagine")
+        for r in rimaste:
+            if len(r) > i_img and r[i_img].strip():
+                usate_da_righe.add(r[i_img].strip().lower())
+    importate = {f.name.lower() for f in foto_usate}
+    in_attesa = sorted(f.name for f in cart.iterdir()
+                       if f.is_file() and f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp", ".tif", ".tiff")
+                       and f.name.lower() not in usate_da_righe and f.name.lower() not in importate)
+    scrivi_esito(cart, ok, errori, a.prova, in_attesa)
 
-    print(f"Importate: {len(ok)}   Con errori: {len(errori)}")
+    print(f"Importate: {len(ok)}   Con errori: {len(errori)}   Foto senza riga: {len(in_attesa)}")
     for n, t, url, nota, seo, descr in ok:
         print(f"  ✓ riga {n}: {t} -> {url}  ({nota})")
     for n, t, errs in errori:
@@ -456,7 +515,7 @@ def record_intestazione(percorso: Path, sep: str):
     return COLONNE
 
 
-def scrivi_esito(cart: Path, ok, errori, prova):
+def scrivi_esito(cart: Path, ok, errori, prova, in_attesa=()):
     righe = [f"# Esito importazione — {datetime.now().strftime('%d/%m/%Y %H:%M')}", ""]
     if ok:
         righe += [f"## ✓ Importate ({len(ok)})", ""]
@@ -472,7 +531,13 @@ def scrivi_esito(cart: Path, ok, errori, prova):
         for n, t, errs in errori:
             righe.append(f"- riga {n} — **{t}**: " + "; ".join(errs))
         righe.append("")
-    if not ok and not errori:
+    if in_attesa:
+        righe += [f"## ⏳ Foto senza riga nel CSV ({len(in_attesa)})", "",
+                  "Queste foto sono in `importa/` ma nessuna riga di `opere.csv` le usa: "
+                  "aggiungi una riga per ciascuna (colonna `file_immagine` = nome del file).", ""]
+        righe += [f"- `{f}`" for f in in_attesa]
+        righe.append("")
+    if not ok and not errori and not in_attesa:
         righe.append("Niente da importare.")
     testo = "\n".join(righe) + "\n"
     if prova:
