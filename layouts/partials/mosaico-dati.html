@@ -25,7 +25,7 @@
   tw = √(w·h·r), th = √(w·h / r), con r = larghezza/altezza della foto,
   quindi tw·th = w·h: la grandezza relativa tra le opere resta quella vera.
 */ -}}
-{{- $densita := 42.0 -}}   {{- /* più basso = tessere più piccole */ -}}
+{{- $densita := 50.0 -}}   {{- /* più basso = tessere più piccole */ -}}
 {{- $items := slice -}}
 {{- $area := 0.0 -}}
 {{- range .RegularPages.ByDate.Reverse -}}
@@ -88,19 +88,17 @@
 {{- if $items -}}
   {{- $k = div $densita (math.Sqrt $area) -}}
 
-  {{- /* misure in % della colonna desktop (640px): spazio di 2px tra le
-         tessere, 11px per lato intorno alle minuscole (< 24px su mobile) */ -}}
+  {{- /* misure in % della colonna desktop (640px): spazio di 8px tra le
+         tessere, come quadri appesi a una parete */ -}}
   {{- $colonnaPx := 640.0 -}}
   {{- $colonnaMobilePx := 326.0 -}}
-  {{- $gap := div 200.0 $colonnaPx -}}
-  {{- $margineMinuscola := div 2200.0 $colonnaPx -}}
+  {{- $gap := div 800.0 $colonnaPx -}}
   {{- $conMisure := slice -}}
   {{- range $items -}}
     {{- $pct := math.Min 100.0 (mul .tw $k) -}}
     {{- $pxMobile := mul (div $pct 100.0) $colonnaMobilePx -}}
     {{- $minuscola := lt $pxMobile 24.0 -}}
     {{- $lw := add $pct $gap -}}
-    {{- if $minuscola -}}{{- $lw = add $lw $margineMinuscola -}}{{- end -}}
     {{- $conMisure = $conMisure | append (merge . (dict "pct" $pct "piccola" (lt $pxMobile 40.0) "minuscola" $minuscola "lw" $lw "lh" (mul .th $k))) -}}
   {{- end -}}
 

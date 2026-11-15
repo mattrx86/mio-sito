@@ -82,9 +82,9 @@ article img,
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;      /* allineate in alto */
-  justify-content: flex-start;  /* e a sinistra */
-  gap: 2px;
+  align-items: center;          /* "parete di galleria": ogni riga appesa sulla sua linea centrale */
+  justify-content: center;
+  gap: 12px 8px;                /* spazio regolare tra i quadri */
   margin: 0 0 0.5rem;
 }
 .mosaico > li { margin: 0; }    /* il tema dà un margine a ogni li */
@@ -118,7 +118,6 @@ article img,
   inset: min(0px, calc(50% - 12px));
 }
 .mosaico > li.mosaico-tessera--minuscola {
-  margin: 0 11px;               /* aria solo intorno alle minuscole: aree di tocco da 24px senza sovrapporsi */
   z-index: 1;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
@@ -147,7 +146,7 @@ article img,
 }
 /* tessere minuscole: puntino accanto, nello spazio laterale della tessera */
 .mosaico-tessera--minuscola.mosaico-tessera--disponibile::before {
-  top: 0; right: -8px;
+  top: 0; right: -7px;
 }
 .mosaico-legenda-punto {
   display: inline-block; width: 7px; height: 7px; border-radius: 50%;
@@ -157,14 +156,14 @@ article img,
   font-family: monospace;
   font-size: 0.8rem;
   opacity: 0.7;
-  margin: 0.4rem 0 1.5rem;
-  text-align: left;
+  margin: 0.6rem 0 1.5rem;
+  text-align: center;
 }
 /* la barra è lunga quanto la misura indicata, alla stessa scala delle tessere */
 .mosaico-barra {
   display: block;
   height: 6px;
-  margin: 0 0 0.3rem;
+  margin: 0 auto 0.3rem;
   border: 1.5px solid currentColor;
   border-top: none;
   box-sizing: border-box;
