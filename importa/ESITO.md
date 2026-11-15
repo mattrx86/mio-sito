@@ -1,8 +1,9 @@
 # Esito importazione — 15/11/2026 12:03
 
-## ✗ Da correggere (1)
+## ✓ Importate (1)
 
-Queste righe sono rimaste in `opere.csv` con le loro foto: correggile e ricarica il CSV.
-
-- riga 2 — **photo_2026-08-02_16-39-59.jpg**: manca «titolo»; manca «tecnica»; manca «larghezza_cm»; manca «altezza_cm»; manca «anno»
+- **omaggio a Salvo** → https://mattiariccadonna.com/dipinti-recenti/omaggio-a-salvo/
+  - foto: tolti 12 metadati EXIF
+  - titolo per Google: omaggio a Salvo: paesaggio, sconosciuto, olio su tela 30,5x45
+  - descrizione: opera realizzata studiando un quadro di Salvatore Mangione con lo scopo di mero esercizio pittorico. L'opera consiste in una copia d'autore privata, non in…
 
