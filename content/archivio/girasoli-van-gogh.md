@@ -17,12 +17,11 @@ schema:
 
 ![Girasoli di Van Gogh, acrilico su tela 50x70 cm, Mattia Riccadonna, 2001](/img/archivio/girasoli.jpg)
 
-**tecnica:** acrilico su tela  
-**anno produzione:** 2001  
-**dimensioni:** 50x70 cm  
+acrilico su tela  
+50x70 cm  
+2001
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
-**annotazioni:** opera eseguita a scopo di studio e pratica pittorica, cercando di riprodurre la celebre natura morta di `Vincent van Gogh` con il vaso di girasoli. Soggetto originale di Vincent van Gogh.
+Opera eseguita a scopo di studio e pratica pittorica, cercando di riprodurre la celebre natura morta di `Vincent van Gogh` con il vaso di girasoli. Soggetto originale di Vincent van Gogh.

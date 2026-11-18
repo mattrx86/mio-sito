@@ -34,16 +34,6 @@ article img,
   font-weight: bold;
   text-decoration: none !important;
 }
-.vendita-nota {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-/* ---------- Opere correlate (partials/correlate.html) ---------- */
-.correlate { margin-top: 2.5rem; }
-.correlate h2 { font-size: 1rem; }
-.correlate ul { padding-left: 1.2rem; }
-.correlate span { font-family: monospace; opacity: 0.7; }
 
 /* Miniature della galleria raggiungibili anche da tastiera */
 #gallery-thumbs img:focus-visible {
@@ -332,7 +322,7 @@ body[a] a { color: #6E4B2E !important; }
 body[a] a:hover { background: none !important; text-decoration: underline; text-underline-offset: 3px; }
 body[a] h1, body[a] h2, body[a] h3 { font-weight: 500; letter-spacing: -0.01em; }
 body[a] h1 { color: #6E4B2E; font-size: 2.1rem; }
-body[a] code { background: none !important; color: #6E4B2E !important; font-family: inherit; padding: 0; }
+body[a] code { background: #6E4B2E !important; color: #F7F6F3 !important; font-family: monospace; font-size: 0.92em; padding: 0.05em 0.35em; border: none !important; }
 body[a] .topbar { background: #F7F6F3 !important; font-family: inherit !important; font-size: 1.05rem; }
 body[a] .topbar a { color: #000 !important; }
 body[a] .topbar .topbar-firma { font-weight: 600; font-size: 1.3rem; letter-spacing: 0.02em; }
@@ -361,7 +351,7 @@ dl.scheda dd { margin: 0; }
 [id] { scroll-margin-top: 4.5rem; }
 
 /* piè di pagina (layouts/partials/footer.html) */
-.piede { margin-top: 4rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,0.12); font-size: 0.9rem; color: #595959; }
+.piede { margin-top: 4rem; }
 .piede p { margin: 0.25rem 0; }
 .piede-servizio { display: flex; flex-direction: column; gap: 0.15rem; margin-bottom: 0.9rem; }
 ul.elenco-eventi > li::before { font-family: monospace; }
@@ -374,3 +364,60 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 /* home: nome come titolo, "strati." come sottotitolo */
 .intestazione-home h1 { margin-bottom: 0; }
 .intestazione-home .sottotitolo { margin: 0.1rem 0 1.5rem; font-size: 1.25rem; color: #595959; }
+
+/* firma a penna nella barra in alto (static/img/firma-mr.png, fondo trasparente) */
+.topbar-dentro { align-items: center; }
+.topbar-firma { display: block; line-height: 0; }
+.topbar-firma img { height: 40px !important; width: auto !important; max-width: none !important; margin: 0 !important; }
+@media (max-width: 704px) { .topbar-firma img { height: 34px !important; } }
+
+/* ---------- Pagina dell'opera ---------- */
+/* informazioni sotto la foto: una per riga, a sinistra, senza etichette */
+p.info-opera { margin: 0.6rem 0 1rem; line-height: 1.5; color: #595959; font-size: 0.95rem; }
+/* opera precedente / successiva */
+.navquadro { display: flex; justify-content: space-between; margin: 1rem 0 2rem; font-family: monospace; font-size: 15px; }
+.navquadro a { text-decoration: none; }
+/* riquadro "Cosa succedeva nel 2004?" (stesso colore del riquadro "elenco delle opere") */
+p.riquadro {
+  background: rgba(163, 119, 117, 0.15);
+  padding: 1rem 1.2rem;
+  margin: 2rem 0;
+}
+/* "per commissioni..." e note di acquisto: corpo normale del testo */
+.vendita-nota { margin: 1.5rem 0; }
+/* titoletti piccoli (potrebbe interessarti, vedi anche): corpo del testo */
+h2.titoletto, p.titoletto { font-size: 1rem; font-weight: 500; margin: 2.5rem 0 0.5rem; letter-spacing: 0; color: inherit; }
+nav.correlate { margin-top: 2.5rem; }
+nav.correlate ul.elenco { margin-top: 0.4rem; }
+
+/* contatti: recapiti uno per riga */
+p.recapiti { line-height: 1.7; margin-top: 1.5rem; }
+/* home: radice dell'indice, come la prima riga del comando "tree" */
+.albero-radice { font-family: monospace; font-size: 15px; margin: 2rem 0 0.4rem; }
+.albero-radice span { color: #595959; }
+
+/* ---------- Telefono: margini laterali più stretti e quadri da bordo a bordo ----------
+   Le foto delle opere (carrellata e immagini nelle pagine) occupano tutta la
+   larghezza dello schermo; i testi restano con un piccolo margine. */
+@media (max-width: 704px) {
+  .w { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .carrellata-opera img,
+  article > p > img {
+    width: calc(100% + 2.5rem) !important;
+    max-width: none !important;
+    height: auto !important;
+    max-height: none !important;
+    margin-left: -1.25rem !important;
+    margin-right: -1.25rem !important;
+  }
+}
+
+/* Tutti gli altri elenchi (articoli del blog, rassegna stampa...): lineetta al
+   posto del pallino, stessa tinta grigia dei simboli ad albero */
+.w ul:not(.elenco):not(.albero):not(.mosaico):not(.carrellata) { list-style: none; padding-left: 1.4em; }
+.w ul:not(.elenco):not(.albero):not(.mosaico):not(.carrellata) > li::before {
+  content: "–"; content: "–" / "";
+  display: inline-block; width: 1.4em; margin-left: -1.4em; color: #8a8a8a;
+}
+/* foto delle opere allineate a sinistra come le informazioni sotto */
+article > p > img { margin-left: 0 !important; margin-right: auto !important; }

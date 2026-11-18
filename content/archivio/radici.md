@@ -20,14 +20,14 @@ schema:
 /img/archivio/radici-1.jpg | Radici, dettaglio
 {{< /galleria >}}
 
-**tecnica:** olio su tela  
-**anno produzione:** 2002  
-**dimensioni:** 50x60 cm  
-**ubicazione:** collezione privata
+olio su tela  
+50x60 cm  
+2002  
+collezione privata
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
 **Cosa succedeva nel 2002?**  
 si usavano i `floppy-disk` da 1,44MB e cominciavano a diffondersi i CD-ROM. Virgilio era il motore di ricerca usato da tutti. Ricordo di aver dipinto questa tela partendo da una foto, non ricordo nè il luogo nè a chi è stata venduta.
+{.riquadro}

@@ -18,10 +18,11 @@ schema:
 
 ![Casa colonica, studio da Van Gogh, olio su cartoncino telato 40x30 cm, Mattia Riccadonna, 2000](/img/archivio/casa-colonica.jpg)
 
-**tecnica:** olio su cartoncino telato  
-**anno produzione:** 2000  
-**dimensioni:** 40x30 cm  
-**ubicazione:** collezione privata  
-**studio da:** Van Gogh  
+olio su cartoncino telato  
+40x30 cm  
+2000  
+studio da Van Gogh  
+collezione privata
+{.info-opera}
 
 {{< navquadro >}}

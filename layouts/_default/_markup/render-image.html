@@ -7,7 +7,7 @@
 {{- $v := partial "img-varianti.html" .Destination -}}
 {{- $lazy := gt .Ordinal 0 -}}
 <img src="{{ $v.src }}"
-  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) calc(100vw - 4rem), 640px"{{ end }}
+  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) 100vw, 640px"{{ end }}
   {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
   alt="{{ .PlainText }}"
   {{- with .Title }} title="{{ . }}"{{ end }}

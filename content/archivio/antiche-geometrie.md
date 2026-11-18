@@ -17,14 +17,14 @@ schema:
 
 ![Antiche geometrie, olio su tela 50x60 cm, Mattia Riccadonna, 2002](/img/archivio/antiche-geometrie.jpg)
 
-**tecnica:** olio su tela  
-**anno produzione:** 2002  
-**dimensioni:** 50x60 cm  
-**ubicazione:** collezione dell'autore
+olio su tela  
+50x60 cm  
+2002  
+collezione dell'autore
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
 **Cosa succedeva nel 2002?**  
 Nel gennaio 2002 entrarono ufficialmente in circolazione le banconote e monete in euro. Gli SMS diventavano un fenomeno di massa.
+{.riquadro}

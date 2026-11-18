@@ -142,7 +142,7 @@
         "url" $base
         "jobTitle" "Pittore"
         "description" site.Params.description
-        "address" (dict "@type" "PostalAddress" "addressLocality" "Comano Terme" "addressRegion" "Trentino" "addressCountry" "IT")
+        "address" (dict "@type" "PostalAddress" "streetAddress" "Frazione Cares, 73/A" "addressLocality" "Comano Terme" "addressRegion" "Trentino" "addressCountry" "IT")
         "knowsAbout" (slice "Pittura a olio" "Acquerello" "Disegno")
     -}}
     {{- with site.Params.sameAs -}}{{- $person = merge $person (dict "sameAs" .) -}}{{- end -}}

@@ -22,13 +22,12 @@ schema:
 /img/dipinti-recenti/avocado-2.jpg | Avocado realista, cornice
 {{< /galleria >}}
 
-**tecnica:** olio su masonite  
-**anno produzione:** 2025  
-**dimensioni:** 12x12 cm  
-**ubicazione:** disponibile
+olio su masonite  
+12x12 cm  
+2025  
+disponibile
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
-**annotazioni:** opera realizzata su supporto creato incollando foglio di giornale su pannello in legno di masonite e utilizzandolo come base per la pittura ad olio
+Opera realizzata su supporto creato incollando foglio di giornale su pannello in legno di masonite e utilizzandolo come base per la pittura ad olio

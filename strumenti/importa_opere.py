@@ -356,20 +356,21 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
             fm.append(f"  spedizione: {q(sped)}")
     fm.append("---")
 
-    # --- corpo
-    corpo = ["", f"![{alt}](/img/{sez}/{nome_img})", "",
-             f"**tecnica:** {tec_low}  ",
-             f"**anno produzione:** {anno}  ",
-             f"**dimensioni:** {fmt_it(w)}x{fmt_it(h)} cm  "]
-    if colloc and colloc != "in vendita":
-        corpo.append(f"**ubicazione:** {colloc}  ")
-    if coautori:
-        corpo.append(f"**con:** {', '.join(coautori)}  ")
+    # --- corpo: sotto la foto le informazioni essenziali, una per riga e senza
+    # etichette (tecnica, misure, anno, ...), con la classe "info-opera";
+    # poi le note dell'opera come testo normale
+    righe = [tec_low, f"{fmt_it(w)}x{fmt_it(h)} cm", str(anno)]
     if autore_orig:
-        corpo.append(f"**studio da:** {autore_orig}  ")
+        righe.append(f"studio da {autore_orig}")
+    if coautori:
+        righe.append(f"con {', '.join(coautori)}")
+    if colloc and colloc != "in vendita":
+        righe.append(colloc)
+    corpo = ["", f"![{alt}](/img/{sez}/{nome_img})", ""]
+    corpo += [r + "  " for r in righe[:-1]] + [righe[-1], "{.info-opera}"]
     corpo += ["", "{{< navquadro >}}"]
     if note_pagina:
-        corpo += ["", "---", "", f"**annotazioni:** {note_pagina}"]
+        corpo += ["", note_pagina[:1].upper() + note_pagina[1:]]
     return "\n".join(fm + corpo) + "\n", seo, descr
 
 

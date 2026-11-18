@@ -9,8 +9,8 @@
   {{- $correlate = first 3 $correlate -}}
   {{- with $correlate }}
   <nav class="correlate" aria-label="Opere correlate">
-    <h2>potrebbe interessarti</h2>
-    <ul>
+    <h2 class="titoletto">potrebbe interessarti</h2>
+    <ul class="elenco">
       {{- range . }}
       <li><span>{{ .Date.Format "2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Params.heading | default .Title }}</a></li>
       {{- end }}

@@ -49,7 +49,7 @@
     {{- if and (gt $it.w 0.0) (gt $it.h 0.0) -}}{{- $misure = replace (printf "%g × %g cm" $it.w $it.h) "." "," -}}{{- end }}
   <li class="carrellata-opera">
     <a href="{{ $p.RelPermalink }}">
-      <img src="{{ $s1.RelPermalink }}" srcset="{{ $s1.RelPermalink }} {{ $s1.Width }}w, {{ $s2.RelPermalink }} {{ $s2.Width }}w" sizes="(max-width: 704px) 92vw, 640px" width="{{ $s2.Width }}" height="{{ $s2.Height }}" alt="{{ $it.etichetta }}" decoding="async"{{ if eq $i 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
+      <img src="{{ $s1.RelPermalink }}" srcset="{{ $s1.RelPermalink }} {{ $s1.Width }}w, {{ $s2.RelPermalink }} {{ $s2.Width }}w" sizes="(max-width: 704px) 100vw, 640px" width="{{ $s2.Width }}" height="{{ $s2.Height }}" alt="{{ $it.etichetta }}" decoding="async"{{ if eq $i 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
       <span class="carrellata-didascalia">
         <span class="carrellata-titolo">{{ $titolo }}</span>
         {{- with $tecnica }}<span class="carrellata-riga">{{ . }}</span>{{ end }}

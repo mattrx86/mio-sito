@@ -20,14 +20,13 @@ schema:
 /img/archivio/tenacia-trentina-retro.jpg | Tenacia trentina, retro
 {{< /galleria >}}
 
-**tecnica:** tempera su carta  
-**anno produzione:** 2001  
-**dimensioni:** 21x30 cm  
-**ubicazione:** collezione dell'autore
+tempera su carta  
+21x30 cm  
+2001  
+collezione dell'autore
+{.info-opera}
 
 {{< navquadro >}}
-
----
 
 **Annotazioni:**  
 opera omaggio a `Carlo Sartori` e alla sua tela *tenacia trentina* a cui il lavoro è ispirato. Dipinta nel 2001 quando avevo 14 anni e frequentavo la seconda superiore Tione di Trento. Oggi ricordo con piacere quando Sartori lasciò una sua dedica sul retro del quadro. Soggetto originale di Carlo Sartori. Tutti i diritti sull'opera originale appartengono all'autore.

@@ -23,13 +23,12 @@ schema:
 /img/dipinti-recenti/miniatura-monet-dettaglio.jpg | Miniatura Monet, dettaglio miniatura
 {{< /galleria >}}
 
-**tecnica:** acquerello su carta  
-**anno produzione:** 2022  
-**dimensioni:** 26x26 mm  
-**ubicazione:** disponibile in studio
+acquerello su carta  
+26x26 mm  
+2022  
+disponibile in studio
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
-**annotazioni:** miniatura ad acquerello di 26x26 millimetri su carta. Lavorando con dosi d'acqua contenutissime e pennelli molto fini, il maggiore ostacolo sono i tempi brevissimi causati dalla rapida evaporazione del colore sul pennello. Una divertente sfida tecnica.
+Miniatura ad acquerello di 26x26 millimetri su carta. Lavorando con dosi d'acqua contenutissime e pennelli molto fini, il maggiore ostacolo sono i tempi brevissimi causati dalla rapida evaporazione del colore sul pennello. Una divertente sfida tecnica.

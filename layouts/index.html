@@ -6,6 +6,7 @@
     <p class="sottotitolo">strati.</p>
 </header>
 {{ .Content }}
+<p class="albero-radice">strati/ <span># indice del sito</span></p>
 {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
 
 {{ end }}

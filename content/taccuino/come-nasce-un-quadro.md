@@ -75,7 +75,9 @@ intorno alla tela.
 Sullo sfondo, sul cavalletto, [studio batchelder](/dipinti-recenti/studio-batchelder/)
 ormai quasi finito.
 
----
+## vedi anche {.titoletto}
 
-→ [tutti i dipinti recenti](/dipinti-recenti/)  
-→ per commissioni o informazioni sulle opere [scrivimi](/contatti/)
+- [tutti i dipinti recenti](/dipinti-recenti/)
+{.elenco}
+
+Per commissioni o informazioni sulle opere [scrivimi](/contatti/).

@@ -37,7 +37,7 @@
     {{- end }}
     {{- $link := .link_pagamento | default "" -}}
     {{- if hasPrefix $link "https://buy.stripe.com/" }}
-    <p><a class="vendita-pulsante" href="{{ $link }}" rel="noopener">acquista ora →</a></p>
+    <p><a class="vendita-pulsante" href="{{ $link }}" rel="noopener">acquista ora</a></p>
     <p class="vendita-nota">Pagamento sicuro su Stripe: carta, Apple Pay o Google Pay. I dati della carta non passano da questo sito.{{ with .spedizione }}<br>{{ . }}{{ end }}</p>
     {{- else }}
       {{- if $link }}{{ warnf "[vendita] link_pagamento non valido in %s: deve iniziare con https://buy.stripe.com/" $.File.Path }}{{ end }}

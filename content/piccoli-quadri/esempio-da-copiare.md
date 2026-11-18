@@ -26,12 +26,11 @@ vendita:
 
 ![Avocado, olio su masonite 12x12 cm, Mattia Riccadonna, 2026](/img/dipinti-recenti/avocado-1.jpg)
 
-**tecnica:** olio su masonite  
-**anno produzione:** 2026  
-**dimensioni:** 12x12 cm  
+olio su masonite  
+12x12 cm  
+2026
+{.info-opera}
 
 {{< navquadro >}}
 
----
-
-**annotazioni:** testo di esempio.
+Testo di esempio.
