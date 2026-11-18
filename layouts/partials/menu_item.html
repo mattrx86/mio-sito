@@ -3,7 +3,7 @@
   una pagina interna non ancora pubblicata (per esempio una sezione in
   bozza, "draft: true") viene nascosta invece di produrre un link rotto.
 */ -}}
-<ul>
+<ul class="albero">
     {{- range $item := .collection -}}
         {{- $show := true -}}
         {{- with $item.url -}}

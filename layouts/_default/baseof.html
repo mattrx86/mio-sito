@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+    {{- partial "head.html" . -}}
+    <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
+        {{- /*
+          Copia del baseof del tema con una barra in alto diversa:
+          firma "MR" a sinistra, menu e social a destra, sempre visibile
+          scorrendo (stili in assets/css/override.css, sezione "Barra in alto").
+        */ -}}
+        <style>
+        img {
+          pointer-events: none;
+          user-select: none;
+          -webkit-user-drag: none;
+        }
+        </style>
+        {{- $qui := .RelPermalink }}
+        <header class="topbar">
+          <div class="topbar-dentro">
+            <a class="topbar-firma" href="/" aria-label="Mattia Riccadonna, home">MR</a>
+            <nav class="topbar-menu" aria-label="Menu principale">
+              {{- range slice (dict "t" "home" "u" "/") (dict "t" "chi sono" "u" "/chi-sono/") (dict "t" "blog" "u" "/blog/") (dict "t" "contatti" "u" "/contatti/") }}
+              <a href="{{ .u }}"{{ if or (eq $qui .u) (and (ne .u "/") (hasPrefix $qui .u)) }} aria-current="page"{{ end }}>{{ .t }}</a>
+              {{- end }}
+              <span class="topbar-social">
+                <span class="topbar-sep" aria-hidden="true">/</span>
+                <a href="https://www.instagram.com/riccadonna_art/" target="_blank" rel="me noopener" aria-label="Instagram (si apre in una nuova scheda)">ig</a>
+                <a href="https://www.ebay.it/usr/mattia_riccadonna_art" target="_blank" rel="me noopener" aria-label="eBay (si apre in una nuova scheda)">ebay</a>
+              </span>
+            </nav>
+          </div>
+        </header>
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="d8d278f4-ddec-4002-b907-0cc9eeda5917"></script>
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                {{- block "main" . }}{{- end }}
+                {{ partial "footer.html" }}
+            </div>
+        </main>
+    </body>
+</html>

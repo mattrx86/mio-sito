@@ -194,3 +194,115 @@ article img,
   .trittico { gap: 4px; }
   .trittico figcaption { font-size: 0.65rem; }
 }
+
+
+/* ---------- Carrellata delle opere (layouts/partials/carrellata.html) ----------
+   Una opera sotto l'altra, foto intera, solo anno e titolo. */
+.carrellata {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+}
+.carrellata > li.carrellata-opera { margin: 0 0 3.5rem; }   /* il tema dà un margine a ogni li */
+.carrellata-opera > a {
+  display: block;
+  text-decoration: none !important;
+  background: none !important;
+  color: inherit;
+}
+.carrellata-opera img {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: 100% !important;
+  max-height: 78vh !important;   /* i quadri verticali non riempiono più di uno schermo */
+  margin: 0 auto 0.7rem !important;
+  transition: opacity 0.2s ease;
+}
+.carrellata-didascalia {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.carrellata-anno { opacity: 0.6; margin-right: 0.4em; }
+.carrellata-disponibile { opacity: 0.6; }
+@media (hover: hover) {
+  .carrellata-opera > a:hover img { opacity: 0.85; }
+  .carrellata-opera > a:hover .carrellata-titolo { text-decoration: underline; text-underline-offset: 3px; }
+}
+.carrellata-opera > a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+@media (max-width: 704px) {
+  .carrellata > li.carrellata-opera { margin-bottom: 2.5rem; }
+}
+/* bianco e nero che si colora (carrellata_bn: true) */
+.carrellata--bn .carrellata-opera img {
+  filter: grayscale(1);
+  transition: filter 0.45s ease, opacity 0.2s ease;
+}
+.carrellata--bn .carrellata-opera > a:focus-visible img,
+.carrellata--bn .carrellata-opera.a-colori img { filter: none; }
+@media (hover: hover) {
+  .carrellata--bn .carrellata-opera > a:hover img { filter: none; opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carrellata-opera img,
+  .carrellata--bn .carrellata-opera img { transition: none; }
+}
+
+/* ---------- Barra in alto (layouts/_default/baseof.html) ----------
+   Sempre visibile scorrendo. Fondo dello stesso bianco della pagina, così
+   sembra trasparente ma il testo che scorre sotto non si sovrappone al menu. */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.topbar-dentro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.topbar a { color: inherit !important; text-decoration: none !important; background: none !important; }
+.topbar a:hover,
+.topbar a[aria-current="page"] { text-decoration: underline !important; text-underline-offset: 3px; }
+.topbar-firma { font-weight: bold; letter-spacing: 0.08em; }
+.topbar-menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1rem; }
+.topbar-social { display: inline-flex; gap: 0 1rem; opacity: 0.6; }
+.topbar-sep { opacity: 0.6; }
+.w { padding-top: 1.5rem; }   /* la barra ora occupa il suo spazio: meno vuoto sopra */
+@media (max-width: 704px) {
+  .topbar { font-size: 0.92rem; }
+  .topbar-dentro { padding: 0.7rem 1rem; }
+  .topbar-menu { gap: 0 0.6rem; }
+  .topbar-social { display: none; }   /* su telefono i social restano nel piè di pagina */
+}
+
+/* ---------- Elenchi delle sezioni in stile "tree" (layouts/partials/post_list.html) ---------- */
+ul.elenco { list-style: none; padding-left: 0; }
+ul.elenco > li { padding-left: 4ch; text-indent: -4ch; }
+ul.elenco > li::before { content: "├── "; white-space: pre; opacity: 0.45; }
+ul.elenco > li:last-child::before { content: "└── "; }
+
+/* Menu della home come l'output del comando "tree" (layouts/partials/menu_item.html):
+   ├── voce
+   │   ├── 2004 opera
+   │   └── .. mostra tutti
+   └── ultima voce */
+ul.albero { list-style: none; padding-left: 0; }
+ul.albero > li { padding-left: 4ch; text-indent: -4ch; }
+ul.albero > li::before { content: "├── "; white-space: pre; opacity: 0.45; }
+ul.albero > li:last-child::before { content: "└── "; }
+/* l'elenco delle opere sta subito dopo la voce (non dentro il suo <li>) */
+ul.albero > ul.elenco { margin: 0; padding-left: 0; }
+ul.albero > ul.elenco > li { padding-left: 8ch; text-indent: -8ch; }
+ul.albero > ul.elenco > li::before { content: "│   ├── "; }
+ul.albero > ul.elenco > li:last-child::before { content: "│   └── "; }
+ul.albero > ul.elenco:last-child > li::before { content: "    ├── "; }
+ul.albero > ul.elenco:last-child > li:last-child::before { content: "    └── "; }

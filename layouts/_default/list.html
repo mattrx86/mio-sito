@@ -5,8 +5,13 @@
 
 {{ .Content }}
 
-{{- /* Parete con le opere in scala reale (si attiva con "mosaico: true" nel _index.md) */}}
+{{- /* "carrellata: true" nel _index.md: opere una sotto l'altra (sostituisce mosaico ed elenco).
+       "mosaico: true": parete di miniature sopra l'elenco. */}}
+{{ if .Params.carrellata }}
+{{ partial "carrellata.html" . }}
+{{ else }}
 {{ if .Params.mosaico }}{{ partial "mosaico.html" . }}{{ end }}
 
 {{ partial "post_list.html" (dict "context" . "section" .Section)}}
+{{ end }}
 {{ end }}

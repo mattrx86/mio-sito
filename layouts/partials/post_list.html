@@ -22,7 +22,7 @@
     {{- if .limit }}
         {{ $posts = (first .limit $posts ) }}
     {{ end }}
-    <ul>
+    <ul class="elenco">
         {{- range $post := $posts -}}
         <li>
             <span>{{- ($post.Date | time.Format "2006") }}</span>
