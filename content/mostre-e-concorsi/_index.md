@@ -7,6 +7,8 @@ description: "Mostre, concorsi e premi di Mattia Riccadonna dal 1999: Concorso S
 
 Ricordi di mostre personali, alcune collettive e qualche concorso, dal primo premio da ragazzo alle partecipazioni di oggi.
 
+## mostre-e-concorsi/ {.radice data-nota="# dalla più recente"}
+
 <ul class="elenco elenco-eventi">
 <li id="mercatini-rango-2025"><span>2025</span> Mercatini di Natale di Rango
 <span class="elenco-nota">esposta <a href="/taccuino/tre-arche-una-storia/">tre arche, una storia</a>, con Tommaso Pohl — corten, legno e metallo, 250 × 150 cm</span></li>

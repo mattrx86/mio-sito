@@ -23,7 +23,7 @@
 {{- with $dati.items }}
 {{- if $.Params.carrellata_elenco }}
 <details class="elenco-opere">
-  <summary>elenco delle opere ({{ len . }})</summary>
+  <summary>opere/ <span class="nota-grigia"># elenco completo, {{ len . }}</span></summary>
   <ul class="elenco">
     {{- range . }}
     <li><span>{{ .page.Date | time.Format "2006" }}</span> <a href="{{ .page.RelPermalink }}">{{ .page.Params.heading | default .page.Title }}</a></li>

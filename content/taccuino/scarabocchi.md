@@ -30,7 +30,7 @@ Ritratti veloci, buttati giù in pochi minuti — spesso da una foto, a volte da
 
 *matita su carta — ritratto, facce e facce — 2026*
 
-## vedi anche {.titoletto}
+## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
 - [archivio (1999–2007)](/archivio/)
 - [dipinti recenti (dal 2024)](/dipinti-recenti/)

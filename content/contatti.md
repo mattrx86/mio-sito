@@ -15,6 +15,14 @@ Comano Terme (Trento)
 <a href="https://www.instagram.com/riccadonna_art/" target="_blank" rel="me noopener">Instagram</a>
 {.recapiti}
 
+## vedi anche/ {.radice data-nota="# altre pagine del sito"}
+
+- [chi sono](/chi-sono/)
+- [archivio (1999–2007)](/archivio/)
+- [dipinti recenti (dal 2024)](/dipinti-recenti/)
+- [mostre e concorsi](/mostre-e-concorsi/)
+{.elenco}
+
 <script>
 (function() {
   var u = 'info';

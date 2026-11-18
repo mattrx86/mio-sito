@@ -12,6 +12,8 @@
 {{ else }}
 {{ if .Params.mosaico }}{{ partial "mosaico.html" . }}{{ end }}
 
+{{- $n := len (where site.RegularPages "Section" .Section) }}
+{{- with $n }}<h2 class="radice" data-nota="# {{ . }} {{ cond (eq . 1) "pagina" "pagine" }}, dalla più recente">{{ $.Section }}/</h2>{{ end }}
 {{ partial "post_list.html" (dict "context" . "section" .Section)}}
 {{ end }}
 {{ end }}

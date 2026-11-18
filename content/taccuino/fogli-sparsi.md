@@ -25,7 +25,7 @@ Matita, penna, pennarello — qualsiasi cosa avessi a portata di mano.
 
 *matita, inchiostro e gesso su carta — studio di edifici — 2025*  
 
-## vedi anche {.titoletto}
+## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
 - [archivio (1999–2007)](/archivio/)
 - [dipinti recenti (dal 2024)](/dipinti-recenti/)

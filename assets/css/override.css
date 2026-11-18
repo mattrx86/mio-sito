@@ -363,7 +363,7 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 
 /* home: nome come titolo, "strati." come sottotitolo */
 .intestazione-home h1 { margin-bottom: 0; }
-.intestazione-home .sottotitolo { margin: 0.1rem 0 1.5rem; font-size: 1.25rem; color: #595959; }
+.intestazione-home .sottotitolo { margin: 0.1rem 0 1.5rem; font-size: 1.6rem; font-style: italic; color: #595959; }
 
 /* firma a penna nella barra in alto (static/img/firma-mr.png, fondo trasparente) */
 .topbar-dentro { align-items: center; }
@@ -392,9 +392,6 @@ nav.correlate ul.elenco { margin-top: 0.4rem; }
 
 /* contatti: recapiti uno per riga */
 p.recapiti { line-height: 1.7; margin-top: 1.5rem; }
-/* home: radice dell'indice, come la prima riga del comando "tree" */
-.albero-radice { font-family: monospace; font-size: 15px; margin: 2rem 0 0.4rem; }
-.albero-radice span { color: #595959; }
 
 /* ---------- Telefono: margini laterali più stretti e quadri da bordo a bordo ----------
    Le foto delle opere (carrellata e immagini nelle pagine) occupano tutta la
@@ -421,3 +418,16 @@ p.recapiti { line-height: 1.7; margin-top: 1.5rem; }
 }
 /* foto delle opere allineate a sinistra come le informazioni sotto */
 article > p > img { margin-left: 0 !important; margin-right: auto !important; }
+
+/* Titoletto delle liste "ad albero" (indice della home, vedi anche, potrebbe
+   interessarti): come la prima riga del comando "tree", con un commento grigio.
+   Il commento sta in data-nota: ## vedi anche/ {.radice data-nota="# altre pagine del sito"} */
+h2.radice {
+  font-family: monospace; font-size: 15px; font-weight: normal; letter-spacing: 0;
+  color: #222; margin: 2.5rem 0 0.4rem;
+}
+h2.radice[data-nota]::after { content: " " attr(data-nota); color: #595959; }
+h2.radice + ul.elenco, h2.radice + ul.albero { margin-top: 0.3rem; }
+/* sottotitoli di sezione dentro una pagina (chi sono: in numeri, il sito) */
+h2.sezione { font-size: 1.3rem; font-weight: 500; color: #6E4B2E; margin: 2.5rem 0 0.6rem; letter-spacing: -0.01em; }
+.nota-grigia { color: #595959; }

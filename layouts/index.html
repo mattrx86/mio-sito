@@ -1,12 +1,12 @@
 {{ define "main" }}
 {{- /* Copia della home del tema: nome come titolo principale (meglio per
-       Google e su una riga anche da telefono), "strati." come sottotitolo. */}}
+       Google e su una riga anche da telefono), "strati" in corsivo come sottotitolo. */}}
 <header class="intestazione-home">
     <h1>Mattia Riccadonna</h1>
-    <p class="sottotitolo">strati.</p>
+    <p class="sottotitolo">strati</p>
 </header>
 {{ .Content }}
-<p class="albero-radice">strati/ <span># indice del sito</span></p>
+<h2 class="radice" data-nota="# indice del sito">strati/</h2>
 {{ partial "menu_item.html" (dict "context" . "collection" $.Site.Data.menu.entries) }}
 
 {{ end }}

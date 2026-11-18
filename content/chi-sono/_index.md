@@ -16,7 +16,7 @@ Il periodo più intenso è stato tra il 2002 e il 2007, con le prime mostre — 
 
 Oggi dipingo con più libertà di un tempo e lavoro soprattutto sul colore. In oltre venticinque anni ho realizzato circa 70–80 tele: alcune le ho conservate, altre sono state vendute, qualcuna è andata persa.
 
-## in numeri {.titoletto}
+## in numeri {.sezione}
 
 - opere realizzate: circa 70–80, dal 1999
 - [mostre e concorsi](/mostre-e-concorsi/): 5, tra personali, collettive e concorsi
@@ -24,11 +24,11 @@ Oggi dipingo con più libertà di un tempo e lavoro soprattutto sul colore. In o
 - anni di pittura: più di venticinque
 {.elenco}
 
-## il sito {.titoletto}
+## il sito {.sezione}
 
 Questo sito l'ho costruito e lo curo io. È un archivio in continua evoluzione: raccoglie le opere vecchie e nuove, le mostre, la rassegna stampa e gli appunti del taccuino. La base grafica è il tema *no-style-please* di riggraz, adattato nel tempo.
 
-## vedi anche {.titoletto}
+## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
 - [archivio (1999–2007)](/archivio/)
 - [dipinti recenti (dal 2024)](/dipinti-recenti/)

@@ -66,7 +66,7 @@ color ruggine diventeranno corten, quelle grigie metallo.
 
 *progetto grafico digitale — 2025*
 
-## vedi anche {.titoletto}
+## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
 - [mostre e concorsi](/mostre-e-concorsi/#mercatini-rango-2025)
 - [taccuino](/taccuino/)
