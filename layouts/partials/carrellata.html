@@ -60,6 +60,12 @@
   </li>
   {{- end }}
 </ol>
+{{- /* legenda dell'asterisco, se nella sezione c'è almeno una copia d'autore */ -}}
+{{- $copie := 0 -}}
+{{- range . -}}{{- if strings.HasSuffix (trim (.page.Params.heading | default .page.Title) " ") "*" -}}{{- $copie = add $copie 1 -}}{{- end -}}{{- end }}
+{{- if gt $copie 0 }}
+<p class="nota-asterisco">* copia d'autore: riproduzione dichiarata di un'opera di un altro artista, senza intento di falso.</p>
+{{- end }}
 {{- if $.Params.carrellata_bn }}
 <script>
 /* Solo per schermi senza mouse: colora il quadro che sta a metà schermo. */

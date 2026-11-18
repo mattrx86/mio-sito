@@ -322,7 +322,8 @@ body[a] a { color: #6E4B2E !important; }
 body[a] a:hover { background: none !important; text-decoration: underline; text-underline-offset: 3px; }
 body[a] h1, body[a] h2, body[a] h3 { font-weight: 500; letter-spacing: -0.01em; }
 body[a] h1 { color: #6E4B2E; font-size: 2.1rem; }
-body[a] code { background: #6E4B2E !important; color: #F7F6F3 !important; font-family: monospace; font-size: 0.92em; padding: 0.05em 0.35em; border: none !important; }
+/* niente evidenziazione per le parole tra apici `così`: restano testo normale */
+body[a] code { background: none !important; color: inherit !important; font: inherit !important; padding: 0 !important; border: none !important; }
 body[a] .topbar { background: #F7F6F3 !important; font-family: inherit !important; font-size: 1.05rem; }
 body[a] .topbar a { color: #000 !important; }
 body[a] .topbar .topbar-firma { font-weight: 600; font-size: 1.3rem; letter-spacing: 0.02em; }
@@ -363,7 +364,7 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 
 /* home: nome come titolo, "strati." come sottotitolo */
 .intestazione-home h1 { margin-bottom: 0; }
-.intestazione-home .sottotitolo { margin: 0.1rem 0 1.5rem; font-size: 1.6rem; font-style: italic; color: #595959; }
+.intestazione-home .sottotitolo { margin: 0.2rem 0 1.5rem; font-size: 1.3rem; font-weight: 500; color: #6E4B2E; letter-spacing: -0.01em; }   /* come i sottotitoli "in numeri" */
 
 /* firma a penna nella barra in alto (static/img/firma-mr.png, fondo trasparente) */
 .topbar-dentro { align-items: center; }
@@ -393,19 +394,16 @@ nav.correlate ul.elenco { margin-top: 0.4rem; }
 /* contatti: recapiti uno per riga */
 p.recapiti { line-height: 1.7; margin-top: 1.5rem; }
 
-/* ---------- Telefono: margini laterali più stretti e quadri da bordo a bordo ----------
-   Le foto delle opere (carrellata e immagini nelle pagine) occupano tutta la
-   larghezza dello schermo; i testi restano con un piccolo margine. */
+/* ---------- Telefono: margini laterali uguali a destra e a sinistra ----------
+   Le foto delle opere occupano tutta la colonna, con lo stesso margine del testo. */
 @media (max-width: 704px) {
   .w { padding-left: 1.25rem; padding-right: 1.25rem; }
   .carrellata-opera img,
   article > p > img {
-    width: calc(100% + 2.5rem) !important;
-    max-width: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
     max-height: none !important;
-    margin-left: -1.25rem !important;
-    margin-right: -1.25rem !important;
   }
 }
 
@@ -431,3 +429,8 @@ h2.radice + ul.elenco, h2.radice + ul.albero { margin-top: 0.3rem; }
 /* sottotitoli di sezione dentro una pagina (chi sono: in numeri, il sito) */
 h2.sezione { font-size: 1.3rem; font-weight: 500; color: #6E4B2E; margin: 2.5rem 0 0.6rem; letter-spacing: -0.01em; }
 .nota-grigia { color: #595959; }
+
+/* la barra di scorrimento del computer non sposta la colonna: spazio uguale ai due lati */
+html { scrollbar-gutter: stable both-edges; }
+/* legenda dell'asterisco (copie d'autore) */
+.nota-asterisco { color: #595959; font-size: 0.9rem; margin: 1rem 0; }

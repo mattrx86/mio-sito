@@ -20,6 +20,10 @@
         </aside>
     {{ end }}
     {{ .Content }}
+    {{- /* copia d'autore: il titolo finisce con l'asterisco */}}
+    {{- if strings.HasSuffix (trim (.Params.heading | default "") " ") "*" }}
+    <p class="nota-asterisco">* copia d'autore: riproduzione dichiarata di un'opera di un altro artista, senza intento di falso.</p>
+    {{- end }}
 
     {{- /* Acquisto / disponibilità / commissioni (vedi partials/vendita.html) */}}
     {{ partial "vendita.html" . }}
