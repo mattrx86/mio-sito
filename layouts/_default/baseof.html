@@ -4,7 +4,7 @@
     <body a="{{ $.Site.Params.theme_config.appearance | default "auto" }}">
         {{- /*
           Copia del baseof del tema con una barra in alto diversa:
-          firma "MR" a sinistra, menu e social a destra, sempre visibile
+          firma "MR" a sinistra, menu a destra, sempre visibile
           scorrendo (stili in assets/css/override.css, sezione "Barra in alto").
         */ -}}
         <style>
@@ -19,16 +19,10 @@
           <div class="topbar-dentro">
             <a class="topbar-firma" href="/" aria-label="Mattia Riccadonna, home">MR</a>
             <nav class="topbar-menu" aria-label="Menu principale">
-              {{- /* "corto": etichetta usata su telefono, dove lo spazio è poco
-                     (la voce home lì sparisce: ci porta già la firma MR) */ -}}
-              {{- range slice (dict "t" "home" "u" "/" "c" "") (dict "t" "archivio" "u" "/archivio/" "c" "archivio") (dict "t" "dipinti recenti" "u" "/dipinti-recenti/" "c" "recenti") (dict "t" "blog" "u" "/blog/" "c" "blog") (dict "t" "contatti" "u" "/contatti/" "c" "contatti") }}
-              <a href="{{ .u }}"{{ if eq .u "/" }} class="topbar-home"{{ end }}{{ if or (eq $qui .u) (and (ne .u "/") (hasPrefix $qui .u)) }} aria-current="page"{{ end }}>{{ if and .c (ne .c .t) }}<span class="topbar-lungo">{{ .t }}</span><span class="topbar-corto">{{ .c }}</span>{{ else }}{{ .t }}{{ end }}</a>
+              {{- /* "corto": etichetta usata su telefono, dove lo spazio è poco */ -}}
+              {{- range slice (dict "t" "home" "u" "/" "c" "home") (dict "t" "archivio" "u" "/archivio/" "c" "archivio") (dict "t" "dipinti recenti" "u" "/dipinti-recenti/" "c" "recenti") (dict "t" "contatti" "u" "/contatti/" "c" "contatti") }}
+              <a href="{{ .u }}"{{ if or (eq $qui .u) (and (ne .u "/") (hasPrefix $qui .u)) }} aria-current="page"{{ end }}>{{ if and .c (ne .c .t) }}<span class="topbar-lungo">{{ .t }}</span><span class="topbar-corto">{{ .c }}</span>{{ else }}{{ .t }}{{ end }}</a>
               {{- end }}
-              <span class="topbar-social">
-                <span class="topbar-sep" aria-hidden="true">/</span>
-                <a href="https://www.instagram.com/riccadonna_art/" target="_blank" rel="me noopener" aria-label="Instagram (si apre in una nuova scheda)">ig</a>
-                <a href="https://www.ebay.it/usr/mattia_riccadonna_art" target="_blank" rel="me noopener" aria-label="eBay (si apre in una nuova scheda)">ebay</a>
-              </span>
             </nav>
           </div>
         </header>

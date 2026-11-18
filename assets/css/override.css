@@ -222,13 +222,13 @@ article img,
 .carrellata-didascalia {
   display: block;
   text-align: left;
-  font-size: 0.85rem;
-  line-height: 1.5;
+  font-size: 0.9rem;
+  line-height: 1.45;
 }
 .carrellata-titolo { display: block; }
 .carrellata-riga { display: block; color: #595959; }
 /* elenco completo apribile sopra la carrellata */
-details.elenco-opere { margin: 1.5rem 0 0; }
+details.elenco-opere { margin: 1.5rem 0 2.5rem; }
 details.elenco-opere summary { font-family: monospace; font-size: 15px; }
 details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 @media (hover: hover) {
@@ -279,14 +279,12 @@ details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 .topbar a[aria-current="page"] { text-decoration: underline !important; text-underline-offset: 3px; }
 .topbar-firma { font-weight: bold; letter-spacing: 0.08em; }
 .topbar-menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1rem; }
-.topbar-social { display: inline-flex; gap: 0 1rem; opacity: 0.6; }
 .topbar-sep { opacity: 0.6; }
 .w { padding-top: 1.5rem; }   /* la barra ora occupa il suo spazio: meno vuoto sopra */
 @media (max-width: 704px) {
   .topbar { font-size: 0.92rem; }
   .topbar-dentro { padding: 0.7rem 1rem; }
   .topbar-menu { gap: 0 0.6rem; }
-  .topbar-social { display: none; }   /* su telefono i social restano nel piè di pagina */
 }
 
 /* ---------- Elenchi delle sezioni in stile "tree" (layouts/partials/post_list.html) ---------- */
@@ -338,7 +336,7 @@ body[a] code { background: none !important; color: #6E4B2E !important; font-fami
 body[a] .topbar { background: #F7F6F3 !important; font-family: inherit !important; font-size: 1.05rem; }
 body[a] .topbar a { color: #000 !important; }
 body[a] .topbar .topbar-firma { font-weight: 600; font-size: 1.3rem; letter-spacing: 0.02em; }
-ul.albero, ul.elenco, .carrellata-didascalia { font-family: monospace; font-size: 15px; }
+ul.albero, ul.elenco { font-family: monospace; font-size: 15px; }
 @media (max-width: 704px) {
   body[a] .topbar { font-size: 0.98rem; }
 }
@@ -346,7 +344,6 @@ ul.albero, ul.elenco, .carrellata-didascalia { font-family: monospace; font-size
 /* barra in alto su telefono: senza "home" (c'è MR) e con "recenti" al posto di "dipinti recenti" */
 .topbar-corto { display: none; }
 @media (max-width: 704px) {
-  .topbar-home { display: none; }
   .topbar-lungo { display: none; }
   .topbar-corto { display: inline; }
 }
@@ -373,3 +370,7 @@ ul.elenco-eventi > li::before { font-family: monospace; }
   dl.scheda { grid-template-columns: 8ch minmax(0, 1fr); gap: 0.3rem 0.8rem; }
 }
 dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
+
+/* home: nome come titolo, "strati." come sottotitolo */
+.intestazione-home h1 { margin-bottom: 0; }
+.intestazione-home .sottotitolo { margin: 0.1rem 0 1.5rem; font-size: 1.25rem; color: #595959; }
