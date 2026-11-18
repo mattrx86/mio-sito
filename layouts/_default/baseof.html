@@ -19,8 +19,10 @@
           <div class="topbar-dentro">
             <a class="topbar-firma" href="/" aria-label="Mattia Riccadonna, home">MR</a>
             <nav class="topbar-menu" aria-label="Menu principale">
-              {{- range slice (dict "t" "home" "u" "/") (dict "t" "chi sono" "u" "/chi-sono/") (dict "t" "blog" "u" "/blog/") (dict "t" "contatti" "u" "/contatti/") }}
-              <a href="{{ .u }}"{{ if or (eq $qui .u) (and (ne .u "/") (hasPrefix $qui .u)) }} aria-current="page"{{ end }}>{{ .t }}</a>
+              {{- /* "corto": etichetta usata su telefono, dove lo spazio è poco
+                     (la voce home lì sparisce: ci porta già la firma MR) */ -}}
+              {{- range slice (dict "t" "home" "u" "/" "c" "") (dict "t" "archivio" "u" "/archivio/" "c" "archivio") (dict "t" "dipinti recenti" "u" "/dipinti-recenti/" "c" "recenti") (dict "t" "blog" "u" "/blog/" "c" "blog") (dict "t" "contatti" "u" "/contatti/" "c" "contatti") }}
+              <a href="{{ .u }}"{{ if eq .u "/" }} class="topbar-home"{{ end }}{{ if or (eq $qui .u) (and (ne .u "/") (hasPrefix $qui .u)) }} aria-current="page"{{ end }}>{{ if and .c (ne .c .t) }}<span class="topbar-lungo">{{ .t }}</span><span class="topbar-corto">{{ .c }}</span>{{ else }}{{ .t }}{{ end }}</a>
               {{- end }}
               <span class="topbar-social">
                 <span class="topbar-sep" aria-hidden="true">/</span>

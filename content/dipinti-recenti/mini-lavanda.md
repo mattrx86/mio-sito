@@ -1,5 +1,6 @@
 ---
 title: "Lavanda — miniatura 30x30 mm — acquerello su carta, 2022"
+seo_title: "Lavanda: miniatura ad acquerello 30x30 mm, 2022"
 heading: "mini — lavanda"
 date: 2022-07-14
 hideDate: true

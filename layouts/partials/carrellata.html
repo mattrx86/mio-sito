@@ -1,9 +1,12 @@
 {{- /*
   CARRELLATA DELLE OPERE
   ----------------------------------------------------------------------
-  Le opere di una sezione una sotto l'altra, foto intera, con solo anno e
-  titolo. Cliccando si apre la pagina del quadro (che resta indicizzata da
+  Le opere di una sezione una sotto l'altra, foto intera, con sotto
+  titolo, tecnica, misure e anno (una riga ciascuno, allineati a sinistra). Cliccando si apre la pagina del quadro (che resta indicizzata da
   Google con descrizione, note e dati strutturati).
+
+  Con "carrellata_elenco: true" sopra le opere c'è anche l'elenco completo,
+  chiuso: si apre solo se lo si vuole.
 
   Si attiva con "carrellata: true" nel file _index.md della sezione e
   sostituisce mosaico ed elenco. Stesse opere e stesso ordine di
@@ -18,6 +21,16 @@
 */ -}}
 {{- $dati := partialCached "mosaico-dati.html" . .RelPermalink -}}
 {{- with $dati.items }}
+{{- if $.Params.carrellata_elenco }}
+<details class="elenco-opere">
+  <summary>elenco delle opere ({{ len . }})</summary>
+  <ul class="elenco">
+    {{- range . }}
+    <li><span>{{ .page.Date | time.Format "2006" }}</span> <a href="{{ .page.RelPermalink }}">{{ .page.Params.heading | default .page.Title }}</a></li>
+    {{- end }}
+  </ul>
+</details>
+{{- end }}
 <ol class="carrellata{{ if $.Params.carrellata_bn }} carrellata--bn{{ end }}" aria-label="Le opere della sezione">
   {{- range $i, $it := . -}}
     {{- $p := $it.page -}}
@@ -29,11 +42,20 @@
     {{- $s1 := $img.Resize (printf "%dx webp q80" $w1) -}}
     {{- $s2 := $img.Resize (printf "%dx webp q80" $w2) -}}
     {{- $anno := $p.Date | time.Format "2006" -}}
-    {{- $titolo := $p.Params.heading | default $p.Title }}
+    {{- with $p.Params.schema.dateCreated -}}{{- $anno = printf "%v" . -}}{{- end -}}
+    {{- $titolo := $p.Params.heading | default $p.Title -}}
+    {{- $tecnica := lower ($p.Params.schema.medium | default "") -}}
+    {{- $misure := "" -}}
+    {{- if and (gt $it.w 0.0) (gt $it.h 0.0) -}}{{- $misure = replace (printf "%g × %g cm" $it.w $it.h) "." "," -}}{{- end }}
   <li class="carrellata-opera">
     <a href="{{ $p.RelPermalink }}">
       <img src="{{ $s1.RelPermalink }}" srcset="{{ $s1.RelPermalink }} {{ $s1.Width }}w, {{ $s2.RelPermalink }} {{ $s2.Width }}w" sizes="(max-width: 704px) 92vw, 640px" width="{{ $s2.Width }}" height="{{ $s2.Height }}" alt="{{ $it.etichetta }}" decoding="async"{{ if eq $i 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
-      <span class="carrellata-didascalia"><span class="carrellata-anno">{{ $anno }}</span> <span class="carrellata-titolo">{{ $titolo }}</span>{{ if $it.disponibile }} <span class="carrellata-disponibile">· disponibile</span>{{ end }}</span>
+      <span class="carrellata-didascalia">
+        <span class="carrellata-titolo">{{ $titolo }}</span>
+        {{- with $tecnica }}<span class="carrellata-riga">{{ . }}</span>{{ end }}
+        {{- with $misure }}<span class="carrellata-riga">{{ . }}</span>{{ end }}
+        <span class="carrellata-riga">{{ $anno }}{{ if $it.disponibile }} · disponibile{{ end }}</span>
+      </span>
     </a>
   </li>
   {{- end }}

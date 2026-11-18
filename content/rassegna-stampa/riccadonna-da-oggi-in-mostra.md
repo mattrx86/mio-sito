@@ -1,5 +1,6 @@
 ---
 title: "Esercizi di pittura — Mostra personale a Tione, 2003 | Mattia Riccadonna"
+seo_title: "Esercizi di pittura: mostra personale a Tione, 2003"
 heading: "esercizi di pittura"
 date: 2003-08-25
 description: "Mostra personale di Mattia Riccadonna al Centro Studi Judicaria di Tione di Trento. Pittura, copie d'autore e lavori originali esposti fino al 31 agosto 2003."

@@ -7,40 +7,17 @@ description: "Mostre, concorsi e premi di Mattia Riccadonna dal 1999: Concorso S
 
 Ricordi di mostre personali, alcune collettive e qualche concorso, dal primo premio da ragazzo alle partecipazioni di oggi.
 
----
-
-## 2025 — Mercatini di Natale di Rango {#mercatini-rango-2025}
-
-Esposta ai Mercatini di Natale di Rango l'opera [tre arche, una storia](/taccuino/tre-arche-una-storia/), realizzata con Tommaso Pohl: corten, legno e metallo, 250 × 150 cm.
-
-## 2025 — Premio d'Arte Giulio Riccadonna, Rango {#premio-rango-2025}
-
-26 luglio 2025, Rango (Bleggio Superiore). In concorso due tele recenti:
-
-- [chiaro di luna](/dipinti-recenti/chiaro-di-luna/) — olio su tela, 30x50 cm
-- [risveglio alpino](/dipinti-recenti/risveglio-alpino/) — olio su tela, 40x70 cm
-
-## 2024 — Premio d'Arte Giulio Riccadonna, Rango {#premio-rango-2024}
-
-30 luglio 2024, Rango (Bleggio Superiore). `Secondo posto` assegnato dalla giuria a:
-
-- [luce mattutina](/dipinti-recenti/luce-mattutina/) — olio su tela, 24x30 cm
-
-## 2003 — «Esercizi di pittura», mostra personale a Tione {#esercizi-di-pittura-2003}
-
-Dal 25 al 31 agosto 2003, sale espositive del Centro Studi Judicaria, Tione di Trento. I primi lavori e la produzione di quegli anni, compresi gli omaggi a Carlo Sartori e Gianluigi Rocca.
-
-- [l'articolo del Trentino](/rassegna-stampa/riccadonna-da-oggi-in-mostra/)
-- [l'articolo della rivista Judicaria](/rassegna-stampa/centro-studi-judicaria/)
-
-## 1999 — 1° Concorso Provinciale Giovanni Segantini, Arco {#concorso-segantini-1999}
-
-Borsa di studio per la sezione grafica/pittura, a tredici anni.
-
-- [l'articolo de l'Adige](/rassegna-stampa/concorso-segantini-i-vincitori/)
-
----
+<ul class="elenco elenco-eventi">
+<li id="mercatini-rango-2025"><span>2025</span> Mercatini di Natale di Rango
+<span class="elenco-nota">esposta <a href="/taccuino/tre-arche-una-storia/">tre arche, una storia</a>, con Tommaso Pohl — corten, legno e metallo, 250 × 150 cm</span></li>
+<li id="premio-rango-2025"><span>2025</span> Premio d'Arte Giulio Riccadonna, Rango
+<span class="elenco-nota">26 luglio 2025, Rango (Bleggio Superiore) — in concorso <a href="/dipinti-recenti/chiaro-di-luna/">chiaro di luna</a> (olio su tela, 30 × 50 cm) e <a href="/dipinti-recenti/risveglio-alpino/">risveglio alpino</a> (olio su tela, 40 × 70 cm)</span></li>
+<li id="premio-rango-2024"><span>2024</span> Premio d'Arte Giulio Riccadonna, Rango
+<span class="elenco-nota">30 luglio 2024, Rango (Bleggio Superiore) — <code>secondo posto</code> con <a href="/dipinti-recenti/luce-mattutina/">luce mattutina</a> (olio su tela, 24 × 30 cm)</span></li>
+<li id="esercizi-di-pittura-2003"><span>2003</span> «Esercizi di pittura», mostra personale, Tione di Trento
+<span class="elenco-nota">25–31 agosto 2003, sale del Centro Studi Judicaria — i primi lavori e la produzione di quegli anni, compresi gli omaggi a Carlo Sartori e Gianluigi Rocca · articoli: <a href="/rassegna-stampa/riccadonna-da-oggi-in-mostra/">Trentino</a>, <a href="/rassegna-stampa/centro-studi-judicaria/">Judicaria</a></span></li>
+<li id="concorso-segantini-1999"><span>1999</span> 1° Concorso Provinciale Giovanni Segantini, Arco
+<span class="elenco-nota">borsa di studio per la sezione grafica/pittura, a tredici anni · articolo: <a href="/rassegna-stampa/concorso-segantini-i-vincitori/">l'Adige</a></span></li>
+</ul>
 
 *Le altre mostre tra il 2002 e il 2007 sono in costruzione.*
-
-<br>

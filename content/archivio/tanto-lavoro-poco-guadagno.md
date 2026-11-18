@@ -1,5 +1,6 @@
 ---
 title: "Tanta fatica e poco guadagno — Olio su tela, 2001"
+seo_title: "Tanta fatica e poco guadagno: olio su tela, 2001"
 heading: "tanta fatica e poco guadagno*"
 date: 2001-06-14
 hideDate: true

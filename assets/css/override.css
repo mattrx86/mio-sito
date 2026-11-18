@@ -216,16 +216,21 @@ article img,
   height: auto !important;
   max-width: 100% !important;
   max-height: 78vh !important;   /* i quadri verticali non riempiono più di uno schermo */
-  margin: 0 auto 0.7rem !important;
+  margin: 0 0 0.7rem !important; /* a sinistra, allineati al testo */
   transition: opacity 0.2s ease;
 }
 .carrellata-didascalia {
   display: block;
-  text-align: center;
+  text-align: left;
   font-size: 0.85rem;
+  line-height: 1.5;
 }
-.carrellata-anno { opacity: 0.6; margin-right: 0.4em; }
-.carrellata-disponibile { opacity: 0.6; }
+.carrellata-titolo { display: block; }
+.carrellata-riga { display: block; color: #595959; }
+/* elenco completo apribile sopra la carrellata */
+details.elenco-opere { margin: 1.5rem 0 0; }
+details.elenco-opere summary { font-family: monospace; font-size: 15px; }
+details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 @media (hover: hover) {
   .carrellata-opera > a:hover img { opacity: 0.85; }
   .carrellata-opera > a:hover .carrellata-titolo { text-decoration: underline; text-underline-offset: 3px; }
@@ -287,8 +292,8 @@ article img,
 /* ---------- Elenchi delle sezioni in stile "tree" (layouts/partials/post_list.html) ---------- */
 ul.elenco { list-style: none; padding-left: 0; }
 ul.elenco > li { padding-left: 4ch; text-indent: -4ch; }
-ul.elenco > li::before { content: "├── "; white-space: pre; opacity: 0.45; }
-ul.elenco > li:last-child::before { content: "└── "; }
+ul.elenco > li::before { content: "├── "; content: "├── " / ""; white-space: pre; opacity: 0.45; }
+ul.elenco > li:last-child::before { content: "└── "; content: "└── " / ""; }
 
 /* Menu della home come l'output del comando "tree" (layouts/partials/menu_item.html):
    ├── voce
@@ -297,15 +302,15 @@ ul.elenco > li:last-child::before { content: "└── "; }
    └── ultima voce */
 ul.albero { list-style: none; padding-left: 0; }
 ul.albero > li { padding-left: 4ch; text-indent: -4ch; }
-ul.albero > li::before { content: "├── "; white-space: pre; opacity: 0.45; }
-ul.albero > li:last-child::before { content: "└── "; }
+ul.albero > li::before { content: "├── "; content: "├── " / ""; white-space: pre; opacity: 0.45; }
+ul.albero > li:last-child::before { content: "└── "; content: "└── " / ""; }
 /* l'elenco delle opere sta subito dopo la voce (non dentro il suo <li>) */
 ul.albero > ul.elenco { margin: 0; padding-left: 0; }
 ul.albero > ul.elenco > li { padding-left: 8ch; text-indent: -8ch; }
-ul.albero > ul.elenco > li::before { content: "│   ├── "; }
-ul.albero > ul.elenco > li:last-child::before { content: "│   └── "; }
-ul.albero > ul.elenco:last-child > li::before { content: "    ├── "; }
-ul.albero > ul.elenco:last-child > li:last-child::before { content: "    └── "; }
+ul.albero > ul.elenco > li::before { content: "│   ├── "; content: "│   ├── " / ""; }
+ul.albero > ul.elenco > li:last-child::before { content: "│   └── "; content: "│   └── " / ""; }
+ul.albero > ul.elenco:last-child > li::before { content: "    ├── "; content: "    ├── " / ""; }
+ul.albero > ul.elenco:last-child > li:last-child::before { content: "    └── "; content: "    └── " / ""; }
 
 /* ---------- Carattere e colori ----------
    Testo in Figtree (font libero, licenza SIL OFL in static/fonts/LICENSE-Figtree.txt),
@@ -337,3 +342,34 @@ ul.albero, ul.elenco, .carrellata-didascalia { font-family: monospace; font-size
 @media (max-width: 704px) {
   body[a] .topbar { font-size: 0.98rem; }
 }
+
+/* barra in alto su telefono: senza "home" (c'è MR) e con "recenti" al posto di "dipinti recenti" */
+.topbar-corto { display: none; }
+@media (max-width: 704px) {
+  .topbar-home { display: none; }
+  .topbar-lungo { display: none; }
+  .topbar-corto { display: inline; }
+}
+
+/* elenco con una riga di dettaglio sotto ogni voce (mostre e concorsi) */
+ul.elenco .elenco-nota { display: block; text-indent: 0; color: #595959; font-size: 0.9em; margin: 0.15rem 0 0.6rem; }
+ul.elenco-eventi { font-family: inherit; font-size: inherit; }
+ul.elenco-eventi > li > span:first-child { font-family: monospace; }
+
+/* schede "etichetta  valore" (contatti) */
+dl.scheda { display: grid; grid-template-columns: 10ch 1fr; gap: 0.35rem 1rem; margin: 1rem 0 1.5rem; }
+dl.scheda dt { font-family: monospace; font-size: 15px; color: #595959; padding-top: 0.15em; }
+dl.scheda dd { margin: 0; }
+/* le ancore (#premio-rango-2025...) non finiscono sotto la barra fissa */
+[id] { scroll-margin-top: 4.5rem; }
+
+/* piè di pagina (layouts/partials/footer.html) */
+.piede { margin-top: 4rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,0.12); font-size: 0.9rem; color: #595959; }
+.piede p { margin: 0.25rem 0; }
+.piede-servizio { display: flex; flex-direction: column; gap: 0.15rem; margin-bottom: 0.9rem; }
+ul.elenco-eventi > li::before { font-family: monospace; }
+
+@media (max-width: 480px) {
+  dl.scheda { grid-template-columns: 8ch minmax(0, 1fr); gap: 0.3rem 0.8rem; }
+}
+dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }

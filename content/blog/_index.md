@@ -1,5 +1,6 @@
 ---
-title: "note & blog"
+title: "Blog di pittura: colore, acquerello e tecnica | Mattia Riccadonna"
+heading: "blog"
 date: 2024-01-01
 description: "Note e appunti di Mattia Riccadonna su tecnica pittorica, teoria del colore, libri letti e cose viste."
 ---

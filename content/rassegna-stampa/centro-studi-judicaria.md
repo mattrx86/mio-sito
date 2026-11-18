@@ -1,5 +1,6 @@
 ---
 title: "Articolo della rivista Judicaria del 25 agosto 2003"
+seo_title: "Rivista Judicaria, agosto 2003: la mostra di Tione"
 heading: "rivista judicaria"
 date: 2003-08-25
 description: "Articolo della rivista Judicaria (Centro Studi Judicaria) sulla mostra personale «Esercizi di pittura» di Mattia Riccadonna a Tione, agosto 2003."

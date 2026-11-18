@@ -1,5 +1,6 @@
 ---
 title: "1° Concorso Provinciale Giovanni Segantini, 1999"
+seo_title: "Concorso Giovanni Segantini 1999: i vincitori"
 heading: "concorso segantini, i vincitori"
 date: 1999-12-18
 description: "Mattia Riccadonna vince una borsa di studio al 1° Concorso Provinciale Giovanni Segantini ad Arco, dicembre 1999. Diploma e articoli di giornale."
