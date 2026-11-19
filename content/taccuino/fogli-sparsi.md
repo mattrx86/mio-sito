@@ -15,15 +15,24 @@ Matita, penna, pennarello — qualsiasi cosa avessi a portata di mano.
 
 ![Foglio sparso 01 — studio di edifici e composizioni, matita e gesso, 2025](/img/taccuino/fogli-sparsi/foglio-1.jpg)
 
-*matita, inchiostro e gesso su carta — studio di composizioni — 2025*  
+<span class="didascalia-titolo">studio di composizioni</span>  
+matita, inchiostro e gesso su carta  
+2025
+{.didascalia}
 
 ![Foglio sparso 02 — studio di malghe, penna, 2025](/img/taccuino/fogli-sparsi/foglio-3.jpg)
 
-*matita, inchiostro e gesso su carta — studio di malghe — 2025*  
+<span class="didascalia-titolo">studio di malghe</span>  
+matita, inchiostro e gesso su carta  
+2025
+{.didascalia}
 
 ![Foglio sparso 03 — studio di edifici, matita, 2025](/img/taccuino/fogli-sparsi/foglio-4.jpg)
 
-*matita, inchiostro e gesso su carta — studio di edifici — 2025*  
+<span class="didascalia-titolo">studio di edifici</span>  
+matita, inchiostro e gesso su carta  
+2025
+{.didascalia}
 
 ## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 

@@ -32,7 +32,7 @@ defaultContentLanguageInSubdir = false
     style      = "rrt"
   [markup.tableOfContents]
     startLevel = 2
-    endLevel   = 3
+    endLevel   = 2   # indice solo con i titoli principali: elenco ad albero a un livello
     ordered    = false
 
 [params]

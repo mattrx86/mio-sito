@@ -31,6 +31,7 @@ Studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto origin
 
 ![Studio da Batchelder in lavorazione sul cavalletto: abbozzo a olio del fienile giallo con tetto verde e staccionata su fondo arancione](/img/taccuino/studio/02-abbozzo-studio-batchelder.jpg)
 
-*l'abbozzo sul cavalletto: le grandi masse di colore sul fondo arancione*
+l'abbozzo sul cavalletto: le grandi masse di colore sul fondo arancione
+{.didascalia}
 
 Tutte le fasi, dagli schizzi a matita alla cornice: [come nasce un quadro](/taccuino/come-nasce-un-quadro/).

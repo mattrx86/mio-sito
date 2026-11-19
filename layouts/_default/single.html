@@ -12,10 +12,11 @@
     </p>
     {{ end }}
     {{ if not .Params.hideTitle }}
-    <h1 style='font-size:1.6rem;'>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+    <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
     {{ end }}
     {{ if .Params.toc }}
-        <aside {{ if .Params.tocBorder }} class="toc" {{ end }}>
+        <aside class="indice{{ if .Params.tocBorder }} toc{{ end }}">
+            <p class="radice" data-nota="# in questo articolo">indice/</p>
             {{ .TableOfContents }}
         </aside>
     {{ end }}

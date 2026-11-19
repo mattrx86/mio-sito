@@ -31,6 +31,7 @@ Studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto origin
 
 ![Studio da Salvo in lavorazione: alberi e rocce stesi in grigio con i contorni rossi, cielo giallo e chioma in alto già a colori](/img/taccuino/studio/05-studio-da-salvo-in-lavorazione.jpg)
 
-*in lavorazione: le forme stese in grigio con i contorni rossi, il cielo e la chioma in alto già al colore*
+in lavorazione: le forme stese in grigio con i contorni rossi, il cielo e la chioma in alto già al colore
+{.didascalia}
 
 Tutte le fasi, dagli schizzi a matita alla cornice: [come nasce un quadro](/taccuino/come-nasce-un-quadro/).

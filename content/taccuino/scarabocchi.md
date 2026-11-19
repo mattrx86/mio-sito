@@ -12,23 +12,38 @@ Ritratti veloci, buttati giù in pochi minuti — spesso da una foto, a volte da
 
 ![uomo con berretto, occhiali e sigaretta, matita](/img/taccuino/scarabocchi/uomo-con-sigaretta.jpg)
 
-*matita su carta — ritratto, uomo con sigaretta — 2026*
+<span class="didascalia-titolo">ritratto, uomo con sigaretta</span>  
+matita su carta  
+2026
+{.didascalia}
 
 ![uomo con berretto e pipa, matita](/img/taccuino/scarabocchi/uomo-con-pipa.jpg)
 
-*matita su carta — ritratto, uomo con pipa — 2026*
+<span class="didascalia-titolo">ritratto, uomo con pipa</span>  
+matita su carta  
+2026
+{.didascalia}
 
 ![agricoltore dall'aria diffidente, ritratto a matita](/img/taccuino/scarabocchi/agricoltore.jpg)
 
-*matita su carta — ritratto, uomo diffidente — 2026*
+<span class="didascalia-titolo">ritratto, uomo diffidente</span>  
+matita su carta  
+2026
+{.didascalia}
 
 ![pescatore soddisfatto, ritratto a matita](/img/taccuino/scarabocchi/pescatore.jpg)
 
-*matita su carta — ritratto, pescatore soddisfatto — 2026*
+<span class="didascalia-titolo">ritratto, pescatore soddisfatto</span>  
+matita su carta  
+2026
+{.didascalia}
 
 ![facce e caricature, schizzi a matita](/img/taccuino/scarabocchi/facce-2.jpg)
 
-*matita su carta — ritratto, facce e facce — 2026*
+<span class="didascalia-titolo">ritratto, facce e facce</span>  
+matita su carta  
+2026
+{.didascalia}
 
 ## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 

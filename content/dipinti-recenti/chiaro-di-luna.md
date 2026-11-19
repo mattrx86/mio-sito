@@ -32,6 +32,7 @@ Opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concor
 
 ![Chiaro di luna in lavorazione sul cavalletto dello studio: chiesa e campanile con il disegno blu ancora a vista sotto la luna](/img/taccuino/studio/06-chiaro-di-luna-sul-cavalletto.jpg)
 
-*sul cavalletto: la chiesa e il campanile con il disegno ancora a vista, la luna già accesa*
+sul cavalletto: la chiesa e il campanile con il disegno ancora a vista, la luna già accesa
+{.didascalia}
 
 Tutte le fasi, dagli schizzi a matita alla cornice: [come nasce un quadro](/taccuino/come-nasce-un-quadro/).

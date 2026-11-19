@@ -420,11 +420,11 @@ article > p > img { margin-left: 0 !important; margin-right: auto !important; }
 /* Titoletto delle liste "ad albero" (indice della home, vedi anche, potrebbe
    interessarti): come la prima riga del comando "tree", con un commento grigio.
    Il commento sta in data-nota: ## vedi anche/ {.radice data-nota="# altre pagine del sito"} */
-h2.radice {
+h2.radice, p.radice {
   font-family: monospace; font-size: 15px; font-weight: normal; letter-spacing: 0;
   color: #222; margin: 2.5rem 0 0.4rem;
 }
-h2.radice[data-nota]::after { content: " " attr(data-nota); color: #595959; }
+.radice[data-nota]::after { content: " " attr(data-nota); color: #595959; }
 h2.radice + ul.elenco, h2.radice + ul.albero { margin-top: 0.3rem; }
 /* sottotitoli di sezione dentro una pagina (chi sono: in numeri, il sito) */
 h2.sezione { font-size: 1.3rem; font-weight: 500; color: #6E4B2E; margin: 2.5rem 0 0.6rem; letter-spacing: -0.01em; }
@@ -434,3 +434,23 @@ h2.sezione { font-size: 1.3rem; font-weight: 500; color: #6E4B2E; margin: 2.5rem
 html { scrollbar-gutter: stable both-edges; }
 /* legenda dell'asterisco (copie d'autore) */
 .nota-asterisco { color: #595959; font-size: 0.9rem; margin: 1rem 0; }
+
+/* ---------- Titoli uguali in tutto il sito ----------
+   h1 come "chi sono"; h2 come "in numeri" (marrone, 1.3rem); h3 un gradino sotto. */
+body[a] .w h2:not(.radice) { font-size: 1.3rem; font-weight: 500; color: #6E4B2E; letter-spacing: -0.01em; margin: 2.5rem 0 0.6rem; }
+body[a] .w h3 { font-size: 1.1rem; font-weight: 500; color: #222; margin: 2rem 0 0.5rem; }
+
+/* ---------- Didascalie delle immagini come quelle sotto i quadri ---------- */
+p.didascalia, .trittico figcaption {
+  font-size: 0.9rem; line-height: 1.45; color: #595959; text-align: left; font-style: normal; margin: 0.4rem 0 1.8rem;
+}
+.didascalia-titolo { color: #222; }
+
+/* ---------- Indice degli articoli del blog come elenco ad albero ---------- */
+aside.indice { margin: 1.5rem 0 2rem; }
+aside.indice #TableOfContents ul { list-style: none; padding-left: 0; margin: 0.3rem 0 0; font-family: monospace; font-size: 15px; }
+aside.indice #TableOfContents li { padding-left: 4ch; text-indent: -4ch; margin: 0.15rem 0; }
+aside.indice #TableOfContents li::before { content: "├── "; content: "├── " / ""; white-space: pre; opacity: 0.45; display: inline; width: auto; margin-left: 0; color: inherit; }
+aside.indice #TableOfContents li:last-child::before { content: "└── "; content: "└── " / ""; }
+aside.indice #TableOfContents li ul { display: none; }
+@media (max-width: 704px) { .trittico figcaption { font-size: 0.65rem; } }

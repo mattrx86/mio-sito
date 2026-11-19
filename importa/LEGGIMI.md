@@ -47,6 +47,7 @@ Se metti un **asterisco** in fondo al titolo (`Casa colonica *`), resta solo nel
 | `descrizione` | descrizione per Google (max 160 caratteri); se vuota la scrive lo script | |
 | `tags` | parole separate da spazio | `paesaggio montagna` |
 | `data` | data precisa (gg/mm/aaaa), serve solo per l'ordine | `02/08/2026` |
+| `ordine` | numero d'ordine dentro l'anno, se non sai la data precisa: 1 = il primo quadro dipinto quell'anno, 2 = il secondo... Sul sito le opere sono dalla più recente, quindi il numero più alto viene prima. Se c'è anche `data`, vince `data` | `3` |
 
 **Per i quadri in vendita** (`sezione` = `piccoli-quadri` oppure `collocazione` = `in vendita`)
 

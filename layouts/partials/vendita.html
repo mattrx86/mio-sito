@@ -14,8 +14,7 @@
   2) Opera disponibile ma senza prezzo online: "disponibile: true"
      → invito a scrivere per informazioni
 
-  3) Tutte le altre opere di archivio, dipinti recenti e piccoli quadri
-     → riga discreta per commissioni
+  3) Tutte le altre opere: niente (i contatti sono nel menu)
 
   Per sicurezza il pulsante compare solo se il link inizia con
   https://buy.stripe.com/ (evita errori di battitura o link sbagliati).
@@ -52,7 +51,5 @@
     <p class="vendita-stato">disponibile</p>
     <p>Quest'opera è disponibile. Per prezzo e spedizione <a href="{{ $contatti }}">scrivimi</a>.</p>
   </section>
-  {{- else if in (slice "archivio" "dipinti-recenti" "piccoli-quadri") .Section }}
-  <p class="vendita-nota">Per commissioni o informazioni sulle opere <a href="{{ $contatti }}">scrivimi</a>.</p>
   {{- end }}
 {{- end -}}

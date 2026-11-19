@@ -32,6 +32,7 @@ Opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concor
 
 ![Risveglio alpino quasi finito sul cavalletto dello studio: malghe gialle e rosse con le Dolomiti illuminate sullo sfondo](/img/taccuino/studio/07-risveglio-alpino-sul-cavalletto.jpg)
 
-*quasi finito, sul cavalletto: le montagne già accese dalla luce, le malghe e il prato*
+quasi finito, sul cavalletto: le montagne già accese dalla luce, le malghe e il prato
+{.didascalia}
 
 Tutte le fasi, dagli schizzi a matita alla cornice: [come nasce un quadro](/taccuino/come-nasce-un-quadro/).

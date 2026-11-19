@@ -56,6 +56,7 @@ COLONNE = OBBLIGATORI + [
     "soggetto", "luogo", "descrizione", "annotazioni", "collocazione", "prezzo",
     "link_pagamento", "spedizione", "tags", "data", "cornice_larghezza_cm",
     "cornice_altezza_cm", "coautori", "indirizzo", "sovrascrivi", "autore_originale",
+    "ordine",
 ]
 SINONIMI = {  # intestazioni alternative accettate
     "immagine": "file_immagine", "foto": "file_immagine", "file": "file_immagine",
@@ -138,13 +139,20 @@ def leggi_csv(percorso: Path):
     return intest, record, sep
 
 
-def data_iso(valore: str, anno: int) -> str:
+def data_iso(valore: str, anno: int, ordine: int = 0) -> str:
+    """Data della pagina, che decide l'ordine delle opere sul sito
+    (dalla più recente). Una data precisa vince sempre; altrimenti il numero
+    d'ordine dentro l'anno (1 = la prima dipinta quell'anno) diventa un giorno
+    dell'anno: 1 -> 1 gennaio, 2 -> 2 gennaio... Sul sito si vede solo l'anno."""
     v = (valore or "").strip()
     for f in ("%Y-%m-%d", "%d/%m/%Y", "%d-%m-%Y", "%d.%m.%Y"):
         try:
             return datetime.strptime(v, f).date().isoformat()
         except ValueError:
             pass
+    if ordine > 0:
+        from datetime import date, timedelta
+        return (date(anno, 1, 1) + timedelta(days=min(ordine, 365) - 1)).isoformat()
     return f"{anno}-01-01"
 
 
@@ -319,17 +327,28 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     if autore_orig and autore_orig.lower() not in titolo.lower():
         alt = f"{titolo}, studio da {autore_orig}, {tec_low} {misure} cm, {AUTORE}, {anno}"
 
+    # --- numero d'ordine dentro l'anno (facoltativo)
+    ordine = 0
+    grezzo_ord = pulito(d.get("ordine", ""))
+    if grezzo_ord:
+        if grezzo_ord.isdigit() and int(grezzo_ord) > 0:
+            ordine = int(grezzo_ord)
+        else:
+            avvisi.append(f"ordine \"{grezzo_ord}\" ignorato: serve un numero intero (1, 2, 3...)")
+
     # --- frontmatter
     fm = ["---",
           f"title: {q(f'{titolo} — {tecnica}, {anno}')}"]
     if seo:
         fm.append(f"seo_title: {q(seo)}")
     fm += [f"heading: {q(prima_minuscola(titolo) + ('*' if asterisco else ''))}",
-           f"date: {data_iso(d.get('data', ''), anno)}",
+           f"date: {data_iso(d.get('data', ''), anno, ordine)}",
            "hideDate: true",
            f"description: {q(descr)}",
            f"image: {q(f'/img/{sez}/{nome_img}')}",
            f"tags: [{', '.join(q(t) for t in tags)}]"]
+    if ordine:
+        fm.append(f"ordine: {ordine}")
     if colloc == "disponibile" and not in_vendita:
         fm.append("disponibile: true")
     cw, ch = numero(d.get("cornice_larghezza_cm", "")), numero(d.get("cornice_altezza_cm", ""))

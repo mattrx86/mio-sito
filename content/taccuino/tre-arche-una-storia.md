@@ -43,11 +43,17 @@ ospiti attratti dalla preziosa e unica acqua delle Terme di Comano.
 
 ![Primo schizzo a matita per Tre Arche, una storia: case, luna e una pianta con forme semplificate](/img/taccuino/progetto-rango/schizzo-1.jpg)
 
-*matita su carta — primo schizzo: case, luna, una pianta — 2025*
+<span class="didascalia-titolo">primo schizzo: case, luna, una pianta</span>  
+matita su carta  
+2025
+{.didascalia}
 
 ![Secondo schizzo a matita per Tre Arche, una storia, 6 settembre 2025: compaiono le due figure e gli archi del ponte](/img/taccuino/progetto-rango/schizzo-2.jpg)
 
-*matita su carta — compaiono le due figure e gli archi del ponte — 6 settembre 2025*
+<span class="didascalia-titolo">compaiono le due figure e gli archi del ponte</span>  
+matita su carta  
+6 settembre 2025
+{.didascalia}
 
 ### il disegno definitivo
 
@@ -64,7 +70,9 @@ color ruggine diventeranno corten, quelle grigie metallo.
 
 ![Progetto grafico digitale di Tre Arche, una storia: sagome color ruggine e metallo su fondo chiaro](/img/taccuino/progetto-rango/progetto-grafico.jpg)
 
-*progetto grafico digitale — 2025*
+progetto grafico digitale  
+2025
+{.didascalia}
 
 ## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
