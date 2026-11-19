@@ -380,15 +380,21 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 /* informazioni sotto la foto: una per riga, a sinistra, senza etichette */
 /* pallino di disponibilità: agganciato all'angolo basso-destro della foto
    (partials/stato-punto.html). Rosso acceso o bianco, bordino nero molto fine. */
-.foto-con-stato { position: relative; display: block; width: fit-content; max-width: 100%; margin-bottom: 1.3rem; }
+.foto-con-stato { position: relative; display: block; width: fit-content; max-width: 100%; margin-bottom: 0.7rem; }
 .foto-con-stato > img { margin: 0 !important; }
+/* altezza: il centro del pallino sta sulla stessa riga della scritta sotto la foto
+   (titolo nelle pagine a scorrimento; prima riga di informazioni nella pagina dell'opera) */
 .stato-punto {
-  position: absolute; right: 0; top: calc(100% + 4px);
+  position: absolute; right: 0;
+  top: calc(100% + 0.7rem + 0.6525rem - 4.5px);   /* 0.6525rem = metà di 0.9rem x interlinea 1,45 */
   width: 9px; height: 9px; border-radius: 50%;
   box-sizing: border-box; border: 1px solid #000;
 }
 .stato-punto--no { background: #f01616; }
 .stato-punto--si { background: #fff; }
+/* pagina dell'opera: foto singola -> allineato alla prima riga di informazioni; galleria -> subito sotto la foto grande */
+p > .foto-con-stato > .stato-punto { top: calc(100% + 0.7rem + 0.6525rem + 0.9px); }
+#gallery-wrap .stato-punto { top: calc(100% + 4px); }
 p.info-opera { margin: 0.6rem 0 1rem; line-height: 1.5; color: #595959; font-size: 0.95rem; }
 /* opera precedente / successiva */
 .navquadro { display: flex; justify-content: space-between; margin: 1rem 0 2rem; font-family: monospace; font-size: 15px; }
