@@ -34,6 +34,24 @@ matita, inchiostro e gesso su carta
 2025
 {.didascalia}
 
+![Foglio sparso 04 — studio a matita di case con tetti scuri in un quadrato, grandi masse di chiaro e scuro](/img/taccuino/fogli-sparsi/foglio-5.jpg)
+
+<span class="didascalia-titolo">studio di valori: case</span>  
+matita su carta
+{.didascalia}
+
+![Foglio sparso 05 — studio di case alpine con tetti a falde e ombre nette, matita e tratti grigi](/img/taccuino/fogli-sparsi/foglio-6.jpg)
+
+<span class="didascalia-titolo">studio di case e ombre</span>  
+tecnica mista su carta
+{.didascalia}
+
+![Foglio sparso 06 — studi di composizione con case, strade e sentieri, matita e colore arancio e azzurro](/img/taccuino/fogli-sparsi/foglio-7.jpg)
+
+<span class="didascalia-titolo">studi di composizione a colori</span>  
+tecnica mista su carta
+{.didascalia}
+
 ## vedi anche/ {.radice data-nota="# altre pagine del sito"}
 
 - [archivio (1999–2007)](/archivio/)
