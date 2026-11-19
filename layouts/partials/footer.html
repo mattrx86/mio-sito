@@ -1,21 +1,15 @@
 {{- /*
-  Piè di pagina di tutte le pagine (sostituisce quello del tema e layouts/footer.md).
-  I link alle pagine di servizio compaiono solo se la pagina esiste ed è
-  pubblicata (niente "draft: true"): finché sono bozze non si vedono.
+  Piè di pagina di tutte le pagine: una sola riga.
+  Il link alla privacy resta su ogni pagina (il GDPR chiede che l'informativa
+  sia facilmente raggiungibile ovunque); "come acquistare" compare solo
+  quando la pagina è pubblicata (niente "draft: true").
 */ -}}
 {{- $servizio := slice -}}
-{{- range $v := slice (dict "t" "privacy e cookie" "u" "/privacy") (dict "t" "come acquistare" "u" "/come-acquistare") -}}
+{{- range $v := slice (dict "t" "privacy" "u" "/privacy") (dict "t" "come acquistare" "u" "/come-acquistare") -}}
   {{- with site.GetPage $v.u -}}
     {{- if ne .RelPermalink "" -}}{{- $servizio = $servizio | append (dict "t" $v.t "u" .RelPermalink) -}}{{- end -}}
   {{- end -}}
 {{- end }}
 <footer class="piede">
-  {{- with $servizio }}
-  <nav class="piede-servizio" aria-label="Informazioni">
-    {{- range . }}
-    <a href="{{ .u }}">{{ .t }}</a>
-    {{- end }}
-  </nav>
-  {{- end }}
-  <p class="piede-firma">© {{ now.Format "2006" }} Mattia Riccadonna — un archivio personale.</p>
+  <p class="piede-firma">© {{ now.Format "2006" }} Mattia Riccadonna — un archivio personale{{ range $servizio }} · <a href="{{ .u }}">{{ .t }}</a>{{ end }}</p>
 </footer>
