@@ -1,11 +1,6 @@
 ---
-title: "Studio da Salvo — Olio su tela, 2025"
-heading: "studio di salvo*"
-date: 2025-05-10
-hideDate: true
-description: "Olio su tela, 30x40 cm, 2025. Studio da un'opera di Salvo (Salvatore Mangione), eseguito a scopo di studio e pratica pittorica. Non in vendita."
+heading: "studio opera di salvatore mangione (salvo)*"
 image: "/img/dipinti-recenti/studio-di-salvo-01.jpg"
-tags: ["olio", "salvo", "paesaggio", "2025"]
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
@@ -13,7 +8,18 @@ schema:
   width: "30"
   height: "40"
   dateCreated: "2025"
+date: "2025-05-10"
 collocazione: "collezione dell'autore"
+disponibile: false
+description: "Olio su tela, 30x40 cm, 2025. Studio da un'opera di Salvo (Salvatore Mangione), eseguito a scopo di studio e pratica pittorica. Non in vendita."
+title: "Studio da Salvo — Olio su tela, 2025"
+tags:
+  - "olio"
+  - "salvo"
+  - "paesaggio"
+  - "2025"
+hideDate: true
+draft: false
 ---
 
 Studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto originale di Salvo (Salvatore Mangione). Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.
