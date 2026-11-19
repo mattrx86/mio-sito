@@ -1,8 +1,3 @@
-# Elenco delle tecniche e dei tag già usati sul sito.
-# Serve al pannello /admin/ e alla tabella /admin/tabella/ per proporre
-# sempre gli stessi nomi (così non nascono "Olio su tela" e "olio su tela",
-# oppure "Rango" e "rango"). Per aggiungere una voce nuova: pannello →
-# "Vocabolario" (oppure dalla tabella, che ti chiede conferma).
 tecniche:
   - "Acquerello su carta"
   - "Acrilico su tela"
@@ -13,6 +8,9 @@ tecniche:
   - "Tempera su carta"
 tag:
   - "2000"
+  - "2001"
+  - "2002"
+  - "2003"
   - "2022"
   - "2024"
   - "2025"
