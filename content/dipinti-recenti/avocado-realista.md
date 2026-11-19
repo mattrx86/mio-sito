@@ -9,7 +9,7 @@ schema:
   height: "12"
   dateCreated: "2025"
 date: "2025-07-14"
-collocazione: "disponibile"
+collocazione: "disponibile in studio"
 disponibile: true
 foto_aggiuntive:
   - foto: "/img/dipinti-recenti/avocado-2.jpg"
