@@ -24,25 +24,7 @@
 {{- $anno := printf "%v" ($s.dateCreated | default ($p.Date.Format "2006")) -}}
 {{- $alt := delimit (slice $nome (trim (printf "%s %s" $tecnica $misure) " ") "Mattia Riccadonna" $anno) ", " -}}
 
-{{- /* foto: una sola, oppure galleria con le foto aggiuntive */ -}}
-{{- with $p.Params.image -}}
-  {{- if $p.Params.foto_aggiuntive -}}
-    {{- $lista := slice (dict "src" . "alt" $alt) -}}
-    {{- range $p.Params.foto_aggiuntive -}}
-      {{- $lista = $lista | append (dict "src" .foto "alt" (.descrizione | default $alt)) -}}
-    {{- end -}}
-    {{- partial "galleria.html" $lista -}}
-  {{- else -}}
-    {{- $v := partial "img-varianti.html" . }}
-<p><img src="{{ $v.src }}"
-  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) 100vw, 640px"{{ end }}
-  {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
-  alt="{{ $alt }}" fetchpriority="high" decoding="async"></p>
-  {{- end -}}
-{{- end }}
-
-{{- /* pallino di disponibilità, in basso a destra sotto la foto:
-       bianco con bordo = disponibile, rosso = non disponibile.
+{{- /* pallino di disponibilità sotto la foto: bianco = disponibile, rosso = non disponibile.
        Piccoli quadri: conta lo stato della vendita; altre opere: "disponibile" del frontmatter */ -}}
 {{- $disp := false -}}
 {{- with $p.Params.vendita -}}
@@ -50,8 +32,22 @@
 {{- else -}}
   {{- $disp = $p.Params.disponibile | default false -}}
 {{- end -}}
-{{- if $p.Params.image }}
-<p class="stato-opera"><span class="stato-punto {{ if $disp }}stato-punto--si{{ else }}stato-punto--no{{ end }}" role="img" aria-label="{{ if $disp }}Opera disponibile{{ else }}Opera non disponibile{{ end }}" title="{{ if $disp }}disponibile{{ else }}non disponibile{{ end }}"></span></p>
+
+{{- /* foto: una sola, oppure galleria con le foto aggiuntive */ -}}
+{{- with $p.Params.image -}}
+  {{- if $p.Params.foto_aggiuntive -}}
+    {{- $lista := slice (dict "src" . "alt" $alt) -}}
+    {{- range $p.Params.foto_aggiuntive -}}
+      {{- $lista = $lista | append (dict "src" .foto "alt" (.descrizione | default $alt)) -}}
+    {{- end -}}
+    {{- partial "galleria.html" (dict "items" $lista "stato" $disp) -}}
+  {{- else -}}
+    {{- $v := partial "img-varianti.html" . }}
+<p><span class="foto-con-stato"><img src="{{ $v.src }}"
+  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) 100vw, 640px"{{ end }}
+  {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
+  alt="{{ $alt }}" fetchpriority="high" decoding="async">{{ partial "stato-punto.html" $disp }}</span></p>
+  {{- end -}}
 {{- end }}
 
 {{- /* informazioni essenziali, una per riga */ -}}
