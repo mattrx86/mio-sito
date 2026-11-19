@@ -1,43 +1,59 @@
 ---
-# ATTENZIONE: pagina in bozza (draft: true), non viene pubblicata.
-# Controlla le parti [DA VERIFICARE] (meglio con chi si occupa di privacy
-# o con un commercialista) prima di togliere "draft: true".
-# Quando la pubblichi, il link "privacy e cookie" compare da solo nel piè di pagina.
-draft: true
 title: "Privacy e cookie — Mattia Riccadonna"
 heading: "privacy e cookie"
-date: 2026-11-18
+date: 2026-11-19
 hideDate: true
-description: "Informativa privacy e cookie del sito di Mattia Riccadonna: quali dati vengono trattati, perché, per quanto tempo e quali sono i tuoi diritti."
+description: "Informativa privacy e cookie del sito di Mattia Riccadonna: quali dati vengono trattati, da chi, perché, per quanto tempo e quali sono i tuoi diritti."
+# Se attivi la vendita online (Stripe), aggiungi qui la sezione "acquisti".
 ---
 
-Ultimo aggiornamento: 18 novembre 2026.
+Informativa ai sensi degli articoli 13 e 14 del Regolamento (UE) 2016/679 (GDPR). Ultimo aggiornamento: 19 novembre 2026.
 
-### chi tratta i dati
+## titolare del trattamento
 
-<dl class="scheda">
-  <dt>titolare</dt>
-  <dd>Mattia Riccadonna, Cares, Comano Terme (TN), Italia</dd>
-  <dt>contatto</dt>
-  <dd>info [chiocciola] mattiariccadonna.com</dd>
-</dl>
+Mattia Riccadonna  
+Frazione Cares, 73/A — Comano Terme (Trento)  
+<span id="email-privacy">info [chiocciola] mattiariccadonna.com</span>
 
-### quali dati e perché
+## quali dati e perché
 
-**Se mi scrivi.** Uso il tuo indirizzo email e quello che mi scrivi solo per risponderti. Non li uso per pubblicità e non li do a nessuno. Li tengo per il tempo necessario alla conversazione. [DA VERIFICARE: quanto tempo li conservi, per esempio "fino a 2 anni, poi li cancello".]
+**Se mi scrivi.** Il sito non ha moduli di contatto: se mi mandi un'email uso il tuo indirizzo e il contenuto del messaggio solo per risponderti e, se serve, per accordarci su un'opera o una collaborazione. La base giuridica è la risposta a una tua richiesta (art. 6, par. 1, lett. b GDPR). Conservo i messaggi per il tempo necessario e comunque non oltre 24 mesi dall'ultimo scambio, salvo obblighi di legge (per esempio fiscali, in caso di vendita).
 
-**Statistiche di visita.** Il sito usa [Umami](https://umami.is/), che conta le visite senza cookie e senza salvare dati che identificano chi visita (per esempio non conserva l'indirizzo IP completo). [DA VERIFICARE: nelle impostazioni del tuo account Umami Cloud, in quale regione sono conservati i dati.]
+**Navigazione.** Come qualsiasi sito, i server che lo ospitano e lo distribuiscono registrano per motivi tecnici e di sicurezza alcuni dati della connessione: indirizzo IP, data e ora, pagina richiesta, browser. La base giuridica è il legittimo interesse a far funzionare il sito in modo sicuro (art. 6, par. 1, lett. f GDPR). Questi dati non vengono usati per identificarti.
 
-**Hosting.** Il sito è ospitato da Netlify, che, come ogni server web, registra per motivi tecnici e di sicurezza dati come indirizzo IP, data e ora della visita e pagina richiesta. [DA VERIFICARE: Netlify ha sede negli Stati Uniti; controlla nella sua informativa che aderisca all'EU-US Data Privacy Framework. Verifica anche se il dominio passa da Cloudflare: in quel caso va citato qui allo stesso modo.]
+**Statistiche di visita.** Uso [Umami](https://umami.is/) per sapere quante persone visitano il sito e quali pagine guardano. Umami non usa cookie, non conserva l'indirizzo IP e non segue i visitatori tra siti diversi: i dati (pagina, provenienza, tipo di dispositivo e browser, Paese) sono aggregati e anonimi. La base giuridica è il legittimo interesse a capire come viene usato il sito (art. 6, par. 1, lett. f GDPR).
 
-**Acquisti.** Se compri un quadro, il pagamento avviene sulla pagina di Stripe: i dati della carta li gestisce solo Stripe e io non li vedo. Ricevo nome, indirizzo di spedizione ed email, che uso solo per spedire il quadro e per gli obblighi di legge (per esempio fiscali). [DA VERIFICARE: per quanto tempo conservi questi dati.]
+I dati non vengono venduti, non sono usati per pubblicità e non sono soggetti a decisioni automatizzate o profilazione.
 
-### cookie
+## chi altro tratta i dati
 
-Il sito non usa cookie di profilazione né cookie pubblicitari. Per questo non c'è il banner dei cookie. [DA VERIFICARE prima di pubblicare: apri il sito con gli strumenti del browser (F12 → Applicazione → Cookie) e controlla che non ce ne siano.]
+Questi fornitori trattano i dati solo per offrire il loro servizio, come responsabili del trattamento:
 
-I link a Instagram ed eBay portano su siti esterni, che hanno le loro regole sulla privacy e sui cookie.
+- **Netlify, Inc.** (Stati Uniti): ospita il sito.
+- **Cloudflare, Inc.** (Stati Uniti): gestisce i DNS del dominio e può trattare l'indirizzo IP per instradare e proteggere le connessioni.
+- **Umami Software, Inc.** (Stati Uniti): statistiche di visita anonime.
+- il fornitore della casella di posta del titolare, per le email.
+{.elenco}
 
-### i tuoi diritti
+Netlify e Cloudflare aderiscono all'EU-US Data Privacy Framework, riconosciuto dalla Commissione europea come garanzia adeguata per il trasferimento di dati negli Stati Uniti (art. 45 GDPR).
 
-Puoi chiedermi in ogni momento di vedere, correggere o cancellare i tuoi dati, oppure di non usarli più, scrivendo all'indirizzo qui sopra. Se pensi che i tuoi dati non siano trattati correttamente puoi presentare un reclamo al [Garante per la protezione dei dati personali](https://www.garanteprivacy.it/).
+I caratteri tipografici sono caricati dal sito stesso: nessun dato viene inviato a Google Fonts o ad altri servizi esterni.
+
+## cookie
+
+Il sito non usa cookie di profilazione, pubblicitari o di statistica, e per questo non mostra il banner dei cookie. Eventuali cookie tecnici impostati per la sicurezza della connessione sono strettamente necessari e non richiedono consenso.
+
+I link a Instagram ed eBay portano su siti esterni, che applicano le loro regole su privacy e cookie.
+
+## i tuoi diritti
+
+Puoi chiedermi in qualsiasi momento di accedere ai tuoi dati, correggerli, cancellarli, limitarne l'uso, opporti al trattamento o riceverli in un formato leggibile (articoli 15–21 GDPR), scrivendo all'indirizzo qui sopra. Rispondo entro un mese.
+
+Se ritieni che i tuoi dati siano trattati in modo non corretto puoi presentare reclamo al [Garante per la protezione dei dati personali](https://www.garanteprivacy.it/).
+
+<script>
+(function () {
+  var u = 'info', d = 'mattiariccadonna.com', el = document.getElementById('email-privacy');
+  if (el) { el.innerHTML = '<a href="mailto:' + u + '@' + d + '">' + u + '@' + d + '</a>'; }
+})();
+</script>
