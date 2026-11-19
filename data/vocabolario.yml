@@ -1,0 +1,41 @@
+# Elenco delle tecniche e dei tag già usati sul sito.
+# Serve al pannello /admin/ e alla tabella /admin/tabella/ per proporre
+# sempre gli stessi nomi (così non nascono "Olio su tela" e "olio su tela",
+# oppure "Rango" e "rango"). Per aggiungere una voce nuova: pannello →
+# "Vocabolario" (oppure dalla tabella, che ti chiede conferma).
+tecniche:
+  - "Acquerello su carta"
+  - "Acrilico su tela"
+  - "Olio su cartoncino telato"
+  - "Olio su cartone"
+  - "Olio su masonite"
+  - "Olio su tela"
+  - "Tempera su carta"
+tag:
+  - "2000"
+  - "2022"
+  - "2024"
+  - "2025"
+  - "2026"
+  - "acquerello"
+  - "acrilico"
+  - "caravaggio"
+  - "composizione"
+  - "cornici"
+  - "disegno"
+  - "miniatura"
+  - "natura-morta"
+  - "olio"
+  - "omaggio"
+  - "paesaggio"
+  - "ponte-arche"
+  - "progetto-grafico"
+  - "rango"
+  - "salvo"
+  - "sartori"
+  - "studio"
+  - "tecnica"
+  - "tempera"
+  - "teoria-del-colore"
+  - "trentino"
+  - "van-gogh"

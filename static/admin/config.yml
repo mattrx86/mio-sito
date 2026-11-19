@@ -91,7 +91,15 @@ collections:
         fields:
           - { name: type, label: Tipo, widget: hidden, default: VisualArtwork }
           - { name: artist, label: Autore, widget: hidden, default: Mattia Riccadonna }
-          - { name: medium, label: Tecnica, widget: string, hint: "Es. Olio su tela, Acrilico su tela, Acquerello su carta" }
+          - name: medium
+            label: Tecnica
+            widget: relation
+            collection: vocabolario
+            file: vocabolario
+            value_field: "tecniche.*"
+            search_fields: ["tecniche.*"]
+            display_fields: ["tecniche.*"]
+            hint: "Scegli dall'elenco (così non nascono varianti). Una tecnica nuova si aggiunge prima in Vocabolario."
           - { name: width, label: Larghezza (cm), widget: string, hint: "Solo il numero, es. 40 oppure 30.5" }
           - { name: height, label: Altezza (cm), widget: string, hint: "Solo il numero" }
           - { name: dateCreated, label: Anno, widget: string, pattern: ['^\d{4}$', "Quattro cifre, es. 2004"] }
@@ -158,8 +166,15 @@ collections:
         hint: "Le opere vecchie ce l'hanno (es. Radici — Olio su tela, 2002). Per le nuove lascialo vuoto."
       - name: tags
         label: Tag
-        widget: list
+        widget: relation
+        collection: vocabolario
+        file: vocabolario
+        value_field: "tag.*"
+        search_fields: ["tag.*"]
+        display_fields: ["tag.*"]
+        multiple: true
         required: false
+        hint: "Scegli dall'elenco. Un tag nuovo si aggiunge prima in Vocabolario."
       - name: miniatura_mosaico
         label: Foto ritagliata per gli elenchi (facoltativa)
         widget: image
@@ -234,3 +249,21 @@ collections:
       - { label: Anno, field: schema.dateCreated, pattern: "\\d{4}" }
     fields: *campi_opera
 
+  # Elenchi di tecniche e tag già usati: i campi "Tecnica" e "Tag" delle opere
+  # propongono solo queste voci, così non nascono varianti quasi uguali.
+  - name: vocabolario
+    label: Vocabolario (tecniche e tag)
+    icon: sell
+    files:
+      - name: vocabolario
+        label: Tecniche e tag
+        file: data/vocabolario.yml
+        fields:
+          - name: tecniche
+            label: Tecniche
+            widget: list
+            hint: "Una per riga, con la maiuscola iniziale, es. Olio su tela"
+          - name: tag
+            label: Tag
+            widget: list
+            hint: "Minuscolo, senza spazi: usa il trattino, es. natura-morta"

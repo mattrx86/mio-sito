@@ -4,7 +4,7 @@ image: "/img/archivio/la-porta-di-rango-5e7e9a5ce213.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
-  medium: "olio su tela"
+  medium: "Olio su tela"
   width: "40"
   height: "30"
   dateCreated: "2000"
@@ -16,7 +16,7 @@ title: "La porta di Rango"
 tags:
   - "olio"
   - "2000"
-  - "Rango"
+  - "rango"
   - "paesaggio"
 hideDate: true
 draft: false

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- La pagina maneggia il token: può caricare solo cose dal proprio sito e parlare solo con api.github.com -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src https://api.github.com; base-uri 'none'; form-action 'none'">
+<title>Tabella delle opere — Mattia Riccadonna</title>
+<link rel="icon" href="/favicon-48.png" sizes="48x48">
+<!--
+  Tabella per modificare in blocco i dati delle opere (anno, numero d'ordine,
+  tecnica, tag, collocazione...). Un solo file, senza programmi esterni: parla
+  soltanto con api.github.com usando il tuo token (lo stesso del pannello
+  /admin/, se hai già fatto l'accesso in questo browser). Tutte le modifiche
+  vengono salvate insieme in un solo commit, dopo che le hai riviste.
+-->
+<style>
+@font-face { font-family: "Figtree"; src: url("/fonts/figtree-latin-400-normal.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Figtree"; src: url("/fonts/figtree-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+:root { --marrone:#6E4B2E; --nero:#111; --grigio:#6b6b6b; --linea:#d9d4cd; --sfondo:#fbfaf8; --giallo:#fff4cc; --rosso:#b3261e; --arancio:#fde3c8; }
+* { box-sizing:border-box; }
+html,body { margin:0; background:var(--sfondo); color:var(--nero); font:15px/1.45 "Figtree",system-ui,-apple-system,"Segoe UI",sans-serif; }
+header.top { position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--linea); padding:.6rem 1rem; display:flex; flex-wrap:wrap; gap:.6rem 1rem; align-items:center; }
+header.top h1 { font-size:1.05rem; font-weight:600; margin:0 .5rem 0 0; }
+header.top a { color:var(--marrone); }
+button, select, input { font:inherit; color:inherit; }
+button { border:1px solid var(--marrone); background:#fff; color:var(--marrone); padding:.3rem .7rem; border-radius:4px; cursor:pointer; }
+button.primario { background:var(--marrone); color:#fff; }
+button:disabled { opacity:.45; cursor:not-allowed; }
+button.link { border:0; background:none; padding:0; text-decoration:underline; }
+.barra { display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; padding:.5rem 1rem; background:#fff; border-bottom:1px solid var(--linea); }
+.barra input[type=search], .barra select, .barra input[type=text], .barra input[type=number] { border:1px solid var(--linea); padding:.3rem .5rem; border-radius:4px; background:#fff; min-width:0; }
+.barra .sep { flex:1; }
+.stato { font-size:.9rem; color:var(--grigio); }
+.stato b { color:var(--nero); }
+#msg { margin:.6rem 1rem; padding:.6rem .8rem; border-radius:4px; display:none; white-space:pre-line; }
+#msg.ok { display:block; background:#e8f2e4; border:1px solid #b9d6b0; }
+#msg.err { display:block; background:#fbe7e5; border:1px solid #e6b3ae; }
+#msg.info { display:block; background:#eef1f6; border:1px solid #c9d1e0; }
+.login { max-width:30rem; margin:3rem auto; padding:1.2rem; background:#fff; border:1px solid var(--linea); border-radius:6px; }
+.login input { width:100%; padding:.45rem; margin:.5rem 0; border:1px solid var(--linea); border-radius:4px; }
+.tabwrap { overflow:auto; padding:0 1rem 5rem; }
+table { border-collapse:collapse; width:max-content; min-width:100%; background:#fff; }
+th, td { border:1px solid var(--linea); padding:.15rem .3rem; vertical-align:middle; font-size:.92rem; }
+th { position:sticky; top:0; background:#f1ede7; z-index:5; text-align:left; font-weight:600; white-space:nowrap; cursor:pointer; user-select:none; padding:.35rem .4rem; }
+th.nosort { cursor:default; }
+th .freccia { color:var(--marrone); margin-left:.2rem; }
+td input[type=text], td input[type=number], td select { width:100%; border:1px solid transparent; background:transparent; padding:.2rem .25rem; border-radius:3px; }
+td input:focus, td select:focus { border-color:var(--marrone); background:#fff; outline:none; }
+td.mod { background:var(--giallo); }
+td.mod input, td.mod select { background:var(--giallo); }
+td.errore input, td.errore select { border-color:var(--rosso); }
+td.avviso { background:var(--arancio); }
+td.num input { text-align:right; }
+td.img img { display:block; width:42px; height:42px; object-fit:cover; border-radius:2px; background:#eee; }
+td.chk, th.chk { text-align:center; width:2rem; }
+tr.sezione td { background:#f7f4ef; color:var(--marrone); font-weight:600; border-left:0; border-right:0; }
+tr.sel td { box-shadow:inset 0 0 0 9999px rgba(110,75,46,.06); }
+.col-titolo { min-width:16rem; } .col-tec { min-width:13rem; } .col-anno { width:5rem; } .col-ord { width:4.5rem; } .col-data { width:8.5rem; }
+.col-mis { width:4.5rem; } .col-coll { min-width:10.5rem; } .col-tag { min-width:15rem; }
+.tags { display:flex; flex-wrap:wrap; gap:.2rem; align-items:center; }
+.tag { background:#efe7de; color:var(--marrone); border-radius:3px; padding:0 .3rem; font-size:.84rem; white-space:nowrap; }
+.tag button { border:0; background:none; padding:0 0 0 .2rem; color:var(--marrone); font-size:.9rem; line-height:1; }
+.tags input { width:6.5rem !important; flex:0 0 auto; }
+.problemi { font-size:.8rem; color:var(--rosso); min-width:6rem; }
+.riepilogo { margin:.6rem 1rem; padding:.8rem 1rem; background:#fff; border:1px solid var(--marrone); border-radius:6px; }
+.riepilogo h2 { font-size:1rem; margin:.2rem 0 .5rem; }
+.riepilogo ul { margin:.3rem 0 .6rem; padding-left:1.1rem; max-height:16rem; overflow:auto; font-size:.9rem; }
+.riepilogo .vecchio { color:var(--grigio); text-decoration:line-through; }
+.nota { color:var(--grigio); font-size:.85rem; margin:.3rem 1rem; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1>Tabella delle opere</h1>
+  <a href="/admin/">← pannello opere</a>
+  <span class="stato" id="statoToken"></span>
+</header>
+
+<div id="msg"></div>
+
+<div id="loginBox" class="login" hidden>
+  <strong>Accesso</strong>
+  <p>Serve il token GitHub del pannello (permesso <em>Contents: Read and write</em> sul repository <code>mattrx86/mio-sito</code>). Resta solo in questa scheda del browser e si cancella quando la chiudi.</p>
+  <input type="password" id="tokenIn" placeholder="github_pat_…" autocomplete="off">
+  <button class="primario" id="tokenBtn">Entra</button>
+</div>
+
+<div id="app" hidden>
+  <div class="barra">
+    <input type="search" id="cerca" placeholder="Cerca titolo, tecnica, tag…" size="26">
+    <select id="fSez"><option value="">tutte le sezioni</option></select>
+    <select id="fAnno"><option value="">tutti gli anni</option></select>
+    <select id="fTec"><option value="">tutte le tecniche</option></select>
+    <label><input type="checkbox" id="fProb"> solo con problemi</label>
+    <label title="Mostra una riga d'intestazione per ogni sezione"><input type="checkbox" id="fRaggr" checked> raggruppa per sezione</label>
+    <span class="sep"></span>
+    <button id="btnCsv" title="Scarica una copia della tabella per Excel (non modifica nulla)">Scarica CSV</button>
+    <button id="btnRicarica" title="Rilegge i dati da GitHub (le modifiche non salvate vanno perse)">Ricarica</button>
+  </div>
+  <div class="barra" id="barraBulk">
+    <span class="stato"><b id="nSel">0</b> selezionate</span>
+    <select id="bAz">
+      <option value="">Azione sulle selezionate…</option>
+      <option value="tagAdd">Aggiungi tag</option>
+      <option value="tagDel">Togli tag</option>
+      <option value="tec">Imposta tecnica</option>
+      <option value="coll">Imposta collocazione</option>
+      <option value="anno">Imposta anno</option>
+      <option value="disp">Imposta disponibile</option>
+      <option value="bozza">Imposta bozza</option>
+      <option value="seq">Numera in sequenza (per anno)</option>
+    </select>
+    <span id="bVal"></span>
+    <button id="bApplica" disabled>Applica</button>
+    <span class="sep"></span>
+    <span class="stato"><b id="nMod">0</b> opere modificate</span>
+    <button id="btnAnnulla" disabled>Annulla tutto</button>
+    <button id="btnRivedi" class="primario" disabled>Rivedi e salva…</button>
+  </div>
+  <div id="riepilogo" hidden></div>
+  <div class="tabwrap">
+    <table id="tab"><thead></thead><tbody></tbody></table>
+  </div>
+  <p class="nota">Giallo = modificato, non ancora salvato. Rosso = valore non valido. Arancio = da controllare (data ripetuta, tecnica fuori elenco…). Clicca sull'intestazione di una colonna per ordinare. Invio sposta alla riga sotto.
+  L'ordine sul sito è per <em>data</em>, dalla più recente: cambiando «n°» o «anno» la data si aggiorna da sola (1 gennaio + n° − 1 giorni).</p>
+</div>
+
+<datalist id="dlTag"></datalist>
+
+<script src="/admin/tabella/tabella.js"></script>
+</body>
+</html>

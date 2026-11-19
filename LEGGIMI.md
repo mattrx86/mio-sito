@@ -36,6 +36,42 @@ Il token resta salvato solo in quel browser: usalo solo su dispositivi tuoi.
 Le note sono in Markdown "grezzo": le parti speciali restano come sono
 (es. `{.riquadro}` su una riga sotto un paragrafo = riquadro marrone).
 
+### Tecniche e tag: si sceglie dall'elenco (Vocabolario)
+I campi **Tecnica** e **Tag** delle opere non si scrivono a mano: si sceglie
+da un elenco (così non nascono varianti come «Olio su tela» / «olio su tela»
+o «Rango» / «rango»). L'elenco è nella voce **Vocabolario (tecniche e tag)**
+del pannello. Per una tecnica o un tag nuovo: apri il Vocabolario, aggiungi
+la voce (tecniche con la maiuscola iniziale, tag minuscoli con il trattino,
+es. `natura-morta`), **Salva**, poi usala nell'opera. L'elenco è il file
+`data/vocabolario.yml`.
+
+### La tabella: modifiche in blocco
+**https://mattiariccadonna.com/admin/tabella/** (salvala tra i preferiti; usa
+lo stesso accesso del pannello, se sei già entrato in quel browser, altrimenti
+chiede il token). Mostra tutte le opere in una griglia modificabile:
+titolo, tecnica, anno, n° nell'anno, data, misure, dove si trova, disponibile,
+tag, bozza.
+- Cambi una cella e diventa **gialla**. **Rosso** = valore non valido,
+  **arancio** = da controllare (due opere con la stessa data, tecnica o tag
+  fuori elenco).
+- **Cerca**, filtra per sezione, anno, tecnica o «solo con problemi»; clic
+  sull'intestazione di una colonna per ordinare. Invio scende alla riga sotto.
+- **Selezioni più righe** (casella a sinistra) e usi «Azione sulle selezionate»:
+  aggiungi/togli un tag, imposta tecnica, collocazione, anno, disponibile,
+  bozza, oppure **numera in sequenza** (n° 1, 2, 3… nell'ordine mostrato,
+  ricominciando a ogni anno; 1 = la prima dipinta: ordina prima per data
+  crescente).
+- L'ordine sul sito dipende dalla **data**: cambiando «n°» o «anno» la data si
+  aggiorna da sola (1 gennaio + n° − 1 giorni). Sul sito si vede solo l'anno.
+- **Rivedi e salva…** mostra l'elenco di tutto ciò che cambia (prima → dopo)
+  e fa **un solo salvataggio** su GitHub. Se nel frattempo un'opera è
+  cambiata altrove (es. dal pannello), non salva e ti chiede di ricaricare.
+- I tag nuovi li crea la tabella stessa, ma solo dopo la tua conferma, e se
+  sono quasi uguali a uno esistente ti propone quello.
+- **Scarica CSV** esporta una copia per Excel (non cambia nulla).
+- Sicurezza: la pagina può parlare solo con api.github.com (blocco nel
+  codice della pagina), il token resta nel browser, ed è esclusa da Google.
+
 ---
 
 ## 0. Caricamento massivo con il CSV
