@@ -15,7 +15,6 @@ seo_title: "La porta di Rango"
 title: "La porta di Rango"
 tags:
   - "olio"
-  - "2000"
   - "rango"
   - "paesaggio"
 hideDate: true

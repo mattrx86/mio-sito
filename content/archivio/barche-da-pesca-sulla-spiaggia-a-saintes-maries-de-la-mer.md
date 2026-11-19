@@ -6,7 +6,10 @@ date: 2000-01-01
 hideDate: true
 description: "Olio su cartoncino telato, 40x30 cm, 2000. Studio da un'opera di Van Gogh (paesaggio). Opera di Mattia Riccadonna. Collezione privata."
 image: "/img/archivio/barche-da-pesca-sulla-spiaggia-a-saintes-maries-de-la-mer.jpg"
-tags: ["olio", "van-gogh", "paesaggio", "2000"]
+tags:
+  - "olio"
+  - "van-gogh"
+  - "paesaggio"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"

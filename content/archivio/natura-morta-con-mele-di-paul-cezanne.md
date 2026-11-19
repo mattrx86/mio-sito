@@ -13,7 +13,6 @@ collocazione: "collezione dell'autore"
 disponibile: false
 description: "Natura morta con mele, riproduzione dell'opera di Paul Cezanne"
 tags:
-  - "2000"
   - "olio"
   - "natura-morta"
   - "studio"

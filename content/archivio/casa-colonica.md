@@ -18,7 +18,6 @@ tags:
   - "olio"
   - "van-gogh"
   - "paesaggio"
-  - "2000"
 hideDate: true
 draft: false
 ---
