@@ -24,7 +24,6 @@ schema:
 olio su tela  
 30,5x45 cm  
 2024  
-studio da Salvo  
 collezione dell'autore
 {.info-opera}
 

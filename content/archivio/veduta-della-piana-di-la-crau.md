@@ -21,7 +21,6 @@ schema:
 olio su cartoncino telato  
 40x30 cm  
 2000  
-studio da Van Gogh  
 collezione privata
 {.info-opera}
 

@@ -21,7 +21,6 @@ schema:
 olio su cartone  
 17,3x24,4 cm  
 2025  
-studio da Salvo  
 collezione dell'autore
 {.info-opera}
 

@@ -379,8 +379,6 @@ def genera_pagina(d: dict, sez: str, nome_img: str, w: float, h: float, anno: in
     # etichette (tecnica, misure, anno, ...), con la classe "info-opera";
     # poi le note dell'opera come testo normale
     righe = [tec_low, f"{fmt_it(w)}x{fmt_it(h)} cm", str(anno)]
-    if autore_orig:
-        righe.append(f"studio da {autore_orig}")
     if coautori:
         righe.append(f"con {', '.join(coautori)}")
     if colloc and colloc != "in vendita":
