@@ -28,14 +28,15 @@ media_libraries:
     config:
       max_file_size: 31457280
       slugify_filename: true
+      # misure prudenti: il salvataggio invia la foto a GitHub in una sola richiesta; sopra ~2 MB può fallire ("Failed to fetch") soprattutto da telefono
       # foto rinominate come l'opera + codice breve: niente sovrascritture tra file con lo stesso nome
       filename_template: "{{slug}}-{{uuid_short}}"
       transformations:
         raster_image:
           format: webp
-          quality: 90
-          width: 2560
-          height: 2560
+          quality: 82
+          width: 1800
+          height: 1800
 
 # File scritti dal pannello: niente campi vuoti, testi tra virgolette doppie
 output:
