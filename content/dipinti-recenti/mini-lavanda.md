@@ -1,16 +1,6 @@
 ---
-title: "Lavanda — miniatura 30x30 mm — acquerello su carta, 2022"
-seo_title: "Lavanda: miniatura ad acquerello 30x30 mm, 2022"
-heading: "mini — lavanda"
-date: 2022-07-14
-hideDate: true
-disponibile: true
-description: "Acquerello su carta, 30x30 mm, 2022. Miniatura di un edificio arancione in un campo di lavanda, dipinta con pennelli finissimi e pochissima acqua."
-image: "/img/dipinti-recenti/miniatura-lavanda.jpg"
-miniatura_mosaico: "/img/dipinti-recenti/miniatura-lavanda-mosaico.jpg"
-tags:
-  - "acquerello"
-  - "miniatura"
+heading: "lavanda"
+image: "/img/dipinti-recenti/mini-lavanda-693d2b12d30b.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
@@ -18,11 +8,22 @@ schema:
   width: "3"
   height: "3"
   dateCreated: "2022"
+date: "2022-07-14"
 collocazione: "disponibile in studio"
-misure: "30x30 mm"
+disponibile: true
 foto_aggiuntive:
   - foto: "/img/dipinti-recenti/miniatura-lavanda-dettaglio.jpg"
     descrizione: "Miniatura lavanda, dettaglio miniatura"
+misure: "30x30 mm"
+description: "Acquerello su carta, 30x30 mm, 2022. Miniatura di un edificio arancione in un campo di lavanda, dipinta con pennelli finissimi e pochissima acqua."
+seo_title: "Lavanda: miniatura ad acquerello 30x30 mm, 2022"
+title: "Lavanda — miniatura 30x30 mm — acquerello su carta, 2022"
+tags:
+  - "acquerello"
+  - "miniatura"
+miniatura_mosaico: "/img/dipinti-recenti/miniatura-lavanda-mosaico.jpg"
+hideDate: true
+draft: false
 ---
 
-Lavoro di dimensioni 30 x 30 millimetri realizzato su foglio di carta da acquerello. Lavorando con dosi di acqua contenutissime e pennelli molto fini il maggiore ostacolo sono i tempi molto ristretti causati dalla rapida evaporazione del colore sul pennello.  
+Lavoro di dimensioni 30 x 30 millimetri realizzato su foglio di carta da acquerello. Lavorando con dosi di acqua contenutissime e pennelli molto fini il maggiore ostacolo sono i tempi molto ristretti causati dalla rapida evaporazione del colore sul pennello.
