@@ -380,9 +380,9 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 /* informazioni sotto la foto: una per riga, a sinistra, senza etichette */
 /* pallino di disponibilità sotto la foto (layouts/partials/opera-testata.html) */
 p.stato-opera { margin: -0.8rem 0 0.2rem; text-align: right; line-height: 1; }
-.stato-punto { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; }
-.stato-punto--no { background: #b3392b; opacity: 0.85; }
-.stato-punto--si { background: #fff; box-shadow: 0 0 0 1.5px #6E4B2E; }
+.stato-punto { display: inline-block; width: 8px; height: 8px; border-radius: 50%; vertical-align: middle; box-shadow: 0 0 0 1.5px #1a1a1a; }
+.stato-punto--no { background: #b3392b; }
+.stato-punto--si { background: #fff; }
 p.info-opera { margin: 0.6rem 0 1rem; line-height: 1.5; color: #595959; font-size: 0.95rem; }
 /* opera precedente / successiva */
 .navquadro { display: flex; justify-content: space-between; margin: 1rem 0 2rem; font-family: monospace; font-size: 15px; }
