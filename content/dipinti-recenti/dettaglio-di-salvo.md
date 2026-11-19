@@ -6,7 +6,10 @@ date: 2025-01-01
 hideDate: true
 description: "Olio su cartone, 17,3x24,4 cm, 2025. Studio da un'opera di Salvo (paesaggio). Opera di Mattia Riccadonna. Collezione dell'autore."
 image: "/img/dipinti-recenti/dettaglio-di-salvo.jpg"
-tags: ["olio", "salvo", "paesaggio", "2025"]
+tags:
+  - "olio"
+  - "salvo"
+  - "paesaggio"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"

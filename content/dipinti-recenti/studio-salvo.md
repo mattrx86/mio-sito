@@ -17,7 +17,6 @@ tags:
   - "olio"
   - "salvo"
   - "paesaggio"
-  - "2025"
 hideDate: true
 draft: false
 ---

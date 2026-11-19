@@ -18,7 +18,6 @@ title: "Risveglio alpino — Olio su tela, 2025"
 tags:
   - "olio"
   - "paesaggio"
-  - "2025"
 hideDate: true
 draft: false
 ---

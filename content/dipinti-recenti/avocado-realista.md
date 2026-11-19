@@ -20,7 +20,6 @@ title: "Avocado realista! — Olio su masonite, 2025"
 tags:
   - "olio"
   - "natura-morta"
-  - "2025"
 hideDate: true
 draft: false
 ---

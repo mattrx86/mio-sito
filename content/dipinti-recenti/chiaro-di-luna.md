@@ -6,7 +6,9 @@ date: 2025-07-14
 hideDate: true
 description: "Olio su tela, 30x50 cm, 2025. Paesaggio notturno trentino con chiesa, ispirato a Salvo. Esposto al Premio d'Arte Giulio Riccadonna di Rango 2025."
 image: "/img/dipinti-recenti/chiaro-di-luna.jpg"
-tags: ["olio", "paesaggio", "2025"]
+tags:
+  - "olio"
+  - "paesaggio"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"

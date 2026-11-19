@@ -6,7 +6,10 @@ date: 2024-01-01
 hideDate: true
 description: "Olio su tela, 30,5x45 cm, 2024. Studio da un'opera di Salvo (paesaggio). Opera di Mattia Riccadonna. Collezione dell'autore."
 image: "/img/dipinti-recenti/omaggio-a-salvo.jpg"
-tags: ["olio", "salvo", "paesaggio", "2024"]
+tags:
+  - "olio"
+  - "salvo"
+  - "paesaggio"
 cornice:
   larghezza: 33
   altezza: 48

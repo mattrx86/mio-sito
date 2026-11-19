@@ -6,7 +6,9 @@ date: 2024-09-22
 hideDate: true
 description: "Olio su tela, 35x40 cm, 2024. Paesaggio metafisico tra Bleggio e Lomaso, ispirato a Peter Batchelder e Hopper. Collezione privata."
 image: "/img/dipinti-recenti/paesaggio.jpg"
-tags: ["olio", "paesaggio", "2024"]
+tags:
+  - "olio"
+  - "paesaggio"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"

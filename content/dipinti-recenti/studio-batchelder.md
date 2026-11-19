@@ -17,7 +17,6 @@ title: "Studio opera da P. Batchelder — Olio su tela, 2025"
 tags:
   - "olio"
   - "paesaggio"
-  - "2025"
 hideDate: true
 draft: false
 ---

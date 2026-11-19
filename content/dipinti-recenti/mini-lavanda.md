@@ -8,7 +8,9 @@ disponibile: true
 description: "Acquerello su carta, 30x30 mm, 2022. Miniatura di un edificio arancione in un campo di lavanda, dipinta con pennelli finissimi e pochissima acqua."
 image: "/img/dipinti-recenti/miniatura-lavanda.jpg"
 miniatura_mosaico: "/img/dipinti-recenti/miniatura-lavanda-mosaico.jpg"
-tags: ["acquerello", "miniatura", "2022"]
+tags:
+  - "acquerello"
+  - "miniatura"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"

@@ -17,7 +17,6 @@ title: "Luce mattutina — Olio su tela, 2024"
 tags:
   - "olio"
   - "paesaggio"
-  - "2024"
 hideDate: true
 draft: false
 ---
