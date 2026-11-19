@@ -264,3 +264,21 @@ ritaglio, didascalia piccola sotto). Una riga per foto:
 /img/taccuino/studio/b.jpg | Chiaro di luna sul cavalletto con il disegno a vista | chiaro di luna sul cavalletto
 {{< /trittico >}}
 ```
+
+## Il pannello /admin/ non dipende da servizi esterni
+
+Il pannello (Sveltia CMS 0.269.2) di norma scarica a ogni uso alcune librerie e i font da unpkg.com e cdn.jsdelivr.net. Qui sono invece copiati sul sito, in `static/admin/vendor/`:
+
+- librerie: encoder WebP (@jsquash/webp 1.5.0 con i file `.wasm`), exifr 7.1.3, immutable 5.2.1, dayjs 1.11.23 (solo locale `it` e `en`), turndown 7.2.5, transliterate 3.1.0 (preparate con esbuild dai pacchetti npm originali);
+- font: Source Sans 3, Noto Mono, Material Symbols;
+- traduzioni: `locales/it.json` e `locales/en-GB.json`.
+
+Modifiche fatte a `static/admin/sveltia-cms.js` (tutto il resto è il file originale, identico al pacchetto npm):
+1. la funzione `qc` punta a `/admin/vendor/…` per le librerie elencate sopra;
+2. i tre URL dei font e la cartella `locales` puntano a `/admin/vendor/…`;
+3. il controllo "nuova versione disponibile" è disattivato;
+4. l'evidenziatore di codice (che caricava uno script da unpkg) è disattivato.
+
+Resta una sola richiesta esterna: lo stato di GitHub (`githubstatus.com`, solo dati). Funzioni rare (importare file HEIC, PDF, SVG ottimizzati, mappe) caricano ancora da unpkg: non usate in questo sito.
+
+**Se un giorno aggiorni Sveltia** (nuova versione di `sveltia-cms.js`), vanno rifatti i 4 punti sopra e riscaricate le librerie alle versioni indicate nel nuovo file (mappa `Are`).
