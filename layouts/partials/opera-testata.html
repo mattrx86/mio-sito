@@ -41,6 +41,19 @@
   {{- end -}}
 {{- end }}
 
+{{- /* pallino di disponibilità, in basso a destra sotto la foto:
+       bianco con bordo = disponibile, rosso = non disponibile.
+       Piccoli quadri: conta lo stato della vendita; altre opere: "disponibile" del frontmatter */ -}}
+{{- $disp := false -}}
+{{- with $p.Params.vendita -}}
+  {{- $disp = eq (.stato | default "disponibile") "disponibile" -}}
+{{- else -}}
+  {{- $disp = $p.Params.disponibile | default false -}}
+{{- end -}}
+{{- if $p.Params.image }}
+<p class="stato-opera"><span class="stato-punto {{ if $disp }}stato-punto--si{{ else }}stato-punto--no{{ end }}" role="img" aria-label="{{ if $disp }}Opera disponibile{{ else }}Opera non disponibile{{ end }}" title="{{ if $disp }}disponibile{{ else }}non disponibile{{ end }}"></span></p>
+{{- end }}
+
 {{- /* informazioni essenziali, una per riga */ -}}
 {{- $righe := slice -}}
 {{- with $tecnica }}{{ $righe = $righe | append . }}{{ end -}}
