@@ -20,6 +20,10 @@
             {{ .TableOfContents }}
         </aside>
     {{ end }}
+    {{- /* opere: foto, informazioni e precedente/successiva vengono dal frontmatter */}}
+    {{- if and (in (slice "archivio" "dipinti-recenti" "piccoli-quadri") .Section) .Params.image .Params.schema }}
+    {{ partial "opera-testata.html" . }}
+    {{- end }}
     {{ .Content }}
     {{- /* copia d'autore: il titolo finisce con l'asterisco */}}
     {{- if strings.HasSuffix (trim (.Params.heading | default "") " ") "*" }}

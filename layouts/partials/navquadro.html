@@ -1,0 +1,11 @@
+{{- /* Opera precedente / successiva nella stessa sezione. Uso: partial "navquadro.html" .Page */ -}}
+{{ if or .PrevInSection .NextInSection }}
+<nav class="navquadro" aria-label="Altre opere">
+    {{ if .NextInSection }}
+    <a href="{{ .NextInSection.RelPermalink }}" rel="prev">&lt; precedente</a>
+    {{ else }}<span></span>{{ end }}
+    {{ if .PrevInSection }}
+    <a href="{{ .PrevInSection.RelPermalink }}" rel="next">successivo &gt;</a>
+    {{ else }}<span></span>{{ end }}
+</nav>
+{{ end }}

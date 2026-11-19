@@ -8,7 +8,37 @@ Tutto si può fare **da browser** su https://github.com/mattrx86/mio-sito
 
 ---
 
-## 0. Il modo più veloce: caricamento massivo
+## Il modo più comodo: il pannello delle opere
+
+Apri **https://mattiariccadonna.com/admin/** (meglio da computer, funziona
+anche da telefono). Vedi tutte le opere di archivio, dipinti recenti e
+piccoli quadri con le miniature: cerchi, filtri (olio, acrilico, acquerello,
+copie d'autore, disponibili), ordini per data, titolo o anno e raggruppi
+per anno. Apri un'opera, cambi quello che serve, **Salva**: il sito si
+aggiorna da solo in 1-2 minuti. Con **Nuovo** crei un'opera da zero
+caricando la foto dal pannello: viene convertita in WebP, ridotta a 2560 px
+e ripulita dai dati EXIF/GPS.
+
+Accesso: **Accedi con token** e incolla il tuo token GitHub (vedi sotto).
+Il token resta salvato solo in quel browser: usalo solo su dispositivi tuoi.
+
+### Creare il token GitHub (una volta sola)
+1. github.com → foto profilo → **Settings** → **Developer settings** →
+   **Personal access tokens** → **Fine-grained tokens** → **Generate new token**.
+2. Nome: `pannello sito`. Scadenza: 1 anno (poi lo rigeneri).
+3. **Repository access → Only select repositories → mattrx86/mio-sito**.
+4. **Permissions → Repository permissions → Contents: Read and write**
+   (Metadata: Read-only si attiva da solo).
+5. **Generate token**, copialo subito (non viene più mostrato) e incollalo
+   nel pannello. Se lo perdi o temi che qualcuno l'abbia visto: GitHub →
+   stessa pagina → **Revoke**, poi ne crei un altro.
+
+Le note sono in Markdown "grezzo": le parti speciali restano come sono
+(es. `{.riquadro}` su una riga sotto un paragrafo = riquadro marrone).
+
+---
+
+## 0. Caricamento massivo con il CSV
 
 Per aggiungere tante opere insieme: compila `importa/opere.csv` (una riga
 per opera) e carica CSV e foto nella cartella `importa/`. Il sito crea da

@@ -14,17 +14,9 @@ schema:
   width: "50"
   height: "30"
   dateCreated: "2004"
+collocazione: "collezione dell'autore"
+misure: "30x50 cm"
 ---
-
-![Catenaccio a Villa Banale, olio su tela 30x50 cm, Mattia Riccadonna, 2004](/img/archivio/catenaccio-villa-banale.jpg)
-
-olio su tela  
-30x50 cm  
-2004  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 **Cosa succedeva nel 2004?**  
 `MSN Messenger` era il social network. Il telefonino era il Nokia 6600 e si ascoltava *Boulevard of Broken Dreams*

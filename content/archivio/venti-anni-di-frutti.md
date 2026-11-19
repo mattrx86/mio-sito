@@ -13,17 +13,9 @@ schema:
   width: "70"
   height: "50"
   dateCreated: "2002"
+collocazione: "collezione dell'autore"
+misure: "50x70 cm"
 ---
-
-![Vent'anni di frutti, olio su tela 50x70 cm, Mattia Riccadonna, 2002](/img/archivio/venti-anni-frutti.jpg)
-
-olio su tela  
-50x70 cm  
-2002  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 **Cosa succedeva nel 2002?**  
 Nel gennaio 2002 entrarono ufficialmente in circolazione le banconote e monete in euro. Gli SMS diventavano un fenomeno di massa.

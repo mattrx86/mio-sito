@@ -230,3 +230,10 @@
   for = "/index.xml"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# Pannello delle opere (/admin/): mai nei risultati di Google, sempre la versione aggiornata
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "no-cache"

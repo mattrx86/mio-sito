@@ -15,19 +15,10 @@ schema:
   width: "12"
   height: "12"
   dateCreated: "2025"
+collocazione: "disponibile"
+foto_aggiuntive:
+  - foto: "/img/dipinti-recenti/avocado-2.jpg"
+    descrizione: "Avocado realista, cornice"
 ---
-
-{{< galleria >}}
-/img/dipinti-recenti/avocado-1.jpg | Avocado realista, vista frontale
-/img/dipinti-recenti/avocado-2.jpg | Avocado realista, cornice
-{{< /galleria >}}
-
-olio su masonite  
-12x12 cm  
-2025  
-disponibile
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera realizzata su supporto creato incollando foglio di giornale su pannello in legno di masonite e utilizzandolo come base per la pittura ad olio

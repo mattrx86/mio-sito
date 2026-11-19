@@ -14,17 +14,8 @@ schema:
   width: "30"
   height: "50"
   dateCreated: "2025"
+collocazione: "collezione privata"
 ---
-
-![Chiaro di Luna, olio su tela 30x50 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/chiaro-di-luna.jpg)
-
-olio su tela  
-30x50 cm  
-2025  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concorsi/#premio-rango-2025) il 26 luglio 2025
 

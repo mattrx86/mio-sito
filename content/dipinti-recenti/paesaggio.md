@@ -14,16 +14,8 @@ schema:
   width: "40"
   height: "35"
   dateCreated: "2024"
+collocazione: "collezione privata"
+misure: "35x40 cm"
 ---
-
-![Senza titolo, olio su tela 35x40 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/paesaggio.jpg)
-
-olio su tela  
-35x40 cm  
-2024  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera con forme giudicariesi, vagamente ispirato all'opera di Hopper e Batchelder

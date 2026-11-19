@@ -14,14 +14,5 @@ schema:
   width: "40"
   height: "30"
   dateCreated: "2000"
+collocazione: "collezione privata"
 ---
-
-![Veduta della piana di La Crau, studio da Van Gogh, olio su cartoncino telato 40x30 cm, Mattia Riccadonna, 2000](/img/archivio/veduta-della-piana-di-la-crau.jpg)
-
-olio su cartoncino telato  
-40x30 cm  
-2000  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}

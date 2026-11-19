@@ -13,17 +13,9 @@ schema:
   width: "70"
   height: "50"
   dateCreated: "2003"
+collocazione: "collezione privata"
+misure: "50x70 cm"
 ---
-
-![Ricordi, olio su tela 50x70 cm, Mattia Riccadonna, 2003](/img/archivio/ricordi.jpg)
-
-olio su tela  
-50x70 cm  
-2003  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}
 
 **Cosa succedeva nel 2003?**  
 Avevo il Nokia 3310. nelle sale usciva *Il `Signore degli Anelli` — Il ritorno del re*. Ibrahimović era appena arrivato alla Juve dall'Ajax.

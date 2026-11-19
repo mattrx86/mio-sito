@@ -1,0 +1,236 @@
+# Pannello delle opere: mattiariccadonna.com/admin/
+# Ogni salvataggio diventa un commit su GitHub e Netlify ripubblica il sito
+# in un paio di minuti. Guida: LEGGIMI.md, sezione "Pannello delle opere".
+
+backend:
+  name: github
+  repo: mattrx86/mio-sito
+  branch: main
+  commit_messages:
+    create: "Pannello: nuova opera {{slug}}"
+    update: "Pannello: modificata {{slug}}"
+    delete: "Pannello: eliminata {{slug}}"
+    uploadMedia: "Pannello: caricata {{path}}"
+    deleteMedia: "Pannello: eliminata {{path}}"
+
+site_url: https://mattiariccadonna.com
+display_url: https://mattiariccadonna.com
+logo:
+  src: /favicon-96.png
+
+media_folder: static/img
+public_folder: /img
+
+# Foto caricate: convertite in WebP (qualità 90), lato lungo max 2560 px.
+# La conversione ricrea l'immagine e quindi elimina i dati EXIF (GPS compreso).
+media_libraries:
+  default:
+    config:
+      max_file_size: 31457280
+      slugify_filename: true
+      # foto rinominate come l'opera + codice breve: niente sovrascritture tra file con lo stesso nome
+      filename_template: "{{slug}}-{{uuid_short}}"
+      transformations:
+        raster_image:
+          format: webp
+          quality: 90
+          width: 2560
+          height: 2560
+
+# File scritti dal pannello: niente campi vuoti, testi tra virgolette doppie
+output:
+  omit_empty_optional_fields: true
+  yaml:
+    quote: double
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+collections:
+  - name: dipinti-recenti
+    label: Dipinti recenti
+    label_singular: "dipinto"
+    folder: content/dipinti-recenti
+    media_folder: /static/img/dipinti-recenti
+    public_folder: /img/dipinti-recenti
+    preview_path: /dipinti-recenti/{{slug}}/
+    identifier_field: heading
+    slug: "{{heading}}"
+    summary: "{{heading}} · {{schema.medium}} · {{schema.dateCreated}}"
+    thumbnail: image
+    create: true
+    delete: true
+    sortable_fields:
+      - { field: date, label: Data, default_sort: desc }
+      - { field: heading, label: Titolo }
+      - { field: schema.dateCreated, label: Anno }
+    view_filters:
+      - { label: Olio, field: schema.medium, pattern: "[Oo]lio" }
+      - { label: Acrilico, field: schema.medium, pattern: "[Aa]crilic" }
+      - { label: Acquerello, field: schema.medium, pattern: "[Aa]cquerell" }
+      - { label: "Copie d'autore", field: heading, pattern: "\\*$" }
+      - { label: Disponibili, field: disponibile, pattern: true }
+    view_groups:
+      - { label: Anno, field: schema.dateCreated, pattern: "\\d{4}" }
+    # campi di un'opera: definiti qui e riusati nelle altre sezioni (*campi_opera)
+    fields: &campi_opera
+      - name: heading
+        label: Titolo
+        widget: string
+        hint: "In minuscolo, come le altre opere. Per una copia d'autore aggiungi * in fondo, es. casa colonica*"
+      - name: image
+        label: Foto principale
+        widget: image
+        hint: "Il quadro dritto, con un po' di margine. Viene convertita e ridotta in automatico."
+      - name: schema
+        label: Dati dell'opera
+        widget: object
+        collapsed: false
+        fields:
+          - { name: type, label: Tipo, widget: hidden, default: VisualArtwork }
+          - { name: artist, label: Autore, widget: hidden, default: Mattia Riccadonna }
+          - { name: medium, label: Tecnica, widget: string, hint: "Es. Olio su tela, Acrilico su tela, Acquerello su carta" }
+          - { name: width, label: Larghezza (cm), widget: string, hint: "Solo il numero, es. 40 oppure 30.5" }
+          - { name: height, label: Altezza (cm), widget: string, hint: "Solo il numero" }
+          - { name: dateCreated, label: Anno, widget: string, pattern: ['^\d{4}$', "Quattro cifre, es. 2004"] }
+      - name: date
+        label: Data (ordine sul sito)
+        widget: datetime
+        date_format: YYYY-MM-DD
+        time_format: false
+        format: YYYY-MM-DD
+        hint: "Le opere sono mostrate dalla più recente. Se non sai il giorno, metti l'anno e un giorno qualsiasi: serve solo per l'ordine."
+      - name: collocazione
+        label: Dove si trova
+        widget: select
+        required: false
+        options: ["collezione dell'autore", "collezione privata", "disponibile", "disponibile in studio"]
+      - name: disponibile
+        label: Disponibile (pallino negli elenchi)
+        widget: boolean
+        required: false
+      - name: body
+        label: Note e storia dell'opera
+        widget: markdown
+        modes: [raw]
+        required: false
+        hint: "Testo sotto le informazioni. Per il riquadro marrone scrivi il paragrafo e sotto, su una riga, {.riquadro}"
+      - name: foto_aggiuntive
+        label: Altre foto (dettagli, retro, cornice)
+        widget: list
+        required: false
+        collapsed: true
+        fields:
+          - { name: foto, label: Foto, widget: image }
+          - { name: descrizione, label: Descrizione, widget: string, required: false }
+      - name: misure
+        label: Misure scritte a mano (facoltativo)
+        widget: string
+        required: false
+        hint: "Solo se vuoi un testo diverso da larghezza x altezza, es. 30x30 mm"
+      - name: vendita
+        label: Vendita online (facoltativo)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: stato, label: Stato, widget: select, options: [disponibile, riservato, venduto], default: disponibile }
+          - { name: prezzo, label: Prezzo (€), widget: number, value_type: int, required: false }
+          - { name: link_pagamento, label: Link di pagamento Stripe, widget: string, required: false, hint: "Deve iniziare con https://buy.stripe.com/" }
+          - { name: spedizione, label: Nota sulla spedizione, widget: string, required: false }
+      - name: description
+        label: Descrizione per Google (facoltativa)
+        widget: text
+        required: false
+        maxlength: 160
+        hint: "Se la lasci vuota viene scritta in automatico da tecnica, misure e anno."
+      - name: seo_title
+        label: Titolo per Google (facoltativo)
+        widget: string
+        required: false
+        maxlength: 65
+      - name: title
+        label: Titolo completo (vecchio formato, facoltativo)
+        widget: string
+        required: false
+        hint: "Le opere vecchie ce l'hanno (es. Radici — Olio su tela, 2002). Per le nuove lascialo vuoto."
+      - name: tags
+        label: Tag
+        widget: list
+        required: false
+      - name: miniatura_mosaico
+        label: Foto ritagliata per gli elenchi (facoltativa)
+        widget: image
+        required: false
+      - name: cornice
+        label: Cornice, misure esterne (facoltativo)
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - { name: larghezza, label: Larghezza (cm), widget: number, value_type: float, required: false }
+          - { name: altezza, label: Altezza (cm), widget: number, value_type: float, required: false }
+      - name: ordine
+        label: Numero d'ordine nell'anno (facoltativo)
+        widget: number
+        value_type: int
+        required: false
+      - { name: hideDate, label: Nascondi data, widget: hidden, default: true }
+      - { name: draft, label: Bozza (non pubblicata), widget: boolean, required: false }
+
+  - name: archivio
+    label: Archivio
+    label_singular: "opera d'archivio"
+    folder: content/archivio
+    media_folder: /static/img/archivio
+    public_folder: /img/archivio
+    preview_path: /archivio/{{slug}}/
+    identifier_field: heading
+    slug: "{{heading}}"
+    summary: "{{heading}} · {{schema.medium}} · {{schema.dateCreated}}"
+    thumbnail: image
+    create: true
+    delete: true
+    sortable_fields:
+      - { field: date, label: Data, default_sort: desc }
+      - { field: heading, label: Titolo }
+      - { field: schema.dateCreated, label: Anno }
+    view_filters:
+      - { label: Olio, field: schema.medium, pattern: "[Oo]lio" }
+      - { label: Acrilico, field: schema.medium, pattern: "[Aa]crilic" }
+      - { label: Acquerello, field: schema.medium, pattern: "[Aa]cquerell" }
+      - { label: "Copie d'autore", field: heading, pattern: "\\*$" }
+      - { label: Disponibili, field: disponibile, pattern: true }
+    view_groups:
+      - { label: Anno, field: schema.dateCreated, pattern: "\\d{4}" }
+    fields: *campi_opera
+
+  - name: piccoli-quadri
+    label: Piccoli quadri (in vendita)
+    label_singular: "piccolo quadro"
+    folder: content/piccoli-quadri
+    media_folder: /static/img/piccoli-quadri
+    public_folder: /img/piccoli-quadri
+    preview_path: /piccoli-quadri/{{slug}}/
+    identifier_field: heading
+    slug: "{{heading}}"
+    summary: "{{heading}} · {{schema.medium}} · {{schema.dateCreated}}"
+    thumbnail: image
+    create: true
+    delete: true
+    sortable_fields:
+      - { field: date, label: Data, default_sort: desc }
+      - { field: heading, label: Titolo }
+      - { field: schema.dateCreated, label: Anno }
+    view_filters:
+      - { label: Olio, field: schema.medium, pattern: "[Oo]lio" }
+      - { label: Acrilico, field: schema.medium, pattern: "[Aa]crilic" }
+      - { label: Acquerello, field: schema.medium, pattern: "[Aa]cquerell" }
+      - { label: "Copie d'autore", field: heading, pattern: "\\*$" }
+      - { label: Disponibili, field: disponibile, pattern: true }
+    view_groups:
+      - { label: Anno, field: schema.dateCreated, pattern: "\\d{4}" }
+    fields: *campi_opera
+

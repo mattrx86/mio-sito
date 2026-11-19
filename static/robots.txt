@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
 Sitemap: https://mattiariccadonna.com/sitemap.xml
 Sitemap: https://mattiariccadonna.com/sitemap-images.xml

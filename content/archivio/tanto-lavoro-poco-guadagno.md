@@ -14,16 +14,8 @@ schema:
   width: "70"
   height: "50"
   dateCreated: "2001"
+collocazione: "collezione dell'autore"
+misure: "50x70 cm"
 ---
-
-![Tanta fatica e poco guadagno, olio su tela 50x70 cm, Mattia Riccadonna, 2001](/img/archivio/tanto-lavoro-poco-guadagno.jpg)
-
-olio su tela  
-50x70 cm  
-2001  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera eseguita a scopo di studio e pratica pittorica. Soggetto originale di Carlo Sartori. Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.

@@ -14,16 +14,7 @@ schema:
   width: "17.3"
   height: "24.4"
   dateCreated: "2025"
+collocazione: "collezione dell'autore"
 ---
-
-![Dettaglio di Salvo: paesaggio, olio su cartone 17,3x24,4 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/dettaglio-di-salvo.jpg)
-
-olio su cartone  
-17,3x24,4 cm  
-2025  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera realizzata studiando un quadro di Salvatore Mangione (Salvo) con lo scopo di mero esercizio pittorico. L'opera consiste in una copia d'autore privata, non in vendita.

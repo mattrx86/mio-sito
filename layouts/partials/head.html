@@ -18,10 +18,28 @@
          se il titolo lo contiene già
        ================================================================ */ -}}
   {{- $label := .Title -}}
+  {{- /* opere create dal pannello /admin/: hanno solo titolo e dati dell'opera,
+         titolo e descrizione per Google vengono composti qui */ -}}
+  {{- $operaAuto := and $isArtwork (not .Params.title) -}}
+  {{- $operaNome := "" -}}{{- $operaRiga := "" -}}
+  {{- if $operaAuto -}}
+    {{- $operaNome = trim (replace (.Params.heading | default "") "*" "") " " -}}
+    {{- $operaNome = printf "%s%s" (upper (substr $operaNome 0 1)) (substr $operaNome 1) -}}
+    {{- $s := .Params.schema -}}
+    {{- $w := partial "numero-cm.html" $s.width -}}{{- $h := partial "numero-cm.html" $s.height -}}
+    {{- $mis := .Params.misure | default "" -}}
+    {{- if and (not $mis) (gt $w 0.0) (gt $h 0.0) -}}{{- $mis = replace (printf "%gx%g cm" $w $h) "." "," -}}{{- end -}}
+    {{- $operaRiga = trim (printf "%s %s" (lower ($s.medium | default "")) $mis) " " -}}
+    {{- $label = $operaNome -}}
+  {{- end -}}
   {{- if eq .Kind "term" -}}{{- $label = printf "%s — opere e appunti" (humanize .Data.Term) -}}{{- end -}}
   {{- if eq .Kind "404" -}}{{- $label = "Pagina non trovata" -}}{{- end -}}
   {{- $ogTitle := $label -}}
   {{- with .Params.seo_title -}}{{- $ogTitle = . -}}{{- end -}}
+  {{- if and $operaAuto (not .Params.seo_title) $operaRiga -}}
+    {{- $cand := printf "%s: %s" $operaNome $operaRiga -}}
+    {{- if le (len $cand) 65 -}}{{- $ogTitle = $cand -}}{{- $label = $cand -}}{{- end -}}
+  {{- end -}}
   {{- if .IsHome -}}{{- $ogTitle = site.Params.seo_title | default site.Title -}}{{- end -}}
   {{- $title := $ogTitle -}}
   {{- if and (not .IsHome) (not .Params.seo_title) (not (in $label $brand)) -}}
@@ -42,6 +60,8 @@
       {{- $desc = site.Params.description -}}
     {{- else if eq .Kind "term" -}}
       {{- $desc = printf "Opere e appunti di %s con il tag «%s»." $brand (humanize .Data.Term) -}}
+    {{- else if $operaAuto -}}
+      {{- $desc = printf "%s, %v. %s %s." (strings.FirstUpper $operaRiga) (.Params.schema.dateCreated | default (.Date.Format "2006")) (cond (strings.HasSuffix (trim (.Params.heading | default "") " ") "*") "Copia d'autore dipinta da" "Opera di") $brand -}}
     {{- else if .IsPage -}}
       {{- $desc = .Summary | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `^\s+|\s+$` "" | truncate 155 -}}
     {{- else -}}
@@ -168,6 +188,7 @@
     {{- if $isArtwork -}}
       {{- $s := .Params.schema -}}
       {{- $name := $s.name | default (index (split .Title " — ") 0) -}}
+      {{- if $operaAuto -}}{{- $name = $s.name | default $operaNome -}}{{- end -}}
       {{- $art := dict
           "@type" "VisualArtwork"
           "@id" (printf "%s#opera" .Permalink)

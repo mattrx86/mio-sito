@@ -14,14 +14,5 @@ schema:
   width: "20"
   height: "30"
   dateCreated: "2024"
+collocazione: "collezione privata"
 ---
-
-![Casa viola: paesaggio, olio su tela 20x30 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/casa-viola.jpg)
-
-olio su tela  
-20x30 cm  
-2024  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}

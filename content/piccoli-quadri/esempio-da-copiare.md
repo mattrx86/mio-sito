@@ -23,14 +23,4 @@ vendita:
   link_pagamento: "https://buy.stripe.com/test_esempio"
   spedizione: "Spedizione tracciata in Italia inclusa"
 ---
-
-![Avocado, olio su masonite 12x12 cm, Mattia Riccadonna, 2026](/img/dipinti-recenti/avocado-1.jpg)
-
-olio su masonite  
-12x12 cm  
-2026
-{.info-opera}
-
-{{< navquadro >}}
-
 Testo di esempio.

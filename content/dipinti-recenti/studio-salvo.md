@@ -13,17 +13,8 @@ schema:
   width: "30"
   height: "40"
   dateCreated: "2025"
+collocazione: "collezione dell'autore"
 ---
-
-![Studio da Salvo, olio su tela 30x40 cm, Mattia Riccadonna, 2025](/img/dipinti-recenti/studio-di-salvo-01.jpg)
-
-olio su tela  
-30x40 cm  
-2025  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 Studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto originale di Salvo (Salvatore Mangione). Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.
 

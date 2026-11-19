@@ -1,0 +1,54 @@
+{{- /*
+  TESTATA DELLA PAGINA DI UN'OPERA (archivio, dipinti recenti, piccoli quadri)
+  Tutto viene dal frontmatter, così il pannello /admin/ può gestirlo senza
+  toccare il testo:
+    image            foto principale
+    foto_aggiuntive  altre foto (lista di  foto / descrizione) -> galleria
+    schema.medium, schema.width, schema.height, schema.dateCreated
+    misure           (facoltativo) testo delle misure se diverso da "LxA cm"
+    collocazione     (facoltativo) es. "collezione privata"
+  Sotto: opera precedente / successiva. Il testo della pagina (note,
+  "cosa succedeva", dietro le quinte...) segue dopo, in single.html.
+*/ -}}
+{{- $p := . -}}
+{{- $s := $p.Params.schema | default dict -}}
+{{- $nome := trim (replace ($p.Params.heading | default $p.Title) "*" "") " " -}}
+{{- $nome = printf "%s%s" (upper (substr $nome 0 1)) (substr $nome 1) -}}
+{{- $tecnica := lower ($s.medium | default "") -}}
+{{- $w := partial "numero-cm.html" $s.width -}}
+{{- $h := partial "numero-cm.html" $s.height -}}
+{{- $misure := $p.Params.misure | default "" -}}
+{{- if and (not $misure) (gt $w 0.0) (gt $h 0.0) -}}
+  {{- $misure = replace (printf "%gx%g cm" $w $h) "." "," -}}
+{{- end -}}
+{{- $anno := printf "%v" ($s.dateCreated | default ($p.Date.Format "2006")) -}}
+{{- $alt := delimit (slice $nome (trim (printf "%s %s" $tecnica $misure) " ") "Mattia Riccadonna" $anno) ", " -}}
+
+{{- /* foto: una sola, oppure galleria con le foto aggiuntive */ -}}
+{{- with $p.Params.image -}}
+  {{- if $p.Params.foto_aggiuntive -}}
+    {{- $lista := slice (dict "src" . "alt" $alt) -}}
+    {{- range $p.Params.foto_aggiuntive -}}
+      {{- $lista = $lista | append (dict "src" .foto "alt" (.descrizione | default $alt)) -}}
+    {{- end -}}
+    {{- partial "galleria.html" $lista -}}
+  {{- else -}}
+    {{- $v := partial "img-varianti.html" . }}
+<p><img src="{{ $v.src }}"
+  {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) 100vw, 640px"{{ end }}
+  {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
+  alt="{{ $alt }}" fetchpriority="high" decoding="async"></p>
+  {{- end -}}
+{{- end }}
+
+{{- /* informazioni essenziali, una per riga */ -}}
+{{- $righe := slice -}}
+{{- with $tecnica }}{{ $righe = $righe | append . }}{{ end -}}
+{{- with $misure }}{{ $righe = $righe | append . }}{{ end -}}
+{{- with $anno }}{{ $righe = $righe | append . }}{{ end -}}
+{{- with $p.Params.coautori_testo }}{{ $righe = $righe | append . }}{{ end -}}
+{{- with $p.Params.collocazione }}{{ $righe = $righe | append ($p.RenderString .) }}{{ end -}}
+{{- with $righe }}
+<p class="info-opera">{{ delimit . "<br>" | safeHTML }}</p>
+{{- end }}
+{{ partial "navquadro.html" $p }}

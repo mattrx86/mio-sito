@@ -17,16 +17,7 @@ schema:
   width: "30.5"
   height: "45"
   dateCreated: "2024"
+collocazione: "collezione dell'autore"
 ---
-
-![Omaggio a Salvo: paesaggio, olio su tela 30,5x45 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/omaggio-a-salvo.jpg)
-
-olio su tela  
-30,5x45 cm  
-2024  
-collezione dell'autore
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera realizzata studiando un quadro di Salvatore Mangione (Salvo) con lo scopo di mero esercizio pittorico. L'opera consiste in una copia d'autore privata, non in vendita.

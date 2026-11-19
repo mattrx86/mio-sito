@@ -14,16 +14,7 @@ schema:
   width: "24"
   height: "30"
   dateCreated: "2024"
+collocazione: "collezione privata"
 ---
-
-![Luce mattutina, olio su tela 24x30 cm, Mattia Riccadonna, 2024](/img/dipinti-recenti/luce-mattutina.jpg)
-
-olio su tela  
-24x30 cm  
-2024  
-collezione privata
-{.info-opera}
-
-{{< navquadro >}}
 
 Opera in concorso al [Premio d'Arte Giulio Riccadonna di Rango](/mostre-e-concorsi/#premio-rango-2024) il 30 luglio 2024 e premiata dalla giuria con il `secondo posto` in gara
