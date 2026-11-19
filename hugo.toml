@@ -45,7 +45,8 @@ defaultContentLanguageInSubdir = false
   # Profili ufficiali collegati alla persona (dati strutturati schema.org "sameAs")
   sameAs = [
     "https://www.instagram.com/riccadonna_art/",
-    "https://www.ebay.it/usr/mattia_riccadonna_art"
+    "https://www.ebay.it/usr/mattia_riccadonna_art",
+    "https://www.facebook.com/mattiariccadonnaa"
   ]
 
   [params.theme_config]

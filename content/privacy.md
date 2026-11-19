@@ -30,9 +30,10 @@ I dati non vengono venduti, non sono usati per pubblicità e non sono soggetti a
 Questi fornitori trattano i dati solo per offrire il loro servizio, come responsabili del trattamento:
 
 - **Netlify, Inc.** (Stati Uniti): ospita il sito.
-- **Cloudflare, Inc.** (Stati Uniti): gestisce i DNS del dominio e può trattare l'indirizzo IP per instradare e proteggere le connessioni.
+- **Cloudflare, Inc.** (Stati Uniti): gestisce i DNS del dominio e fa da intermediario per le connessioni al sito, trattando l'indirizzo IP per instradare e proteggere il traffico.
+- **Porkbun, LLC** (Stati Uniti): registra il dominio e inoltra le email alla casella del titolare.
 - **Umami Software, Inc.** (Stati Uniti): statistiche di visita anonime.
-- il fornitore della casella di posta del titolare, per le email.
+- il fornitore della casella di posta del titolare, che riceve le email inoltrate.
 {.elenco}
 
 Netlify e Cloudflare aderiscono all'EU-US Data Privacy Framework, riconosciuto dalla Commissione europea come garanzia adeguata per il trasferimento di dati negli Stati Uniti (art. 45 GDPR).
@@ -43,7 +44,7 @@ I caratteri tipografici sono caricati dal sito stesso: nessun dato viene inviato
 
 Il sito non usa cookie di profilazione, pubblicitari o di statistica, e per questo non mostra il banner dei cookie. Eventuali cookie tecnici impostati per la sicurezza della connessione sono strettamente necessari e non richiedono consenso.
 
-I link a Instagram ed eBay portano su siti esterni, che applicano le loro regole su privacy e cookie.
+I link a Instagram, Facebook ed eBay portano su siti esterni, che applicano le loro regole su privacy e cookie.
 
 ## i tuoi diritti
 
