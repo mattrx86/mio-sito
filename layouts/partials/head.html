@@ -42,6 +42,8 @@
   {{- end -}}
   {{- if .IsHome -}}{{- $ogTitle = site.Params.seo_title | default site.Title -}}{{- end -}}
   {{- $title := $ogTitle -}}
+  {{- /* titolo breve solo per le anteprime di condivisione della home */ -}}
+  {{- if .IsHome -}}{{- with site.Params.og_title -}}{{- $ogTitle = . -}}{{- end -}}{{- end -}}
   {{- if and (not .IsHome) (not .Params.seo_title) (not (in $label $brand)) -}}
     {{- $title = printf "%s | %s" $label $brand -}}
   {{- end }}
@@ -84,7 +86,11 @@
        - "image" del frontmatter, altrimenti l'immagine di default del sito
        - larghezza e altezza lette dal file vero
        ================================================================ */ -}}
-  {{- $imgPath := .Params.image | default site.Params.defaultImage | default "/img/og-home.jpg" -}}
+  {{- $imgPath := .Params.image | default site.Params.defaultImage | default "/img/og-studio-cavalletto.jpg" -}}
+  {{- $imgAlt := $ogTitle -}}
+  {{- if and (not .Params.image) site.Params.defaultImageAlt -}}{{- $imgAlt = site.Params.defaultImageAlt -}}{{- end -}}
+  {{- $imgType := "image/jpeg" -}}
+  {{- if strings.HasSuffix (lower $imgPath) ".webp" -}}{{- $imgType = "image/webp" -}}{{- else if strings.HasSuffix (lower $imgPath) ".png" -}}{{- $imgType = "image/png" -}}{{- end -}}
   {{- $imgURL := $imgPath | absURL -}}
   {{- $imgW := 0 -}}
   {{- $imgH := 0 -}}
@@ -93,6 +99,12 @@
     {{- $imgH = .Height -}}
   {{- else -}}
     {{- warnf "[SEO] Immagine di condivisione non trovata: %s (pagina %s)" $imgPath $.RelPermalink -}}
+  {{- end }}
+  {{- /* immagine quasi quadrata: su X/Twitter la scheda "summary" la mostra intera, la "large" la taglierebbe */ -}}
+  {{- $card := "summary_large_image" -}}
+  {{- if and (gt $imgW 0) (gt $imgH 0) -}}
+    {{- $ratio := div (float $imgW) (float $imgH) -}}
+    {{- if and (ge $ratio 0.85) (le $ratio 1.18) -}}{{- $card = "summary" -}}{{- end -}}
   {{- end }}
 
   {{- /* Open Graph */}}
@@ -103,21 +115,23 @@
   <meta property="og:title" content="{{ $ogTitle }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:image" content="{{ $imgURL }}">
+  <meta property="og:image:type" content="{{ $imgType }}">
   {{- if gt $imgW 0 }}
   <meta property="og:image:width" content="{{ $imgW }}">
   <meta property="og:image:height" content="{{ $imgH }}">
   {{- end }}
-  <meta property="og:image:alt" content="{{ $ogTitle }}">
+  <meta property="og:image:alt" content="{{ $imgAlt }}">
   {{- if $isBlogPost }}
   <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
   <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
   {{- end }}
 
   {{- /* Twitter / X Card */}}
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="{{ $card }}">
   <meta name="twitter:title" content="{{ $ogTitle }}">
   <meta name="twitter:description" content="{{ $desc }}">
   <meta name="twitter:image" content="{{ $imgURL }}">
+  <meta name="twitter:image:alt" content="{{ $imgAlt }}">
 
   {{- /* Autore e copyright */}}
   <meta name="author" content="{{ site.Params.author }}">

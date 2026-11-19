@@ -12,6 +12,8 @@ defaultContentLanguageInSubdir = false
     weight       = 1
     [languages.it.params]
       seo_title   = "Mattia Riccadonna, pittore trentino — paesaggi delle Giudicarie"
+      # Titolo breve per le anteprime di condivisione (WhatsApp, Facebook...): non tocca il titolo per Google
+      og_title    = "Mattia Riccadonna — pittore trentino"
       description = "Mattia Riccadonna, pittore trentino di Comano Terme dal 1999: olio su tela, acquerello e disegno. Archivio di opere, dipinti recenti, mostre e rassegna stampa."
       keywords    = ["Mattia Riccadonna", "pittore trentino", "pittura ad olio", "disegno", "arte Trentino", "quadri originali", "quadri in vendita", "acquisto quadri", "opere d'arte originali", "pittore Comano Terme", "arte contemporanea trentina", "quadri olio su tela"]
 
@@ -40,7 +42,9 @@ defaultContentLanguageInSubdir = false
   copyright = "Mattia Riccadonna"
 
   # Immagine di condivisione usata quando una pagina non ha "image" nel frontmatter
-  defaultImage = "/img/og-home.jpg"
+  defaultImage = "/img/og-studio-cavalletto.jpg"
+  # Descrizione a parole dell'immagine di default (per accessibilità e anteprime)
+  defaultImageAlt = "Un paesaggio alpino a olio, con fienili rossi e gialli e le Dolomiti al tramonto, sul cavalletto nello studio di Mattia Riccadonna"
 
   # Profili ufficiali collegati alla persona (dati strutturati schema.org "sameAs")
   sameAs = [
