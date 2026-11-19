@@ -12,6 +12,8 @@
 	{{- end -}}
     {{- end -}}
 {{- end -}}
+{{- /* pagine con "fuori_elenco: true" nel frontmatter non compaiono negli elenchi (restano raggiungibili da altri link) */ -}}
+{{- $posts = where $posts "Params.fuori_elenco" "ne" true -}}
 {{- $limit_exceeded:= "" -}}
 {{- if (and .limit (gt (len $posts) .limit)) -}}
     {{- $limit_exceeded = true -}}

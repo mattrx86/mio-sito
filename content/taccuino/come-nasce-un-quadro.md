@@ -4,6 +4,7 @@ seo_title: "Come nasce un quadro a olio: dallo schizzo alla cornice"
 heading: "come nasce un quadro"
 date: 2026-11-14
 hideDate: true
+fuori_elenco: true
 description: "Dietro le quinte dello studio di Mattia Riccadonna: schizzi a matita, fondo arancione, abbozzo, colore e cornici flottanti costruite a mano."
 image: "/img/taccuino/studio/02-abbozzo-studio-batchelder.jpg"
 tags: ["studio", "tecnica", "olio", "cornici"]

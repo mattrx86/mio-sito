@@ -19,7 +19,7 @@
   post_list = { section = "piccoli-quadri", limit = 2, show_more = true, show_more_url = "/piccoli-quadri/", show_more_text = ".. mostra tutti" }
 
 [[entries]]
-  title = "lavori in corso: come nasce un quadro"
+  title = "come nasce un quadro"
   url   = "/taccuino/come-nasce-un-quadro/"
 
 [[entries]]
