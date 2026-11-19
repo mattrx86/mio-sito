@@ -155,3 +155,78 @@
   to = "https://mattiariccadonna.com/:splat"
   status = 301
   force = true
+
+# --- Indirizzi vecchi trovati da Google Search Console (404, novembre 2026) ---
+# Prima i redirect precisi, poi quelli generici delle vecchie sezioni
+# (Netlify usa la prima regola che corrisponde).
+[[redirects]]
+  from = "/galleria/chiaro-di-luna/"
+  to = "/dipinti-recenti/chiaro-di-luna/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galleria/salvo-copia-di-autore/"
+  to = "/dipinti-recenti/studio-salvo/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/rassegna-stampa/concorso-segantini-1999/"
+  to = "/rassegna-stampa/concorso-segantini-i-vincitori/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/archivio/segantini/"
+  to = "/rassegna-stampa/concorso-segantini-i-vincitori/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/archivio/pittore-delle-montagne/"
+  to = "/rassegna-stampa/concorso-segantini-i-vincitori/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/archivio/pittore-delle-montagne"
+  to = "/rassegna-stampa/concorso-segantini-i-vincitori/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/archivio/uomo-con-pipa/"
+  to = "/taccuino/scarabocchi/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/mostre-e-concorsi/mostra-3-riccadonna/"
+  to = "/mostre-e-concorsi/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galleria"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/galleria/*"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/studio/*"
+  to = "/dipinti-recenti/"
+  status = 301
+  force = true
+
+# Feed RSS principale: utile ai lettori di feed, non serve nei risultati di Google
+[[headers]]
+  for = "/index.xml"
+  [headers.values]
+    X-Robots-Tag = "noindex"
