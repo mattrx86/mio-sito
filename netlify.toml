@@ -105,6 +105,19 @@
   status = 301
   force = true
 
+# Pagina del progetto per i Mercatini di Rango sostituita da "Tre Arche, una storia" (novembre 2026)
+[[redirects]]
+  from = "/taccuino/progetto-mercatini-rango/"
+  to = "/taccuino/tre-arche-una-storia/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/taccuino/progetto-mercatini-rango"
+  to = "/taccuino/tre-arche-una-storia/"
+  status = 301
+  force = true
+
 # --- Redirect 301 per vecchie sezioni del sito (struttura cambiata) ---
 [[redirects]]
   from = "/studio"
