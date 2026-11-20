@@ -379,7 +379,7 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 /* ---------- Pagina dell'opera ---------- */
 /* informazioni sotto la foto: una per riga, a sinistra, senza etichette */
 /* pallino di disponibilità: agganciato all'angolo basso-destro della foto
-   (partials/stato-punto.html). Rosso acceso o bianco, bordino nero molto fine. */
+   (partials/stato-punto.html). Rosso mattone o bianco, bordino nero finissimo. */
 .foto-con-stato { position: relative; display: block; width: fit-content; max-width: 100%; margin-bottom: 0.7rem; }
 .foto-con-stato > img { margin: 0 !important; }
 /* altezza: il centro del pallino sta sulla stessa riga della scritta sotto la foto
@@ -388,9 +388,9 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
   position: absolute; right: 0;
   top: calc(100% + 0.7rem + 0.6525rem - 4.5px);   /* 0.6525rem = metà di 0.9rem x interlinea 1,45 */
   width: 9px; height: 9px; border-radius: 50%;
-  box-sizing: border-box; border: 1px solid #000;
+  box-sizing: border-box; border: 0.5px solid #000;
 }
-.stato-punto--no { background: #f01616; }
+.stato-punto--no { background: #b8412c; }   /* rosso mattone, in tinta col marrone del sito */
 .stato-punto--si { background: #fff; }
 /* pagina dell'opera: foto singola -> allineato alla prima riga di informazioni; galleria -> subito sotto la foto grande */
 p > .foto-con-stato > .stato-punto { top: calc(100% + 0.7rem + 0.6525rem + 0.9px); }
