@@ -1,6 +1,6 @@
 ---
 heading: "cipressi*"
-image: "/img/archivio/cipressi-294181713b40.webp"
+image: "/img/archivio/cipressi-e1446af8054a.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
