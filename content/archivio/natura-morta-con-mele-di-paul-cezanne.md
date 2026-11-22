@@ -7,8 +7,8 @@ schema:
   medium: "Olio su cartoncino telato"
   width: "40"
   height: "30"
-  dateCreated: "2000"
-date: "2000-01-01"
+  dateCreated: "2001"
+date: "2001-01-01"
 collocazione: "collezione dell'autore"
 disponibile: false
 description: "Natura morta con mele, riproduzione dell'opera di Paul Cezanne"
