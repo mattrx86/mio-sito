@@ -1,6 +1,6 @@
 ---
 heading: "armonia verde"
-image: "/img/dipinti-recenti/miniatura-monet.jpg"
+image: "/img/dipinti-recenti/mini-monet-f05f0d7fa018.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
