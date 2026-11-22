@@ -1,6 +1,6 @@
 ---
 heading: "saggezza non è"
-image: "/img/dipinti-recenti/saggezza-non-e-8421a4b00d36.webp"
+image: "/img/dipinti-recenti/saggezza-non-e-9ded4eae64b8.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
