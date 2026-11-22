@@ -1,6 +1,6 @@
 ---
 heading: "casa rossa"
-image: "/img/dipinti-recenti/casa-rossa-c67ac8ea5d45.webp"
+image: "/img/dipinti-recenti/casa-rossa-0938bb481798.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
