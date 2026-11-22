@@ -1,6 +1,6 @@
 ---
 heading: "acqua"
-image: "/img/archivio/acqua-7c908afe51b8.webp"
+image: "/img/archivio/acqua-49fff76d89b5.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
