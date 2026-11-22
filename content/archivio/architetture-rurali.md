@@ -1,6 +1,6 @@
 ---
 heading: "architetture rurali"
-image: "/img/archivio/architetture-rurali-1d12f53406f1.webp"
+image: "/img/archivio/architetture-rurali-676d0080b30d.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
