@@ -3,7 +3,6 @@ title: "Dipinti recenti — Dal 2024 | Mattia Riccadonna"
 seo_title: "Quadri a olio recenti: paesaggi del Trentino | Mattia Riccadonna"
 mosaico: true
 carrellata: true
-carrellata_bn: true
 carrellata_elenco: true
 heading: "dipinti recenti"
 date: 2024-01-01

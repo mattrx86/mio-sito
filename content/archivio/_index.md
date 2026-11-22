@@ -2,7 +2,6 @@
 title: "Archivio dipinti 1999–2007 | Mattia Riccadonna"
 mosaico: true
 carrellata: true
-carrellata_bn: true
 carrellata_elenco: true
 heading: "archivio"
 date: 2024-01-01

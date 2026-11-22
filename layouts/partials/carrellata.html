@@ -12,10 +12,6 @@
   sostituisce mosaico ed elenco. Stesse opere e stesso ordine di
   mosaico-dati.html (quindi anche dei dati ItemList in head.html).
 
-  Con "carrellata_bn: true" i quadri sono in bianco e nero e si colorano
-  passandoci sopra col mouse; su telefono e tablet (niente mouse) si
-  colorano quando arrivano a metà schermo scorrendo.
-
   Immagini WebP in due larghezze (640 e 1280 px) scelte dal browser;
   la prima si carica subito, le altre solo quando ci si avvicina.
 */ -}}
@@ -31,7 +27,7 @@
   </ul>
 </details>
 {{- end }}
-<ol class="carrellata{{ if $.Params.carrellata_bn }} carrellata--bn{{ end }}" aria-label="Le opere della sezione">
+<ol class="carrellata" aria-label="Le opere della sezione">
   {{- range $i, $it := . -}}
     {{- $p := $it.page -}}
     {{- /* foto completa della pagina (non il ritaglio del mosaico) */ -}}
@@ -49,8 +45,7 @@
     {{- if and (gt $it.w 0.0) (gt $it.h 0.0) -}}{{- $misure = replace (printf "%g × %g cm" $it.w $it.h) "." "," -}}{{- end }}
   <li class="carrellata-opera">
     <a href="{{ $p.RelPermalink }}">
-      <span class="foto-con-stato"><img src="{{ $s1.RelPermalink }}" srcset="{{ $s1.RelPermalink }} {{ $s1.Width }}w, {{ $s2.RelPermalink }} {{ $s2.Width }}w" sizes="(max-width: 704px) 100vw, 640px" width="{{ $s2.Width }}" height="{{ $s2.Height }}" alt="{{ $it.etichetta }}" decoding="async"{{ if eq $i 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
-      {{ partial "stato-punto.html" $it.disponibile }}</span>
+      <img src="{{ $s1.RelPermalink }}" srcset="{{ $s1.RelPermalink }} {{ $s1.Width }}w, {{ $s2.RelPermalink }} {{ $s2.Width }}w" sizes="(max-width: 704px) 100vw, 640px" width="{{ $s2.Width }}" height="{{ $s2.Height }}" alt="{{ $it.etichetta }}" decoding="async"{{ if eq $i 0 }} fetchpriority="high"{{ else }} loading="lazy"{{ end }}>
       <span class="carrellata-didascalia">
         <span class="carrellata-titolo">{{ $titolo }}</span>
         {{- with $tecnica }}<span class="carrellata-riga">{{ . }}</span>{{ end }}
@@ -66,17 +61,5 @@
 {{- range . -}}{{- if strings.HasSuffix (trim (.page.Params.heading | default .page.Title) " ") "*" -}}{{- $copie = add $copie 1 -}}{{- end -}}{{- end }}
 {{- if gt $copie 0 }}
 <p class="nota-asterisco">* copia d'autore: riproduzione dichiarata di un'opera di un altro artista, senza intento di falso.</p>
-{{- end }}
-{{- if $.Params.carrellata_bn }}
-<script>
-/* Solo per schermi senza mouse: colora il quadro che sta a metà schermo. */
-(function () {
-  if (!('IntersectionObserver' in window) || window.matchMedia('(hover: hover)').matches) return;
-  var oss = new IntersectionObserver(function (voci) {
-    voci.forEach(function (v) { v.target.classList.toggle('a-colori', v.isIntersecting); });
-  }, { rootMargin: '-35% 0px -35% 0px' });
-  document.querySelectorAll('.carrellata--bn .carrellata-opera').forEach(function (el) { oss.observe(el); });
-})();
-</script>
 {{- end }}
 {{- end }}

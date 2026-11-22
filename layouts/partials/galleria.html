@@ -3,21 +3,17 @@
   Uso: partial "galleria.html" (slice (dict "src" "/img/..." "alt" "...") ...)
   Usata dallo shortcode {{< galleria >}} e dalla testata delle pagine delle opere.
 */ -}}
-{{- /* accetta anche un dizionario: dict "items" (...) "stato" true|false  -> pallino sotto la foto grande */ -}}
-{{- $lista := . -}}{{- $stato := "" -}}
-{{- if reflect.IsMap . -}}{{- $lista = .items -}}{{- $stato = .stato -}}{{- end -}}
 {{- $items := slice -}}
-{{- range $lista -}}
+{{- range . -}}
   {{- $items = $items | append (merge (partial "img-varianti.html" .src) (dict "alt" .alt)) -}}
 {{- end -}}
 {{- if $items -}}
 {{- $first := index $items 0 -}}
 <div id="gallery-wrap">
-<span class="foto-con-stato"><img id="gallery-main" src="{{ $first.src }}"
+<img id="gallery-main" src="{{ $first.src }}"
   {{- with $first.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) calc(100vw - 4rem), 640px"{{ end }}
   {{- if gt $first.w 0 }} width="{{ $first.w }}" height="{{ $first.h }}"{{ end }}
   alt="{{ $first.alt }}" fetchpriority="high" decoding="async">
-{{- if ne $stato "" }}{{ partial "stato-punto.html" $stato }}{{ end }}</span>
 <div id="gallery-thumbs">
 {{- range $items }}
 <img src="{{ .thumb }}" width="60" height="60" alt="miniatura: {{ .alt }}" loading="lazy" decoding="async"

@@ -229,19 +229,8 @@ details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 @media (max-width: 704px) {
   .carrellata > li.carrellata-opera { margin-bottom: 2.5rem; }
 }
-/* bianco e nero che si colora (carrellata_bn: true) */
-.carrellata--bn .carrellata-opera img {
-  filter: grayscale(1);
-  transition: filter 0.45s ease, opacity 0.2s ease;
-}
-.carrellata--bn .carrellata-opera > a:focus-visible img,
-.carrellata--bn .carrellata-opera.a-colori img { filter: none; }
-@media (hover: hover) {
-  .carrellata--bn .carrellata-opera > a:hover img { filter: none; opacity: 1; }
-}
 @media (prefers-reduced-motion: reduce) {
-  .carrellata-opera img,
-  .carrellata--bn .carrellata-opera img { transition: none; }
+  .carrellata-opera img { transition: none; }
 }
 
 /* ---------- Barra in alto (layouts/_default/baseof.html) ----------
@@ -378,23 +367,6 @@ dl.scheda dd { min-width: 0; overflow-wrap: anywhere; }
 
 /* ---------- Pagina dell'opera ---------- */
 /* informazioni sotto la foto: una per riga, a sinistra, senza etichette */
-/* pallino di disponibilità: agganciato all'angolo basso-destro della foto
-   (partials/stato-punto.html). Rosso mattone o bianco, bordino nero finissimo. */
-.foto-con-stato { position: relative; display: block; width: fit-content; max-width: 100%; margin-bottom: 0.7rem; }
-.foto-con-stato > img { margin: 0 !important; }
-/* altezza: il centro del pallino sta sulla stessa riga della scritta sotto la foto
-   (titolo nelle pagine a scorrimento; prima riga di informazioni nella pagina dell'opera) */
-.stato-punto {
-  position: absolute; right: 0;
-  top: calc(100% + 0.7rem + 0.6525rem - 4.5px);   /* 0.6525rem = metà di 0.9rem x interlinea 1,45 */
-  width: 9px; height: 9px; border-radius: 50%;
-  box-sizing: border-box; border: 0.5px solid #000;
-}
-.stato-punto--no { background: #b8412c; }   /* rosso mattone, in tinta col marrone del sito */
-.stato-punto--si { background: #fff; }
-/* pagina dell'opera: foto singola -> allineato alla prima riga di informazioni; galleria -> subito sotto la foto grande */
-p > .foto-con-stato > .stato-punto { top: calc(100% + 0.7rem + 0.6525rem + 0.9px); }
-#gallery-wrap .stato-punto { top: calc(100% + 4px); }
 p.info-opera { margin: 0.6rem 0 1rem; line-height: 1.5; color: #595959; font-size: 0.95rem; }
 /* opera precedente / successiva */
 .navquadro { display: flex; justify-content: space-between; margin: 1rem 0 2rem; font-family: monospace; font-size: 15px; }

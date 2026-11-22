@@ -24,15 +24,6 @@
 {{- $anno := printf "%v" ($s.dateCreated | default ($p.Date.Format "2006")) -}}
 {{- $alt := delimit (slice $nome (trim (printf "%s %s" $tecnica $misure) " ") "Mattia Riccadonna" $anno) ", " -}}
 
-{{- /* pallino di disponibilità sotto la foto: bianco = disponibile, rosso = non disponibile.
-       Piccoli quadri: conta lo stato della vendita; altre opere: "disponibile" del frontmatter */ -}}
-{{- $disp := false -}}
-{{- with $p.Params.vendita -}}
-  {{- $disp = eq (.stato | default "disponibile") "disponibile" -}}
-{{- else -}}
-  {{- $disp = $p.Params.disponibile | default false -}}
-{{- end -}}
-
 {{- /* foto: una sola, oppure galleria con le foto aggiuntive */ -}}
 {{- with $p.Params.image -}}
   {{- if $p.Params.foto_aggiuntive -}}
@@ -40,13 +31,13 @@
     {{- range $p.Params.foto_aggiuntive -}}
       {{- $lista = $lista | append (dict "src" .foto "alt" (.descrizione | default $alt)) -}}
     {{- end -}}
-    {{- partial "galleria.html" (dict "items" $lista "stato" $disp) -}}
+    {{- partial "galleria.html" $lista -}}
   {{- else -}}
     {{- $v := partial "img-varianti.html" . }}
-<p><span class="foto-con-stato"><img src="{{ $v.src }}"
+<p><img src="{{ $v.src }}"
   {{- with $v.srcset }} srcset="{{ . }}" sizes="(max-width: 704px) 100vw, 640px"{{ end }}
   {{- if gt $v.w 0 }} width="{{ $v.w }}" height="{{ $v.h }}"{{ end }}
-  alt="{{ $alt }}" fetchpriority="high" decoding="async">{{ partial "stato-punto.html" $disp }}</span></p>
+  alt="{{ $alt }}" fetchpriority="high" decoding="async"></p>
   {{- end -}}
 {{- end }}
 
