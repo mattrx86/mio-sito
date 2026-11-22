@@ -9,6 +9,7 @@ schema:
   height: "50"
   dateCreated: "2003"
 date: "2003-01-01"
+collocazione: "collezione privata"
 disponibile: false
 tags:
   - "olio"
