@@ -1,6 +1,6 @@
 ---
 heading: "nostalgia"
-image: "/img/archivio/nostalgia-bf7a8a872a08.webp"
+image: "/img/archivio/nostalgia-5c649a50aedf.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
