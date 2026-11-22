@@ -1,6 +1,6 @@
 ---
 heading: "riflessi d'argento"
-image: "/img/archivio/senza-titolo-c19e698841f4.webp"
+image: "/img/archivio/senza-titolo-cdc04c7c2894.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
