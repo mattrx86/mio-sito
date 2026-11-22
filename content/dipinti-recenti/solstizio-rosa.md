@@ -1,6 +1,6 @@
 ---
 heading: "solstizio rosa"
-image: "/img/dipinti-recenti/solstizio-rosa-eb5a2dda5bb6.webp"
+image: "/img/dipinti-recenti/solstizio-rosa-830904cfbc6b.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
