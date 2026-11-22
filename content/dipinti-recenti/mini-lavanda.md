@@ -1,6 +1,6 @@
 ---
 heading: "lavanda"
-image: "/img/dipinti-recenti/mini-lavanda-693d2b12d30b.webp"
+image: "/img/dipinti-recenti/mini-lavanda-dd9108fbbad1.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
