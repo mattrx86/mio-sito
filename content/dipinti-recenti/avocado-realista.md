@@ -1,6 +1,6 @@
 ---
 heading: "avocado"
-image: "/img/dipinti-recenti/avocado-realista-81b737f4d5c5.webp"
+image: "/img/dipinti-recenti/avocado-realista-ff1e69fd5ddf.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
