@@ -1,6 +1,6 @@
 ---
 heading: "campo giallo"
-image: "/img/dipinti-recenti/campo-giallo-a223a56f280e.webp"
+image: "/img/dipinti-recenti/campo-giallo-65573083e3d0.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
