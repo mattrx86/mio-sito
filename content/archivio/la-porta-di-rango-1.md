@@ -1,6 +1,6 @@
 ---
 heading: "la porta di rango"
-image: "/img/archivio/la-porta-di-rango-1-47e203a038a1.webp"
+image: "/img/archivio/la-porta-di-rango-1-8cdaddadbcd5.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
