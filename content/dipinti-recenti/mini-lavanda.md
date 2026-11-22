@@ -14,6 +14,8 @@ disponibile: true
 foto_aggiuntive:
   - foto: "/img/dipinti-recenti/miniatura-lavanda-dettaglio.jpg"
     descrizione: "Miniatura lavanda, dettaglio miniatura"
+  - foto: "/img/dipinti-recenti/mini-lavanda-bb7048bb7317.webp"
+    descrizione: "dettaglio carta"
 misure: "30x30 mm"
 description: "Acquerello su carta, 30x30 mm, 2022. Miniatura di un edificio arancione in un campo di lavanda, dipinta con pennelli finissimi e pochissima acqua."
 seo_title: "Lavanda: miniatura ad acquerello 30x30 mm, 2022"
