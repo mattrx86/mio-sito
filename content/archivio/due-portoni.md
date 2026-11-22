@@ -1,6 +1,6 @@
 ---
 heading: "due portoni"
-image: "/img/archivio/due-portoni-bed0c884a754.webp"
+image: "/img/archivio/due-portoni-a0b1300a6499.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
