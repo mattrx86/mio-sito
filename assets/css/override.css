@@ -109,10 +109,6 @@ article img,
   margin: 0 !important;
 }
 .mosaico-tessera > a:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
-/* "riflettore": solo con mouse, e solo quando si punta davvero un'opera */
-@media (hover: hover) {
-  .mosaico:has(.mosaico-tessera:hover) .mosaico-tessera:not(:hover) { opacity: 0.45; }
-}
 /* opere disponibili: piccolo segno discreto nell'angolo */
 .mosaico-tessera--disponibile::before {
   content: "";
@@ -222,7 +218,6 @@ details.elenco-opere { margin: 1.5rem 0 2.5rem; }
 details.elenco-opere summary { font-family: monospace; font-size: 15px; }
 details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 @media (hover: hover) {
-  .carrellata-opera > a:hover img { opacity: 0.85; }
   .carrellata-opera > a:hover .carrellata-titolo { text-decoration: underline; text-underline-offset: 3px; }
 }
 .carrellata-opera > a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
