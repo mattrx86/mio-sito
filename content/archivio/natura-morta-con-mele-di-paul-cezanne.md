@@ -1,6 +1,6 @@
 ---
 heading: "natura morta con mele di paul cezanne*"
-image: "/img/archivio/natura-morta-con-mele-di-paul-cezanne-80a35d912442.webp"
+image: "/img/archivio/natura-morta-con-mele-di-paul-cezanne-fdc22d15ca5e.webp"
 schema:
   type: "VisualArtwork"
   artist: "Mattia Riccadonna"
