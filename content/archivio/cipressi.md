@@ -11,6 +11,7 @@ schema:
 date: "2000-01-01"
 collocazione: "collezione privata"
 disponibile: false
+description: "Cipressi: acrilico su tela 30x40 cm, 2000. Omaggio a Van Gogh dall'archivio giovanile di Mattia Riccadonna, pittore trentino. Collezione privata."
 tags:
   - "acrilico"
   - "omaggio"

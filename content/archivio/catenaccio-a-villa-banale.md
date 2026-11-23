@@ -1,6 +1,6 @@
 ---
 title: "Catenaccio a Villa Banale — Olio su tela, 2004"
-seo_title: "Catenaccio a Villa Banale: olio su tela, 2004 — Mattia Riccadonna"
+seo_title: "Catenaccio a Villa Banale: olio su tela, 2004"
 heading: "catenaccio a villa banale"
 date: 2004-06-14
 hideDate: true

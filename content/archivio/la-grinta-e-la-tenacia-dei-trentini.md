@@ -11,6 +11,7 @@ schema:
 date: "2001-01-01"
 collocazione: "collezione privata"
 disponibile: false
+description: "La grinta e la tenacia dei trentini: acrilico su tela 50x70 cm, 2001, dall'archivio giovanile di Mattia Riccadonna. Studio da Sartori. Collezione privata."
 tags:
   - "acrilico"
   - "paesaggio"

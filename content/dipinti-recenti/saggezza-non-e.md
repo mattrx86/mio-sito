@@ -11,6 +11,7 @@ schema:
 date: "2025-01-01"
 collocazione: "disponibile in studio"
 disponibile: true
+description: "Saggezza non è: olio su masonite 12x12 cm, 2025. Piccolo quadro di Mattia Riccadonna, pittore trentino; disponibile in studio."
 tags:
   - "olio"
 hideDate: true

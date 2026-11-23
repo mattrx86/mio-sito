@@ -4,7 +4,7 @@ seo_title: "Barche a Saintes-Maries-de-la-Mer, da Van Gogh: olio 40x30 cm"
 heading: "barche da pesca sulla spiaggia a Saintes-Maries-de-la-Mer*"
 date: 2000-01-01
 hideDate: true
-description: "Olio su cartoncino telato, 40x30 cm, 2000. Studio da un'opera di Van Gogh del 1888 con le barche da pesca sulla spiaggia di Saintes-Maries-de-la-Mer. Collezione privata."
+description: "Olio su cartoncino telato, 40x30 cm, 2000. Studio da Van Gogh (1888): barche da pesca sulla spiaggia di Saintes-Maries-de-la-Mer. Collezione privata."
 image: "/img/archivio/barche-da-pesca-sulla-spiaggia-a-saintes-maries-de-la-mer.jpg"
 tags:
   - "olio"

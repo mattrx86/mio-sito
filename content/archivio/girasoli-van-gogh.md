@@ -12,7 +12,7 @@ date: "2001-01-01"
 collocazione: "collezione dell'autore"
 disponibile: false
 description: "Acrilico su tela, 50x70 cm, 2001. Natura morta con vaso di girasoli: studio dai Girasoli di Vincent van Gogh, dall'archivio giovanile di Mattia Riccadonna."
-title: "Girasoli di Van Gogh — Acrilico su tela, 2001"
+title: "Girasoli di Van Gogh — acrilico, 2001"
 tags:
   - "acrilico"
   - "natura-morta"

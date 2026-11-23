@@ -11,8 +11,9 @@ schema:
 date: "2000-01-01"
 collocazione: "collezione privata"
 disponibile: false
-seo_title: "La porta di Rango #1"
-title: "La porta di Rango #1"
+seo_title: "La porta di Rango #1: olio su tela 40x30 cm, 2000"
+title: "La porta di Rango #1 — olio su tela, 2000"
+description: "Olio su tela, 40x30 cm, 2000. Prima delle due porte di Rango dipinte da Mattia Riccadonna, pittore trentino. Collezione privata."
 tags:
   - "olio"
   - "rango"

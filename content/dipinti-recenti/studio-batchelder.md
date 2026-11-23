@@ -13,7 +13,7 @@ collocazione: "collezione dell'autore"
 disponibile: false
 misure: "50x60 cm"
 description: "Olio su tela, 50x60 cm, 2025. Studio da un'opera di Peter Batchelder, eseguito a scopo di studio e pratica pittorica. Non in vendita."
-title: "Studio da Batchelder #2 — Olio su tela, 2025"
+title: "Studio da Batchelder #2 — olio su tela"
 tags:
   - "olio"
   - "paesaggio"

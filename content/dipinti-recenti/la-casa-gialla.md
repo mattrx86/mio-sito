@@ -16,6 +16,7 @@ foto_aggiuntive:
     descrizione: "dettaglio cornice"
   - foto: "/img/dipinti-recenti/la-casa-gialla-3e287ac904e1.webp"
     descrizione: "dettaglio"
+description: "La casa gialla: olio su masonite 12x12 cm, 2025. Piccolo omaggio a Van Gogh dipinto da Mattia Riccadonna, pittore trentino."
 tags:
   - "omaggio"
   - "van-gogh"
