@@ -11,9 +11,14 @@ schema:
 date: "2007-01-01"
 collocazione: "collezione privata"
 disponibile: false
+description: "«Riflessi d'argento», olio su tela, 25x35 cm, 2007. Opera dall'archivio di Mattia Riccadonna, pittore trentino."
 tags:
   - "olio"
   - "natura-morta"
 hideDate: true
 draft: false
 ---
+
+## nel frattempo
+
+Nel 2007 Steve Jobs presenta il primo iPhone e Kimi Räikkönen vince il Mondiale di Formula 1 con la Ferrari.
