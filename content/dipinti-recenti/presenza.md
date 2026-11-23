@@ -11,7 +11,7 @@ schema:
 date: "2025-01-01"
 collocazione: "disponibile in studio"
 disponibile: true
-description: "Presenza: tecnica mista 45x35 cm, 2025, olio su tela con rifiniture a pastello a olio. Paesaggio di Mattia Riccadonna, pittore trentino; disponibile in studio."
+description: "Presenza: tecnica mista 45x35 cm, 2025, olio su tela e pastello a olio. Paesaggio di Mattia Riccadonna, pittore trentino. Disponibile in studio."
 tags:
   - "olio"
   - "paesaggio"
