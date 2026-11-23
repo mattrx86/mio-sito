@@ -6,13 +6,13 @@ description: "Mattia Riccadonna, pittore trentino nato nel 1986, dipinge dal 199
 schematype: "ProfilePage"
 ---
 
-Sono Mattia Riccadonna, nato nel 1986. Vivo a Cares, frazione di Comano Terme, nelle Giudicarie, in Trentino.
+Sono Mattia Riccadonna, pittore, nato a Ponte Arche nel 1986. Vivo a Cares, frazione di Comano Terme, nelle Giudicarie, in Trentino.
 
 Dipingo dal 1999. Quell'anno, a tredici anni, ho ricevuto una borsa di studio al [1° Concorso Provinciale Giovanni Segantini](/rassegna-stampa/concorso-segantini-i-vincitori/) di Arco con una mia versione del *pittore delle montagne*.
 
 Ho cominciato con caricature e fumetti, guardando soprattutto a Benito Jacovitti e Charles M. Schulz. Poi sono passato alla pittura, con Van Gogh e Carlo Sartori come riferimenti. Ho lavorato soprattutto a olio su tela, in parte con l'acrilico e, negli ultimi anni, con tecniche miste.
 
-Il periodo più intenso è stato tra il 2002 e il 2007, con le prime mostre — tra cui la personale del 2003 a Tione — e alcuni articoli sui giornali locali. In seguito università, lavoro e famiglia hanno avuto la precedenza: per alcuni anni ho dipinto poco e mi sono dedicato alla fotografia.
+Il periodo più intenso è stato tra il 2002 e il 2007, con le prime mostre — tra cui la personale «Esercizi di Pittura», al [Centro Studi Judicaria](https://www.judicaria.it/mostra/opere-di-riccadonna-mattia/) di Tione dal 25 al 31 agosto 2003, con una recensione critica di Alessandro Togni — e alcuni articoli sui giornali locali. In seguito università, lavoro e famiglia hanno avuto la precedenza: per alcuni anni ho dipinto poco e mi sono dedicato alla fotografia.
 
 Oggi dipingo con più libertà di un tempo e lavoro soprattutto sul colore. In oltre venticinque anni ho realizzato circa 70–80 tele: alcune le ho conservate, altre sono state vendute, qualcuna è andata persa.
 
