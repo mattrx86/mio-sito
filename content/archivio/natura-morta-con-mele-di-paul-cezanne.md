@@ -11,7 +11,7 @@ schema:
 date: "2001-01-01"
 collocazione: "collezione dell'autore"
 disponibile: false
-description: "Natura morta con mele, riproduzione dell'opera di Paul Cezanne"
+description: "Olio su cartoncino telato, 40x30 cm, 2001. Riproduzione di una natura morta con mele di Paul Cézanne."
 tags:
   - "olio"
   - "natura-morta"
@@ -19,3 +19,9 @@ tags:
 hideDate: true
 draft: false
 ---
+
+Riproduzione di una natura morta con mele di Paul Cézanne, eseguita a scopo di studio e pratica pittorica.
+
+## nel frattempo
+
+Il 2001 è anche l'anno dei primi due grandi film fantasy del nuovo millennio: «Harry Potter e la pietra filosofale» e «Il Signore degli Anelli – La Compagnia dell'Anello», entrambi nelle sale a fine anno.
