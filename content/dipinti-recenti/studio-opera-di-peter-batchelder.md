@@ -11,6 +11,7 @@ schema:
 date: "2024-01-01"
 collocazione: "collezione dell'autore"
 disponibile: false
+description: "Studio da un'opera di Peter Batchelder: olio su tela 20x30 cm, 2024, dipinto da Mattia Riccadonna a scopo di studio. Primo di due studi. Non in vendita."
 tags:
   - "olio"
   - "paesaggio"

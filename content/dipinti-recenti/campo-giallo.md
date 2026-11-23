@@ -16,6 +16,7 @@ foto_aggiuntive:
     descrizione: "rapporto con mano"
   - foto: "/img/dipinti-recenti/campo-giallo-8fee084a7d8e.webp"
     descrizione: "work in progress aquerello"
+description: "Acquerello su carta di soli 3x3 cm, 2003: una miniatura di campo giallo dipinta da Mattia Riccadonna, pittore trentino."
 tags:
   - "acquerello"
   - "miniatura"

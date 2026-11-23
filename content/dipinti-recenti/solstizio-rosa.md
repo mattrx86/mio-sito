@@ -14,6 +14,7 @@ disponibile: false
 foto_aggiuntive:
   - foto: "/img/dipinti-recenti/solstizio-rosa-b68513f52a73.webp"
     descrizione: "cornice"
+description: "Solstizio rosa: olio su masonite 12x12 cm, 2023, con cornice. Piccolo paesaggio di Mattia Riccadonna, pittore trentino. Collezione privata."
 tags:
   - "olio"
   - "cornici"
