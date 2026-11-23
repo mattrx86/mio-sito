@@ -5,18 +5,18 @@
 [[entries]]
   title     = "archivio (1999–2007)"
   url       = "/archivio/"
-  post_list = { section = "archivio", limit = 2, show_more = true, show_more_url = "/archivio/", show_more_text = ".. mostra tutti" }
+  post_list = { section = "archivio", limit = 2, show_more = true, show_more_url = "/archivio/", show_more_text = ".. tutto l'archivio" }
 
 [[entries]]
   title     = "dipinti recenti (dal 2024)"
   url       = "/dipinti-recenti/"
-  post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. mostra tutti" }
+  post_list = { section = "dipinti-recenti", limit = 2, show_more = true, show_more_url = "/dipinti-recenti/", show_more_text = ".. tutti i dipinti recenti" }
 
 # Voce nascosta in automatico finché la sezione è in bozza (draft: true)
 [[entries]]
   title     = "piccoli quadri in vendita"
   url       = "/piccoli-quadri/"
-  post_list = { section = "piccoli-quadri", limit = 2, show_more = true, show_more_url = "/piccoli-quadri/", show_more_text = ".. mostra tutti" }
+  post_list = { section = "piccoli-quadri", limit = 2, show_more = true, show_more_url = "/piccoli-quadri/", show_more_text = ".. tutti i piccoli quadri" }
 
 [[entries]]
   title = "come nasce un quadro"
@@ -25,7 +25,7 @@
 [[entries]]
   title = "taccuino"
   url   = "/taccuino/"
-  post_list = { section = "taccuino", limit = 2, show_more = true, show_more_url = "/taccuino/", show_more_text = ".. mostra tutti" }
+  post_list = { section = "taccuino", limit = 2, show_more = true, show_more_url = "/taccuino/", show_more_text = ".. tutto il taccuino" }
 
 [[entries]]
   title = "mostre e concorsi"

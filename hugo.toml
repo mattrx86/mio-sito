@@ -55,7 +55,7 @@ defaultContentLanguageInSubdir = false
 
   [params.theme_config]
     appearance        = "light"
-    back_home_text    = "< indietro"
+    back_home_text    = "< pagina iniziale"
     date_format       = "02-01-2006"
     isListGroupByDate = true
     isShowFooter      = true
