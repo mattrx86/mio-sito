@@ -50,7 +50,8 @@ defaultContentLanguageInSubdir = false
   sameAs = [
     "https://www.instagram.com/riccadonna_art/",
     "https://www.ebay.it/usr/mattia_riccadonna_art",
-    "https://www.facebook.com/mattiariccadonnaa"
+    "https://www.facebook.com/mattiariccadonnaa",
+    "https://www.reddit.com/user/mattia_riccadonna/"
   ]
 
   [params.theme_config]
