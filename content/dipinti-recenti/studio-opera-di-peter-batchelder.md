@@ -1,5 +1,5 @@
 ---
-heading: "studio opera di peter batchelder*"
+heading: "studio opera di peter batchelder #1*"
 image: "/img/dipinti-recenti/studio-opera-di-peter-batchelder-a66043469f86.webp"
 schema:
   type: "VisualArtwork"

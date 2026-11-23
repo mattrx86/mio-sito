@@ -1,5 +1,5 @@
 ---
-heading: "la porta di rango"
+heading: "la porta di rango #1"
 image: "/img/archivio/la-porta-di-rango-5e7e9a5ce213.webp"
 schema:
   type: "VisualArtwork"
@@ -11,8 +11,8 @@ schema:
 date: "2000-01-01"
 collocazione: "collezione privata"
 disponibile: false
-seo_title: "La porta di Rango"
-title: "La porta di Rango"
+seo_title: "La porta di Rango #1"
+title: "La porta di Rango #1"
 tags:
   - "olio"
   - "rango"
