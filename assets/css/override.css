@@ -253,6 +253,8 @@ details.elenco-opere ul.elenco { margin: 0.6rem 0 0; }
 .topbar a[aria-current="page"] { text-decoration: underline !important; text-underline-offset: 3px; }
 .topbar-firma { font-weight: bold; letter-spacing: 0.08em; }
 .topbar-menu { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0 1rem; }
+/* area di tocco più alta (la riga resta uguale: il padding è compensato dal margine negativo) */
+.topbar-menu a { display: inline-block; padding: 0.45rem 0; margin: -0.45rem 0; }
 .topbar-sep { opacity: 0.6; }
 .w { padding-top: 1.5rem; }   /* la barra ora occupa il suo spazio: meno vuoto sopra */
 @media (max-width: 704px) {

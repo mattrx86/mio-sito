@@ -36,7 +36,7 @@
     {{- $classi := slice "mosaico-tessera" -}}
     {{- if .disponibile -}}{{- $classi = $classi | append "mosaico-tessera--disponibile" -}}{{- end }}
   <li class="{{ delimit $classi " " }}" style="{{ $stile | safeCSS }}">
-    <a href="{{ $p.RelPermalink }}" title="{{ .etichetta }}"><img src="{{ $thumb1.RelPermalink }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .etichetta }}" decoding="async"></a>
+    <a href="{{ $p.RelPermalink }}" title="{{ .etichetta }}"><img src="{{ $thumb1.RelPermalink }}" srcset="{{ $srcset }}" sizes="{{ $sizes }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}" alt="{{ .etichetta }}" loading="lazy" decoding="async"></a>
   </li>
   {{- end }}
 </ul>

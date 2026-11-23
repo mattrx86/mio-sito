@@ -109,6 +109,9 @@ defaultContentLanguageInSubdir = false
     notAlternative = true
 
 [outputs]
-  home    = ["HTML", "RSS", "ImageSitemap"]
-  section = ["HTML", "RSS"]
-  page    = ["HTML"]
+  home     = ["HTML", "RSS", "ImageSitemap"]
+  # Solo la home ha il feed RSS: quelli di sezioni e tag non servono e Google li scansionava inutilmente
+  section  = ["HTML"]
+  taxonomy = ["HTML"]
+  term     = ["HTML"]
+  page     = ["HTML"]

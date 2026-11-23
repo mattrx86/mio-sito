@@ -8,7 +8,8 @@
   {{- $brand   := site.Params.author | default "Mattia Riccadonna" -}}
   {{- $noindex := partial "noindex.html" . -}}
   {{- $isArtwork := and .IsPage .Params.schema (eq .Params.schema.type "VisualArtwork") -}}
-  {{- $isBlogPost := and .IsPage (eq .Section "blog") -}}
+  {{- /* articoli di "blog" e "taccuino"; le pagine con uno schematype proprio (es. gallerie) restano come sono */ -}}
+  {{- $isBlogPost := and .IsPage (in (slice "blog" "taccuino") .Section) (not .Params.schematype) -}}
 
   {{- /* ================================================================
        TITOLO
@@ -34,17 +35,19 @@
   {{- end -}}
   {{- if eq .Kind "term" -}}{{- $label = printf "%s — opere e appunti" (humanize .Data.Term) -}}{{- end -}}
   {{- if eq .Kind "404" -}}{{- $label = "Pagina non trovata" -}}{{- end -}}
+  {{- $candUsed := false -}}
   {{- $ogTitle := $label -}}
   {{- with .Params.seo_title -}}{{- $ogTitle = . -}}{{- end -}}
   {{- if and $operaAuto (not .Params.seo_title) $operaRiga -}}
     {{- $cand := printf "%s: %s" $operaNome $operaRiga -}}
-    {{- if le (len $cand) 65 -}}{{- $ogTitle = $cand -}}{{- $label = $cand -}}{{- end -}}
+    {{- /* lunghezza in caratteri (non in byte); il titolo completo resta entro ~65 caratteri, quindi senza suffisso del brand */ -}}
+    {{- if le (strings.RuneCount $cand) 65 -}}{{- $ogTitle = $cand -}}{{- $label = $cand -}}{{- $candUsed = true -}}{{- end -}}
   {{- end -}}
   {{- if .IsHome -}}{{- $ogTitle = site.Params.seo_title | default site.Title -}}{{- end -}}
   {{- $title := $ogTitle -}}
   {{- /* titolo breve solo per le anteprime di condivisione della home */ -}}
   {{- if .IsHome -}}{{- with site.Params.og_title -}}{{- $ogTitle = . -}}{{- end -}}{{- end -}}
-  {{- if and (not .IsHome) (not .Params.seo_title) (not (in $label $brand)) -}}
+  {{- if and (not .IsHome) (not .Params.seo_title) (not $candUsed) (not (in $label $brand)) -}}
     {{- $title = printf "%s | %s" $label $brand -}}
   {{- end }}
   <title>{{ $title }}</title>
@@ -95,8 +98,17 @@
   {{- $imgW := 0 -}}
   {{- $imgH := 0 -}}
   {{- with resources.Get (strings.TrimPrefix "/" $imgPath) -}}
-    {{- $imgW = .Width -}}
-    {{- $imgH = .Height -}}
+    {{- if gt .Width 1600 -}}
+      {{- /* originali enormi (anche più di 1 MB): per le anteprime social basta una versione da 1200 px */ -}}
+      {{- $og := .Resize "1200x jpg q82" -}}
+      {{- $imgURL = $og.Permalink -}}
+      {{- $imgType = "image/jpeg" -}}
+      {{- $imgW = $og.Width -}}
+      {{- $imgH = $og.Height -}}
+    {{- else -}}
+      {{- $imgW = .Width -}}
+      {{- $imgH = .Height -}}
+    {{- end -}}
   {{- else -}}
     {{- warnf "[SEO] Immagine di condivisione non trovata: %s (pagina %s)" $imgPath $.RelPermalink -}}
   {{- end }}
@@ -147,6 +159,9 @@
   <link rel="icon" type="image/png" href="/favicon-96.png" sizes="96x96">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
+
+  {{- /* Font del testo: caricato subito per evitare lo "scatto" quando cambia carattere */}}
+  <link rel="preload" href="/fonts/figtree-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 
   {{- /* CSS del tema */}}
   {{- $options := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) -}}
@@ -201,7 +216,15 @@
     {{- /* Nodo principale della pagina */ -}}
     {{- if $isArtwork -}}
       {{- $s := .Params.schema -}}
-      {{- $name := $s.name | default (index (split .Title " — ") 0) -}}
+      {{- /* nome: schema.name se c'è; altrimenti l'H1 (heading) pulito dall'asterisco; altrimenti la parte di titolo prima del trattino lungo */ -}}
+      {{- $hd := trim (replace (.Params.heading | default "") "*" "") " " -}}
+      {{- $hdNome := "" -}}
+      {{- if $hd -}}{{- $hdNome = printf "%s%s" (upper (substr $hd 0 1)) (substr $hd 1) -}}{{- end -}}
+      {{- $parteTitolo := index (split .Title " — ") 0 -}}
+      {{- /* se il titolo contiene già l'H1 (es. "Girasoli di Van Gogh" contiene "girasoli") il titolo è più descrittivo: si tiene */ -}}
+      {{- $nomeScelto := $parteTitolo -}}
+      {{- if and $hdNome (not (in (lower $parteTitolo) (lower $hd))) -}}{{- $nomeScelto = $hdNome -}}{{- end -}}
+      {{- $name := $s.name | default $nomeScelto -}}
       {{- if $operaAuto -}}{{- $name = $s.name | default $operaNome -}}{{- end -}}
       {{- $art := dict
           "@type" "VisualArtwork"
@@ -238,7 +261,7 @@
       {{- $post := dict
           "@type" "BlogPosting"
           "@id" (printf "%s#articolo" .Permalink)
-          "headline" .Title
+          "headline" $ogTitle
           "description" $desc
           "url" .Permalink
           "mainEntityOfPage" .Permalink
@@ -286,11 +309,11 @@
       {{- $pos := 2 -}}
       {{- with .Parent -}}
         {{- if not .IsHome -}}
-          {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (index (split (.Params.heading | default .Title) " | ") 0) "item" .Permalink) -}}
+          {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (trim (replace (index (split (.Params.heading | default .Title) " | ") 0) "*" "") " ") "item" .Permalink) -}}
           {{- $pos = add $pos 1 -}}
         {{- end -}}
       {{- end -}}
-      {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (index (split (.Params.heading | default .Title) " | ") 0) "item" .Permalink) -}}
+      {{- $crumbs = $crumbs | append (dict "@type" "ListItem" "position" $pos "name" (trim (replace (index (split (.Params.heading | default .Title) " | ") 0) "*" "") " ") "item" .Permalink) -}}
       {{- $graph = $graph | append (dict "@type" "BreadcrumbList" "itemListElement" $crumbs) -}}
     {{- end }}
   <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" $graph | jsonify | safeJS }}</script>

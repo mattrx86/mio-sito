@@ -30,6 +30,16 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
+# --- www verso apex: DEVE restare la PRIMA regola ---
+# Netlify applica la prima regola che corrisponde, e le regole che hanno solo un
+# percorso valgono su qualsiasi host: se questa stesse più in basso, un vecchio
+# indirizzo con www passerebbe prima da un'altra regola (due salti invece di uno).
+[[redirects]]
+  from = "https://www.mattiariccadonna.com/*"
+  to = "https://mattiariccadonna.com/:splat"
+  status = 301
+  force = true
+
 # --- Redirect 301 per vecchi URL di singole opere (rinominate) ---
 [[redirects]]
   from = "/archivio/catenaccio-a-glolo/"
@@ -149,10 +159,9 @@
   status = 301
   force = true
 
-# --- Redirect esistente: normalizza www verso apex domain ---
 [[redirects]]
-  from = "https://www.mattiariccadonna.com/*"
-  to = "https://mattiariccadonna.com/:splat"
+  from = "/lavori-recenti/*"
+  to = "/dipinti-recenti/"
   status = 301
   force = true
 
@@ -207,6 +216,13 @@
   status = 301
   force = true
 
+# Sottopagine della vecchia sezione "mostre" (rinominata "mostre-e-concorsi")
+[[redirects]]
+  from = "/mostre/*"
+  to = "/mostre-e-concorsi/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/galleria"
   to = "/dipinti-recenti/"
@@ -230,6 +246,13 @@
   for = "/index.xml"
   [headers.values]
     X-Robots-Tag = "noindex"
+
+# Immagini: 7 giorni di cache nel browser. I file generati da Hugo hanno l'impronta
+# (hash) nel nome; per gli altri, una settimana è un compromesso sicuro se ne sostituisci uno.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
 
 # Pannello delle opere (/admin/): mai nei risultati di Google, sempre la versione aggiornata
 [[headers]]

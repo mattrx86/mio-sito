@@ -12,6 +12,8 @@
   {{- if not (partial "noindex.html" .) }}
     {{- $imgs := slice -}}
     {{- with .Params.image }}{{ $imgs = $imgs | append . }}{{ end -}}
+    {{- with .Params.miniatura_mosaico }}{{ $imgs = $imgs | append . }}{{ end -}}
+    {{- range .Params.foto_aggiuntive }}{{ with .foto }}{{ $imgs = $imgs | append . }}{{ end }}{{ end -}}
     {{- range findRE `/img/[^\s"')|]+\.(?:jpe?g|png|webp|gif)` .RawContent -}}
       {{- $imgs = $imgs | append . -}}
     {{- end -}}
