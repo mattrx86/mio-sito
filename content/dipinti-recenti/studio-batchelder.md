@@ -1,5 +1,5 @@
 ---
-heading: "studio opera di peter batchelder*"
+heading: "studio opera di peter batchelder #2*"
 image: "/img/dipinti-recenti/studio-Batchelder-01.jpg"
 schema:
   type: "VisualArtwork"
@@ -13,7 +13,7 @@ collocazione: "collezione dell'autore"
 disponibile: false
 misure: "50x60 cm"
 description: "Olio su tela, 50x60 cm, 2025. Studio da un'opera di Peter Batchelder, eseguito a scopo di studio e pratica pittorica. Non in vendita."
-title: "Studio opera da P. Batchelder — Olio su tela, 2025"
+title: "Studio da Batchelder #2 — Olio su tela, 2025"
 tags:
   - "olio"
   - "paesaggio"
@@ -21,7 +21,7 @@ hideDate: true
 draft: false
 ---
 
-Studio pittorico eseguita a scopo di studio e pratica pittorica. Soggetto originale di Peter Batchelder. Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.
+Studio pittorico eseguito a scopo di studio e pratica pittorica. Soggetto originale di Peter Batchelder. Tutti i diritti sull'opera originale appartengono all'autore. Questa riproduzione non è in vendita.
 
 ## dietro le quinte
 

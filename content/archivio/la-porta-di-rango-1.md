@@ -1,5 +1,5 @@
 ---
-heading: "la porta di rango"
+heading: "la porta di rango #2"
 image: "/img/archivio/la-porta-di-rango-1-8cdaddadbcd5.webp"
 schema:
   type: "VisualArtwork"
@@ -11,7 +11,7 @@ schema:
 date: "2003-01-01"
 collocazione: "collezione privata"
 disponibile: false
-title: "La porta del Borgo di Rango"
+title: "La porta del Borgo di Rango #2"
 tags:
   - "paesaggio"
   - "olio"

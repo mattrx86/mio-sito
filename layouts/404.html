@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{- /* Pagina mostrata quando un indirizzo non esiste. Resta fuori da Google (noindex, vedi head.html). */ -}}
+<header>
+    <h1>Pagina non trovata</h1>
+</header>
+
+<p>L'indirizzo che hai aperto non esiste o è stato spostato.</p>
+<p>Da qui puoi ripartire:</p>
+<ul>
+    <li><a href="/">la pagina iniziale</a></li>
+    <li><a href="/archivio/">archivio (le opere dal 1999 al 2007)</a></li>
+    <li><a href="/dipinti-recenti/">dipinti recenti</a></li>
+    <li><a href="/contatti/">contatti</a></li>
+</ul>
+{{ end }}
