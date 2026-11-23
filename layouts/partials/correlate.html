@@ -1,15 +1,28 @@
 {{- /*
-  "Potrebbe interessarti": fino a 3 opere con tag in comune.
-  Compare sulle pagine delle opere e del blog. I criteri sono in
-  hugo.toml, sezione [related].
+  "Potrebbe interessarti": fino a 3 opere e fino a 2 articoli (blog o taccuino)
+  con tag in comune. Compare sulle pagine delle opere, del blog e del taccuino.
+  Così quadri e articoli si rimandano tra loro (utile ai lettori e a Google).
+  I criteri di somiglianza sono in hugo.toml, sezione [related].
 */ -}}
 {{- $sezioniOpere := slice "archivio" "dipinti-recenti" "piccoli-quadri" -}}
-{{- if in (slice "archivio" "dipinti-recenti" "piccoli-quadri" "blog") .Section -}}
-  {{- $correlate := where (site.RegularPages.Related .) "Section" "in" $sezioniOpere -}}
-  {{- $correlate = first 3 $correlate -}}
+{{- $sezioniArticoli := slice "blog" "taccuino" -}}
+{{- if or (in $sezioniOpere .Section) (in $sezioniArticoli .Section) -}}
+  {{- $simili := site.RegularPages.Related . -}}
+  {{- $correlate := first 3 (where $simili "Section" "in" $sezioniOpere) -}}
+  {{- $articoli := first 2 (where $simili "Section" "in" $sezioniArticoli) -}}
   {{- with $correlate }}
   <nav class="correlate" aria-label="Opere correlate">
     <h2 class="radice" data-nota="# opere simili">potrebbe interessarti/</h2>
+    <ul class="elenco">
+      {{- range . }}
+      <li><span>{{ .Date.Format "2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Params.heading | default .Title }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+  {{- end }}
+  {{- with $articoli }}
+  <nav class="correlate" aria-label="Articoli correlati">
+    <h2 class="radice" data-nota="# tecnica e appunti">approfondimenti/</h2>
     <ul class="elenco">
       {{- range . }}
       <li><span>{{ .Date.Format "2006" }}</span> <a href="{{ .RelPermalink }}">{{ .Params.heading | default .Title }}</a></li>
